@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH -J gtt                         # Job name
+#SBATCH -o gtt.out                  # output file (%j expands to jobID)
+#SBATCH -e gtt.err                  # error log file (%j expands to jobID)
+#SBATCH --mail-type=ALL                      # Request status by email 
+#SBATCH --mail-user=zc272@cornell.edu        # Email address to send results to.
+#SBATCH -N 1                                 # Total number of nodes requested
+#SBATCH -n 1                                 # Total number of cores requested
+#SBATCH --get-user-env                       # retrieve the users login environment
+#SBATCH --mem=20000                           # server memory requested (per node)
+#SBATCH -t 8:00:00                           # Time limit (hh:mm:ss)
+#SBATCH --partition=default_partition       # Request partition
+#SBATCH --gres=gpu:2080ti:4                  # Type/number of GPUs needed
+
+ROOT_DIR="/home/zc272"
+CONDA_ENV=GTT
+
+cd "$ROOT_DIR/GTT"
+source /share/apps/anaconda3/2022.10/bin/activate
+conda activate $CONDA_ENV
+pip3 install -r requirements.txt
+$ROOT_DIR/GTT/model_gtt/run_pl.sh

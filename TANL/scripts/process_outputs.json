@@ -1,0 +1,78 @@
+{
+    "multi_phase": {
+        "template_errors_train_out": null,
+        "template_errors_train_tanl_ref": null,
+        "template_errors_train_gtt_ref": null,
+        "template_errors_train_output_files": null,
+        "template_errors_test_out": null,
+        "template_errors_test_tanl_ref": null,
+        "template_errors_test_gtt_ref": null,
+        "template_errors_test_output_file": null,
+        "second_phase_train_out": null,
+        "second_phase_train_tanl_ref": null,
+        "second_phase_train_gtt_ref": null,
+        "second_phase_train_output_file": null,
+        "second_phase_args": {
+            "training_data": null,
+            "second_phase_logging_train_output_file": null,
+            "second_phase_logging_train_num": 10,
+            "second_phase_logging_test_output_file": null,
+            "second_phase_logging_test_num": 10
+        },
+        "types_mapping": "",
+        "error_analysis_full": null,
+        "error_analysis_quick": null
+    },
+    "verbose_tags": {
+        "template_errors_train_out": null,
+        "template_errors_train_tanl_ref": null,
+        "template_errors_train_gtt_ref": null,
+        "template_errors_train_output_files": null,
+        "template_errors_test_out": null,
+        "template_errors_test_tanl_ref": null,
+        "template_errors_test_gtt_ref": null,
+        "template_errors_test_output_file": null,
+        "types_mapping": "",
+        "error_analysis_full": null,
+        "error_analysis_quick": null
+    },
+    "multiple_triggers": {
+        "template_errors_train_out": null,
+        "template_errors_train_tanl_ref": null,
+        "template_errors_train_gtt_ref": null,
+        "template_errors_train_output_files": null,
+        "template_errors_test_out": null,
+        "template_errors_test_tanl_ref": null,
+        "template_errors_test_gtt_ref": null,
+        "template_errors_test_output_file": null,
+        "types_mapping": "",
+        "error_analysis_full": null,
+        "error_analysis_quick": null
+    },
+    "focused_cross_entropy_typed": {
+        "template_errors_train_out": null,
+        "template_errors_train_tanl_ref": null,
+        "template_errors_train_gtt_ref": null,
+        "template_errors_train_output_files": null,
+        "template_errors_test_out": null,
+        "template_errors_test_tanl_ref": null,
+        "template_errors_test_gtt_ref": null,
+        "template_errors_test_output_file": null,
+        "types_mapping": "",
+        "error_analysis_full": null,
+        "error_analysis_quick": null
+    },
+    "focused_cross_entropy_notype": {
+        "template_errors_train_out": null,
+        "template_errors_train_tanl_ref": null,
+        "template_errors_train_gtt_ref": null,
+        "template_errors_train_output_files": null,
+        "template_errors_test_out": null,
+        "template_errors_test_tanl_ref": null,
+        "template_errors_test_gtt_ref": null,
+        "template_errors_test_output_file": null,
+        "types_mapping": "",
+        "error_analysis_full": null,
+        "error_analysis_quick": null
+    }
+}
