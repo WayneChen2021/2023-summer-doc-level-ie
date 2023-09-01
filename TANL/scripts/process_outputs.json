@@ -1,78 +1,131 @@
 {
     "multi_phase": {
-        "template_errors_train_out": null,
-        "template_errors_train_tanl_ref": null,
-        "template_errors_train_gtt_ref": null,
-        "template_errors_train_output_files": null,
-        "template_errors_test_out": null,
-        "template_errors_test_tanl_ref": null,
-        "template_errors_test_gtt_ref": null,
-        "template_errors_test_output_file": null,
-        "second_phase_train_out": null,
-        "second_phase_train_tanl_ref": null,
-        "second_phase_train_gtt_ref": null,
-        "second_phase_train_output_file": null,
-        "second_phase_args": {
+        "test_time_logs": {
+            "template_errors_test_out": null,
+            "template_errors_test_tanl_ref": null,
+            "template_errors_test_gtt_ref": null,
+            "template_errors_test_output_file": null,
+            "error_analysis_script": null
+        },
+        "second_phase_as_test_logs": {
+            "template_errors_test_out": null,
+            "template_errors_test_tanl_ref": null,
+            "template_errors_test_gtt_ref": null,
+            "template_errors_test_output_file": null,
+            "error_analysis_script": null
+        },
+        "generate_second_phase_train": {
             "training_data": null,
             "second_phase_logging_train_output_file": null,
             "second_phase_logging_train_num": 10,
             "second_phase_logging_test_output_file": null,
             "second_phase_logging_test_num": 10
         },
-        "types_mapping": "",
-        "error_analysis_full": null,
-        "error_analysis_quick": null
+        "train_time_logs": {
+            "template_errors_train_out": null,
+            "template_errors_train_tanl_ref": [],
+            "template_errors_train_gtt_ref": [],
+            "template_errors_train_output_files": null,
+            "error_analysis_script": null,
+            "training_loss": {
+                "log_file": null,
+                "loss_collection_interval": 0,
+                "small_evaluation_interval": 0,
+                "output_file": null
+            }
+        },
+        "types_mapping": ""
     },
     "verbose_tags": {
-        "template_errors_train_out": null,
-        "template_errors_train_tanl_ref": null,
-        "template_errors_train_gtt_ref": null,
-        "template_errors_train_output_files": null,
-        "template_errors_test_out": null,
-        "template_errors_test_tanl_ref": null,
-        "template_errors_test_gtt_ref": null,
-        "template_errors_test_output_file": null,
-        "types_mapping": "",
-        "error_analysis_full": null,
-        "error_analysis_quick": null
+        "test_time_logs": {
+            "template_errors_test_out": null,
+            "template_errors_test_tanl_ref": null,
+            "template_errors_test_gtt_ref": null,
+            "template_errors_test_output_file": null,
+            "error_analysis_script": null
+        },
+        "train_time_logs": {
+            "template_errors_train_out": null,
+            "template_errors_train_tanl_ref": [],
+            "template_errors_train_gtt_ref": [],
+            "template_errors_train_output_files": null,
+            "error_analysis_script": null,
+            "training_loss": {
+                "log_file": null,
+                "loss_collection_interval": 0,
+                "small_evaluation_interval": 0,
+                "output_file": null
+            }
+        },
+        "types_mapping": ""
     },
     "multiple_triggers": {
-        "template_errors_train_out": null,
-        "template_errors_train_tanl_ref": null,
-        "template_errors_train_gtt_ref": null,
-        "template_errors_train_output_files": null,
-        "template_errors_test_out": null,
-        "template_errors_test_tanl_ref": null,
-        "template_errors_test_gtt_ref": null,
-        "template_errors_test_output_file": null,
-        "types_mapping": "",
-        "error_analysis_full": null,
-        "error_analysis_quick": null
+        "test_time_logs": {
+            "template_errors_test_out": null,
+            "template_errors_test_tanl_ref": null,
+            "template_errors_test_gtt_ref": null,
+            "template_errors_test_output_file": null,
+            "error_analysis_script": null
+        },
+        "train_time_logs": {
+            "template_errors_train_out": null,
+            "template_errors_train_tanl_ref": [],
+            "template_errors_train_gtt_ref": [],
+            "template_errors_train_output_files": null,
+            "error_analysis_script": null,
+            "training_loss": {
+                "log_file": null,
+                "loss_collection_interval": 0,
+                "small_evaluation_interval": 0,
+                "output_file": null
+            }
+        },
+        "types_mapping": ""
     },
     "focused_cross_entropy_typed": {
-        "template_errors_train_out": null,
-        "template_errors_train_tanl_ref": null,
-        "template_errors_train_gtt_ref": null,
-        "template_errors_train_output_files": null,
-        "template_errors_test_out": null,
-        "template_errors_test_tanl_ref": null,
-        "template_errors_test_gtt_ref": null,
-        "template_errors_test_output_file": null,
-        "types_mapping": "",
-        "error_analysis_full": null,
-        "error_analysis_quick": null
+        "test_time_logs": {
+            "template_errors_test_out": null,
+            "template_errors_test_tanl_ref": null,
+            "template_errors_test_gtt_ref": null,
+            "template_errors_test_output_file": null,
+            "error_analysis_script": null
+        },
+        "train_time_logs": {
+            "template_errors_train_out": null,
+            "template_errors_train_tanl_ref": [],
+            "template_errors_train_gtt_ref": [],
+            "template_errors_train_output_files": null,
+            "error_analysis_script": null,
+            "training_loss": {
+                "log_file": null,
+                "loss_collection_interval": 0,
+                "small_evaluation_interval": 0,
+                "output_file": null
+            }
+        },
+        "types_mapping": ""
     },
     "focused_cross_entropy_notype": {
-        "template_errors_train_out": null,
-        "template_errors_train_tanl_ref": null,
-        "template_errors_train_gtt_ref": null,
-        "template_errors_train_output_files": null,
-        "template_errors_test_out": null,
-        "template_errors_test_tanl_ref": null,
-        "template_errors_test_gtt_ref": null,
-        "template_errors_test_output_file": null,
-        "types_mapping": "",
-        "error_analysis_full": null,
-        "error_analysis_quick": null
+        "test_time_logs": {
+            "template_errors_test_out": null,
+            "template_errors_test_tanl_ref": null,
+            "template_errors_test_gtt_ref": null,
+            "template_errors_test_output_file": null,
+            "error_analysis_script": null
+        },
+        "train_time_logs": {
+            "template_errors_train_out": null,
+            "template_errors_train_tanl_ref": [],
+            "template_errors_train_gtt_ref": [],
+            "template_errors_train_output_files": null,
+            "error_analysis_script": null,
+            "training_loss": {
+                "log_file": null,
+                "loss_collection_interval": 0,
+                "small_evaluation_interval": 0,
+                "output_file": null
+            }
+        },
+        "types_mapping": ""
     }
 }
