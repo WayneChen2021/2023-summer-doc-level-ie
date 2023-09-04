@@ -41,9 +41,9 @@ def profile(func):
         mem_before = process_memory()
         result = func(*args, **kwargs)
         mem_after = process_memory()
-        print("{}:consumed memory: {:,}".format(
-            func.__name__,
-            mem_before, mem_after, mem_after - mem_before))
+        # print("{}:consumed memory: {:,}".format(
+        #     func.__name__,
+        #     mem_before, mem_after, mem_after - mem_before))
         return result
 
     return wrapper
@@ -1246,7 +1246,7 @@ def main():
 
     total_result_before = Result()
 
-    for docid, pair in tqdm(data, desc="Analyzing Data and Applying Transformations: "):
+    for docid, pair in data:
         output_file.write("\n\n\t------------------\n\n")
         output_file.write("DOCID: " + str(docid) + "\n\n")
         output_file.write("Comparing:")
@@ -1337,15 +1337,15 @@ def main():
 
     output_file.close()
 
-    print("\n----------------------")
-    print("SPAN ERRORS:\n")
+    # print("\n----------------------")
+    # print("SPAN ERRORS:\n")
     missing_span = {}
     extra_span = {}
     for span, me in total_result_before.spans:
         st = nlp(span)
         for token in st:
             pos = token.pos_
-            print((token, pos, "missing" if me == "m" else "extra"))
+            # print((token, pos, "missing" if me == "m" else "extra"))
             if me == "m":
                 try:
                     missing_span[pos] += 1
@@ -1357,24 +1357,25 @@ def main():
                 except:
                     extra_span[pos] = 1
 
-    print("\nMissing span tokens - POS counts \n" + str(missing_span) + "\n")
-    print("Extra span tokens - POS counts \n" + str(extra_span) + "\n")
-    print("----------------------\n")
+    # print("\nMissing span tokens - POS counts \n" + str(missing_span) + "\n")
+    # print("Extra span tokens - POS counts \n" + str(extra_span) + "\n")
+    # print("----------------------\n")
 
-    print("----------------------")
-    print("MISSING ROLE COUNTS:\n")
-    for role_name, role_count in total_result_before.missing_roles.items():
-        print(role_name + ": " + str(role_count))
-    print("----------------------\n")
+    # print("----------------------")
+    # print("MISSING ROLE COUNTS:\n")
+    # for role_name, role_count in total_result_before.missing_roles.items():
+    #     print(role_name + ": " + str(role_count))
+    # print("----------------------\n")
 
-    print("----------------------")
-    print("INCORRECT ROLE COUNTS:\n")
-    for role_name, role_count in total_result_before.incorrect_roles.items():
-        print(role_name + ": " + str(role_count))
-    print("----------------------\n")
+    # print("----------------------")
+    # print("INCORRECT ROLE COUNTS:\n")
+    # for role_name, role_count in total_result_before.incorrect_roles.items():
+    #     print(role_name + ": " + str(role_count))
+    # print("----------------------\n")
 
-    print("Time: " + str(time.time() - start))
+    # print("Time: " + str(time.time() - start))
 
 
 if __name__ == "__main__":
+    os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
     main()

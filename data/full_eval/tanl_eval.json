@@ -262,7 +262,8 @@
             "tank",
             "truck",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0001"
     },
     {
         "entities": [],
@@ -445,7 +446,8 @@
             "sabotage",
             "activity",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0002"
     },
     {
         "entities": [],
@@ -805,7 +807,8 @@
             "punished",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST1-MUC3-0003"
     },
     {
         "entities": [],
@@ -1004,7 +1007,8 @@
             "the",
             "department",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0004"
     },
     {
         "entities": [],
@@ -1293,7 +1297,8 @@
             "to",
             "them",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0005"
     },
     {
         "entities": [],
@@ -1615,7 +1620,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0006"
     },
     {
         "entities": [],
@@ -1847,7 +1853,8 @@
             "the",
             "country",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0007"
     },
     {
         "entities": [],
@@ -2213,7 +2220,8 @@
             "cartel",
             "itself",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0008"
     },
     {
         "entities": [],
@@ -2447,7 +2455,8 @@
             "salvadoran",
             "people",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0009"
     },
     {
         "entities": [],
@@ -2943,7 +2952,8 @@
             "commander",
             "joaquin",
             "villalobos"
-        ]
+        ],
+        "id": "TST1-MUC3-0010"
     },
     {
         "entities": [],
@@ -3428,7 +3438,8 @@
             "argentine",
             "journalist",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0011"
     },
     {
         "entities": [],
@@ -3547,7 +3558,8 @@
             "be",
             "heard",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0012"
     },
     {
         "entities": [],
@@ -4437,7 +4449,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0013"
     },
     {
         "entities": [],
@@ -4952,7 +4965,8 @@
             "material",
             "damage",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0014"
     },
     {
         "entities": [],
@@ -5788,7 +5802,8 @@
             "far",
             ")",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0015"
     },
     {
         "entities": [],
@@ -6434,7 +6449,8 @@
             "save",
             "themselves",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0016"
     },
     {
         "entities": [],
@@ -6899,7 +6915,8 @@
             "november",
             "1989",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0017"
     },
     {
         "entities": [],
@@ -7136,7 +7153,8 @@
             "just",
             "speculation",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0018"
     },
     {
         "entities": [],
@@ -7846,7 +7864,8 @@
             "american",
             "parliament",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0019"
     },
     {
         "entities": [],
@@ -8166,7 +8185,8 @@
             "under",
             "control",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0020"
     },
     {
         "entities": [],
@@ -8625,7 +8645,8 @@
             "7",
             "august",
             "1989"
-        ]
+        ],
+        "id": "TST1-MUC3-0021"
     },
     {
         "entities": [],
@@ -8985,7 +9006,8 @@
             "awakening",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST1-MUC3-0022"
     },
     {
         "entities": [],
@@ -9285,7 +9307,8 @@
             "good",
             "night",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0023"
     },
     {
         "entities": [],
@@ -9595,7 +9618,8 @@
             "and",
             "cement",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0024"
     },
     {
         "entities": [],
@@ -9725,7 +9749,8 @@
             "terrorist",
             "activities",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0025"
     },
     {
         "entities": [],
@@ -10280,7 +10305,8 @@
             "northwestern",
             "area",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0026"
     },
     {
         "entities": [],
@@ -10486,7 +10512,8 @@
             "produce",
             "cocaine",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0027"
     },
     {
         "entities": [],
@@ -10629,7 +10656,8 @@
             "rodriguez",
             "crime",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0028"
     },
     {
         "entities": [],
@@ -11140,7 +11168,8 @@
             "the",
             "future",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0029"
     },
     {
         "entities": [],
@@ -12059,7 +12088,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0030"
     },
     {
         "entities": [],
@@ -12166,7 +12196,8 @@
             "past",
             "24",
             "hours"
-        ]
+        ],
+        "id": "TST1-MUC3-0031"
     },
     {
         "entities": [],
@@ -12895,7 +12926,8 @@
             "fight",
             "corruption",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0032"
     },
     {
         "entities": [],
@@ -13164,7 +13196,8 @@
             "peace",
             "camp",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0033"
     },
     {
         "entities": [],
@@ -13775,7 +13808,8 @@
             "people",
             "homeless",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0034"
     },
     {
         "entities": [],
@@ -13954,7 +13988,8 @@
             "will",
             "win",
             "!"
-        ]
+        ],
+        "id": "TST1-MUC3-0035"
     },
     {
         "entities": [],
@@ -14060,7 +14095,8 @@
             "at",
             "0030",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0036"
     },
     {
         "entities": [],
@@ -14246,7 +14282,8 @@
             "killed",
             "also",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0037"
     },
     {
         "entities": [],
@@ -14790,7 +14827,8 @@
             "abandoned",
             "lands",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0038"
     },
     {
         "entities": [],
@@ -15172,7 +15210,8 @@
             "the",
             "demonstration",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0039"
     },
     {
         "entities": [],
@@ -15583,7 +15622,8 @@
             "1,000",
             "wounded",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0040"
     },
     {
         "entities": [],
@@ -15900,7 +15940,8 @@
             "this",
             "morning",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0041"
     },
     {
         "entities": [],
@@ -16674,7 +16715,8 @@
             "panamanian",
             "towns",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0042"
     },
     {
         "entities": [],
@@ -17320,7 +17362,8 @@
             "overcome",
             "this",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0043"
     },
     {
         "entities": [],
@@ -18348,7 +18391,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0044"
     },
     {
         "entities": [],
@@ -18765,7 +18809,8 @@
             "11",
             "november",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0045"
     },
     {
         "entities": [],
@@ -19294,7 +19339,8 @@
             "was",
             "wounded",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0046"
     },
     {
         "entities": [],
@@ -19605,7 +19651,8 @@
             "western",
             "europe",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0047"
     },
     {
         "entities": [],
@@ -19718,7 +19765,8 @@
             "virtually",
             "paralyzed",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0048"
     },
     {
         "entities": [],
@@ -20010,7 +20058,8 @@
             "necessary",
             "measures",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0049"
     },
     {
         "entities": [],
@@ -20431,7 +20480,8 @@
             "murders",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST1-MUC3-0050"
     },
     {
         "entities": [],
@@ -20532,7 +20582,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0051"
     },
     {
         "entities": [],
@@ -21265,7 +21316,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0052"
     },
     {
         "entities": [],
@@ -21762,7 +21814,8 @@
             "san",
             "miguel",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0053"
     },
     {
         "entities": [],
@@ -22470,7 +22523,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0054"
     },
     {
         "entities": [],
@@ -22863,7 +22917,8 @@
             "building",
             "victory",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0055"
     },
     {
         "entities": [],
@@ -23165,7 +23220,8 @@
             "these",
             "attacks",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0056"
     },
     {
         "entities": [],
@@ -23490,7 +23546,8 @@
             "military",
             "institution",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0057"
     },
     {
         "entities": [],
@@ -24012,7 +24069,8 @@
             "face",
             "obstacles",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0058"
     },
     {
         "entities": [],
@@ -24490,7 +24548,8 @@
             "rodriguez",
             "porth",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0059"
     },
     {
         "entities": [],
@@ -24943,7 +25002,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0060"
     },
     {
         "entities": [],
@@ -25394,7 +25454,8 @@
             "drug",
             "mafias",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0061"
     },
     {
         "entities": [],
@@ -25875,7 +25936,8 @@
             "the",
             "negotiations",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0062"
     },
     {
         "entities": [],
@@ -26175,7 +26237,8 @@
             "'s",
             "return",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0063"
     },
     {
         "entities": [],
@@ -27070,7 +27133,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0064"
     },
     {
         "entities": [],
@@ -27237,7 +27301,8 @@
             "the",
             "incident",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0065"
     },
     {
         "entities": [],
@@ -27747,7 +27812,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0066"
     },
     {
         "entities": [],
@@ -28153,7 +28219,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0067"
     },
     {
         "entities": [],
@@ -28412,7 +28479,8 @@
             "to",
             "spain",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0068"
     },
     {
         "entities": [],
@@ -28790,7 +28858,8 @@
             "george",
             "bush",
             "?"
-        ]
+        ],
+        "id": "TST1-MUC3-0069"
     },
     {
         "entities": [],
@@ -29390,7 +29459,8 @@
             "his",
             "honesty",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0070"
     },
     {
         "entities": [],
@@ -29796,7 +29866,8 @@
             "of",
             "potosi",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0071"
     },
     {
         "entities": [],
@@ -29937,7 +30008,8 @@
             "few",
             "hours",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0072"
     },
     {
         "entities": [],
@@ -30253,7 +30325,8 @@
             "chile",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST1-MUC3-0073"
     },
     {
         "entities": [],
@@ -30460,7 +30533,8 @@
             "this",
             "afternoon",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0074"
     },
     {
         "entities": [],
@@ -30745,7 +30819,8 @@
             "medellin",
             "tomorrow",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0075"
     },
     {
         "entities": [],
@@ -30937,7 +31012,8 @@
             "logistics",
             "department",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0076"
     },
     {
         "entities": [],
@@ -31404,7 +31480,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0077"
     },
     {
         "entities": [],
@@ -31639,7 +31716,8 @@
             "ramirez",
             "quintero",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0078"
     },
     {
         "entities": [],
@@ -32427,7 +32505,8 @@
             "(",
             "applause",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0079"
     },
     {
         "entities": [],
@@ -32598,7 +32677,8 @@
             "drug",
             "traffickers",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0080"
     },
     {
         "entities": [],
@@ -32742,7 +32822,8 @@
             "antioquia",
             "department",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0081"
     },
     {
         "entities": [],
@@ -32868,7 +32949,8 @@
             "cuscatlan",
             "department",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0082"
     },
     {
         "entities": [],
@@ -33198,7 +33280,8 @@
             "cancer",
             "patients",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0083"
     },
     {
         "entities": [],
@@ -33572,7 +33655,8 @@
             "the",
             "war",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0084"
     },
     {
         "entities": [],
@@ -33948,7 +34032,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST1-MUC3-0085"
     },
     {
         "entities": [],
@@ -34532,7 +34617,8 @@
             "thank",
             "you",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0086"
     },
     {
         "entities": [],
@@ -34728,7 +34814,8 @@
             "military",
             "uniforms",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0087"
     },
     {
         "entities": [],
@@ -35246,7 +35333,8 @@
             "other",
             "explosives",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0088"
     },
     {
         "entities": [],
@@ -35607,7 +35695,8 @@
             "salvadoran",
             "people",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0089"
     },
     {
         "entities": [],
@@ -35762,7 +35851,8 @@
             "and",
             "installations",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0090"
     },
     {
         "entities": [],
@@ -36356,7 +36446,8 @@
             "that",
             "reality",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0091"
     },
     {
         "entities": [],
@@ -36675,7 +36766,8 @@
             "against",
             "arena",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0092"
     },
     {
         "entities": [],
@@ -37117,7 +37209,8 @@
             "and",
             "justice",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0093"
     },
     {
         "entities": [],
@@ -37215,7 +37308,8 @@
             "on",
             "board",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0094"
     },
     {
         "entities": [],
@@ -37472,7 +37566,8 @@
             "war",
             "economy",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0095"
     },
     {
         "entities": [],
@@ -37786,7 +37881,8 @@
             "appropriate",
             "organizations",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0096"
     },
     {
         "entities": [],
@@ -38462,7 +38558,8 @@
             "worked",
             "there",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0097"
     },
     {
         "entities": [],
@@ -38555,7 +38652,8 @@
             "terrorist",
             "organization",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0098"
     },
     {
         "entities": [],
@@ -38817,7 +38915,8 @@
             "24",
             "oct",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0099"
     },
     {
         "entities": [],
@@ -39580,7 +39679,8 @@
             "for",
             "deputy",
             "."
-        ]
+        ],
+        "id": "TST1-MUC3-0100"
     },
     {
         "entities": [],
@@ -39739,7 +39839,8 @@
             "is",
             "growing",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0001"
     },
     {
         "entities": [],
@@ -39917,7 +40018,8 @@
             "the",
             "attack",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0002"
     },
     {
         "entities": [],
@@ -40367,7 +40469,8 @@
             "few",
             "days",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0003"
     },
     {
         "entities": [],
@@ -40727,7 +40830,8 @@
             "damages",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST2-MUC4-0004"
     },
     {
         "entities": [],
@@ -41316,7 +41420,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0005"
     },
     {
         "entities": [],
@@ -42399,7 +42504,8 @@
             "bless",
             "you",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0006"
     },
     {
         "entities": [],
@@ -42901,7 +43007,8 @@
             "those",
             "countries",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0007"
     },
     {
         "entities": [],
@@ -43405,7 +43512,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0008"
     },
     {
         "entities": [],
@@ -44140,7 +44248,8 @@
             "campo",
             "grande",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0009"
     },
     {
         "entities": [],
@@ -44721,7 +44830,8 @@
             "have",
             "confidence",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0010"
     },
     {
         "entities": [],
@@ -45304,7 +45414,8 @@
             "of",
             "staff",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0011"
     },
     {
         "entities": [],
@@ -45412,7 +45523,8 @@
             "in",
             "santiago",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0012"
     },
     {
         "entities": [],
@@ -45666,7 +45778,8 @@
             "the",
             "letters",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0013"
     },
     {
         "entities": [],
@@ -45920,7 +46033,8 @@
             "totally",
             "destroyed",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0014"
     },
     {
         "entities": [],
@@ -46095,7 +46209,8 @@
             "1",
             "hour",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0015"
     },
     {
         "entities": [],
@@ -46897,7 +47012,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0016"
     },
     {
         "entities": [],
@@ -47054,7 +47170,8 @@
             "the",
             "issue",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0017"
     },
     {
         "entities": [],
@@ -47618,7 +47735,8 @@
             "'s",
             "it",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0018"
     },
     {
         "entities": [],
@@ -48301,7 +48419,8 @@
             "defenseless",
             "citizens",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0019"
     },
     {
         "entities": [],
@@ -48540,7 +48659,8 @@
             "to",
             "cali",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0020"
     },
     {
         "entities": [],
@@ -48688,7 +48808,8 @@
             "taking",
             "place",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0021"
     },
     {
         "entities": [],
@@ -49405,7 +49526,8 @@
             "of",
             "inflation",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0022"
     },
     {
         "entities": [],
@@ -49814,7 +49936,8 @@
             "all",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST2-MUC4-0023"
     },
     {
         "entities": [],
@@ -50327,7 +50450,8 @@
             "military",
             "objectives",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0024"
     },
     {
         "entities": [],
@@ -50604,7 +50728,8 @@
             "pablo",
             "monsanto",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0025"
     },
     {
         "entities": [],
@@ -51205,7 +51330,8 @@
             "and",
             "4",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0026"
     },
     {
         "entities": [],
@@ -51835,7 +51961,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0027"
     },
     {
         "entities": [],
@@ -52043,7 +52170,8 @@
             "terrorist",
             "policies",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0028"
     },
     {
         "entities": [],
@@ -52142,7 +52270,8 @@
             "their",
             "homes",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0029"
     },
     {
         "entities": [],
@@ -52289,7 +52418,8 @@
             "with",
             "silencers",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0030"
     },
     {
         "entities": [],
@@ -52730,7 +52860,8 @@
             "and",
             "ammunition",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0031"
     },
     {
         "entities": [],
@@ -53114,7 +53245,8 @@
             "jaramillo",
             "ossa",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0032"
     },
     {
         "entities": [],
@@ -53543,7 +53675,8 @@
             "with",
             "sorrow",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0033"
     },
     {
         "entities": [],
@@ -54029,7 +54162,8 @@
             "of",
             "torture",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0034"
     },
     {
         "entities": [],
@@ -54218,7 +54352,8 @@
             "metropolitan",
             "area",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0035"
     },
     {
         "entities": [],
@@ -54742,7 +54877,8 @@
             "corrupt",
             "men",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0036"
     },
     {
         "entities": [],
@@ -55193,7 +55329,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0037"
     },
     {
         "entities": [],
@@ -55780,7 +55917,8 @@
             "good",
             "night",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0038"
     },
     {
         "entities": [],
@@ -55916,7 +56054,8 @@
             "donnelly",
             "...",
             "\""
-        ]
+        ],
+        "id": "TST2-MUC4-0039"
     },
     {
         "entities": [],
@@ -56380,7 +56519,8 @@
             "16",
             "january",
             "1990"
-        ]
+        ],
+        "id": "TST2-MUC4-0040"
     },
     {
         "entities": [],
@@ -57002,7 +57142,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0041"
     },
     {
         "entities": [],
@@ -57558,7 +57699,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0042"
     },
     {
         "entities": [],
@@ -58047,7 +58189,8 @@
             "september",
             "1989",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0043"
     },
     {
         "entities": [],
@@ -58298,7 +58441,8 @@
             "into",
             "colombia",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0044"
     },
     {
         "entities": [],
@@ -58501,7 +58645,8 @@
             "the",
             "ceremony",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0045"
     },
     {
         "entities": [],
@@ -58872,7 +59017,8 @@
             "hk-1803",
             "airplane",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0046"
     },
     {
         "entities": [],
@@ -59232,7 +59378,8 @@
             "liberal",
             "party",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0047"
     },
     {
         "entities": [],
@@ -59912,7 +60059,8 @@
             "laws",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST2-MUC4-0048"
     },
     {
         "entities": [],
@@ -60102,7 +60250,8 @@
             "of",
             "lima",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0049"
     },
     {
         "entities": [],
@@ -60302,7 +60451,8 @@
             "vargas",
             "gonzalez",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0050"
     },
     {
         "entities": [],
@@ -60492,7 +60642,8 @@
             "a",
             "judge",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0051"
     },
     {
         "entities": [],
@@ -60947,7 +61098,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0052"
     },
     {
         "entities": [],
@@ -61065,7 +61217,8 @@
             "been",
             "kidnapped",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0053"
     },
     {
         "entities": [],
@@ -61496,7 +61649,8 @@
             "be",
             "news",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0054"
     },
     {
         "entities": [],
@@ -61763,7 +61917,8 @@
             "mrta",
             "called",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0055"
     },
     {
         "entities": [],
@@ -62106,7 +62261,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0056"
     },
     {
         "entities": [],
@@ -62587,7 +62743,8 @@
             "december",
             "1989",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0057"
     },
     {
         "entities": [],
@@ -62702,7 +62859,8 @@
             "how",
             "many",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0058"
     },
     {
         "entities": [],
@@ -62939,7 +63097,8 @@
             "drug",
             "traffickers",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0059"
     },
     {
         "entities": [],
@@ -63390,7 +63549,8 @@
             "to",
             "chile",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0060"
     },
     {
         "entities": [],
@@ -63631,7 +63791,8 @@
             "the",
             "facilities",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0061"
     },
     {
         "entities": [],
@@ -63810,7 +63971,8 @@
             "3",
             "years",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0062"
     },
     {
         "entities": [],
@@ -63987,7 +64149,8 @@
             "another",
             "wounded",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0063"
     },
     {
         "entities": [],
@@ -64291,7 +64454,8 @@
             "drug",
             "traffickers",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0064"
     },
     {
         "entities": [],
@@ -64466,7 +64630,8 @@
             "five",
             "helicopters",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0065"
     },
     {
         "entities": [],
@@ -64858,7 +65023,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0066"
     },
     {
         "entities": [],
@@ -65122,7 +65288,8 @@
             "their",
             "ballots",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0067"
     },
     {
         "entities": [],
@@ -65480,7 +65647,8 @@
             "area",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST2-MUC4-0068"
     },
     {
         "entities": [],
@@ -65700,7 +65868,8 @@
             "their",
             "whereabouts",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0069"
     },
     {
         "entities": [],
@@ -66158,7 +66327,8 @@
             "few",
             "hours",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0070"
     },
     {
         "entities": [],
@@ -66465,7 +66635,8 @@
             "week",
             "ago",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0071"
     },
     {
         "entities": [],
@@ -67148,7 +67319,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0072"
     },
     {
         "entities": [],
@@ -67555,7 +67727,8 @@
             "he",
             "said",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0073"
     },
     {
         "entities": [],
@@ -68074,7 +68247,8 @@
             "16",
             "november",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0074"
     },
     {
         "entities": [],
@@ -68168,7 +68342,8 @@
             "the",
             "government",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0075"
     },
     {
         "entities": [],
@@ -68451,7 +68626,8 @@
             "colombian",
             "authorities",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0076"
     },
     {
         "entities": [],
@@ -68559,7 +68735,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0077"
     },
     {
         "entities": [],
@@ -69183,7 +69360,8 @@
             "san",
             "salvador",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0078"
     },
     {
         "entities": [],
@@ -69321,7 +69499,8 @@
             "undetermined",
             "date",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0079"
     },
     {
         "entities": [],
@@ -69662,7 +69841,8 @@
             "continue",
             "reporting",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0080"
     },
     {
         "entities": [],
@@ -69922,7 +70102,8 @@
             "her",
             "resignation",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0081"
     },
     {
         "entities": [],
@@ -70417,7 +70598,8 @@
             "andres",
             "perez",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0082"
     },
     {
         "entities": [],
@@ -70559,7 +70741,8 @@
             "mountain",
             "region",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0083"
     },
     {
         "entities": [],
@@ -71453,7 +71636,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0084"
     },
     {
         "entities": [],
@@ -71906,7 +72090,8 @@
             "salvadoran",
             "people",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0085"
     },
     {
         "entities": [],
@@ -72322,7 +72507,8 @@
             "the",
             "cng",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0086"
     },
     {
         "entities": [],
@@ -73019,7 +73205,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0087"
     },
     {
         "entities": [],
@@ -73152,7 +73339,8 @@
             "machinegun",
             "fire",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0088"
     },
     {
         "entities": [],
@@ -73570,7 +73758,8 @@
             "3",
             "april",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0089"
     },
     {
         "entities": [],
@@ -74603,7 +74792,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0090"
     },
     {
         "entities": [],
@@ -74817,7 +75007,8 @@
             "civilian",
             "neighborhoods",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0091"
     },
     {
         "entities": [],
@@ -75303,7 +75494,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0092"
     },
     {
         "entities": [],
@@ -75493,7 +75685,8 @@
             "the",
             "country",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0093"
     },
     {
         "entities": [],
@@ -75801,7 +75994,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST2-MUC4-0094"
     },
     {
         "entities": [],
@@ -76052,7 +76246,8 @@
             "these",
             "activities",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0095"
     },
     {
         "entities": [],
@@ -76377,7 +76572,8 @@
             "mrta",
             "member",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0096"
     },
     {
         "entities": [],
@@ -76535,7 +76731,8 @@
             "political",
             "affairs",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0097"
     },
     {
         "entities": [],
@@ -77210,7 +77407,8 @@
             "america",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST2-MUC4-0098"
     },
     {
         "entities": [],
@@ -77518,7 +77716,8 @@
             "resources",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST2-MUC4-0099"
     },
     {
         "entities": [],
@@ -77620,7 +77819,8 @@
             "petroleum",
             "sector",
             "."
-        ]
+        ],
+        "id": "TST2-MUC4-0100"
     },
     {
         "entities": [],
@@ -78269,7 +78469,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0001"
     },
     {
         "entities": [],
@@ -78735,7 +78936,8 @@
             "this",
             "case",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0002"
     },
     {
         "entities": [],
@@ -79002,7 +79204,8 @@
             "municipal",
             "elections",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0003"
     },
     {
         "entities": [],
@@ -79513,7 +79716,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0004"
     },
     {
         "entities": [],
@@ -79689,7 +79893,8 @@
             "political-diplomatic",
             "commission",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0005"
     },
     {
         "entities": [],
@@ -79972,7 +80177,8 @@
             "democratic",
             "party",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0006"
     },
     {
         "entities": [],
@@ -80444,7 +80650,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0007"
     },
     {
         "entities": [],
@@ -80540,7 +80747,8 @@
             "been",
             "identified",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0008"
     },
     {
         "entities": [],
@@ -80699,7 +80907,8 @@
             "the",
             "demonstrations",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0009"
     },
     {
         "entities": [],
@@ -80938,7 +81147,8 @@
             "of",
             "communications",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0010"
     },
     {
         "entities": [],
@@ -81125,7 +81335,8 @@
             "them",
             "european",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0011"
     },
     {
         "entities": [],
@@ -81635,7 +81846,8 @@
             "rebel",
             "proposal",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0012"
     },
     {
         "entities": [],
@@ -82291,7 +82503,8 @@
             "2",
             "november",
             "1989"
-        ]
+        ],
+        "id": "TST3-MUC4-0013"
     },
     {
         "entities": [],
@@ -82450,7 +82663,8 @@
             "luckily",
             "escaped",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0014"
     },
     {
         "entities": [],
@@ -82585,7 +82799,8 @@
             "agency",
             "reuter",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0015"
     },
     {
         "entities": [],
@@ -82786,7 +83001,8 @@
             "of",
             "teotecacinte",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0016"
     },
     {
         "entities": [],
@@ -83089,7 +83305,8 @@
             "the",
             "country",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0017"
     },
     {
         "entities": [],
@@ -83592,7 +83809,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0018"
     },
     {
         "entities": [],
@@ -83645,7 +83863,8 @@
             "santander",
             "department",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0019"
     },
     {
         "entities": [],
@@ -83871,7 +84090,8 @@
             "in",
             "bolivia",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0020"
     },
     {
         "entities": [],
@@ -84592,7 +84812,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0021"
     },
     {
         "entities": [],
@@ -84712,7 +84933,8 @@
             "shining",
             "path",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0022"
     },
     {
         "entities": [],
@@ -85213,7 +85435,8 @@
             "civil",
             "peace",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0023"
     },
     {
         "entities": [],
@@ -85496,7 +85719,8 @@
             "capital",
             "city",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0024"
     },
     {
         "entities": [],
@@ -86542,7 +86766,8 @@
             "as",
             "available",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0025"
     },
     {
         "entities": [],
@@ -87094,7 +87319,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0026"
     },
     {
         "entities": [],
@@ -87211,7 +87437,8 @@
             "january",
             "1986",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0027"
     },
     {
         "entities": [],
@@ -87900,7 +88127,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0028"
     },
     {
         "entities": [],
@@ -88270,7 +88498,8 @@
             "9",
             "august",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0029"
     },
     {
         "entities": [],
@@ -88832,7 +89061,8 @@
             ".",
             "'",
             "\""
-        ]
+        ],
+        "id": "TST3-MUC4-0030"
     },
     {
         "entities": [],
@@ -89343,7 +89573,8 @@
             "its",
             "business",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0031"
     },
     {
         "entities": [],
@@ -89746,7 +89977,8 @@
             "cocaine",
             "trafficking",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0032"
     },
     {
         "entities": [],
@@ -90446,7 +90678,8 @@
             "13",
             "august",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0033"
     },
     {
         "entities": [],
@@ -90544,7 +90777,8 @@
             "presidential",
             "candidates",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0034"
     },
     {
         "entities": [],
@@ -90993,7 +91227,8 @@
             "tax",
             "authorities",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0035"
     },
     {
         "entities": [],
@@ -91256,7 +91491,8 @@
             "in",
             "particular",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0036"
     },
     {
         "entities": [],
@@ -91472,7 +91708,8 @@
             "five",
             "occupants",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0037"
     },
     {
         "entities": [],
@@ -91965,7 +92202,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0038"
     },
     {
         "entities": [],
@@ -92349,7 +92587,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0039"
     },
     {
         "entities": [],
@@ -92594,7 +92833,8 @@
             "bank",
             "office",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0040"
     },
     {
         "entities": [],
@@ -93087,7 +93327,8 @@
             "these",
             "criminals",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0041"
     },
     {
         "entities": [],
@@ -93579,7 +93820,8 @@
             "indelible",
             "mark",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0042"
     },
     {
         "entities": [],
@@ -94140,7 +94382,8 @@
             "fmln",
             "general",
             "command"
-        ]
+        ],
+        "id": "TST3-MUC4-0043"
     },
     {
         "entities": [],
@@ -94269,7 +94512,8 @@
             "are",
             "investigating",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0044"
     },
     {
         "entities": [],
@@ -94777,7 +95021,8 @@
             "that",
             "area",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0045"
     },
     {
         "entities": [],
@@ -95185,7 +95430,8 @@
             "involving",
             "mafiosos",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0046"
     },
     {
         "entities": [],
@@ -96073,7 +96319,8 @@
             "international",
             "program",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0047"
     },
     {
         "entities": [],
@@ -96422,7 +96669,8 @@
             "physical",
             "integrity",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0048"
     },
     {
         "entities": [],
@@ -96603,7 +96851,8 @@
             "el",
             "salvador",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0049"
     },
     {
         "entities": [],
@@ -97265,7 +97514,8 @@
             "army",
             "casualties",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0050"
     },
     {
         "entities": [],
@@ -97384,7 +97634,8 @@
             "del",
             "cauca",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0051"
     },
     {
         "entities": [],
@@ -97634,7 +97885,8 @@
             "million",
             "people",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0052"
     },
     {
         "entities": [],
@@ -97903,7 +98155,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0053"
     },
     {
         "entities": [],
@@ -98226,7 +98479,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0054"
     },
     {
         "entities": [],
@@ -99018,7 +99272,8 @@
             "armed",
             "clashes",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0055"
     },
     {
         "entities": [],
@@ -99238,7 +99493,8 @@
             "civilian",
             "casualties",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0056"
     },
     {
         "entities": [],
@@ -99511,7 +99767,8 @@
             "'s",
             "position",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0057"
     },
     {
         "entities": [],
@@ -99753,7 +100010,8 @@
             "zacamil",
             "neighborhood",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0058"
     },
     {
         "entities": [],
@@ -100175,7 +100433,8 @@
             "days",
             "ago",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0059"
     },
     {
         "entities": [],
@@ -100530,7 +100789,8 @@
             "16",
             "nov",
             "1989"
-        ]
+        ],
+        "id": "TST3-MUC4-0060"
     },
     {
         "entities": [],
@@ -100947,7 +101207,8 @@
             "considerable",
             "blow",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0061"
     },
     {
         "entities": [],
@@ -101483,7 +101744,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0062"
     },
     {
         "entities": [],
@@ -102006,7 +102268,8 @@
             "'s",
             "fangs",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0063"
     },
     {
         "entities": [],
@@ -102127,7 +102390,8 @@
             "fmln",
             "communists",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0064"
     },
     {
         "entities": [],
@@ -102437,7 +102701,8 @@
             "manifesto",
             "states",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0065"
     },
     {
         "entities": [],
@@ -102625,7 +102890,8 @@
             "'s",
             "inefficiency",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0066"
     },
     {
         "entities": [],
@@ -103447,7 +103713,8 @@
             "residential",
             "area",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0067"
     },
     {
         "entities": [],
@@ -103888,7 +104155,8 @@
             "force",
             "helicopters",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0068"
     },
     {
         "entities": [],
@@ -104288,7 +104556,8 @@
             "act",
             "accordingly",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0069"
     },
     {
         "entities": [],
@@ -105017,7 +105286,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0070"
     },
     {
         "entities": [],
@@ -105432,7 +105702,8 @@
             "those",
             "areas",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0071"
     },
     {
         "entities": [],
@@ -105879,7 +106150,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0072"
     },
     {
         "entities": [],
@@ -105983,7 +106255,8 @@
             "he",
             "said",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0073"
     },
     {
         "entities": [],
@@ -106365,7 +106638,8 @@
             "armed",
             "forces",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0074"
     },
     {
         "entities": [],
@@ -107067,7 +107341,8 @@
             "diplomatic",
             "matters",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0075"
     },
     {
         "entities": [],
@@ -107612,7 +107887,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0076"
     },
     {
         "entities": [],
@@ -107973,7 +108249,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0077"
     },
     {
         "entities": [],
@@ -108160,7 +108437,8 @@
             "presumed",
             "chileans",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0078"
     },
     {
         "entities": [],
@@ -108692,7 +108970,8 @@
             ")",
             "brigades",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0079"
     },
     {
         "entities": [],
@@ -109194,7 +109473,8 @@
             "had",
             "expired",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0080"
     },
     {
         "entities": [],
@@ -109851,7 +110131,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0081"
     },
     {
         "entities": [],
@@ -110299,7 +110580,8 @@
             "to",
             "bogota",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0082"
     },
     {
         "entities": [],
@@ -110782,7 +111064,8 @@
             "30",
             "january",
             "1990"
-        ]
+        ],
+        "id": "TST3-MUC4-0083"
     },
     {
         "entities": [],
@@ -110989,7 +111272,8 @@
             "property",
             "damage",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0084"
     },
     {
         "entities": [],
@@ -111584,7 +111868,8 @@
             "the",
             "war",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0085"
     },
     {
         "entities": [],
@@ -111998,7 +112283,8 @@
             "jimenez",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST3-MUC4-0086"
     },
     {
         "entities": [],
@@ -112834,7 +113120,8 @@
             "fait",
             "accompli",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0087"
     },
     {
         "entities": [],
@@ -113181,7 +113468,8 @@
             "his",
             "family",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0088"
     },
     {
         "entities": [],
@@ -113939,7 +114227,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0089"
     },
     {
         "entities": [],
@@ -114434,7 +114723,8 @@
             "we",
             "made",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0090"
     },
     {
         "entities": [],
@@ -114963,7 +115253,8 @@
             "and",
             "stability",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0091"
     },
     {
         "entities": [],
@@ -115568,7 +115859,8 @@
             "an",
             "evaluation",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0092"
     },
     {
         "entities": [],
@@ -116270,7 +116562,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST3-MUC4-0093"
     },
     {
         "entities": [],
@@ -116785,7 +117078,8 @@
             "surgical",
             "operation",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0094"
     },
     {
         "entities": [],
@@ -117403,7 +117697,8 @@
             "of",
             "cocaine",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0095"
     },
     {
         "entities": [],
@@ -118024,7 +118319,8 @@
             "pizarro",
             "leongomez",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0096"
     },
     {
         "entities": [],
@@ -118574,7 +118870,8 @@
             "ungo",
             "said",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0097"
     },
     {
         "entities": [],
@@ -119234,7 +119531,8 @@
             "internal",
             "cooperation",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0098"
     },
     {
         "entities": [],
@@ -119541,7 +119839,8 @@
             "el",
             "salvador",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0099"
     },
     {
         "entities": [],
@@ -119749,7 +120048,8 @@
             "7",
             "june",
             "."
-        ]
+        ],
+        "id": "TST3-MUC4-0100"
     },
     {
         "entities": [],
@@ -119933,7 +120233,8 @@
             "this",
             "attack",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0001"
     },
     {
         "entities": [],
@@ -120204,7 +120505,8 @@
             "cabezas",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST4-MUC4-0002"
     },
     {
         "entities": [],
@@ -120394,7 +120696,8 @@
             "ucayali",
             "department",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0003"
     },
     {
         "entities": [],
@@ -120545,7 +120848,8 @@
             "that",
             "request",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0004"
     },
     {
         "entities": [],
@@ -120871,7 +121175,8 @@
             "death",
             "squads",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0005"
     },
     {
         "entities": [],
@@ -121012,7 +121317,8 @@
             "the",
             "town",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0006"
     },
     {
         "entities": [],
@@ -121159,7 +121465,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0007"
     },
     {
         "entities": [],
@@ -121304,7 +121611,8 @@
             "labor",
             "activities",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0008"
     },
     {
         "entities": [],
@@ -121473,7 +121781,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0009"
     },
     {
         "entities": [],
@@ -121530,7 +121839,8 @@
             "neighboring",
             "houses",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0010"
     },
     {
         "entities": [],
@@ -122023,7 +122333,8 @@
             "better",
             "future",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0011"
     },
     {
         "entities": [],
@@ -122170,7 +122481,8 @@
             "$",
             "500,000",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0012"
     },
     {
         "entities": [],
@@ -122427,7 +122739,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0013"
     },
     {
         "entities": [],
@@ -122701,7 +123014,8 @@
             "to",
             "struggle",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0014"
     },
     {
         "entities": [],
@@ -123029,7 +123343,8 @@
             "liberation",
             "group",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0015"
     },
     {
         "entities": [],
@@ -123199,7 +123514,8 @@
             "government",
             "property",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0016"
     },
     {
         "entities": [],
@@ -123440,7 +123756,8 @@
             "the",
             "hideout",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0017"
     },
     {
         "entities": [],
@@ -123731,7 +124048,8 @@
             "duran",
             "said",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0018"
     },
     {
         "entities": [],
@@ -123903,7 +124221,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0019"
     },
     {
         "entities": [],
@@ -124187,7 +124506,8 @@
             "chilean",
             "nation",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0020"
     },
     {
         "entities": [],
@@ -124403,7 +124723,8 @@
             "nine",
             "homes",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0021"
     },
     {
         "entities": [],
@@ -124505,7 +124826,8 @@
             "of",
             "ica",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0022"
     },
     {
         "entities": [],
@@ -125485,7 +125807,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0023"
     },
     {
         "entities": [],
@@ -125777,7 +126100,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0024"
     },
     {
         "entities": [],
@@ -125908,7 +126232,8 @@
             "paz",
             "department",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0025"
     },
     {
         "entities": [],
@@ -126017,7 +126342,8 @@
             "late",
             "1987",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0026"
     },
     {
         "entities": [],
@@ -126337,7 +126663,8 @@
             "terrorist",
             "charges",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0027"
     },
     {
         "entities": [],
@@ -126565,7 +126892,8 @@
             "bomb",
             "attacks",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0028"
     },
     {
         "entities": [],
@@ -126732,7 +127060,8 @@
             "the",
             "site",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0029"
     },
     {
         "entities": [],
@@ -126928,7 +127257,8 @@
             "farias",
             "diaz",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0030"
     },
     {
         "entities": [],
@@ -127495,7 +127825,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0031"
     },
     {
         "entities": [],
@@ -127610,7 +127941,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0032"
     },
     {
         "entities": [],
@@ -127740,7 +128072,8 @@
             "been",
             "raided",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0033"
     },
     {
         "entities": [],
@@ -127962,7 +128295,8 @@
             "of",
             "lima",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0034"
     },
     {
         "entities": [],
@@ -128302,7 +128636,8 @@
             "colony",
             "rejected",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0035"
     },
     {
         "entities": [],
@@ -128394,7 +128729,8 @@
             "police",
             "station",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0036"
     },
     {
         "entities": [],
@@ -128562,7 +128898,8 @@
             "ilobasco",
             "jurisdiction",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0037"
     },
     {
         "entities": [],
@@ -129052,7 +129389,8 @@
             "in",
             "cifuentes",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0038"
     },
     {
         "entities": [],
@@ -129278,7 +129616,8 @@
             "as",
             "mediators",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0039"
     },
     {
         "entities": [],
@@ -129680,7 +130019,8 @@
             "may",
             "go",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0040"
     },
     {
         "entities": [],
@@ -129866,7 +130206,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0041"
     },
     {
         "entities": [],
@@ -130308,7 +130649,8 @@
             "in",
             "may",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0042"
     },
     {
         "entities": [],
@@ -130592,7 +130934,8 @@
             "internal",
             "affairs",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0043"
     },
     {
         "entities": [],
@@ -131164,7 +131507,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0044"
     },
     {
         "entities": [],
@@ -131275,7 +131619,8 @@
             "being",
             "treated",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0045"
     },
     {
         "entities": [],
@@ -131858,7 +132203,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0046"
     },
     {
         "entities": [],
@@ -132332,7 +132678,8 @@
             "were",
             "saved",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0047"
     },
     {
         "entities": [],
@@ -132696,7 +133043,8 @@
             "longer",
             "valid",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0048"
     },
     {
         "entities": [],
@@ -133271,7 +133619,8 @@
             "democratic",
             "process",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0049"
     },
     {
         "entities": [],
@@ -133695,7 +134044,8 @@
             "and",
             "work",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0050"
     },
     {
         "entities": [],
@@ -133838,7 +134188,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0051"
     },
     {
         "entities": [],
@@ -134254,7 +134605,8 @@
             "people",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST4-MUC4-0052"
     },
     {
         "entities": [],
@@ -134706,7 +135058,8 @@
             "the",
             "law",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0053"
     },
     {
         "entities": [],
@@ -134788,7 +135141,8 @@
             "in",
             "damage",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0054"
     },
     {
         "entities": [],
@@ -134843,7 +135197,8 @@
             "of",
             "tarapaca",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0055"
     },
     {
         "entities": [],
@@ -135189,7 +135544,8 @@
             "amparo",
             "slaughter",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0056"
     },
     {
         "entities": [],
@@ -135602,7 +135958,8 @@
             "their",
             "ideology",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0057"
     },
     {
         "entities": [],
@@ -135808,7 +136165,8 @@
             "10",
             "billion",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0058"
     },
     {
         "entities": [],
@@ -135956,7 +136314,8 @@
             "are",
             "repaired",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0059"
     },
     {
         "entities": [],
@@ -136335,7 +136694,8 @@
             "april",
             "1988",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0060"
     },
     {
         "entities": [],
@@ -136563,7 +136923,8 @@
             "30",
             "wounded",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0061"
     },
     {
         "entities": [],
@@ -136708,7 +137069,8 @@
             "near",
             "curico",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0062"
     },
     {
         "entities": [],
@@ -136815,7 +137177,8 @@
             "were",
             "reported",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0063"
     },
     {
         "entities": [],
@@ -137390,7 +137753,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0064"
     },
     {
         "entities": [],
@@ -137644,7 +138008,8 @@
             "of",
             "evidence",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0065"
     },
     {
         "entities": [],
@@ -137706,7 +138071,8 @@
             "been",
             "identified",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0066"
     },
     {
         "entities": [],
@@ -137813,7 +138179,8 @@
             "any",
             "time",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0067"
     },
     {
         "entities": [],
@@ -137912,7 +138279,8 @@
             "from",
             "doradal",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0068"
     },
     {
         "entities": [],
@@ -138622,7 +138990,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0069"
     },
     {
         "entities": [],
@@ -138983,7 +139352,8 @@
             "as",
             "well",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0070"
     },
     {
         "entities": [],
@@ -139388,7 +139758,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0071"
     },
     {
         "entities": [],
@@ -139556,7 +139927,8 @@
             "eln",
             "rebels",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0072"
     },
     {
         "entities": [],
@@ -140389,7 +140761,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0073"
     },
     {
         "entities": [],
@@ -140786,7 +141159,8 @@
             "strengthened",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST4-MUC4-0074"
     },
     {
         "entities": [],
@@ -141323,7 +141697,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0075"
     },
     {
         "entities": [],
@@ -141686,7 +142061,8 @@
             "end",
             "recording",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0076"
     },
     {
         "entities": [],
@@ -142147,7 +142523,8 @@
             "brothers",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST4-MUC4-0077"
     },
     {
         "entities": [],
@@ -142420,7 +142797,8 @@
             "11",
             "transformers",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0078"
     },
     {
         "entities": [],
@@ -142885,7 +143263,8 @@
             ",",
             "villagran",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0079"
     },
     {
         "entities": [],
@@ -143242,7 +143621,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0080"
     },
     {
         "entities": [],
@@ -143380,7 +143760,8 @@
             "no",
             "casualties",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0081"
     },
     {
         "entities": [],
@@ -143618,7 +143999,8 @@
             "policy",
             ".",
             "\""
-        ]
+        ],
+        "id": "TST4-MUC4-0082"
     },
     {
         "entities": [],
@@ -143819,7 +144201,8 @@
             "ministry",
             "secretary",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0083"
     },
     {
         "entities": [],
@@ -144136,7 +144519,8 @@
             "for",
             "peace",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0084"
     },
     {
         "entities": [],
@@ -144402,7 +144786,8 @@
             "in",
             "1980",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0085"
     },
     {
         "entities": [],
@@ -144692,7 +145077,8 @@
             "government",
             "officials",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0086"
     },
     {
         "entities": [],
@@ -144880,7 +145266,8 @@
             "his",
             "life",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0087"
     },
     {
         "entities": [],
@@ -145129,7 +145516,8 @@
             "the",
             "killing",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0088"
     },
     {
         "entities": [],
@@ -145716,7 +146104,8 @@
             "(",
             "continued",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0089"
     },
     {
         "entities": [],
@@ -145912,7 +146301,8 @@
             "pobres",
             ")",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0090"
     },
     {
         "entities": [],
@@ -146105,7 +146495,8 @@
             "serious",
             "injuries",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0091"
     },
     {
         "entities": [],
@@ -146243,7 +146634,8 @@
             "several",
             "wounded",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0092"
     },
     {
         "entities": [],
@@ -146868,7 +147260,8 @@
             "guerrilla",
             "coordinating",
             "board"
-        ]
+        ],
+        "id": "TST4-MUC4-0093"
     },
     {
         "entities": [],
@@ -147519,7 +147912,8 @@
             "were",
             "attacked",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0094"
     },
     {
         "entities": [],
@@ -147698,7 +148092,8 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0095"
     },
     {
         "entities": [],
@@ -147954,7 +148349,8 @@
             "de",
             "janeiro",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0096"
     },
     {
         "entities": [],
@@ -148014,7 +148410,8 @@
             "million",
             "pesos",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0097"
     },
     {
         "entities": [],
@@ -148440,7 +148837,8 @@
             "police",
             "officers",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0098"
     },
     {
         "entities": [],
@@ -148666,7 +149064,8 @@
             "armed",
             "fight",
             "."
-        ]
+        ],
+        "id": "TST4-MUC4-0099"
     },
     {
         "entities": [],
@@ -148749,6 +149148,7 @@
             "passage",
             "omitted",
             ")"
-        ]
+        ],
+        "id": "TST4-MUC4-0100"
     }
 ]

@@ -2,6 +2,7 @@ import ast
 import json
 import os
 import argparse
+from tqdm import tqdm
 from copy import deepcopy
 from matplotlib import pyplot as plt
 
@@ -17,28 +18,37 @@ def to_error_analysis_format_event(triplets, types_mapping):
 
         trig_to_template = {}
         for trig_tup in triplet["model_out"]["triggers"]:
-            incident_type = types_mapping[trig_tup[0]]
-            new_trig_tup = (incident_type, trig_tup[-2], trig_tup[-1])
-            trig_to_template[new_trig_tup] = {
-                "incident_type": incident_type,
-                "PerpInd": [],
-                "PerpOrg": [],
-                "Target": [],
-                "Victim": [],
-                "Weapon": []
-            }
+            try:
+                incident_type = types_mapping[trig_tup[0]]
+                new_trig_tup = (incident_type, trig_tup[-2], trig_tup[-1])
+                trig_to_template[new_trig_tup] = {
+                    "incident_type": incident_type,
+                    "PerpInd": [],
+                    "PerpOrg": [],
+                    "Target": [],
+                    "Victim": [],
+                    "Weapon": []
+                }
+            except KeyError:
+                print("type '{}' not identified".format(trig_tup[0]))
         
+        assert error_analysis["docid"].strip() == triplet["tanl"]["id"].strip()
+        assert triplet["tanl"]["id"].strip() == triplet["model_out"]["id"].strip()
+
         for arg_tup in triplet["model_out"]["args"]:
-            arg_type = types_mapping[arg_tup[0]]
-            arg_span = " ".join(triplet["tanl"]["tokens"][arg_tup[1][0]: arg_tup[1][1]])
-            trigger_tup = (types_mapping[arg_tup[-1][0]],
-                        arg_tup[-1][-2], arg_tup[-1][-1])
-            trig_to_template[trigger_tup][arg_type].append([arg_span])
+            try:
+                arg_type = types_mapping[arg_tup[0]]
+                arg_span = " ".join(triplet["tanl"]["tokens"][arg_tup[1][0]: arg_tup[1][1]])
+                trigger_tup = (types_mapping[arg_tup[-1][0]],
+                            arg_tup[-1][-2], arg_tup[-1][-1])
+                trig_to_template[trigger_tup][arg_type].append([arg_span])
+            except KeyError:
+                print("types '{}' or '{}' not identified".format(arg_tup[0], arg_tup[-1][0]))
         
         for template in trig_to_template.values():
             error_analysis["pred_templates"].append(template)
         
-        outputs[error_analysis["id"]] = error_analysis
+        outputs[error_analysis["docid"]] = error_analysis
     
     return outputs
 
@@ -70,10 +80,10 @@ def add_annotations(examples, tanl_info, gtt_info):
     return [
         {
             "model_out": example,
-            "tanl": tanl_info[example["id"]],
-            "gtt": gtt_info[example["id"]]
+            "tanl": tanl_info[i],
+            "gtt": gtt_info[i]
         }
-        for example in examples
+        for i, example in enumerate(examples)
     ]
 
 
@@ -114,12 +124,12 @@ def handle_buffer_ner(buffers):
 
 def handle_buffer_event(buffers):
     results = []
-    document = {
-        "id": None,
-        "triggers": set(),
-        "args": set()
-    }
     for buffer in buffers:
+        document = {
+            "id": None,
+            "triggers": set(),
+            "args": set()
+        }
         splits = []
         for line in buffer:
             if line.startswith("id"):
@@ -137,13 +147,14 @@ def handle_buffer_event(buffers):
             elif line.startswith("triggers"):
                 # maybe have to check indexing
                 document["triggers"] = document["triggers"].union(
-                    set(ast.literal_eval(line[9:-1])))
+                    set(ast.literal_eval(line[9:])))
 
             else:
                 # maybe have to check indexing
                 document["args"] = document["args"].union(
                     {tuple(item) for item in ast.literal_eval(line[10:])})
 
+        splits.append(document)
         results.append(splits)
 
     return results
@@ -162,7 +173,7 @@ def split_to_multi_section(file):
                     buffers.append(buffer)
                     buffer = []
                     is_writing_eval = False
-                elif line != EVAL_PART:
+                elif line != EVAL_PART and len(line) > 1:
                     buffer.append(line)
 
             else:
@@ -170,8 +181,10 @@ def split_to_multi_section(file):
                     buffers.append(buffer)
                     buffer = []
                     is_writing_eval = True
-                elif line != TEST_PART:
+                elif line != TEST_PART and len(line) > 1:
                     buffer.append(line)
+
+    buffers.append(buffer)
 
     return buffers
 
@@ -215,14 +228,13 @@ def get_error_analysis_input(model_out, tanl_ref, gtt_ref, handle_buffer, to_err
         for split in handle_buffer(buffers):
             if is_eval:
                 triplets = add_annotations(split, tanl_ref, gtt_ref)
-                error_analysis_input = to_error_analysis_format(triplets, types_mapping)
-                all_inputs.append(error_analysis_input)
                 is_eval = False
             else:
                 triplets = add_annotations(split, tanl_ref_2, gtt_ref_2)
-                error_analysis_input = to_error_analysis_format(triplets, types_mapping)
-                all_inputs.append(error_analysis_input)
                 is_eval = True
+            
+            error_analysis_input = to_error_analysis_format(triplets, types_mapping)
+            all_inputs.append(error_analysis_input)
         
         return all_inputs
     else:
@@ -239,7 +251,7 @@ def error_analysis_event(model_out, tanl_ref, gtt_ref, error_analysis, types_map
     if isinstance(out_file, list):
         eval_out, test_out = out_file
         is_eval = True
-        for inputs in error_analysis_inputs:
+        for inputs in tqdm(error_analysis_inputs, desc="Processing train time template errors..."):
             with open("temp.json", "w") as f:
                 f.write(json.dumps(inputs))
             if is_eval:
@@ -250,12 +262,13 @@ def error_analysis_event(model_out, tanl_ref, gtt_ref, error_analysis, types_map
                 is_eval = True
     else:
         with open("temp.json", "w") as f:
-            f.write(json.dumps(inputs[0]))
+            f.write(json.dumps(error_analysis_inputs[0]))
         
         os.system('python3 {} -i "temp.json" -o "{}" --verbose -s all -m "MUC_Errors" -at'.format(error_analysis, out_file))
     
     os.remove("temp.json")
-    os.remove("_.out")
+    if os.path.exists("_.out"):
+        os.remove("_.out")
 
 
 def error_analysis_ner(model_out, tanl_ref, gtt_ref, error_analysis, out_file):
@@ -264,7 +277,7 @@ def error_analysis_ner(model_out, tanl_ref, gtt_ref, error_analysis, out_file):
     if isinstance(out_file, list):
         eval_out, test_out = out_file
         is_eval = True
-        for inputs in error_analysis_inputs:
+        for inputs in tqdm(error_analysis_inputs, desc="Processing train time template errors..."):
             with open("temp.json", "w") as f:
                 f.write(json.dumps(inputs))
             if is_eval:
@@ -275,7 +288,7 @@ def error_analysis_ner(model_out, tanl_ref, gtt_ref, error_analysis, out_file):
                 is_eval = True
     else:
         with open("temp.json", "w") as f:
-            f.write(json.dumps(inputs[0]))
+            f.write(json.dumps(error_analysis_inputs[0]))
         
         os.system('python3 {} --i "temp.json" --o "{}" --relax'.format(error_analysis, out_file))
     
@@ -307,12 +320,13 @@ def plot_training_errors(error_analysis_summary_train, error_analysis_summary_te
     loss_entries = []
     with open(loss_log, "r") as f:
         for i, log in enumerate(json.loads(f.read()), 1):
-            loss_x.append(i * loss_interval)
-            loss_entries.append(log["loss"])
+            if "loss" in log:
+                loss_x.append(i * loss_interval)
+                loss_entries.append(log["loss"])
     
     plt.title("training statistics")
     plt.xlabel("steps")
-    plt.ylabel("statistic")
+    plt.ylabel("amount")
     plt.yscale("log")
     plt.plot(summary_x, f1_entries_train, label = "train f1")
     plt.plot(summary_x, recall_entries_train, label = "train recall")
@@ -323,6 +337,7 @@ def plot_training_errors(error_analysis_summary_train, error_analysis_summary_te
     plt.plot(loss_x, loss_entries, label = "train loss")
     plt.legend()
     plt.savefig(out_file)
+    plt.clf()
 
 def second_phase_training_event(model_out, tanl_ref, gtt_ref):
     pass
@@ -330,44 +345,79 @@ def second_phase_training_event(model_out, tanl_ref, gtt_ref):
 def second_phase_training_ner(model_out, tanl_ref, gtt_ref):
     pass
 
+def run_task(mode, log_name, config, types_mapping=None, id=None, global_config=None):
+    if mode == "event":
+        if log_name in ["train_time_logs", "test_time_logs"]:
+            error_analysis_event(
+                config["raw_outs"],
+                config["tanl_ref"],
+                config["gtt_ref"],
+                config["error_analysis_script"],
+                types_mapping,
+                config["output_file"]
+            )
+        else:
+            error_analysis_summary = global_config["train_time_logs"]["output_file"][id]
+            plot_training_errors(
+                error_analysis_summary[0],
+                error_analysis_summary[1],
+                config["log_file"],
+                config["small_evaluation_interval"],
+                config["loss_collection_interval"],
+                config["output_file"]
+            )
+
+    else:
+        if log_name in ["train_time_logs", "test_time_logs"]:
+            error_analysis_ner(
+                config["raw_outs"],
+                config["tanl_ref"],
+                config["gtt_ref"],
+                config["error_analysis_script"],
+                config["output_file"]
+            )
+        else:
+            error_analysis_summary = global_config["train_time_logs"]["output_file"][id]
+            plot_training_errors(
+                error_analysis_summary[0],
+                error_analysis_summary[1],
+                config["log_file"],
+                config["small_evaluation_interval"],
+                config["loss_collection_interval"],
+                config["output_file"]
+            )
+
+
+def parse_multiple_jobs(job, multi_job_fields):
+    configs = {}
+    config = {k: v for k, v in job.items() if not k in multi_job_fields}
+
+    for job_id in job[multi_job_fields[0]].keys():
+        for field in multi_job_fields:
+            config[field] = job[field][job_id]
+        
+        configs[job_id] = deepcopy(config)
+
+    return configs
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=str, required=True)
-    parser.add_argument("--mode", type=str, required=True)
+    parser.add_argument("--mode", type=str, required=False)
     args = parser.parse_args()
 
     with open(args.config, "r") as f:
-        config = json.loads(f.read())[args.mode]
+        config = json.loads(f.read())
     
-    for log_name in ["test_time_logs", "second_phase_as_test_logs", "train_time_logs"]:
-        if log_name in config and config[log_name]:
-            inner_config = config[log_name]
-            if args.mode != "ner":
-                error_analysis_event(
-                    inner_config["template_errors_test_out"],
-                    inner_config["template_errors_test_tanl_ref"],
-                    inner_config["template_errors_test_gtt_ref"],
-                    inner_config["error_analysis_script"],
-                    config["types_mapping"],
-                    inner_config["template_errors_test_output_file"]
-                )
-            else:
-                error_analysis_ner(
-                    inner_config["template_errors_test_out"],
-                    inner_config["template_errors_test_tanl_ref"],
-                    inner_config["template_errors_test_gtt_ref"],
-                    inner_config["error_analysis_script"],
-                    config["types_mapping"],
-                    inner_config["template_errors_test_output_file"]
-                )
-
-        if log_name == "train_time_logs" and "training_loss" in inner_config and inner_config["training_loss"]:
-            extra_args = inner_config["training_loss"]
-            plot_training_errors(
-                inner_config["template_errors_test_out"][0],
-                inner_config["template_errors_test_out"][1],
-                extra_args["log_file"],
-                extra_args["small_evaluation_interval"],
-                extra_args["loss_collection_interval"],
-                extra_args["output_file"]
-            )
+    multi_tasks = ["focused_cross_entropy_typed", "focused_cross_entropy_notype"]
+    multi_job_fields = {
+        "test_time_logs": ["raw_outs", "output_file"],
+        "train_time_logs": ["raw_outs", "output_file"],
+        "training_errors": ["log_file", "output_file"]
+    }
+    for task in multi_tasks:
+        jobs = config[task]
+        for job in ["training_errors"]:
+            if jobs and job in jobs:
+                for job_id, single_config in parse_multiple_jobs(jobs[job], multi_job_fields[job]).items():
+                    run_task(args.mode, job, single_config, jobs["types_mapping"], job_id, jobs)

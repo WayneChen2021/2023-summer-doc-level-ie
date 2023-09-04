@@ -1,17 +1,17 @@
 {
     "multi_phase": {
         "test_time_logs": {
-            "template_errors_test_out": null,
-            "template_errors_test_tanl_ref": null,
-            "template_errors_test_gtt_ref": null,
-            "template_errors_test_output_file": null,
+            "raw_outs": null,
+            "tanl_ref": null,
+            "gtt_ref": null,
+            "output_file": null,
             "error_analysis_script": null
         },
         "second_phase_as_test_logs": {
-            "template_errors_test_out": null,
-            "template_errors_test_tanl_ref": null,
-            "template_errors_test_gtt_ref": null,
-            "template_errors_test_output_file": null,
+            "raw_outs": null,
+            "tanl_ref": null,
+            "gtt_ref": null,
+            "output_file": null,
             "error_analysis_script": null
         },
         "generate_second_phase_train": {
@@ -22,12 +22,12 @@
             "second_phase_logging_test_num": 10
         },
         "train_time_logs": {
-            "template_errors_train_out": null,
-            "template_errors_train_tanl_ref": [],
+            "raw_outs": null,
+            "tanl_ref": [],
             "template_errors_train_gtt_ref": [],
-            "template_errors_train_output_files": null,
+            "output_file": null,
             "error_analysis_script": null,
-            "training_loss": {
+            "training_errors": {
                 "log_file": null,
                 "loss_collection_interval": 0,
                 "small_evaluation_interval": 0,
@@ -38,94 +38,305 @@
     },
     "verbose_tags": {
         "test_time_logs": {
-            "template_errors_test_out": null,
-            "template_errors_test_tanl_ref": null,
-            "template_errors_test_gtt_ref": null,
-            "template_errors_test_output_file": null,
-            "error_analysis_script": null
+            "raw_outs": {
+                "0": "../experiments/verbose_tags/g2_environments/3_trig/dev_predictions.txt"
+            },
+            "tanl_ref": "../../data/full_eval/tanl_eval.json",
+            "gtt_ref": "../../data/full_eval/gtt_eval.json",
+            "output_file": {
+                "0": "../experiments/verbose_tags/error_analysis_output/3_trig.out"
+            },
+            "error_analysis_script": "Error_Analysis.py"
         },
         "train_time_logs": {
-            "template_errors_train_out": null,
-            "template_errors_train_tanl_ref": [],
-            "template_errors_train_gtt_ref": [],
-            "template_errors_train_output_files": null,
-            "error_analysis_script": null,
-            "training_loss": {
-                "log_file": null,
-                "loss_collection_interval": 0,
-                "small_evaluation_interval": 0,
-                "output_file": null
-            }
+            "raw_outs": {
+                "0": "../experiments/verbose_tags/g2_environments/3_trig/train_predictions.txt"
+            },
+            "tanl_ref": [
+                "../../data/short_files/tanl_train.json",
+                "../../data/short_files/tanl_test.json"
+            ],
+            "gtt_ref": [
+                "../../data/short_files/gtt_train.json",
+                "../../data/short_files/gtt_test.json"
+            ],
+            "output_file": {
+                "0": [
+                    "../experiments/verbose_tags/training_errors/3_trig/train_template_errors.txt",
+                    "../experiments/verbose_tags/training_errors/3_trig/test_template_errors.txt"
+                ]
+            },
+            "error_analysis_script": "Error_Analysis_quick.py"
         },
-        "types_mapping": ""
+        "training_errors": {
+            "log_file": {
+                "0": "../experiments/verbose_tags/g2_environments/3_trig/logs.json"
+            },
+            "output_file": {
+                "0": "../experiments/verbose_tags/training_errors/3_trig/graph.png"
+            },
+            "loss_collection_interval": 100,
+            "small_evaluation_interval": 500
+        },
+        "types_mapping": "types_mapping_verbose.json"
     },
     "multiple_triggers": {
         "test_time_logs": {
-            "template_errors_test_out": null,
-            "template_errors_test_tanl_ref": null,
-            "template_errors_test_gtt_ref": null,
-            "template_errors_test_output_file": null,
-            "error_analysis_script": null
+            "raw_outs": {
+                "0": "../experiments/multiple_triggers/g2_environments/popular_2_trig/dev_predictions.txt",
+                "1": "../experiments/multiple_triggers/g2_environments/popular_3_trig/dev_predictions.txt",
+                "2": "../experiments/multiple_triggers/g2_environments/popular_trig/dev_predictions.txt"
+            },
+            "tanl_ref": "../../data/full_eval/tanl_eval.json",
+            "gtt_ref": "../../data/full_eval/gtt_eval.json",
+            "output_file": {
+                "0": "../experiments/multiple_triggers/error_analysis_output/popular_2_trig.out",
+                "1": "../experiments/multiple_triggers/error_analysis_output/popular_3_trig.out",
+                "2": "../experiments/multiple_triggers/error_analysis_output/popular_trig.out"
+            },
+            "error_analysis_script": "Error_Analysis.py"
         },
         "train_time_logs": {
-            "template_errors_train_out": null,
-            "template_errors_train_tanl_ref": [],
-            "template_errors_train_gtt_ref": [],
-            "template_errors_train_output_files": null,
-            "error_analysis_script": null,
-            "training_loss": {
-                "log_file": null,
-                "loss_collection_interval": 0,
-                "small_evaluation_interval": 0,
-                "output_file": null
-            }
+            "raw_outs": {
+                "0": "../experiments/multiple_triggers/g2_environments/popular_2_trig/train_predictions.txt",
+                "1": "../experiments/multiple_triggers/g2_environments/popular_3_trig/train_predictions.txt",
+                "2": "../experiments/multiple_triggers/g2_environments/popular_trig/train_predictions.txt"
+            },
+            "tanl_ref": [
+                "../../data/short_files/tanl_train.json",
+                "../../data/short_files/tanl_test.json"
+            ],
+            "gtt_ref": [
+                "../../data/short_files/gtt_train.json",
+                "../../data/short_files/gtt_test.json"
+            ],
+            "output_file": {
+                "0": [
+                    "../experiments/multiple_triggers/training_errors/popular_2_trig/train_template_errors.txt",
+                    "../experiments/multiple_triggers/training_errors/popular_2_trig/test_template_errors.txt"
+                ],
+                "1": [
+                    "../experiments/multiple_triggers/training_errors/popular_3_trig/train_template_errors.txt",
+                    "../experiments/multiple_triggers/training_errors/popular_3_trig/test_template_errors.txt"
+                ],
+                "2": [
+                    "../experiments/multiple_triggers/training_errors/popular_trig/train_template_errors.txt",
+                    "../experiments/multiple_triggers/training_errors/popular_trig/test_template_errors.txt"
+                ]
+            },
+            "error_analysis_script": "Error_Analysis_quick.py"
         },
-        "types_mapping": ""
+        "training_errors": {
+            "log_file": {
+                "0": "../experiments/multiple_triggers/g2_environments/popular_2_trig/logs.json",
+                "1": "../experiments/multiple_triggers/g2_environments/popular_3_trig/logs.json",
+                "2": "../experiments/multiple_triggers/g2_environments/popular_trig/logs.json"
+            },
+            "output_file": {
+                "0": "../experiments/multiple_triggers/training_errors/popular_2_trig/graph.png",
+                "1": "../experiments/multiple_triggers/training_errors/popular_3_trig/graph.png",
+                "2": "../experiments/multiple_triggers/training_errors/popular_trig/graph.png"
+            },
+            "loss_collection_interval": 100,
+            "small_evaluation_interval": 500
+        },
+        "types_mapping": "types_mapping_og.json"
     },
     "focused_cross_entropy_typed": {
         "test_time_logs": {
-            "template_errors_test_out": null,
-            "template_errors_test_tanl_ref": null,
-            "template_errors_test_gtt_ref": null,
-            "template_errors_test_output_file": null,
-            "error_analysis_script": null
+            "raw_outs": {
+                "0": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/brackets_and_types/dev_predictions.txt",
+                "1": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/types/dev_predictions.txt",
+                "2": "../experiments/focused_cross_entropy/g2_environments/2_trig/model_outs_and_gold/brackets_and_types/dev_predictions.txt",
+                "3": "../experiments/focused_cross_entropy/g2_environments/2_trig/model_outs_and_gold/types/dev_predictions.txt",
+                "4": "../experiments/focused_cross_entropy/g2_environments/3_trig/gold_only/brackets_and_types/dev_predictions.txt",
+                "5": "../experiments/focused_cross_entropy/g2_environments/3_trig/gold_only/types/dev_predictions.txt",
+                "6": "../experiments/focused_cross_entropy/g2_environments/3_trig/model_outs_and_gold/brackets_and_types/dev_predictions.txt",
+                "7": "../experiments/focused_cross_entropy/g2_environments/3_trig/model_outs_and_gold/types/dev_predictions.txt"
+            },
+            "tanl_ref": "../../data/full_eval/tanl_eval.json",
+            "gtt_ref": "../../data/full_eval/gtt_eval.json",
+            "output_file": {
+                "0": "../experiments/focused_cross_entropy/error_analysis_output/2_trig/gold_only/brackets_and_types.out",
+                "1": "../experiments/focused_cross_entropy/error_analysis_output/2_trig/gold_only/types.out",
+                "2": "../experiments/focused_cross_entropy/error_analysis_output/2_trig/model_outs_and_gold/brackets_and_types.out",
+                "3": "../experiments/focused_cross_entropy/error_analysis_output/2_trig/model_outs_and_gold/types.out",
+                "4": "../experiments/focused_cross_entropy/error_analysis_output/3_trig/gold_only/brackets_and_types.out",
+                "5": "../experiments/focused_cross_entropy/error_analysis_output/3_trig/gold_only/types.out",
+                "6": "../experiments/focused_cross_entropy/error_analysis_output/3_trig/model_outs_and_gold/brackets_and_types.out",
+                "7": "../experiments/focused_cross_entropy/error_analysis_output/3_trig/model_outs_and_gold/types.out"
+            },
+            "error_analysis_script": "Error_Analysis.py"
         },
         "train_time_logs": {
-            "template_errors_train_out": null,
-            "template_errors_train_tanl_ref": [],
-            "template_errors_train_gtt_ref": [],
-            "template_errors_train_output_files": null,
-            "error_analysis_script": null,
-            "training_loss": {
-                "log_file": null,
-                "loss_collection_interval": 0,
-                "small_evaluation_interval": 0,
-                "output_file": null
-            }
+            "raw_outs": {
+                "0": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/brackets_and_types/train_predictions.txt",
+                "1": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/types/train_predictions.txt",
+                "2": "../experiments/focused_cross_entropy/g2_environments/2_trig/model_outs_and_gold/brackets_and_types/train_predictions.txt",
+                "3": "../experiments/focused_cross_entropy/g2_environments/2_trig/model_outs_and_gold/types/train_predictions.txt",
+                "4": "../experiments/focused_cross_entropy/g2_environments/3_trig/gold_only/brackets_and_types/train_predictions.txt",
+                "5": "../experiments/focused_cross_entropy/g2_environments/3_trig/gold_only/types/train_predictions.txt",
+                "6": "../experiments/focused_cross_entropy/g2_environments/3_trig/model_outs_and_gold/brackets_and_types/train_predictions.txt",
+                "7": "../experiments/focused_cross_entropy/g2_environments/3_trig/model_outs_and_gold/types/train_predictions.txt"
+            },
+            "tanl_ref": [
+                "../../data/short_files/tanl_train.json",
+                "../../data/short_files/tanl_test.json"
+            ],
+            "gtt_ref": [
+                "../../data/short_files/gtt_train.json",
+                "../../data/short_files/gtt_test.json"
+            ],
+            "output_file": {
+                "0": [
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/gold_only/brackets_and_types/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/gold_only/brackets_and_types/test_template_errors.txt"
+                ],
+                "1": [
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/gold_only/types/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/gold_only/types/test_template_errors.txt"
+                ],
+                "2": [
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/model_outs_and_gold/brackets_and_types/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/model_outs_and_gold/brackets_and_types/test_template_errors.txt"
+                ],
+                "3": [
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/model_outs_and_gold/types/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/model_outs_and_gold/types/test_template_errors.txt"
+                ],
+                "4": [
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/gold_only/brackets_and_types/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/gold_only/brackets_and_types/test_template_errors.txt"
+                ],
+                "5": [
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/gold_only/types/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/gold_only/types/test_template_errors.txt"
+                ],
+                "6": [
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/model_outs_and_gold/brackets_and_types/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/model_outs_and_gold/brackets_and_types/test_template_errors.txt"
+                ],
+                "7": [
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/model_outs_and_gold/types/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/model_outs_and_gold/types/test_template_errors.txt"
+                ]
+            },
+            "error_analysis_script": "Error_Analysis_quick.py"
         },
-        "types_mapping": ""
+        "training_errors": {
+            "log_file": {
+                "0": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/brackets_and_types/logs.json",
+                "1": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/types/logs.json",
+                "2": "../experiments/focused_cross_entropy/g2_environments/2_trig/model_outs_and_gold/brackets_and_types/logs.json",
+                "3": "../experiments/focused_cross_entropy/g2_environments/2_trig/model_outs_and_gold/types/logs.json",
+                "4": "../experiments/focused_cross_entropy/g2_environments/3_trig/gold_only/brackets_and_types/logs.json",
+                "5": "../experiments/focused_cross_entropy/g2_environments/3_trig/gold_only/types/logs.json",
+                "6": "../experiments/focused_cross_entropy/g2_environments/3_trig/model_outs_and_gold/brackets_and_types/logs.json",
+                "7": "../experiments/focused_cross_entropy/g2_environments/3_trig/model_outs_and_gold/types/logs.json"
+            },
+            "output_file": {
+                "0": "../experiments/focused_cross_entropy/training_errors/2_trig/gold_only/brackets_and_types/graph.png",
+                "1": "../experiments/focused_cross_entropy/training_errors/2_trig/gold_only/types/graph.png",
+                "2": "../experiments/focused_cross_entropy/training_errors/2_trig/model_outs_and_gold/brackets_and_types/graph.png",
+                "3": "../experiments/focused_cross_entropy/training_errors/2_trig/model_outs_and_gold/types/graph.png",
+                "4": "../experiments/focused_cross_entropy/training_errors/3_trig/gold_only/brackets_and_types/graph.png",
+                "5": "../experiments/focused_cross_entropy/training_errors/3_trig/gold_only/types/graph.png",
+                "6": "../experiments/focused_cross_entropy/training_errors/3_trig/model_outs_and_gold/brackets_and_types/graph.png",
+                "7": "../experiments/focused_cross_entropy/training_errors/3_trig/model_outs_and_gold/types/graph.png"
+            },
+            "loss_collection_interval": 100,
+            "small_evaluation_interval": 500
+        },
+        "types_mapping": "types_mapping_typed.json"
     },
     "focused_cross_entropy_notype": {
         "test_time_logs": {
-            "template_errors_test_out": null,
-            "template_errors_test_tanl_ref": null,
-            "template_errors_test_gtt_ref": null,
-            "template_errors_test_output_file": null,
-            "error_analysis_script": null
+            "raw_outs": {
+                "4": "../experiments/focused_cross_entropy/g2_environments/2_trig/negative_loss/weight_1/dev_predictions.txt",
+                "5": "../experiments/focused_cross_entropy/g2_environments/2_trig/negative_loss/weight_01/dev_predictions.txt",
+                "6": "../experiments/focused_cross_entropy/g2_environments/3_trig/negative_loss/weight_1/dev_predictions.txt"
+            },
+            "tanl_ref": "../../data/full_eval/tanl_eval.json",
+            "gtt_ref": "../../data/full_eval/gtt_eval.json",
+            "output_file": {
+                "4": "../experiments/focused_cross_entropy/error_analysis_output/2_trig/negative_loss/weight_1.out",
+                "5": "../experiments/focused_cross_entropy/error_analysis_output/2_trig/negative_loss/weight_01.out",
+                "6": "../experiments/focused_cross_entropy/error_analysis_output/3_trig/negative_loss/weight_1.out"
+            },
+            "error_analysis_script": "Error_Analysis.py"
         },
         "train_time_logs": {
-            "template_errors_train_out": null,
-            "template_errors_train_tanl_ref": [],
-            "template_errors_train_gtt_ref": [],
-            "template_errors_train_output_files": null,
-            "error_analysis_script": null,
-            "training_loss": {
-                "log_file": null,
-                "loss_collection_interval": 0,
-                "small_evaluation_interval": 0,
-                "output_file": null
-            }
+            "raw_outs": {
+                "0": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/brackets/train_predictions.txt",
+                "1": "../experiments/focused_cross_entropy/g2_environments/2_trig/model_outs_and_gold/brackets/train_predictions.txt",
+                "2": "../experiments/focused_cross_entropy/g2_environments/2_trig/negative_loss/weight_1/train_predictions.txt",
+                "3": "../experiments/focused_cross_entropy/g2_environments/2_trig/negative_loss/weight_01/train_predictions.txt",
+                "4": "../experiments/focused_cross_entropy/g2_environments/3_trig/gold_only/brackets/train_predictions.txt",
+                "5": "../experiments/focused_cross_entropy/g2_environments/3_trig/model_outs_and_gold/brackets/train_predictions.txt",
+                "6": "../experiments/focused_cross_entropy/g2_environments/3_trig/negative_loss/weight_1/train_predictions.txt"
+            },
+            "tanl_ref": [
+                "../../data/short_files/tanl_train.json",
+                "../../data/short_files/tanl_test.json"
+            ],
+            "gtt_ref": [
+                "../../data/short_files/gtt_train.json",
+                "../../data/short_files/gtt_test.json"
+            ],
+            "output_file": {
+                "0": [
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/gold_only/brackets/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/gold_only/brackets/test_template_errors.txt"
+                ],
+                "1": [
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/model_outs_and_gold/brackets/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/model_outs_and_gold/brackets/test_template_errors.txt"
+                ],
+                "2": [
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/negative_loss/weight_1/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/negative_loss/weight_1/test_template_errors.txt"
+                ],
+                "3": [
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/negative_loss/weight_01/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/2_trig/negative_loss/weight_01/test_template_errors.txt"
+                ],
+                "4": [
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/gold_only/brackets/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/gold_only/brackets/test_template_errors.txt"
+                ],
+                "5": [
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/model_outs_and_gold/brackets/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/model_outs_and_gold/brackets/test_template_errors.txt"
+                ],
+                "6": [
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/negative_loss/weight_1/train_template_errors.txt",
+                    "../experiments/focused_cross_entropy/training_errors/3_trig/negative_loss/weight_1/test_template_errors.txt"
+                ]
+            },
+            "error_analysis_script": "Error_Analysis_quick.py"
         },
-        "types_mapping": ""
+        "training_errors": {
+            "log_file": {
+                "0": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/brackets/logs.json",
+                "1": "../experiments/focused_cross_entropy/g2_environments/2_trig/model_outs_and_gold/brackets/logs.json",
+                "2": "../experiments/focused_cross_entropy/g2_environments/2_trig/negative_loss/weight_1/logs.json",
+                "3": "../experiments/focused_cross_entropy/g2_environments/2_trig/negative_loss/weight_01/logs.json",
+                "4": "../experiments/focused_cross_entropy/g2_environments/3_trig/gold_only/brackets/logs.json",
+                "5": "../experiments/focused_cross_entropy/g2_environments/3_trig/model_outs_and_gold/brackets/logs.json",
+                "6": "../experiments/focused_cross_entropy/g2_environments/3_trig/negative_loss/weight_1/logs.json"
+            },
+            "output_file": {
+                "0": "../experiments/focused_cross_entropy/training_errors/2_trig/gold_only/brackets/graph.png",
+                "1": "../experiments/focused_cross_entropy/training_errors/2_trig/model_outs_and_gold/brackets/graph.png",
+                "2": "../experiments/focused_cross_entropy/training_errors/2_trig/negative_loss/weight_1/graph.png",
+                "3": "../experiments/focused_cross_entropy/training_errors/2_trig/negative_loss/weight_01/graph.png",
+                "4": "../experiments/focused_cross_entropy/training_errors/3_trig/gold_only/brackets/graph.png",
+                "5": "../experiments/focused_cross_entropy/training_errors/3_trig/model_outs_and_gold/brackets/graph.png",
+                "6": "../experiments/focused_cross_entropy/training_errors/3_trig/negative_loss/weight_1/graph.png"
+            },
+            "loss_collection_interval": 100,
+            "small_evaluation_interval": 500
+        },
+        "types_mapping": "types_mapping_verbose.json"
     }
 }
