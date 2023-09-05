@@ -38,6 +38,7 @@
     },
     "verbose_tags": {
         "test_time_logs": {
+            "run": false,
             "raw_outs": {
                 "0": "../experiments/verbose_tags/g2_environments/3_trig/dev_predictions.txt"
             },
@@ -49,6 +50,7 @@
             "error_analysis_script": "Error_Analysis.py"
         },
         "train_time_logs": {
+            "run": false,
             "raw_outs": {
                 "0": "../experiments/verbose_tags/g2_environments/3_trig/train_predictions.txt"
             },
@@ -69,6 +71,7 @@
             "error_analysis_script": "Error_Analysis_quick.py"
         },
         "training_errors": {
+            "run": false,
             "log_file": {
                 "0": "../experiments/verbose_tags/g2_environments/3_trig/logs.json"
             },
@@ -78,10 +81,12 @@
             "loss_collection_interval": 100,
             "small_evaluation_interval": 500
         },
-        "types_mapping": "types_mapping_verbose.json"
+        "types_mapping": "types_mapping_verbose.json",
+        "mode": "event"
     },
     "multiple_triggers": {
         "test_time_logs": {
+            "run": false,
             "raw_outs": {
                 "0": "../experiments/multiple_triggers/g2_environments/popular_2_trig/dev_predictions.txt",
                 "1": "../experiments/multiple_triggers/g2_environments/popular_3_trig/dev_predictions.txt",
@@ -97,6 +102,7 @@
             "error_analysis_script": "Error_Analysis.py"
         },
         "train_time_logs": {
+            "run": false,
             "raw_outs": {
                 "0": "../experiments/multiple_triggers/g2_environments/popular_2_trig/train_predictions.txt",
                 "1": "../experiments/multiple_triggers/g2_environments/popular_3_trig/train_predictions.txt",
@@ -127,6 +133,7 @@
             "error_analysis_script": "Error_Analysis_quick.py"
         },
         "training_errors": {
+            "run": false,
             "log_file": {
                 "0": "../experiments/multiple_triggers/g2_environments/popular_2_trig/logs.json",
                 "1": "../experiments/multiple_triggers/g2_environments/popular_3_trig/logs.json",
@@ -140,10 +147,12 @@
             "loss_collection_interval": 100,
             "small_evaluation_interval": 500
         },
-        "types_mapping": "types_mapping_og.json"
+        "types_mapping": "types_mapping_og.json",
+        "mode": "event"
     },
     "focused_cross_entropy_typed": {
         "test_time_logs": {
+            "run": false,
             "raw_outs": {
                 "0": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/brackets_and_types/dev_predictions.txt",
                 "1": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/types/dev_predictions.txt",
@@ -169,6 +178,7 @@
             "error_analysis_script": "Error_Analysis.py"
         },
         "train_time_logs": {
+            "run": false,
             "raw_outs": {
                 "0": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/brackets_and_types/train_predictions.txt",
                 "1": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/types/train_predictions.txt",
@@ -224,6 +234,7 @@
             "error_analysis_script": "Error_Analysis_quick.py"
         },
         "training_errors": {
+            "run": false,
             "log_file": {
                 "0": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/brackets_and_types/logs.json",
                 "1": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/types/logs.json",
@@ -247,10 +258,12 @@
             "loss_collection_interval": 100,
             "small_evaluation_interval": 500
         },
-        "types_mapping": "types_mapping_typed.json"
+        "types_mapping": "types_mapping_typed.json",
+        "mode": "event"
     },
     "focused_cross_entropy_notype": {
         "test_time_logs": {
+            "run": false,
             "raw_outs": {
                 "4": "../experiments/focused_cross_entropy/g2_environments/2_trig/negative_loss/weight_1/dev_predictions.txt",
                 "5": "../experiments/focused_cross_entropy/g2_environments/2_trig/negative_loss/weight_01/dev_predictions.txt",
@@ -266,6 +279,7 @@
             "error_analysis_script": "Error_Analysis.py"
         },
         "train_time_logs": {
+            "run": false,
             "raw_outs": {
                 "0": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/brackets/train_predictions.txt",
                 "1": "../experiments/focused_cross_entropy/g2_environments/2_trig/model_outs_and_gold/brackets/train_predictions.txt",
@@ -316,6 +330,7 @@
             "error_analysis_script": "Error_Analysis_quick.py"
         },
         "training_errors": {
+            "run": false,
             "log_file": {
                 "0": "../experiments/focused_cross_entropy/g2_environments/2_trig/gold_only/brackets/logs.json",
                 "1": "../experiments/focused_cross_entropy/g2_environments/2_trig/model_outs_and_gold/brackets/logs.json",
@@ -337,6 +352,7 @@
             "loss_collection_interval": 100,
             "small_evaluation_interval": 500
         },
-        "types_mapping": "types_mapping_verbose.json"
+        "types_mapping": "types_mapping_verbose.json",
+        "mode": "event"
     }
 }

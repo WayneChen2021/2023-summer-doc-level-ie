@@ -403,21 +403,37 @@ def parse_multiple_jobs(job, multi_job_fields):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", type=str, required=True)
-    parser.add_argument("--mode", type=str, required=False)
     args = parser.parse_args()
 
     with open(args.config, "r") as f:
         config = json.loads(f.read())
     
-    multi_tasks = ["focused_cross_entropy_typed", "focused_cross_entropy_notype"]
+    multi_tasks = ["multi_phase", "verbose_tags", "multiple_triggers", "focused_cross_entropy_typed", "focused_cross_entropy_notype"]
     multi_job_fields = {
-        "test_time_logs": ["raw_outs", "output_file"],
-        "train_time_logs": ["raw_outs", "output_file"],
-        "training_errors": ["log_file", "output_file"]
+        "verbose_tags": {
+            "test_time_logs": ["raw_outs", "output_file"],
+            "train_time_logs": ["raw_outs", "output_file"],
+            "training_errors": ["log_file", "output_file"]
+        },
+        "multiple_triggers": {
+            "test_time_logs": ["raw_outs", "output_file"],
+            "train_time_logs": ["raw_outs", "output_file"],
+            "training_errors": ["log_file", "output_file"]
+        },
+        "focused_cross_entropy_typed": {
+            "test_time_logs": ["raw_outs", "output_file"],
+            "train_time_logs": ["raw_outs", "output_file"],
+            "training_errors": ["log_file", "output_file"]
+        },
+        "focused_cross_entropy_notype": {
+            "test_time_logs": ["raw_outs", "output_file"],
+            "train_time_logs": ["raw_outs", "output_file"],
+            "training_errors": ["log_file", "output_file"]
+        }
     }
-    for task in multi_tasks:
-        jobs = config[task]
-        for job in ["training_errors"]:
-            if jobs and job in jobs:
-                for job_id, single_config in parse_multiple_jobs(jobs[job], multi_job_fields[job]).items():
-                    run_task(args.mode, job, single_config, jobs["types_mapping"], job_id, jobs)
+    for job_category in multi_tasks:
+        jobs = config[job_category]
+        for job_name in ["test_time_logs", "train_time_logs", "training_errors"]:
+            if jobs and job_name in jobs and jobs[job_name]["run"]:
+                for job_id, single_config in parse_multiple_jobs(jobs[job_name], multi_job_fields[job_category][job_name]).items():
+                    run_task(jobs["mode"], job_name, single_config, jobs["types_mapping"], job_id, jobs)
