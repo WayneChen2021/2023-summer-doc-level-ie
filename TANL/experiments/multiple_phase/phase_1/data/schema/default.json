@@ -1,0 +1,44 @@
+{
+    "trigger for kidnapping event": [
+        "perpetrating individual argument for kidnapping event",
+        "perpetrating organization argument for kidnapping event",
+        "target argument for kidnapping event",
+        "victim argument for kidnapping event",
+        "weapon argument for kidnapping event"
+    ],
+    "trigger for attack event": [
+        "perpetrating individual argument for attack event",
+        "perpetrating organization argument for attack event",
+        "target argument for attack event",
+        "victim argument for attack event",
+        "weapon argument for attack event"
+    ],
+    "trigger for bombing event": [
+        "perpetrating individual argument for bombing event",
+        "perpetrating organization argument for bombing event",
+        "target argument for bombing event",
+        "victim argument for bombing event",
+        "weapon argument for bombing event"
+    ],
+    "trigger for robbery event": [
+        "perpetrating individual argument for robbery event",
+        "perpetrating organization argument for robbery event",
+        "target argument for robbery event",
+        "victim argument for robbery event",
+        "weapon argument for robbery event"
+    ],
+    "trigger for arson event": [
+        "perpetrating individual argument for arson event",
+        "perpetrating organization argument for arson event",
+        "target argument for arson event",
+        "victim argument for arson event",
+        "weapon argument for arson event"
+    ],
+    "trigger for forced work stoppage event": [
+        "perpetrating individual argument for forced work stoppage event",
+        "perpetrating organization argument for forced work stoppage event",
+        "target argument for forced work stoppage event",
+        "victim argument for forced work stoppage event",
+        "weapon argument for forced work stoppage event"
+    ]
+}

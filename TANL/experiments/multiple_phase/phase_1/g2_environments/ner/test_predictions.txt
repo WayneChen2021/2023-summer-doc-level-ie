@@ -1,0 +1,342 @@
+id DEV-MUC3-0300 
+arguments [('event argument', 17, 20), ('trigger', 35, 36)]
+id DEV-MUC3-0301 
+arguments [('event argument', 147, 150), ('trigger', 199, 202), ('event argument', 203, 206)]
+id DEV-MUC3-0302 
+arguments [('event argument', 25, 27), ('trigger', 79, 80), ('trigger', 122, 123)]
+id DEV-MUC3-0303 
+arguments [('trigger', 39, 40), ('event argument', 160, 163), ('trigger', 209, 210), ('event argument', 211, 212), ('event argument', 213, 216), ('event argument', 217, 220)]
+id DEV-MUC3-0304 
+arguments [('trigger', 14, 16)]
+id DEV-MUC3-0305
+arguments [('event argument', 152, 154), ('event argument', 156, 157), ('event argument', 160, 163)]
+id DEV-MUC3-0306 
+arguments [('event argument', 18, 23), ('event argument', 36, 39), ('event argument', 54, 55), ('event argument', 56, 57), ('trigger', 70, 71)]
+id DEV-MUC3-0310 
+arguments [('event argument', 35, 37), ('event argument', 39, 40), ('trigger', 37, 40), ('event argument', 44, 48), ('event argument', 76, 78)]
+id DEV-MUC3-0315 
+arguments [('event argument', 16, 22), ('event argument', 23, 24), ('event argument', 30, 31), ('event argument', 35, 36), ('event argument', 39, 41), ('trigger', 53, 54), ('event argument', 83, 84), ('trigger', 129, 130), ('event argument', 138, 140)]
+id DEV-MUC3-0316 
+arguments [('event argument', 28, 32), ('trigger', 35, 37), ('event argument', 100, 103)]
+id DEV-MUC3-0317 
+arguments [('event argument', 22, 24), ('trigger', 69, 70), ('event argument', 123, 125)]
+id DEV-MUC3-0318 
+arguments [('event argument', 29, 33), ('event argument', 34, 35), ('event argument', 41, 42), ('trigger', 77, 78), ('event argument', 126, 130)]
+id DEV-MUC3-0319 
+arguments [('event argument', 32, 34), ('event argument', 35, 37), ('event argument', 68, 71), ('trigger', 80, 81), ('event argument', 127, 129), ('trigger', 239, 240)]
+id DEV-MUC3-0320 
+arguments [('event argument', 16, 19), ('trigger', 25, 26), ('event argument', 28, 31)]
+id DEV-MUC3-0321 
+arguments [('event argument', 35, 36), ('event argument', 45, 46), ('trigger', 46, 47), ('event argument', 48, 50), ('event argument', 54, 55), ('event argument', 56, 57), ('event argument', 140, 142), ('trigger', 146, 147)]
+id DEV-MUC3-0322 
+arguments [('trigger', 36, 38), ('event argument', 95, 96), ('event argument', 100, 105), ('event argument', 144, 146), ('trigger', 320, 322)]
+id DEV-MUC3-0323 
+arguments [('event argument', 94, 96), ('trigger', 97, 98), ('event argument', 113, 115), ('event argument', 118, 120)]
+id DEV-MUC3-0324 
+arguments [('trigger', 34, 36), ('event argument', 48, 50), ('event argument', 58, 60), ('event argument', 98, 102)]
+id DEV-MUC3-0325 
+arguments [('event argument', 77, 81), ('trigger', 140, 141)]
+id DEV-MUC3-0326 
+arguments [('event argument', 19, 21), ('trigger', 44, 45), ('event argument', 46, 48), ('event argument', 89, 91), ('event argument', 104, 107)]
+id DEV-MUC3-0328 
+arguments [('trigger', 144, 145), ('event argument', 162, 165), ('event argument', 173, 174)]
+id DEV-MUC3-0334 
+arguments [('trigger', 18, 19), ('event argument', 40, 42), ('event argument', 61, 62), ('event argument', 83, 85)]
+id DEV-MUC3-0337 
+arguments [('trigger', 59, 62), ('event argument', 73, 75)]
+id DEV-MUC3-0338 
+arguments [('event argument', 27, 28), ('event argument', 71, 72), ('event argument', 182, 183)]
+id DEV-MUC3-0340 
+arguments [('trigger', 13, 15), ('event argument', 30, 33), ('event argument', 41, 43), ('event argument', 46, 47), ('event argument', 52, 53), ('event argument', 105, 112), ('event argument', 117, 120), ('event argument', 122, 124), ('event argument', 131, 132), ('event argument', 181, 183), ('event argument', 201, 202), ('trigger', 206, 207)]
+id DEV-MUC3-0342 
+arguments [('trigger', 41, 44), ('trigger', 181, 182), ('event argument', 273, 275)]
+id DEV-MUC3-0345 
+arguments [('event argument', 28, 32), ('trigger', 48, 49), ('event argument', 61, 64), ('event argument', 139, 141)]
+id DEV-MUC3-0346 
+arguments [('event argument', 16, 19), ('trigger', 23, 24), ('event argument', 29, 31), ('event argument', 109, 111), ('event argument', 119, 122), ('event argument', 149, 151)]
+id DEV-MUC3-0347 
+arguments [('trigger', 30, 31), ('event argument', 34, 36), ('event argument', 282, 284)]
+id DEV-MUC3-0348 
+arguments [('event argument', 20, 23), ('event argument', 34, 35), ('trigger', 35, 36), ('event argument', 117, 118)]
+id DEV-MUC3-0349 
+arguments [('event argument', 31, 32), ('trigger', 89, 90), ('event argument', 182, 185)]
+id DEV-MUC3-0350 
+arguments [('event argument', 84, 87), ('trigger', 99, 100), ('trigger', 139, 140)]
+id DEV-MUC3-0351 
+arguments [('event argument', 13, 16), ('trigger', 23, 24)]
+id DEV-MUC3-0352 
+arguments [('event argument', 19, 22), ('trigger', 28, 29), ('event argument', 47, 50)]
+id DEV-MUC3-0354 
+arguments [('event argument', 76, 79), ('trigger', 84, 85)]
+id DEV-MUC3-0355 
+arguments [('event argument', 13, 15), ('event argument', 57, 59), ('trigger', 179, 180)]
+id DEV-MUC3-0357 
+arguments [('trigger', 76, 77), ('event argument', 81, 84)]
+id DEV-MUC3-0358 
+arguments [('event argument', 20, 23), ('trigger', 34, 35)]
+id DEV-MUC3-0361 
+arguments [('event argument', 23, 25), ('trigger', 34, 35), ('event argument', 58, 60)]
+id DEV-MUC3-0362 
+arguments [('trigger', 119, 120), ('event argument', 132, 135)]
+id DEV-MUC3-0363 
+arguments [('trigger', 84, 87), ('event argument', 114, 116)]
+id DEV-MUC3-0365 
+arguments [('event argument', 46, 48), ('trigger', 50, 51), ('event argument', 54, 58), ('event argument', 65, 68), ('event argument', 69, 72), ('event argument', 73, 77)]
+id DEV-MUC3-0366 
+arguments [('trigger', 48, 49), ('event argument', 56, 57), ('event argument', 247, 248), ('event argument', 255, 256)]
+id DEV-MUC3-0367 
+arguments [('event argument', 72, 75), ('trigger', 148, 149)]
+id DEV-MUC3-0369 
+arguments [('trigger', 22, 23)]
+id DEV-MUC3-0370 
+arguments [('trigger', 117, 118)]
+id DEV-MUC3-0371 
+arguments [('event argument', 32, 34), ('event argument', 61, 62), ('event argument', 148, 149), ('trigger', 180, 181)]
+id DEV-MUC3-0372 
+arguments [('event argument', 20, 21), ('event argument', 43, 46), ('event argument', 49, 51), ('trigger', 71, 72), ('event argument', 73, 77), ('event argument', 80, 86), ('event argument', 97, 101), ('event argument', 107, 114), ('event argument', 133, 136), ('event argument', 140, 143), ('event argument', 160, 161)]
+id DEV-MUC3-0373 
+arguments [('event argument', 15, 18), ('event argument', 23, 27), ('event argument', 31, 32), ('event argument', 57, 61), ('trigger', 82, 85), ('event argument', 127, 129), ('event argument', 134, 136), ('event argument', 137, 139)]
+id DEV-MUC3-0374 
+arguments [('event argument', 22, 25), ('trigger', 26, 27)]
+id DEV-MUC3-0376 
+arguments [('event argument', 13, 16), ('trigger', 63, 65), ('event argument', 67, 71)]
+id DEV-MUC3-0379 
+arguments [('event argument', 25, 27), ('trigger', 66, 67), ('event argument', 141, 142), ('event argument', 186, 187), ('event argument', 212, 215), ('event argument', 217, 219), ('event argument', 228, 232), ('event argument', 236, 238)]
+id DEV-MUC3-0380 
+arguments [('trigger', 48, 49)]
+id DEV-MUC3-0381 
+arguments [('event argument', 47, 50), ('trigger', 127, 128), ('trigger', 138, 139)]
+id DEV-MUC3-0382 
+arguments [('event argument', 18, 20), ('trigger', 102, 105)]
+id DEV-MUC3-0383 
+arguments [('event argument', 25, 28), ('trigger', 30, 31), ('event argument', 33, 35), ('event argument', 69, 71), ('event argument', 128, 129), ('event argument', 135, 138)]
+id DEV-MUC3-0384 
+arguments [('trigger', 90, 91), ('trigger', 351, 352)]
+id DEV-MUC3-0385 
+arguments [('trigger', 255, 257)]
+id DEV-MUC3-0386 
+arguments [('trigger', 14, 15), ('event argument', 136, 138), ('event argument', 218, 220), ('event argument', 245, 249)]
+id DEV-MUC3-0387 
+arguments [('trigger', 81, 82)]
+id DEV-MUC3-0388 
+arguments [('event argument', 32, 33), ('trigger', 59, 60), ('event argument', 197, 199)]
+id DEV-MUC3-0389 
+arguments [('event argument', 32, 34), ('event argument', 36, 38), ('event argument', 45, 47), ('event argument', 57, 58), ('event argument', 60, 61), ('event argument', 78, 82), ('trigger', 102, 103), ('event argument', 108, 111), ('event argument', 112, 115), ('event argument', 116, 118), ('event argument', 120, 122)]
+id DEV-MUC3-0391 
+arguments [('event argument', 40, 43), ('event argument', 261, 263), ('event argument', 264, 266), ('event argument', 276, 279), ('event argument', 282, 283)]
+id DEV-MUC3-0392 
+arguments [('event argument', 14, 16), ('event argument', 210, 213)]
+id DEV-MUC3-0393 
+arguments [('trigger', 277, 278), ('event argument', 330, 333), ('event argument', 338, 341)]
+id DEV-MUC3-0395 
+arguments [('event argument', 12, 14), ('event argument', 28, 31), ('event argument', 50, 53), ('trigger', 141, 142), ('event argument', 162, 163), ('trigger', 190, 191)]
+id DEV-MUC3-0396 
+arguments [('event argument', 88, 89), ('trigger', 208, 210), ('event argument', 282, 284)]
+id DEV-MUC3-0397 
+arguments [('trigger', 27, 28), ('event argument', 30, 31), ('trigger', 287, 288)]
+id DEV-MUC3-0398 
+arguments [('event argument', 31, 34), ('trigger', 35, 36)]
+id DEV-MUC3-0399 
+arguments [('trigger', 27, 28), ('event argument', 199, 202)]
+id DEV-MUC3-0400 
+arguments [('trigger', 35, 36), ('trigger', 92, 93), ('event argument', 94, 95)]
+id DEV-MUC3-0401 
+arguments [('event argument', 42, 43), ('event argument', 44, 46), ('trigger', 48, 49), ('event argument', 64, 67)]
+id DEV-MUC3-0402 
+arguments [('trigger', 30, 31), ('event argument', 64, 67), ('trigger', 78, 80)]
+id DEV-MUC3-0403 
+arguments [('event argument', 16, 20), ('event argument', 23, 25), ('event argument', 27, 29), ('trigger', 56, 57), ('event argument', 63, 68)]
+id DEV-MUC3-0404 
+arguments [('event argument', 67, 69), ('trigger', 93, 94)]
+id DEV-MUC3-0405 
+arguments [('event argument', 19, 20), ('event argument', 32, 35), ('event argument', 36, 38), ('event argument', 39, 42), ('event argument', 95, 98), ('event argument', 109, 113), ('event argument', 117, 121)]
+id DEV-MUC3-0406 
+arguments [('trigger', 66, 67), ('event argument', 75, 79)]
+id DEV-MUC3-0407 
+arguments [('event argument', 38, 41), ('event argument', 62, 63), ('trigger', 73, 74), ('event argument', 76, 79), ('event argument', 104, 105), ('event argument', 132, 133), ('event argument', 147, 149)]
+id DEV-MUC3-0410 
+arguments [('trigger', 17, 18), ('event argument', 36, 37), ('event argument', 42, 45), ('event argument', 83, 85)]
+id DEV-MUC3-0411 
+arguments [('trigger', 17, 20), ('event argument', 71, 75), ('event argument', 288, 292)]
+id DEV-MUC3-0412 
+arguments [('trigger', 26, 29), ('event argument', 176, 178)]
+id DEV-MUC3-0413 
+arguments [('event argument', 52, 54), ('event argument', 57, 59), ('trigger', 77, 78), ('event argument', 86, 87)]
+id DEV-MUC3-0414 
+arguments [('trigger', 31, 32), ('event argument', 209, 210)]
+id DEV-MUC3-0415 
+arguments [('event argument', 36, 37), ('event argument', 87, 89), ('event argument', 100, 102), ('trigger', 113, 114)]
+id DEV-MUC3-0418 
+arguments [('trigger', 17, 20), ('event argument', 26, 30), ('event argument', 64, 66), ('event argument', 68, 71), ('event argument', 74, 76), ('event argument', 80, 82), ('event argument', 109, 111), ('event argument', 116, 118), ('event argument', 120, 122)]
+id DEV-MUC3-0419 
+arguments [('trigger', 35, 36), ('event argument', 38, 42)]
+id DEV-MUC3-0420 
+arguments [('event argument', 16, 19), ('trigger', 21, 22), ('event argument', 81, 84), ('event argument', 128, 131)]
+id DEV-MUC3-0422 
+arguments [('event argument', 23, 24), ('trigger', 28, 29), ('event argument', 33, 34), ('event argument', 78, 81), ('event argument', 180, 181), ('trigger', 205, 206)]
+id DEV-MUC3-0423 
+arguments [('event argument', 24, 26), ('event argument', 32, 34), ('event argument', 36, 38), ('trigger', 83, 84)]
+id DEV-MUC3-0424 
+arguments [('event argument', 19, 23), ('trigger', 24, 25), ('event argument', 25, 28), ('event argument', 68, 69)]
+id DEV-MUC3-0425 
+arguments [('event argument', 19, 23), ('trigger', 45, 46), ('event argument', 48, 49), ('trigger', 217, 219)]
+id DEV-MUC3-0427 
+arguments [('event argument', 32, 34), ('event argument', 54, 55), ('event argument', 237, 239), ('event argument', 244, 245), ('trigger', 247, 248)]
+id DEV-MUC3-0432 
+arguments [('event argument', 48, 49), ('trigger', 45, 49), ('event argument', 146, 148), ('event argument', 176, 178), ('trigger', 179, 182)]
+id DEV-MUC3-0433 
+arguments [('event argument', 19, 21), ('trigger', 52, 53), ('event argument', 69, 71), ('event argument', 75, 77), ('event argument', 79, 81), ('trigger', 268, 269)]
+id DEV-MUC3-0434 
+arguments [('event argument', 41, 45), ('event argument', 47, 50), ('event argument', 52, 54), ('trigger', 110, 111), ('event argument', 141, 142)]
+id DEV-MUC3-0435 
+arguments [('trigger', 17, 19), ('trigger', 16, 19), ('event argument', 47, 49), ('event argument', 51, 52)]
+id DEV-MUC3-0437 
+arguments [('event argument', 13, 15), ('event argument', 24, 26), ('trigger', 95, 96), ('event argument', 312, 314), ('event argument', 316, 317), ('trigger', 318, 320), ('event argument', 322, 323)]
+id DEV-MUC3-0438 
+arguments [('event argument', 151, 153), ('trigger', 155, 156)]
+id DEV-MUC3-0439 
+arguments [('event argument', 15, 19), ('event argument', 69, 71), ('trigger', 74, 75), ('event argument', 89, 91), ('trigger', 125, 126)]
+id DEV-MUC3-0440 
+arguments [('event argument', 15, 16), ('event argument', 18, 25), ('trigger', 31, 33), ('event argument', 31, 33), ('event argument', 37, 39)]
+id DEV-MUC3-0441 
+arguments [('trigger', 42, 48)]
+id DEV-MUC3-0442 
+arguments [('event argument', 17, 18), ('event argument', 22, 28), ('trigger', 55, 58), ('event argument', 84, 86), ('event argument', 114, 116), ('event argument', 120, 123), ('event argument', 175, 176), ('event argument', 183, 184), ('trigger', 185, 187), ('event argument', 229, 230)]
+id DEV-MUC3-0443 
+arguments [('event argument', 21, 26), ('event argument', 36, 37), ('event argument', 46, 48), ('trigger', 64, 65)]
+id DEV-MUC3-0446 
+arguments [('trigger', 26, 27), ('event argument', 35, 38)]
+id DEV-MUC3-0448 
+arguments [('event argument', 22, 24), ('trigger', 46, 47), ('event argument', 48, 50)]
+id DEV-MUC3-0449 
+arguments [('event argument', 68, 70), ('trigger', 187, 189), ('event argument', 253, 254)]
+id DEV-MUC3-0450 
+arguments [('trigger', 31, 32), ('event argument', 34, 36), ('event argument', 184, 185), ('event argument', 188, 189)]
+id DEV-MUC3-0451 
+arguments [('event argument', 13, 15), ('event argument', 29, 31), ('trigger', 34, 36), ('event argument', 89, 91), ('trigger', 118, 119)]
+id DEV-MUC3-0452 
+arguments [('trigger', 171, 172)]
+id DEV-MUC3-0453 
+arguments [('event argument', 40, 46), ('event argument', 75, 76), ('event argument', 142, 144), ('event argument', 159, 161), ('event argument', 165, 168), ('trigger', 195, 196), ('event argument', 213, 216)]
+id DEV-MUC3-0455 
+arguments [('event argument', 24, 27), ('event argument', 61, 63), ('trigger', 68, 69), ('event argument', 108, 111), ('event argument', 112, 115), ('event argument', 116, 119), ('event argument', 120, 123), ('event argument', 125, 129)]
+id DEV-MUC3-0456 
+arguments [('event argument', 23, 26), ('trigger', 51, 54), ('event argument', 120, 121)]
+id DEV-MUC3-0457 
+arguments [('event argument', 19, 21), ('trigger', 22, 23), ('event argument', 75, 77), ('event argument', 102, 104), ('event argument', 106, 107), ('event argument', 150, 152), ('event argument', 179, 181)]
+id DEV-MUC3-0458 
+arguments [('event argument', 39, 41), ('trigger', 65, 66), ('event argument', 78, 81), ('event argument', 99, 103), ('event argument', 123, 126)]
+id DEV-MUC3-0459 
+arguments [('event argument', 12, 14), ('trigger', 41, 46), ('event argument', 77, 79), ('trigger', 125, 127), ('trigger', 302, 303)]
+id DEV-MUC3-0460 
+arguments [('trigger', 28, 29), ('event argument', 70, 72), ('event argument', 77, 79), ('trigger', 95, 96)]
+id DEV-MUC3-0461 
+arguments [('trigger', 33, 35), ('event argument', 37, 39), ('event argument', 84, 87), ('event argument', 98, 100), ('event argument', 107, 108), ('event argument', 114, 117)]
+id DEV-MUC3-0462 
+arguments [('event argument', 15, 18), ('trigger', 22, 25), ('event argument', 26, 28)]
+id DEV-MUC3-0463 
+arguments [('event argument', 12, 15), ('event argument', 28, 29), ('trigger', 32, 33), ('trigger', 30, 33), ('event argument', 56, 59)]
+id DEV-MUC3-0464 
+arguments [('event argument', 25, 28), ('trigger', 52, 53), ('event argument', 54, 57)]
+id DEV-MUC3-0465 
+arguments [('event argument', 18, 19), ('event argument', 23, 27), ('trigger', 28, 29), ('event argument', 37, 38)]
+id DEV-MUC3-0467 
+arguments [('trigger', 35, 36), ('event argument', 37, 40), ('event argument', 52, 55), ('event argument', 64, 66)]
+id DEV-MUC3-0468 
+arguments [('event argument', 18, 21), ('event argument', 36, 38), ('trigger', 50, 51), ('event argument', 85, 86), ('event argument', 189, 194), ('event argument', 295, 298)]
+id DEV-MUC3-0470 
+arguments [('event argument', 15, 16), ('trigger', 16, 17), ('event argument', 18, 25), ('event argument', 71, 73), ('event argument', 75, 77), ('event argument', 96, 98), ('event argument', 114, 117)]
+id DEV-MUC3-0472 
+arguments [('event argument', 76, 77), ('trigger', 166, 167), ('event argument', 169, 172)]
+id DEV-MUC3-0473 
+arguments [('event argument', 25, 26), ('event argument', 213, 216)]
+id DEV-MUC3-0474 
+arguments [('event argument', 13, 14), ('trigger', 12, 15), ('event argument', 22, 27), ('trigger', 37, 38), ('event argument', 115, 116), ('event argument', 118, 120), ('trigger', 122, 123)]
+id DEV-MUC3-0475 
+arguments [('event argument', 44, 46), ('event argument', 61, 63), ('event argument', 68, 69), ('event argument', 73, 74), ('trigger', 77, 78), ('event argument', 106, 107), ('event argument', 124, 126), ('event argument', 130, 131), ('event argument', 134, 135)]
+id DEV-MUC3-0479 
+arguments [('event argument', 22, 25), ('event argument', 26, 29), ('trigger', 139, 140), ('trigger', 213, 214), ('event argument', 263, 265), ('trigger', 266, 267), ('event argument', 267, 269)]
+id DEV-MUC3-0480 
+arguments [('event argument', 139, 140), ('trigger', 177, 178)]
+id DEV-MUC3-0482 
+arguments [('event argument', 14, 18), ('event argument', 28, 33), ('trigger', 78, 79), ('event argument', 164, 168), ('event argument', 211, 213)]
+id DEV-MUC3-0483 
+arguments [('event argument', 30, 33), ('event argument', 34, 37), ('event argument', 49, 53), ('event argument', 95, 98), ('event argument', 99, 102), ('event argument', 103, 106), ('event argument', 113, 116), ('event argument', 223, 224), ('trigger', 274, 275)]
+id DEV-MUC3-0484 
+arguments [('event argument', 86, 88), ('trigger', 207, 209)]
+id DEV-MUC3-0487 
+arguments [('event argument', 15, 16), ('event argument', 43, 45), ('event argument', 65, 71), ('event argument', 73, 75), ('trigger', 116, 117), ('event argument', 124, 126), ('event argument', 129, 131)]
+id DEV-MUC3-0488 
+arguments [('event argument', 42, 44), ('event argument', 45, 48), ('event argument', 52, 53), ('event argument', 73, 74), ('trigger', 79, 81), ('event argument', 88, 91), ('event argument', 96, 99), ('event argument', 105, 109)]
+id DEV-MUC3-0490 
+arguments [('event argument', 15, 17), ('trigger', 29, 30), ('event argument', 64, 65), ('event argument', 104, 106), ('event argument', 126, 133), ('event argument', 139, 145)]
+id DEV-MUC3-0491 
+arguments [('event argument', 18, 20), ('event argument', 24, 29), ('trigger', 85, 86), ('trigger', 89, 91), ('event argument', 116, 119)]
+id DEV-MUC3-0494 
+arguments [('event argument', 35, 36), ('event argument', 42, 44), ('event argument', 45, 47), ('event argument', 54, 57), ('trigger', 63, 65)]
+id DEV-MUC3-0498 
+arguments [('event argument', 34, 39), ('event argument', 205, 208), ('trigger', 213, 215)]
+id DEV-MUC3-0501 
+arguments [('event argument', 34, 36), ('event argument', 45, 49), ('event argument', 73, 76), ('event argument', 90, 92), ('event argument', 113, 116), ('event argument', 163, 166), ('event argument', 208, 210)]
+id DEV-MUC3-0502 
+arguments [('trigger', 164, 165), ('event argument', 273, 276)]
+id DEV-MUC3-0503 
+arguments [('event argument', 31, 33), ('event argument', 42, 46), ('event argument', 55, 57), ('trigger', 85, 86), ('event argument', 88, 91)]
+id DEV-MUC3-0504 
+arguments [('event argument', 31, 32), ('event argument', 38, 40), ('event argument', 42, 49), ('trigger', 61, 62), ('event argument', 63, 64), ('event argument', 65, 67), ('event argument', 75, 77)]
+id DEV-MUC3-0508 
+arguments [('event argument', 13, 14), ('event argument', 18, 25), ('trigger', 39, 41), ('event argument', 59, 61), ('event argument', 90, 92), ('event argument', 113, 114), ('event argument', 142, 145), ('event argument', 150, 152), ('trigger', 154, 155), ('event argument', 156, 157)]
+id DEV-MUC3-0509 
+arguments [('event argument', 23, 30), ('event argument', 41, 42), ('trigger', 44, 45)]
+id DEV-MUC3-0510 
+arguments [('event argument', 23, 30), ('event argument', 58, 61), ('trigger', 94, 95), ('event argument', 106, 107), ('trigger', 131, 132), ('event argument', 213, 215), ('event argument', 217, 219)]
+id DEV-MUC3-0511 
+arguments [('event argument', 18, 20), ('event argument', 27, 28), ('trigger', 199, 200)]
+id DEV-MUC3-0514 
+arguments [('event argument', 38, 39), ('event argument', 65, 66), ('event argument', 80, 84), ('event argument', 94, 97), ('event argument', 116, 118), ('trigger', 126, 127), ('trigger', 128, 130)]
+id DEV-MUC3-0518 
+arguments [('trigger', 139, 140), ('event argument', 167, 169)]
+id DEV-MUC3-0521 
+arguments [('event argument', 13, 16), ('event argument', 59, 61), ('trigger', 84, 87), ('event argument', 88, 89)]
+id DEV-MUC3-0522 
+arguments [('trigger', 41, 42), ('event argument', 63, 64), ('event argument', 90, 91), ('event argument', 104, 106), ('trigger', 271, 272)]
+id DEV-MUC3-0523 
+arguments [('event argument', 254, 257), ('trigger', 267, 271), ('event argument', 279, 282)]
+id DEV-MUC3-0524 
+arguments [('event argument', 28, 29), ('trigger', 30, 31), ('event argument', 32, 34), ('event argument', 51, 56), ('event argument', 82, 83), ('event argument', 106, 108), ('trigger', 109, 110)]
+id DEV-MUC3-0525 
+arguments [('event argument', 33, 34), ('event argument', 197, 198), ('trigger', 224, 225), ('trigger', 242, 243)]
+id DEV-MUC3-0527 
+arguments [('event argument', 32, 35), ('event argument', 36, 39), ('event argument', 48, 51), ('trigger', 53, 54)]
+id DEV-MUC3-0528 
+arguments [('event argument', 21, 24), ('trigger', 35, 36), ('event argument', 37, 40), ('event argument', 46, 48), ('event argument', 55, 57), ('event argument', 93, 98)]
+id DEV-MUC3-0532 
+arguments [('event argument', 196, 197), ('trigger', 203, 204)]
+id DEV-MUC3-0533 
+arguments [('trigger', 36, 37), ('event argument', 70, 71)]
+id DEV-MUC3-0536 
+arguments [('event argument', 213, 215), ('trigger', 349, 350)]
+id DEV-MUC3-0537 
+arguments [('event argument', 45, 48), ('event argument', 50, 52), ('event argument', 55, 57), ('trigger', 68, 69), ('event argument', 70, 72)]
+id DEV-MUC3-0539 
+arguments [('event argument', 13, 17), ('event argument', 20, 22), ('event argument', 27, 30), ('trigger', 91, 92)]
+id DEV-MUC3-0542 
+arguments [('event argument', 34, 37), ('event argument', 51, 55), ('event argument', 58, 59), ('trigger', 61, 62), ('event argument', 64, 80)]
+id DEV-MUC3-0544 
+arguments [('event argument', 37, 39), ('trigger', 39, 40), ('event argument', 129, 131), ('event argument', 133, 135), ('event argument', 136, 137), ('event argument', 138, 140)]
+id DEV-MUC3-0547 
+arguments [('event argument', 25, 27), ('trigger', 113, 114), ('trigger', 112, 114)]
+id DEV-MUC3-0901 
+arguments [('event argument', 96, 97), ('event argument', 120, 125), ('trigger', 130, 131), ('event argument', 144, 148)]
+id DEV-MUC3-0905 
+arguments [('trigger', 24, 25), ('event argument', 218, 223), ('event argument', 249, 250)]
+id DEV-MUC3-0910 
+arguments [('trigger', 24, 25)]
+id DEV-MUC3-0911 
+arguments [('trigger', 24, 26), ('event argument', 109, 114), ('event argument', 139, 144), ('trigger', 176, 177), ('event argument', 178, 179), ('event argument', 235, 237), ('event argument', 300, 301)]
+id DEV-MUC3-0912 
+arguments [('event argument', 62, 65), ('event argument', 73, 76), ('event argument', 18, 91)]
+id DEV-MUC3-0924 
+arguments [('trigger', 39, 41), ('event argument', 42, 43), ('event argument', 50, 52), ('event argument', 60, 61)]
+id DEV-MUC3-0930 
+arguments [('event argument', 18, 20), ('event argument', 35, 40), ('event argument', 60, 61), ('trigger', 62, 63), ('event argument', 66, 68), ('trigger', 97, 98), ('trigger', 251, 253), ('event argument', 254, 256), ('event argument', 258, 260)]
