@@ -1,0 +1,48 @@
+#!/bin/bash
+#SBATCH -J 2_trig                         # Job name
+#SBATCH -o ../g2_logs/2_trig.out                  # output file (%j expands to jobID)
+#SBATCH -e ../g2_logs/2_trig.err                  # error log file (%j expands to jobID)
+#SBATCH --mail-type=ALL                      # Request status by email 
+#SBATCH --mail-user=zc272@cornell.edu        # Email address to send results to.
+#SBATCH -N 1                                 # Total number of nodes requested
+#SBATCH -n 1                                 # Total number of cores requested
+#SBATCH --get-user-env                       # retrieve the users login environment
+#SBATCH --mem=50000                           # server memory requested (per node)
+#SBATCH -t 200:00:00                           # Time limit (hh:mm:ss)
+#SBATCH --partition=claire       # Request partition
+#SBATCH --gres=gpu:titanxp:4                  # Type/number of GPUs needed
+
+CONDA_ENV=TANL2
+ENV_NAME="2_trig"
+NUM_EPOCHS=119
+
+SCHEMA="default.json"
+TYPE="default.json"
+TRAIN="2_trig.json"
+
+BASE_DATASET="base_dataset.py"
+INPUT_EXAMPLE="input_example.py"
+OUTPUT_FORMATS="output_formats.py"
+RUN="run.py"
+
+mkdir "../g2_environments/$ENV_NAME"
+cp -r "../../../../original_scripts/." "../g2_environments/$ENV_NAME"
+
+cp "../data/schema/$SCHEMA" "../g2_environments/$ENV_NAME/data/mucevent/mucevent_schema.json"
+cp "../data/types/$TYPE" "../g2_environments/$ENV_NAME/data/mucevent/mucevent_types.json"
+cp "../data/train/$TRAIN" "../g2_environments/$ENV_NAME/data/mucevent/mucevent_train.json"
+
+cp "../files/$BASE_DATASET" "../g2_environments/$ENV_NAME/base_dataset.py"
+cp "../files/$INPUT_EXAMPLE" "../g2_environments/$ENV_NAME/input_example.py"
+cp "../files/$OUTPUT_FORMATS" "../g2_environments/$ENV_NAME/output_formats.py"
+cp "../files/run/$RUN" "../g2_environments/$ENV_NAME/run.py"
+cp -fr "../files/config.ini" "../g2_environments/$ENV_NAME/config.ini"
+
+source /share/apps/anaconda3/2022.10/bin/activate
+conda activate $CONDA_ENV
+cd "../g2_environments/$ENV_NAME"
+pip3 install transformers
+pip3 install scipy
+pip3 install accelerate --upgrade
+
+python3 run.py muc_event --do_test --from_ckpt --num_train_epochs $NUM_EPOCHS

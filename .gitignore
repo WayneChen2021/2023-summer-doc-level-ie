@@ -80,9 +80,6 @@ TANL/experiments/focused_cross_entropy/g2_environments/3_trig/negative_loss/weig
 !TANL/experiments/focused_cross_entropy/g2_environments/3_trig/negative_loss/weight_01/logs.json
 
 
-TANL/experiments/multiple_phase/phase_2
-
-
 TANL/experiments/multiple_phase/phase_1/g2_environments/2_trig/*
 !TANL/experiments/multiple_phase/phase_1/g2_environments/2_trig/train_predictions.txt
 !TANL/experiments/multiple_phase/phase_1/g2_environments/2_trig/dev_predictions.txt
