@@ -150,7 +150,9 @@ def plot_training_errors(error_analysis_summary_train, error_analysis_summary_te
     plt.savefig(out_file)
     plt.clf()
 
-def create_second_phase_train(model_out, tanl_ref, handle_buffer, create_annotation):
+def create_second_phase_train(model_out, tanl_ref, out_file, handle_buffer, create_annotation):
     buffers, tanl_ref, _ = load_data_test(model_out, tanl_ref, None)
     tuples = add_annotations(handle_buffer(buffers)[0], tanl_ref, None)
-    return [create_annotation(tup) for tup in tuples]
+    
+    with open(out_file, "w") as f:
+        f.write(json.dumps([create_annotation(tup["model_out"], tup["tanl"]) for tup in tuples]))

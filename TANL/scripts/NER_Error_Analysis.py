@@ -46,7 +46,7 @@ def count_matches(pred, gold, relax):
 
     row_ind, col_ind = linear_sum_assignment(cost_matr)
     matches = int(-1 * cost_matr[row_ind, col_ind].sum())
-    gold_matches = [gold[j] for j in row_ind if j < len(gold)]
+    gold_matches = [gold_str for i, gold_str in enumerate(gold) if cost_matr[row_ind[i]][col_ind[i]] != 0]
 
     return matches, gold_matches
 

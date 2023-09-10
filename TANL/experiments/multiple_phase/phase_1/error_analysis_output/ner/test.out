@@ -12,22 +12,15 @@
     "entity f1": 0.5861084681255947,
     "matches": {
         "DEV-MUC3-0300": {
-            "trig": [
-                "kidnappers"
-            ],
+            "trig": [],
             "ent": [
-                "unknownpersons",
                 "manuelvallejouribe"
             ]
         },
         "DEV-MUC3-0301": {
-            "trig": [
-                "burningvehicles"
-            ],
+            "trig": [],
             "ent": [
-                "vehicles",
-                "luisosvaldosandoval",
-                "breadlandworkandfreedommovement"
+                "vehicles"
             ]
         },
         "DEV-MUC3-0302": {
@@ -39,50 +32,24 @@
             ]
         },
         "DEV-MUC3-0303": {
-            "trig": [
-                "bomb",
-                "bombwasfound"
-            ],
-            "ent": [
-                "bomb",
-                "bank",
-                "radiostation",
-                "channelstower"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0304": {
-            "trig": [
-                "bombswentoff",
-                "incident",
-                "blastsoccurred",
-                "blasts"
-            ],
-            "ent": [
-                "mayfpl",
-                "universitybranch",
-                "centralpark",
-                "trainingschoolforteachers",
-                "bombs",
-                "universityofhonduras"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0305": {
-            "trig": [
-                "deaththreats"
-            ],
-            "ent": [
-                "terrorist"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0306": {
             "trig": [
                 "attack"
             ],
             "ent": [
-                "explosives",
-                "uceln",
-                "meterofpipeline",
-                "rebels"
+                "rebels",
+                "uceln"
             ]
         },
         "DEV-MUC3-0310": {
@@ -90,46 +57,31 @@
                 "setoffbombs"
             ],
             "ent": [
-                "unidentifiedmen",
-                "fourbombs",
                 "uca",
                 "electricaltransformer",
-                "administrativeoffice",
                 "bus"
             ]
         },
         "DEV-MUC3-0315": {
             "trig": [
-                "burned",
-                "destroyed"
+                "burned"
             ],
             "ent": [
-                "housesaroundalocalschool",
                 "military",
                 "guerrillas",
-                "coffeefields",
-                "fmln",
-                "buildingofthefoundationforthedevelopmentofmorazancommunities"
+                "coffeefields"
             ]
         },
         "DEV-MUC3-0316": {
-            "trig": [
-                "action"
-            ],
+            "trig": [],
             "ent": [
-                "marthaelenabaronunit",
-                "dynamitecharge",
-                "uceln",
-                "pereiracartagopipeline"
+                "dynamitecharge"
             ]
         },
         "DEV-MUC3-0317": {
-            "trig": [
-                "crime"
-            ],
+            "trig": [],
             "ent": [
-                "danilobarillas",
-                "extremerightistgroups"
+                "danilobarillas"
             ]
         },
         "DEV-MUC3-0318": {
@@ -137,9 +89,8 @@
                 "bombattack"
             ],
             "ent": [
-                "bomb",
                 "policepatrolcar",
-                "fpmr"
+                "bomb"
             ]
         },
         "DEV-MUC3-0319": {
@@ -147,102 +98,64 @@
                 "sabotageactions",
                 "raidstorturesandmurders"
             ],
-            "ent": [
-                "electricitysystem",
-                "fmln"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0320": {
-            "trig": [
-                "execution"
-            ],
+            "trig": [],
             "ent": [
-                "mariaelenadiaz",
-                "losextraditables"
+                "losextraditables",
+                "mariaelenadiaz"
             ]
         },
         "DEV-MUC3-0321": {
             "trig": [
-                "wounded",
-                "attack"
+                "wounded"
             ],
             "ent": [
-                "rifle",
-                "localmilitarycommandpost",
                 "farabundomartinationalliberationfront",
                 "mortars",
                 "guerrillas",
-                "commandpost"
+                "commandpost",
+                "localmilitarycommandpost"
             ]
         },
         "DEV-MUC3-0322": {
             "trig": [
-                "clashes",
-                "placedexplosivedevices",
-                "blewup"
+                "placedexplosivedevices"
             ],
             "ent": [
-                "highways",
-                "electricalpowersystem",
-                "explosivedevices",
-                "farabundomartinationalliberationfront",
-                "telephoneexchangeboxes",
-                "structures",
-                "rebels"
+                "farabundomartinationalliberationfront"
             ]
         },
         "DEV-MUC3-0323": {
             "trig": [
                 "wasshot"
             ],
-            "ent": [
-                "abelardodaza"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0324": {
-            "trig": [
-                "murdered"
-            ],
-            "ent": [
-                "gustavoguerra"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0325": {
-            "trig": [
-                "assassination"
-            ],
-            "ent": [
-                "josenapoleonduarte",
-                "membersofhisfamily",
-                "romero",
-                "achristiandemocraticpartyleader"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0326": {
-            "trig": [
-                "killings",
-                "death"
-            ],
+            "trig": [],
             "ent": [
-                "unidentifiedmen",
                 "renelopez",
+                "extremerightistgroups",
                 "danilobarillas",
-                "extremerightistgroups"
+                "unidentifiedmen"
             ]
         },
         "DEV-MUC3-0328": {
             "trig": [
-                "policebrutality",
-                "assassinations"
+                "policebrutality"
             ],
             "ent": [
-                "eduardoherrera",
-                "afuseppublicsecurityforcesagent",
-                "justopastorescobarsilva",
-                "ramonrobertogaray",
-                "salomonvallecillo",
-                "battalion",
-                "publicsecurityforces"
+                "ramonrobertogaray"
             ]
         },
         "DEV-MUC3-0334": {
@@ -250,8 +163,8 @@
                 "died"
             ],
             "ent": [
-                "unidentifiedindividuals",
                 "bullet",
+                "unidentifiedindividuals",
                 "billymurphy"
             ]
         },
@@ -259,60 +172,36 @@
             "trig": [
                 "actsofviolence"
             ],
-            "ent": [
-                "miningcenters"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0338": {
-            "trig": [
-                "plantingbombs"
-            ],
+            "trig": [],
             "ent": [
-                "bombs",
                 "fmln"
             ]
         },
         "DEV-MUC3-0340": {
-            "trig": [
-                "dead",
-                "damaged",
-                "damaged"
-            ],
+            "trig": [],
             "ent": [
-                "unidentifiedpersons",
-                "vehicles",
-                "stores",
-                "thechurchoftheholypriestofars",
-                "josemariaruiz",
-                "building",
                 "passengerbus",
-                "grenade"
+                "vehicles",
+                "josemariaruiz",
+                "unidentifiedpersons",
+                "grenade",
+                "building"
             ]
         },
         "DEV-MUC3-0342": {
-            "trig": [
-                "attacked"
-            ],
-            "ent": [
-                "saulcantoral",
-                "terrorists"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0345": {
-            "trig": [
-                "intercepted"
-            ],
-            "ent": [
-                "individualsontwomotorcycles",
-                "carlosernestovalenciagarcia"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0346": {
-            "trig": [
-                "attack"
-            ],
+            "trig": [],
             "ent": [
-                "twomentravelingontwomotorcycles",
                 "carlosvalenciagarcia"
             ]
         },
@@ -320,34 +209,25 @@
             "trig": [
                 "murdered"
             ],
-            "ent": [
-                "carlosvalenciagarcia"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0348": {
             "trig": [
-                "murdered",
-                "firedon"
+                "murdered"
             ],
             "ent": [
-                "automaticweapons",
                 "waldemarfranklinquintero",
-                "oneoftheagents",
-                "assassins"
+                "oneoftheagents"
             ]
         },
         "DEV-MUC3-0349": {
             "trig": [
                 "murder"
             ],
-            "ent": [
-                "carlosvalenciagarcia"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0350": {
-            "trig": [
-                "victim"
-            ],
+            "trig": [],
             "ent": [
                 "galan"
             ]
@@ -357,33 +237,22 @@
                 "shot"
             ],
             "ent": [
-                "luiscarlosgalan",
-                "man"
+                "luiscarlosgalan"
             ]
         },
         "DEV-MUC3-0352": {
-            "trig": [
-                "attack"
-            ],
+            "trig": [],
             "ent": [
                 "luiscarloscarlosgalan"
             ]
         },
         "DEV-MUC3-0354": {
-            "trig": [
-                "murder"
-            ],
-            "ent": [
-                "luiscarlosgalan"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0355": {
-            "trig": [
-                "assassinations"
-            ],
-            "ent": [
-                "luiscarlosgalan"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0357": {
             "trig": [
@@ -394,139 +263,82 @@
             ]
         },
         "DEV-MUC3-0358": {
-            "trig": [
-                "assassination",
-                "assassination",
-                "assassination"
-            ],
+            "trig": [],
             "ent": [
-                "guillermocano",
-                "jaimepardoleal",
-                "luiscarlosgalan",
-                "paidassassinsofdrugtraffickers",
-                "pabloescobargaviria",
-                "gonzalorodriguezgacha",
                 "carlosvalenciagarcia"
             ]
         },
         "DEV-MUC3-0361": {
-            "trig": [
-                "assassinated"
-            ],
+            "trig": [],
             "ent": [
-                "luiscarlosgalan",
-                "waldemarfranklinquintero",
-                "themedellincartel",
-                "mercenaries",
                 "carlosvalenciagarcia"
             ]
         },
         "DEV-MUC3-0362": {
-            "trig": [
-                "terroristactions"
-            ],
+            "trig": [],
             "ent": [
-                "valdemarfranklinquintero",
-                "luiscarlosgalansarmiento",
-                "carlosvalenciagarcia"
+                "luiscarlosgalansarmiento"
             ]
         },
         "DEV-MUC3-0363": {
-            "trig": [
-                "threats",
-                "deaththreats"
-            ],
+            "trig": [],
             "ent": [
-                "danilobarillas",
-                "anonymous"
+                "danilobarillas"
             ]
         },
         "DEV-MUC3-0365": {
-            "trig": [
-                "crime"
-            ],
+            "trig": [],
             "ent": [
+                "luiscarlosgalansarmiento",
                 "luishasbun",
                 "luisalfredogonzalezchacon",
-                "luiscarlosgalansarmiento",
-                "armandobernalacosta",
-                "pedrozambranodelgado",
-                "norbertomurillochalata"
+                "pedrozambranodelgado"
             ]
         },
         "DEV-MUC3-0366": {
             "trig": [
                 "murdered"
             ],
-            "ent": [
-                "luiscarlosgalan"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0367": {
-            "trig": [
-                "death"
-            ],
-            "ent": [
-                "drugtraffickingcapos",
-                "luiscarlosgalan"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0369": {
-            "trig": [
-                "murder"
-            ],
-            "ent": [
-                "carlosvalenciagarcia"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0370": {
-            "trig": [
-                "killed"
-            ],
-            "ent": [
-                "luiscarlosgalan"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0371": {
-            "trig": [
-                "explosivedeviceswereplaced"
-            ],
+            "trig": [],
             "ent": [
-                "theextraditablesandthepeoplewhosepropertieshavebeenconfiscated",
-                "explosivedevices"
+                "explosivedevices",
+                "theextraditablesandthepeoplewhosepropertieshavebeenconfiscated"
             ]
         },
         "DEV-MUC3-0372": {
-            "trig": [
-                "bombsexploded",
-                "murdered",
-                "bombexploded",
-                "causingdamage"
-            ],
+            "trig": [],
             "ent": [
-                "bomb",
                 "ignaciovelezescobar",
-                "headquartersofthenewliberalismparty",
-                "edgargutierrezcastro",
-                "countryhome",
-                "kgofdynamite",
                 "luiscarlosgalansarmiento",
+                "edgargutierrezcastro",
+                "joseoscarmarin",
+                "headquartersofthenewliberalismparty",
                 "drugtraffickingmafia",
-                "theheadquartersoftheoppositionsocialconservativeparty",
-                "joseoscarmarin"
+                "kgofdynamite",
+                "countryhome"
             ]
         },
         "DEV-MUC3-0373": {
-            "trig": [
-                "machinegunfire",
-                "kidnapped"
-            ],
+            "trig": [],
             "ent": [
-                "unidentifiedpersons",
-                "ramirocastillolove",
+                "silviaazurdia",
                 "victorrodriguez",
-                "agroupofunidentifiedpersons",
-                "silviaazurdia"
+                "agroupofunidentifiedpersons"
             ]
         },
         "DEV-MUC3-0374": {
@@ -538,201 +350,119 @@
             ]
         },
         "DEV-MUC3-0376": {
-            "trig": [
-                "threattokill",
-                "threatenedtokill"
-            ],
+            "trig": [],
             "ent": [
                 "theclandestinegroup",
-                "extraditablesgroup",
                 "llanograndecountryclub"
             ]
         },
         "DEV-MUC3-0379": {
-            "trig": [
-                "setonfire",
-                "actions"
-            ],
+            "trig": [],
             "ent": [
                 "extraditables",
-                "llanograndecountryclub",
-                "farms"
+                "llanograndecountryclub"
             ]
         },
         "DEV-MUC3-0380": {
-            "trig": [
-                "explosivecharges"
-            ],
-            "ent": [
-                "telephonejunctionboxes",
-                "fmln",
-                "explosivecharges",
-                "theelectricsystem"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0381": {
             "trig": [
                 "incursion",
-                "raids",
-                "threatened"
+                "raids"
             ],
-            "ent": [
-                "hondurantroops",
-                "villagersproperty",
-                "honduranarmy",
-                "schools"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0382": {
-            "trig": [
-                "death"
-            ],
-            "ent": [
-                "luiscarlosgalan",
-                "terrorist"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0383": {
-            "trig": [
-                "attack"
-            ],
+            "trig": [],
             "ent": [
-                "robertonordenflyghtfarias",
-                "fpmr"
+                "robertonordenflyghtfarias"
             ]
         },
         "DEV-MUC3-0384": {
             "trig": [
                 "killing"
             ],
-            "ent": [
-                "traffickers"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0385": {
-            "trig": [
-                "murder"
-            ],
-            "ent": [
-                "luiscarlosgalan",
-                "drugtraffickers"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0386": {
             "trig": [
-                "wounded",
-                "kidnapping",
-                "murder"
+                "wounded"
             ],
             "ent": [
-                "hugogramajo",
-                "victorhugorodriguezjaramillo",
-                "ramiro",
-                "ramirocastillo",
-                "carlosconde",
                 "hishouse",
-                "ivanernestogonzalezfuentes",
-                "silviamariaazurdiautrera"
+                "ivanernestogonzalezfuentes"
             ]
         },
         "DEV-MUC3-0387": {
             "trig": [
                 "murders"
             ],
-            "ent": [
-                "luiscarlosgalansarmiento"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0388": {
-            "trig": [
-                "assaulted",
-                "capturedtorturedandmurdered"
-            ],
+            "trig": [],
             "ent": [
-                "armedforces",
-                "fmlnhospitals"
+                "fmlnhospitals",
+                "armedforces"
             ]
         },
         "DEV-MUC3-0389": {
             "trig": [
-                "arrested",
-                "kidnapped"
+                "arrested"
             ],
             "ent": [
-                "fivesuspects",
-                "fivebombs",
-                "eliecerdejesusacevedoolarte",
-                "armyofnationalliberationeln"
+                "fivesuspects"
             ]
         },
         "DEV-MUC3-0391": {
-            "trig": [
-                "shottodeath"
-            ],
-            "ent": [
-                "mafialeaders",
-                "mariaelenadiaz"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0392": {
-            "trig": [
-                "assassination"
-            ],
-            "ent": [
-                "luiscarlosgalan",
-                "drugcartels"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0393": {
             "trig": [
-                "seriousinjury",
-                "murder",
-                "inhumandeath"
+                "seriousinjury"
             ],
             "ent": [
                 "cni",
-                "carmengloriaquintana",
-                "theregime",
-                "rodrigorojasdenegri",
-                "luisvargas"
+                "theregime"
             ]
         },
         "DEV-MUC3-0395": {
             "trig": [
                 "assassination"
             ],
-            "ent": [
-                "luiscarlosgalan",
-                "jubishazvumb",
-                "fourothercolombians"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0396": {
             "trig": [
                 "assassinationthreats"
             ],
-            "ent": [
-                "monicadegreiff",
-                "drugcartel"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0397": {
-            "trig": [
-                "threatened"
-            ],
-            "ent": [
-                "monicadegreiff",
-                "drugtraffickingmafias"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0398": {
             "trig": [
-                "murder",
-                "assassination"
+                "murder"
             ],
             "ent": [
-                "luiscarlosgalan",
-                "carlosvalencia"
+                "luiscarlosgalan"
             ]
         },
         "DEV-MUC3-0399": {
@@ -746,27 +476,19 @@
                 "death"
             ],
             "ent": [
-                "luiscarlosgalan",
-                "criminals"
-            ]
-        },
-        "DEV-MUC3-0401": {
-            "trig": [
-                "murder"
-            ],
-            "ent": [
                 "luiscarlosgalan"
             ]
         },
+        "DEV-MUC3-0401": {
+            "trig": [],
+            "ent": []
+        },
         "DEV-MUC3-0402": {
             "trig": [
-                "kidnapped",
-                "murdered",
-                "death"
+                "kidnapped"
             ],
             "ent": [
-                "militarypatrol",
-                "victoralfonsopomas"
+                "militarypatrol"
             ]
         },
         "DEV-MUC3-0403": {
@@ -774,73 +496,51 @@
                 "disappeared"
             ],
             "ent": [
-                "libertogutierrezmarquez",
                 "epl"
             ]
         },
         "DEV-MUC3-0404": {
-            "trig": [
-                "extermination"
-            ],
-            "ent": [
-                "generalcarlosprats"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0405": {
-            "trig": [
-                "murder"
-            ],
+            "trig": [],
             "ent": [
-                "luiscarlosgalan",
-                "jorgeandrescanaveral",
-                "alvarodelgado"
+                "luiscarlosgalan"
             ]
         },
         "DEV-MUC3-0406": {
-            "trig": [
-                "killed"
-            ],
+            "trig": [],
             "ent": [
                 "luiscarlosgalansarmiento"
             ]
         },
         "DEV-MUC3-0407": {
-            "trig": [
-                "bombset"
-            ],
+            "trig": [],
             "ent": [
-                "pintucopaintfactory",
-                "cardealerships",
                 "buildings",
-                "bombsetinanicecreamcart"
+                "bombsetinanicecreamcart",
+                "cardealerships",
+                "pintucopaintfactory"
             ]
         },
         "DEV-MUC3-0410": {
             "trig": [
-                "theother",
-                "attack"
+                "theother"
             ],
             "ent": [
-                "countryclub",
                 "ecopetrolcolombianpetroleumenterprisefuelstoragetanks"
             ]
         },
         "DEV-MUC3-0411": {
-            "trig": [
-                "shot"
-            ],
+            "trig": [],
             "ent": [
-                "atlacatlbattalion",
-                "soldiers",
-                "miguelernestomirandareina",
                 "lieutenantsergeantorwhomever"
             ]
         },
         "DEV-MUC3-0412": {
             "trig": [
-                "disappearance",
-                "shottodeath",
-                "kidnapped"
+                "disappearance"
             ],
             "ent": [
                 "hectorsalvatierra"
@@ -851,105 +551,68 @@
                 "blast"
             ],
             "ent": [
-                "heribertolopezgonzalez",
-                "pedroortiz",
-                "danielmantilla",
                 "gloriacarranza",
-                "gasstation",
                 "jaimeorlandosuarez",
-                "gladyspaez",
-                "carmenrosagutierrez",
-                "noralbabeltran",
-                "buses",
-                "leonalvarovitorino",
-                "truckbomb",
-                "elespectadornewspaper",
-                "maritzamartinez",
-                "abelportillo"
+                "leonalvarovitorino"
             ]
         },
         "DEV-MUC3-0414": {
             "trig": [
-                "burned",
-                "attack"
+                "burned"
             ],
-            "ent": [
-                "newspaperelespectadorfacilities",
-                "extraditables",
-                "vacationcabins"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0415": {
             "trig": [
                 "bombattack"
             ],
             "ent": [
-                "newspaperelespectadorfacilities",
                 "almostkgofdynamite",
-                "truckbomb",
-                "gasstation"
+                "newspaperelespectadorfacilities"
             ]
         },
         "DEV-MUC3-0418": {
-            "trig": [
-                "blast"
-            ],
+            "trig": [],
             "ent": [
                 "robertoarcesiopabon",
-                "nearbybusinesses",
                 "robinsonramirez",
-                "severalarearesidences",
-                "branchofbancopopular",
-                "hugomorales"
+                "nearbybusinesses",
+                "hugomorales",
+                "severalarearesidences"
             ]
         },
         "DEV-MUC3-0419": {
             "trig": [
-                "attack",
-                "violence"
+                "attack"
             ],
             "ent": [
-                "josemariacordobaairport",
-                "oneofthemwearingcolombianarmyfatigues",
-                "explosivedevice"
+                "oneofthemwearingcolombianarmyfatigues"
             ]
         },
         "DEV-MUC3-0420": {
-            "trig": [
-                "explosion"
-            ],
+            "trig": [],
             "ent": [
-                "drugtraffickinggangs",
+                "dynamitecharge",
                 "cherculesplane",
-                "dynamitecharge"
+                "drugtraffickinggangs"
             ]
         },
         "DEV-MUC3-0422": {
             "trig": [
-                "firedindiscriminately",
-                "bomb"
+                "firedindiscriminately"
             ],
             "ent": [
                 "drugtraffickingorganizations",
-                "machinegun",
-                "mandressedinacamouflagemilitaryuniform",
-                "chargeofdynamite",
-                "aviancaplane"
+                "machinegun"
             ]
         },
         "DEV-MUC3-0423": {
             "trig": [
-                "died",
-                "destroyed",
-                "detonation"
+                "died"
             ],
             "ent": [
-                "twomenridingonamotorcycle",
-                "cai",
                 "immediateattentioncenter",
-                "gunman",
-                "explosivedevice",
-                "vehicle"
+                "gunman"
             ]
         },
         "DEV-MUC3-0424": {
@@ -957,73 +620,44 @@
                 "killed"
             ],
             "ent": [
-                "angeladeguerrero",
                 "groupofunidentifiedindividuals"
             ]
         },
         "DEV-MUC3-0425": {
-            "trig": [
-                "crime"
-            ],
+            "trig": [],
             "ent": [
-                "jecarantonioneghmecristi",
-                "groupofarmedindividuals",
-                "ammandtheotheramm"
+                "jecarantonioneghmecristi"
             ]
         },
         "DEV-MUC3-0427": {
-            "trig": [
-                "bombing"
-            ],
-            "ent": [
-                "santaelenachurch",
-                "airforce"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0432": {
             "trig": [
-                "burningofarestaurant",
-                "firedanautomaticrifle",
-                "torchedbyrifletotingyouths"
+                "burningofarestaurant"
             ],
             "ent": [
-                "automaticrifle",
-                "luiscarlosgalan",
                 "mandressedincombatgear",
-                "rifletotingyouths",
-                "restaurant",
-                "extraditables"
+                "rifletotingyouths"
             ]
         },
         "DEV-MUC3-0433": {
             "trig": [
                 "attack",
-                "attack",
-                "detonatedtwobombs",
-                "attack",
-                "threatened"
+                "attack"
             ],
             "ent": [
-                "bomb",
-                "unidentifiedindividuals",
-                "bernardettepardo",
-                "bombs",
-                "medellincartel",
-                "couple",
-                "hotel",
-                "restaurant",
+                "carloscorrales",
                 "financialinstitutions",
-                "jorgesaenz",
-                "carloscorrales"
+                "bomb",
+                "bernardettepardo"
             ]
         },
         "DEV-MUC3-0434": {
-            "trig": [
-                "destroyedbyabomb"
-            ],
+            "trig": [],
             "ent": [
-                "bomb",
-                "telephonebooth"
+                "bomb"
             ]
         },
         "DEV-MUC3-0435": {
@@ -1031,72 +665,48 @@
                 "explosions"
             ],
             "ent": [
-                "restaurant",
-                "bankbuildings"
+                "bankbuildings",
+                "restaurant"
             ]
         },
         "DEV-MUC3-0437": {
             "trig": [
-                "burned",
                 "blownup"
             ],
             "ent": [
-                "restaurant",
-                "bankbranches"
+                "restaurant"
             ]
         },
         "DEV-MUC3-0438": {
-            "trig": [
-                "murdered"
-            ],
-            "ent": [
-                "luiscarlosgalan"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0439": {
-            "trig": [
-                "shother"
-            ],
+            "trig": [],
             "ent": [
-                "mmgun",
                 "luzamparogomezserna",
-                "youngman"
+                "mmgun"
             ]
         },
         "DEV-MUC3-0440": {
-            "trig": [
-                "failedaction",
-                "explosion"
-            ],
+            "trig": [],
             "ent": [
+                "device",
                 "bomb",
                 "branchofthestateownedcentralmortgagebank",
-                "device",
                 "stateownedagrarianfund"
             ]
         },
         "DEV-MUC3-0441": {
-            "trig": [
-                "teargas"
-            ],
-            "ent": [
-                "students",
-                "eln"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0442": {
-            "trig": [
-                "explosion",
-                "bombwentoff",
-                "defused"
-            ],
+            "trig": [],
             "ent": [
-                "bomb",
-                "dynamitecharge",
                 "abranchofthecentralmortgagebank",
                 "bernardettpardo",
-                "socialsavingsbank",
-                "restaurant"
+                "bomb"
             ]
         },
         "DEV-MUC3-0443": {
@@ -1104,22 +714,14 @@
                 "devicesexploded"
             ],
             "ent": [
-                "individuals",
-                "twodevices",
-                "nationaluniversityofcolombia"
+                "nationaluniversityofcolombia",
+                "individuals"
             ]
         },
         "DEV-MUC3-0446": {
-            "trig": [
-                "murder",
-                "attack"
-            ],
+            "trig": [],
             "ent": [
-                "medellincartel",
-                "luiscarlosgalansarmiento",
-                "germangonzalezramirez",
-                "nicolasgonzalezcardona",
-                "jaimevalenciamartinez"
+                "nicolasgonzalezcardona"
             ]
         },
         "DEV-MUC3-0448": {
@@ -1127,118 +729,72 @@
                 "dynamited"
             ],
             "ent": [
-                "elespectadornewspaperoffices",
-                "drugtraffickers"
+                "elespectadornewspaperoffices"
             ]
         },
         "DEV-MUC3-0449": {
-            "trig": [
-                "damaged"
-            ],
+            "trig": [],
             "ent": [
-                "bomb",
-                "elespectadorsoffices"
+                "bomb"
             ]
         },
         "DEV-MUC3-0450": {
-            "trig": [
-                "attack"
-            ],
-            "ent": [
-                "guerrillacolumn",
-                "franciscomerino"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0451": {
-            "trig": [
-                "injured"
-            ],
+            "trig": [],
             "ent": [
                 "car",
-                "publicbuilding",
-                "bomb",
-                "telephoneexchange",
-                "numerousmansions"
+                "numerousmansions",
+                "bomb"
             ]
         },
         "DEV-MUC3-0452": {
             "trig": [
                 "murder"
             ],
-            "ent": [
-                "medellincartel",
-                "luisfernandogaleanoberrio"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0453": {
-            "trig": [
-                "explosivedevicewentoff",
-                "murders",
-                "placedacarbomb",
-                "murder",
-                "massacres"
-            ],
+            "trig": [],
             "ent": [
-                "gunmen",
-                "dynamite",
-                "privatefactory",
-                "fernandogaleanoberrio",
-                "carbomb",
-                "loveformedellin",
-                "mafia",
-                "medellintelephonecompany",
-                "medellindrugcartel"
+                "mafia"
             ]
         },
         "DEV-MUC3-0455": {
-            "trig": [
-                "crime"
-            ],
+            "trig": [],
             "ent": [
+                "albertojubishazvumb",
+                "jaimevalenciamartinez",
                 "norbertomurillochalarca",
                 "luiscarlosgalan",
                 "armandobernalacosta",
-                "pedrozambranodelgado",
-                "luisalfredogonzalezchacon",
-                "jaimevalenciamartinez",
-                "albertojubishazvumb"
+                "luisalfredogonzalezchacon"
             ]
         },
         "DEV-MUC3-0456": {
-            "trig": [
-                "attacks"
-            ],
+            "trig": [],
             "ent": [
                 "mafia"
             ]
         },
         "DEV-MUC3-0457": {
-            "trig": [
-                "bombexploded",
-                "exploded"
-            ],
+            "trig": [],
             "ent": [
-                "bomb",
-                "publicbuilding",
-                "unidentifiedmen",
-                "armydissidents",
-                "privateenterprises",
-                "extremerightwingers",
                 "businessestablishments",
-                "grenade",
+                "extremerightwingers",
+                "bomb",
+                "unidentifiedmen",
                 "caminorealhotel"
             ]
         },
         "DEV-MUC3-0458": {
-            "trig": [
-                "identifiedthebody",
-                "kidnapped"
-            ],
+            "trig": [],
             "ent": [
-                "victorhugorodriguez",
                 "leonelchutacamey",
+                "victorhugorodriguez",
                 "silviamariaazurdia",
-                "carloshumbertocabrera",
                 "deathsquads"
             ]
         },
@@ -1246,21 +802,11 @@
             "trig": [
                 "setfire",
                 "incident",
-                "threatenedtokill",
-                "attack",
-                "assassination"
+                "threatenedtokill"
             ],
             "ent": [
-                "unidentifiedindividuals",
                 "mafias",
-                "approximatelyfiveindividuals",
-                "javiervelasco",
-                "mariavictoriagalan",
-                "luiscarlosgalan",
-                "carlosossa",
-                "mafia",
-                "farmownedbycarlosossa",
-                "severalmen"
+                "mariavictoriagalan"
             ]
         },
         "DEV-MUC3-0460": {
@@ -1268,8 +814,8 @@
                 "killing"
             ],
             "ent": [
-                "unidentifiedpersons",
-                "wilsonrengifo"
+                "wilsonrengifo",
+                "unidentifiedpersons"
             ]
         },
         "DEV-MUC3-0461": {
@@ -1277,12 +823,9 @@
                 "setfire"
             ],
             "ent": [
-                "fourthone",
-                "thirdterrorist",
-                "nationalgovernmentisuzudumptruck",
-                "ernestogonzalez",
+                "diegoleonorozco",
                 "antioquiadepartmentdumptruck",
-                "diegoleonorozco"
+                "fourthone"
             ]
         },
         "DEV-MUC3-0462": {
@@ -1290,80 +833,56 @@
                 "shottodeath"
             ],
             "ent": [
-                "unidentifiedindividuals",
-                "pablopelaezgonzalez"
+                "pablopelaezgonzalez",
+                "unidentifiedindividuals"
             ]
         },
         "DEV-MUC3-0463": {
-            "trig": [
-                "murder",
-                "attacks",
-                "attack"
-            ],
+            "trig": [],
             "ent": [
-                "pablopelaezgonzales",
-                "atleastthreeunidentifiedindividuals",
-                "medellincartel",
-                "drugmafias"
+                "pablopelaezgonzales"
             ]
         },
         "DEV-MUC3-0464": {
             "trig": [
                 "killing"
             ],
-            "ent": [
-                "pablopelaezgonzalez"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0465": {
             "trig": [
                 "explosion"
             ],
             "ent": [
-                "bomb",
-                "televisionfacilities",
-                "twopeople"
+                "twopeople",
+                "televisionfacilities"
             ]
         },
         "DEV-MUC3-0467": {
-            "trig": [
-                "kidnapped"
-            ],
+            "trig": [],
             "ent": [
-                "fourheavilyarmedindividuals",
                 "orlandocuellerosorio"
             ]
         },
         "DEV-MUC3-0468": {
             "trig": [
-                "kidnappers",
-                "death",
-                "mutilatedandbulletriddledbodies",
-                "kidnapped"
+                "kidnappers"
             ],
             "ent": [
-                "victorhugorodriguez",
-                "eightmenincivilianclothes",
-                "deathsquads",
                 "residentviniciocerez",
-                "thesecretserviceofthearmyg",
-                "carloshumbertocabrera",
-                "silviaazurdia"
+                "thesecretserviceofthearmyg"
             ]
         },
         "DEV-MUC3-0470": {
             "trig": [
-                "terroristattack",
-                "attacked",
-                "dynamitestickswerethrown"
+                "terroristattack"
             ],
             "ent": [
-                "unidentifiedindividuals",
-                "televisionstation",
-                "molotovcocktail",
+                "regionaldevelopmentcorporation",
                 "ypfbsboliviangovernmentoildepositsgualbertovillaroelrefinery",
-                "dynamitesticks",
-                "regionaldevelopmentcorporation"
+                "televisionstation",
+                "unidentifiedindividuals",
+                "molotovcocktail"
             ]
         },
         "DEV-MUC3-0472": {
@@ -1371,106 +890,67 @@
                 "assassination"
             ],
             "ent": [
-                "deathsquads",
-                "oscararnulforomero"
+                "deathsquads"
             ]
         },
         "DEV-MUC3-0473": {
-            "trig": [
-                "assassination"
-            ],
-            "ent": [
-                "oscararnulforomero"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0474": {
-            "trig": [
-                "bomb"
-            ],
+            "trig": [],
             "ent": [
-                "severaldynamitesticks",
-                "thehonoraryconsulsautomobile",
-                "residenceofecuadoranfelipecostacanadashonoraryconsul",
-                "unidentifiedmeninaluxurycar",
-                "felipecosta"
+                "felipecosta",
+                "unidentifiedmeninaluxurycar"
             ]
         },
         "DEV-MUC3-0475": {
-            "trig": [
-                "incursion"
-            ],
+            "trig": [],
             "ent": [
-                "helicoptergunships",
-                "artillery",
-                "juliorodriguez",
-                "caircraft",
-                "dbrigadecommandercolonelmauriciovargas",
                 "houses",
+                "juliorodriguez",
+                "helicoptergunships",
+                "dbrigadecommandercolonelmauriciovargas",
                 "airforce"
             ]
         },
         "DEV-MUC3-0479": {
-            "trig": [
-                "threat"
-            ],
-            "ent": [
-                "drugtraffickingmafias"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0480": {
-            "trig": [
-                "casualties"
-            ],
-            "ent": [
-                "armedforces"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0482": {
             "trig": [
                 "attack"
             ],
-            "ent": [
-                "oilpipeline",
-                "eln"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0483": {
-            "trig": [
-                "crime"
-            ],
+            "trig": [],
             "ent": [
-                "machinegun",
-                "rafaelriveraalarcon",
-                "luisfelipetorres",
-                "hectormanuelzepedaquintero",
-                "norbertohernandezromero",
                 "albertojubishaszvumb",
-                "luiscarlosgalansarmiento",
-                "armandobernalacosta",
-                "pedrozambranodelgado",
+                "norbertohernandezromero",
+                "luisfelipetorres",
                 "jaimedejesusvalenciamartinez",
-                "luisalfredogonzalezchacon",
-                "norbertomurrillochalarca"
+                "luiscarlosgalansarmiento",
+                "norbertomurrillochalarca",
+                "rafaelriveraalarcon",
+                "pedrozambranodelgado"
             ]
         },
         "DEV-MUC3-0484": {
-            "trig": [
-                "threatenedtokill"
-            ],
-            "ent": [
-                "drugtraffickers"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0487": {
-            "trig": [
-                "dynamitechargesweredetonated"
-            ],
+            "trig": [],
             "ent": [
-                "dynamite",
-                "stores",
                 "bancosantander",
-                "bancopopular",
-                "bombs"
+                "dynamite",
+                "bancopopular"
             ]
         },
         "DEV-MUC3-0488": {
@@ -1478,9 +958,7 @@
                 "explosiveattacks"
             ],
             "ent": [
-                "dynamite",
-                "laviviendacorporation",
-                "bancodesantander"
+                "laviviendacorporation"
             ]
         },
         "DEV-MUC3-0490": {
@@ -1488,10 +966,9 @@
                 "explosion"
             ],
             "ent": [
-                "bomb",
                 "stores",
-                "bankbranch",
-                "conavinationalsavingsandhousingcorporationbranch"
+                "bomb",
+                "bankbranch"
             ]
         },
         "DEV-MUC3-0491": {
@@ -1500,48 +977,28 @@
                 "dynamiteexplosions"
             ],
             "ent": [
-                "personsintheserviceofthedruglords",
-                "dynamite",
-                "rocket",
                 "locals",
                 "usembassy"
             ]
         },
         "DEV-MUC3-0494": {
-            "trig": [
-                "bombexploded",
-                "theother"
-            ],
+            "trig": [],
             "ent": [
-                "bomb",
-                "attackers",
                 "telephonecompanysubstation"
             ]
         },
         "DEV-MUC3-0498": {
-            "trig": [
-                "brutallybeaten"
-            ],
-            "ent": [
-                "cathedral",
-                "police"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0501": {
-            "trig": [
-                "wounded"
-            ],
+            "trig": [],
             "ent": [
-                "irmadepuentes",
-                "liberalpartyoffice",
+                "officeofsocialconservativecouncilmandiegopardocopel",
                 "registrationoffice",
-                "officesofbogotadistrictcouncilmanricaurtelozanavalderrama",
-                "independentconservativepartyoffice",
-                "branchofthesocialsavingsassociation",
-                "officeofmiguelsantamariadavila",
-                "bombs",
                 "officeofsocialconservativecouncilmanfranciscofanadorcabrera",
-                "officeofsocialconservativecouncilmandiegopardocopel"
+                "bombs",
+                "irmadepuentes"
             ]
         },
         "DEV-MUC3-0502": {
@@ -1552,16 +1009,13 @@
         },
         "DEV-MUC3-0503": {
             "trig": [
-                "murder",
-                "murder",
-                "bombattack"
+                "murder"
             ],
             "ent": [
-                "bomb",
                 "elespectador",
                 "fourpersons",
                 "luiscarlosgalansarmiento",
-                "teofiloforerocastro"
+                "bomb"
             ]
         },
         "DEV-MUC3-0504": {
@@ -1569,152 +1023,94 @@
                 "attacks"
             ],
             "ent": [
-                "bombs",
                 "popularandoccidentebanks"
             ]
         },
         "DEV-MUC3-0508": {
             "trig": [
                 "bombexplosions",
-                "destroyed",
-                "damage",
-                "attacks"
+                "destroyed"
             ],
             "ent": [
-                "bomb",
-                "dynamite",
-                "politicalpartyheadquarters",
-                "morningdailysoffice",
-                "drugmafias",
-                "sigifredoarevalo",
                 "bankoffices",
                 "homes",
+                "sigifredoarevalo",
                 "businessestablishments",
-                "officesofelespectador",
-                "narcoterrorists",
-                "menridinginanautomobile"
+                "morningdailysoffice"
             ]
         },
         "DEV-MUC3-0509": {
-            "trig": [
-                "seriouslyinjured"
-            ],
+            "trig": [],
             "ent": [
-                "bomb",
-                "telephonecompanyinstallation"
+                "bomb"
             ]
         },
         "DEV-MUC3-0510": {
-            "trig": [
-                "injured",
-                "terroristaction",
-                "attacked",
-                "carbombattack"
-            ],
+            "trig": [],
             "ent": [
-                "dynamite",
-                "bomb",
-                "meninavehicle",
-                "politicaloffices",
                 "elsiglo",
                 "branchofelespectador",
                 "officeofelespectador",
-                "bankbranches"
+                "politicaloffices"
             ]
         },
         "DEV-MUC3-0511": {
-            "trig": [
-                "threats"
-            ],
+            "trig": [],
             "ent": [
                 "bomb",
                 "colombianembassy"
             ]
         },
         "DEV-MUC3-0514": {
-            "trig": [
-                "todaysattacks",
-                "bomb"
-            ],
+            "trig": [],
             "ent": [
-                "bomb",
-                "dynamite",
-                "lasvillascorporation",
                 "coldesarrolloexpansionunknownoffices",
-                "terrorists",
-                "aviancaairlinesoffices"
+                "aviancaairlinesoffices",
+                "bomb"
             ]
         },
         "DEV-MUC3-0518": {
-            "trig": [
-                "death"
-            ],
+            "trig": [],
             "ent": []
         },
         "DEV-MUC3-0521": {
-            "trig": [
-                "killing"
-            ],
+            "trig": [],
             "ent": [
-                "bomb",
                 "groupslinkedtonarcoticstraffickers",
-                "hotelinthecartagenadeindiastouristcenter"
+                "bomb"
             ]
         },
         "DEV-MUC3-0522": {
             "trig": [
-                "attacked",
                 "attacked"
             ],
             "ent": [
-                "airstrip",
-                "rebels",
-                "highwayleadingfromsanfranciscogoteratosanmiguel"
+                "airstrip"
             ]
         },
         "DEV-MUC3-0523": {
-            "trig": [
-                "attack"
-            ],
-            "ent": [
-                "bomb",
-                "hotel",
-                "drugtraffickers"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0524": {
             "trig": [
-                "destroyed",
-                "explosion"
+                "destroyed"
             ],
             "ent": [
-                "secondaryschool",
-                "store",
                 "dynamite",
-                "drugtraffickingrings"
+                "secondaryschool"
             ]
         },
         "DEV-MUC3-0525": {
-            "trig": [
-                "crime"
-            ],
-            "ent": [
-                "twoofthepeople",
-                "luiscarlosgalan"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0527": {
-            "trig": [
-                "actions",
-                "kidnapped"
-            ],
+            "trig": [],
             "ent": [
-                "carlosmaurohoyos",
                 "andrespastrana",
-                "drugcartel",
-                "pabloescobargaviria",
                 "gonzalorodriguezgacha",
-                "theextraditables"
+                "pabloescobargaviria"
             ]
         },
         "DEV-MUC3-0528": {
@@ -1722,45 +1118,35 @@
                 "kidnapped"
             ],
             "ent": [
-                "heavilyarmedandunidentifiedindividuals",
+                "josemariamartinez",
                 "robertolizardi",
-                "luisrossi",
-                "josemariamartinez"
+                "heavilyarmedandunidentifiedindividuals",
+                "luisrossi"
             ]
         },
         "DEV-MUC3-0532": {
-            "trig": [
-                "threatenedtomurder"
-            ],
-            "ent": [
-                "drugbarons"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0533": {
             "trig": [
                 "attack"
             ],
-            "ent": [
-                "luiscarlosgalan"
-            ]
+            "ent": []
         },
         "DEV-MUC3-0536": {
-            "trig": [
-                "assassinated"
-            ],
-            "ent": [
-                "luiscarlosgalan"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0537": {
             "trig": [
                 "kidnapped"
             ],
             "ent": [
-                "robertolisandy",
+                "josemariamartinez",
                 "armedmen",
                 "dinorossy",
-                "josemariamartinez"
+                "robertolisandy"
             ]
         },
         "DEV-MUC3-0539": {
@@ -1768,115 +1154,66 @@
                 "kidnapped"
             ],
             "ent": [
-                "guerrillas",
-                "pablomartinberrocal",
-                "eln"
+                "pablomartinberrocal"
             ]
         },
         "DEV-MUC3-0542": {
-            "trig": [
-                "crime"
-            ],
+            "trig": [],
             "ent": [
-                "elmermunoz",
-                "jesusemiliojaramillo",
                 "severalarmedmen",
-                "eln"
+                "elmermunoz"
             ]
         },
         "DEV-MUC3-0544": {
-            "trig": [
-                "plan",
-                "actions"
-            ],
+            "trig": [],
             "ent": [
-                "homeofrolandoarchila",
                 "unidentifiedperson",
-                "guerrillas",
-                "radiostations",
-                "extremerightistgroups"
+                "guerrillas"
             ]
         },
         "DEV-MUC3-0547": {
-            "trig": [
-                "heldhostage"
-            ],
-            "ent": [
-                "fecmafammembers",
-                "fecmafam",
-                "jesusfernandez"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0901": {
-            "trig": [
-                "attacking",
-                "beingheldhostage"
-            ],
+            "trig": [],
             "ent": [
-                "presidentalfredocristianisresidence",
-                "farabundomartinationalliberation",
-                "guerrillas",
                 "residenceforusmilitaryadvisers",
-                "alfredocristiani",
+                "farabundomartinationalliberation",
                 "generalstaff"
             ]
         },
         "DEV-MUC3-0905": {
-            "trig": [
-                "seized"
-            ],
-            "ent": [
-                "guerrillas",
-                "fmln"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0910": {
-            "trig": [
-                "crimes"
-            ],
-            "ent": [
-                "extremeright"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0911": {
             "trig": [
-                "straffed",
-                "attacked"
+                "straffed"
             ],
             "ent": [
                 "franciscojoseguerrero",
-                "residenceofusmilitaryadvisers",
-                "guerrillas",
-                "fmln"
+                "guerrillas"
             ]
         },
         "DEV-MUC3-0912": {
-            "trig": [
-                "murdered"
-            ],
-            "ent": [
-                "meninuniform"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0924": {
-            "trig": [
-                "strike"
-            ],
-            "ent": [
-                "fmln"
-            ]
+            "trig": [],
+            "ent": []
         },
         "DEV-MUC3-0930": {
-            "trig": [
-                "deaths"
-            ],
+            "trig": [],
             "ent": [
-                "stores",
-                "grocerystore",
-                "tnt",
-                "drugstore",
+                "electricpole",
                 "fmln",
-                "electricpole"
+                "tnt"
             ]
         }
     }

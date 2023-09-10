@@ -253,11 +253,74 @@ def create_annotation_event(tup):
     
     return example
 
-def second_phase_training_event(model_out, tanl_ref, gtt_ref):
-    pass
+def annotate_second_phase_train_event(model_out, tanl_ref):
+    triggers = [
+        {"type": tup[0], "start": tup[1], "end": tup[2]}
+        for tup in model_out["triggers"]
+    ]
+    entities = []
+    relations = []
+    for relation in model_out["args"]:
+        entity = {
+            "type": "template entity",
+            "start": relation[1][0],
+            "end": relation[1][1]
+        }
+        if not entity in entities:
+            entities.append(entity)
 
-def second_phase_training_ner(model_out, tanl_ref, gtt_ref):
-    pass
+        ref_trigger = {
+            "type": relation[-1][0],
+            "start": relation[-1][1],
+            "end": relation[-1][2],
+        }
+        relations.append({
+            "type": relation[0],
+            "head": entities.index(entity),
+            "tail": triggers.index(ref_trigger)
+        })
+
+    return {
+        "first_phase": {
+            "triggers": triggers,
+            "entities": entities,
+            "relations": relations
+        },
+        "second_phase": {
+            "entities": tanl_ref["entities"],
+            "triggers": tanl_ref["triggers"],
+            "relations": tanl_ref["relations"]
+        },
+        "tokens": tanl_ref["tokens"],
+        "id": tanl_ref["id"]
+    }
+
+def annotate_second_phase_train_ner(model_out, tanl_ref):
+    return {
+        "first_phase": {
+            "triggers": [
+                {"type": "trigger", "start": tup[0], "end": tup[1]}
+                for tup in model_out["triggers"]
+            ],
+            "entities": [
+                {"type": "event argument", "start": tup[0], "end": tup[1]}
+                for tup in model_out["args"]
+            ],
+        },
+        "second_phase": {
+            "entities": tanl_ref["entities"],
+            "triggers": tanl_ref["triggers"],
+            "relations": tanl_ref["relations"]
+        },
+        "tokens": tanl_ref["tokens"],
+        "id": tanl_ref["id"]
+    }
+
+def create_second_phase_train_ner(model_out, tanl_ref, output_file):
+    return BaseProcessing.create_second_phase_train(model_out, tanl_ref, output_file, handle_buffer_ner, annotate_second_phase_train_ner)
+
+def create_second_phase_train_event(model_out, tanl_ref, output_file):
+    return BaseProcessing.create_second_phase_train(model_out, tanl_ref, output_file, handle_buffer_event, annotate_second_phase_train_event)
 
 def run_task(mode, log_name, config, types_mapping=None, id=None, global_config=None):
     if mode == "event":
@@ -270,7 +333,7 @@ def run_task(mode, log_name, config, types_mapping=None, id=None, global_config=
                 types_mapping,
                 config["output_file"]
             )
-        else:
+        elif log_name == "training_errors":
             error_analysis_summary = global_config["train_time_logs"]["output_file"][id]
             BaseProcessing.plot_training_errors(
                 error_analysis_summary[0],
@@ -278,6 +341,12 @@ def run_task(mode, log_name, config, types_mapping=None, id=None, global_config=
                 config["log_file"],
                 config["small_evaluation_interval"],
                 config["loss_collection_interval"],
+                config["output_file"]
+            )
+        elif log_name == "generate_second_phase_train":
+            create_second_phase_train_event(
+                config["raw_outs"],
+                config["tanl_ref"],
                 config["output_file"]
             )
 
@@ -290,7 +359,7 @@ def run_task(mode, log_name, config, types_mapping=None, id=None, global_config=
                 config["error_analysis_script"],
                 config["output_file"]
             )
-        else:
+        elif log_name == "training_errors":
             error_analysis_summary = global_config["train_time_logs"]["output_file"][id]
             BaseProcessing.plot_training_errors(
                 error_analysis_summary[0],
@@ -300,7 +369,12 @@ def run_task(mode, log_name, config, types_mapping=None, id=None, global_config=
                 config["loss_collection_interval"],
                 config["output_file"]
             )
-
+        elif log_name == "generate_second_phase_train":
+            create_second_phase_train_ner(
+                config["raw_outs"],
+                config["tanl_ref"],
+                config["output_file"]
+            )
 
 def parse_multiple_jobs(job, multi_job_fields):
     configs = {}
@@ -347,17 +421,19 @@ if __name__ == "__main__":
         "multi_phase_ner": {
             "test_time_logs": ["raw_outs", "output_file", "tanl_ref", "gtt_ref"],
             "train_time_logs": ["raw_outs", "output_file"],
-            "training_errors": ["log_file", "output_file"]
+            "training_errors": ["log_file", "output_file"],
+            "generate_second_phase_train": ["raw_outs", "output_file"]
         },
         "multi_phase_event": {
             "test_time_logs": ["raw_outs", "output_file", "tanl_ref", "gtt_ref"],
             "train_time_logs": ["raw_outs", "output_file"],
-            "training_errors": ["log_file", "output_file"]
+            "training_errors": ["log_file", "output_file"],
+            "generate_second_phase_train": ["raw_outs", "output_file"]
         }
     }
     for job_category in multi_tasks:
         jobs = config[job_category]
-        for job_name in ["test_time_logs", "train_time_logs", "training_errors"]:
+        for job_name in ["test_time_logs", "train_time_logs", "training_errors", "generate_second_phase_train"]:
             if jobs and job_name in jobs and jobs[job_name]["run"]:
                 for job_id, single_config in parse_multiple_jobs(jobs[job_name], multi_job_fields[job_category][job_name]).items():
                     run_task(jobs["mode"], job_name, single_config, jobs["types_mapping"], job_id, jobs)
