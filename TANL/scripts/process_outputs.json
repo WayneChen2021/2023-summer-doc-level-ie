@@ -1,40 +1,115 @@
 {
-    "multi_phase": {
+    "multi_phase_ner": {
         "test_time_logs": {
-            "raw_outs": null,
-            "tanl_ref": null,
-            "gtt_ref": null,
-            "output_file": null,
-            "error_analysis_script": null
-        },
-        "second_phase_as_test_logs": {
-            "raw_outs": null,
-            "tanl_ref": null,
-            "gtt_ref": null,
-            "output_file": null,
-            "error_analysis_script": null
-        },
-        "generate_second_phase_train": {
-            "training_data": null,
-            "second_phase_logging_train_output_file": null,
-            "second_phase_logging_train_num": 10,
-            "second_phase_logging_test_output_file": null,
-            "second_phase_logging_test_num": 10
+            "run": false,
+            "raw_outs": {
+                "0": "../experiments/multiple_phase/phase_1/g2_environments/ner/dev_predictions.txt",
+                "1": "../experiments/multiple_phase/phase_1/g2_environments/ner/test_predictions.txt"
+            },
+            "tanl_ref": {
+                "0": "../../data/full_eval/tanl_eval.json",
+                "1": "../../data/multi_phase/second_phase_train/tanl_train.json"
+            },
+            "gtt_ref": {
+                "0": "../../data/full_eval/gtt_eval.json",
+                "1": "../../data/multi_phase/second_phase_train/gtt_train.json"
+            },
+            "output_file": {
+                "0": "../experiments/multiple_phase/phase_1/error_analysis_output/ner/dev.out",
+                "1": "../experiments/multiple_phase/phase_1/error_analysis_output/ner/test.out"
+            },
+            "error_analysis_script": "NER_Error_Analysis.py"
         },
         "train_time_logs": {
-            "raw_outs": null,
-            "tanl_ref": [],
-            "template_errors_train_gtt_ref": [],
-            "output_file": null,
-            "error_analysis_script": null,
-            "training_errors": {
-                "log_file": null,
-                "loss_collection_interval": 0,
-                "small_evaluation_interval": 0,
-                "output_file": null
-            }
+            "run": false,
+            "raw_outs": {
+                "0": "../experiments/multiple_phase/phase_1/g2_environments/ner/train_predictions.txt"
+            },
+            "tanl_ref": [
+                "../../data/short_files/tanl_train.json",
+                "../../data/short_files/tanl_test.json"
+            ],
+            "gtt_ref": [
+                "../../data/short_files/gtt_train.json",
+                "../../data/short_files/gtt_test.json"
+            ],
+            "output_file": {
+                "0": [
+                    "../experiments/multiple_phase/phase_1/training_errors/ner/train_template_errors.txt",
+                    "../experiments/multiple_phase/phase_1/training_errors/ner/test_template_errors.txt"
+                ]
+            },
+            "error_analysis_script": "NER_Error_Analysis_quick.py"
         },
-        "types_mapping": ""
+        "training_errors": {
+            "run": true,
+            "log_file": {
+                "0": "../experiments/multiple_phase/phase_1/g2_environments/ner/logs.json"
+            },
+            "output_file": {
+                "0": "../experiments/multiple_phase/phase_1/training_errors/ner/graph.png"
+            },
+            "loss_collection_interval": 100,
+            "small_evaluation_interval": 250
+        },
+        "types_mapping": "types_mapping_verbose.json",
+        "mode": "ner"
+    },
+    "multi_phase_event": {
+        "test_time_logs": {
+            "run": false,
+            "raw_outs": {
+                "0": "../experiments/multiple_phase/phase_1/g2_environments/2_trig/dev_predictions.txt",
+                "1": "../experiments/multiple_phase/phase_1/g2_environments/2_trig/test_predictions.txt"
+            },
+            "tanl_ref": {
+                "0": "../../data/full_eval/tanl_eval.json",
+                "1": "../../data/multi_phase/second_phase_train/tanl_train.json"
+            },
+            "gtt_ref": {
+                "0": "../../data/full_eval/gtt_eval.json",
+                "1": "../../data/multi_phase/second_phase_train/gtt_train.json"
+            },
+            "output_file": {
+                "0": "../experiments/multiple_phase/phase_1/error_analysis_output/2_trig/dev.out",
+                "1": "../experiments/multiple_phase/phase_1/error_analysis_output/2_trig/test.out"
+            },
+            "error_analysis_script": "Error_Analysis.py"
+        },
+        "train_time_logs": {
+            "run": false,
+            "raw_outs": {
+                "0": "../experiments/multiple_phase/phase_1/g2_environments/2_trig/train_predictions.txt"
+            },
+            "tanl_ref": [
+                "../../data/short_files/tanl_train.json",
+                "../../data/short_files/tanl_test.json"
+            ],
+            "gtt_ref": [
+                "../../data/short_files/gtt_train.json",
+                "../../data/short_files/gtt_test.json"
+            ],
+            "output_file": {
+                "0": [
+                    "../experiments/multiple_phase/phase_1/training_errors/2_trig/train_template_errors.txt",
+                    "../experiments/multiple_phase/phase_1/training_errors/2_trig/test_template_errors.txt"
+                ]
+            },
+            "error_analysis_script": "Error_Analysis_quick.py"
+        },
+        "training_errors": {
+            "run": false,
+            "log_file": {
+                "0": "../experiments/multiple_phase/phase_1/g2_environments/2_trig/logs.json"
+            },
+            "output_file": {
+                "0": "../experiments/multiple_phase/phase_1/training_errors/2_trig/graph.png"
+            },
+            "loss_collection_interval": 100,
+            "small_evaluation_interval": 500
+        },
+        "types_mapping": "types_mapping_verbose.json",
+        "mode": "event"
     },
     "verbose_tags": {
         "test_time_logs": {

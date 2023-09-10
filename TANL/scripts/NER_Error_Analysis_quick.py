@@ -145,13 +145,12 @@ def main(in_file, out_file, relax_match):
         "trigger f1": trig_f1,
         "entity precision": ent_precision,
         "entity recall": ent_recall,
-        "entity f1": ent_f1,
-        "matches": matches
-    }, indent=4)
+        "entity f1": ent_f1
+    })
 
     if out_file:
-        with open(out_file, "w") as f:
-            f.write(info)
+        with open(out_file, "a") as f:
+            f.write(info + "\n")
 
 
 if __name__ == "__main__":

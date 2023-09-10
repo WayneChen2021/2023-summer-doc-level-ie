@@ -1,0 +1,2839 @@
+{
+    "total": {
+        "precision": 0.3148936170212766,
+        "recall": 0.5097588978185993,
+        "f1": 0.38930293730819815
+    },
+    "trigger precision": 0.0,
+    "trigger recall": 0.0,
+    "trigger f1": 0.0,
+    "entity precision": 0.4391691394658754,
+    "entity recall": 0.5097588978185993,
+    "entity f1": 0.47183846971307125,
+    "matches": {
+        "TST1-MUC3-0001": {
+            "trig": [],
+            "ent": [
+                "cerezo",
+                "guerrillas",
+                "truck",
+                "farm",
+                "facilities",
+                "presidentialfarm",
+                "urng"
+            ]
+        },
+        "TST1-MUC3-0002": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "electricpowersubstation",
+                "membersofthefarabundomartinationalliberationfront"
+            ]
+        },
+        "TST1-MUC3-0003": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0004": {
+            "trig": [],
+            "ent": [
+                "liqueurplant",
+                "man",
+                "rockets",
+                "woman",
+                "dynamiteandgrenade"
+            ]
+        },
+        "TST1-MUC3-0005": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0006": {
+            "trig": [],
+            "ent": [
+                "antonioroldanbetancur"
+            ]
+        },
+        "TST1-MUC3-0007": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0008": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0009": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0010": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0011": {
+            "trig": [],
+            "ent": [
+                "chileangovernment",
+                "orlandoletelier",
+                "ronniemoffit"
+            ]
+        },
+        "TST1-MUC3-0012": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0013": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0014": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0015": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0016": {
+            "trig": [],
+            "ent": [
+                "officers",
+                "everyoneelseinthearmy",
+                "army",
+                "houses",
+                "bombs"
+            ]
+        },
+        "TST1-MUC3-0017": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0018": {
+            "trig": [],
+            "ent": [
+                "hectoroquelicolindres",
+                "soldiers",
+                "salvadoranrightistsectors",
+                "hildaflores"
+            ]
+        },
+        "TST1-MUC3-0019": {
+            "trig": [],
+            "ent": [
+                "militarymen",
+                "armedforces"
+            ]
+        },
+        "TST1-MUC3-0020": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0021": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0022": {
+            "trig": [],
+            "ent": [
+                "securityforces",
+                "deathsquads"
+            ]
+        },
+        "TST1-MUC3-0023": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0024": {
+            "trig": [],
+            "ent": [
+                "miguelmazamarquez",
+                "twootherpersons",
+                "pabloescobargaviria",
+                "headquartersofthecountrysprincipalsecurityorganization",
+                "basquefatherlandandliberty",
+                "gonzalorodriguezgacha",
+                "medellincartel",
+                "memberofthesinistermedellincartel",
+                "car",
+                "threepersonssuspectedofparticipatingintheattack",
+                "dynamite",
+                "memberoftheseparatistetagroup"
+            ]
+        },
+        "TST1-MUC3-0025": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0026": {
+            "trig": [],
+            "ent": [
+                "morena",
+                "marceloperez",
+                "selfdefensegroups",
+                "gonzalodejesusperez",
+                "henryperez",
+                "acdegam"
+            ]
+        },
+        "TST1-MUC3-0027": {
+            "trig": [],
+            "ent": [
+                "terrorist",
+                "officesofthedeputymayoracivilianofficeoccupiedbytheprovincialgovernor",
+                "bomb"
+            ]
+        },
+        "TST1-MUC3-0028": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0029": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0030": {
+            "trig": [],
+            "ent": [
+                "carlosgalan",
+                "drugtraffickingbands"
+            ]
+        },
+        "TST1-MUC3-0031": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0032": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0033": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0034": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0035": {
+            "trig": [],
+            "ent": [
+                "units",
+                "electricalsystem",
+                "fmln"
+            ]
+        },
+        "TST1-MUC3-0036": {
+            "trig": [],
+            "ent": [
+                "suspects",
+                "bomb"
+            ]
+        },
+        "TST1-MUC3-0037": {
+            "trig": [],
+            "ent": [
+                "christopheranderson",
+                "nadineelkashes",
+                "grenade",
+                "car",
+                "erikasullivan",
+                "presidentalfredocristianismansion"
+            ]
+        },
+        "TST1-MUC3-0038": {
+            "trig": [],
+            "ent": [
+                "ernestinaumanzor"
+            ]
+        },
+        "TST1-MUC3-0039": {
+            "trig": [],
+            "ent": [
+                "guard",
+                "rifles",
+                "gun",
+                "twoindividualsinachevroletopalaautomobile",
+                "students",
+                "brazilianembassy",
+                "policedepartment",
+                "stones"
+            ]
+        },
+        "TST1-MUC3-0040": {
+            "trig": [],
+            "ent": [
+                "explosives",
+                "theextraditables",
+                "drugtraffickers",
+                "carbombs",
+                "plane",
+                "das"
+            ]
+        },
+        "TST1-MUC3-0041": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0042": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0043": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0044": {
+            "trig": [],
+            "ent": [
+                "somearmedforcesmembers",
+                "armedforces"
+            ]
+        },
+        "TST1-MUC3-0045": {
+            "trig": [],
+            "ent": [
+                "armedindividualswearingmilitaryuniforms",
+                "captainalonsochavezgarcia",
+                "certainofficersofthearmedforces",
+                "colonelhectorheribertohernandezchiefofthetreasurypolice",
+                "treasurypolice"
+            ]
+        },
+        "TST1-MUC3-0046": {
+            "trig": [],
+            "ent": [
+                "units",
+                "fmln",
+                "antoniorodriguezporth",
+                "mauriciogutierrezcastro",
+                "government",
+                "edgarchacon",
+                "fighters"
+            ]
+        },
+        "TST1-MUC3-0047": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0048": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0049": {
+            "trig": [],
+            "ent": [
+                "ambulance",
+                "powerpylon",
+                "membersofthethfront",
+                "farc",
+                "powersubstation",
+                "stationwagon",
+                "bernardojaramilloossa",
+                "truck"
+            ]
+        },
+        "TST1-MUC3-0050": {
+            "trig": [],
+            "ent": [
+                "men",
+                "ignacioellacuria"
+            ]
+        },
+        "TST1-MUC3-0051": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0052": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0053": {
+            "trig": [],
+            "ent": [
+                "guns",
+                "rockets",
+                "houses",
+                "colvargas",
+                "mortars"
+            ]
+        },
+        "TST1-MUC3-0054": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0055": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0056": {
+            "trig": [],
+            "ent": [
+                "centralelectoralcouncil",
+                "presidentialresidence",
+                "hotel",
+                "publicworksministermauriciostubigsresidence"
+            ]
+        },
+        "TST1-MUC3-0057": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0058": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0059": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "rebels",
+                "joseantoniorodriguezporth"
+            ]
+        },
+        "TST1-MUC3-0060": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0061": {
+            "trig": [],
+            "ent": [
+                "gonzalorodriguezgachaaliasthemexican",
+                "jaimepardoleal",
+                "twopaidassassinswhoreceivedordersfromelmexicano",
+                "medellincartel"
+            ]
+        },
+        "TST1-MUC3-0062": {
+            "trig": [],
+            "ent": [
+                "eln",
+                "severaldynamiteattacks",
+                "oilinstallations"
+            ]
+        },
+        "TST1-MUC3-0063": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0064": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0065": {
+            "trig": [],
+            "ent": [
+                "marioaccurso",
+                "robertoroascio",
+                "franciscopuja"
+            ]
+        },
+        "TST1-MUC3-0066": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0067": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0068": {
+            "trig": [],
+            "ent": [
+                "uniformedindividuals"
+            ]
+        },
+        "TST1-MUC3-0069": {
+            "trig": [],
+            "ent": [
+                "soldiers",
+                "officers",
+                "armedforces",
+                "joseignacioellacuria"
+            ]
+        },
+        "TST1-MUC3-0070": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0071": {
+            "trig": [],
+            "ent": [
+                "terrorists",
+                "jeffreybrentball",
+                "toddraywilsonburdenson",
+                "fal",
+                "twoburstsofmachinegunfire"
+            ]
+        },
+        "TST1-MUC3-0072": {
+            "trig": [],
+            "ent": [
+                "terrorist",
+                "powerline"
+            ]
+        },
+        "TST1-MUC3-0073": {
+            "trig": [],
+            "ent": [
+                "culturalinstitute",
+                "terrorists",
+                "bomb",
+                "lautaroyouthfront",
+                "fpmr",
+                "financialcompanyoffices",
+                "temple",
+                "culturalinstitutes",
+                "bombattacks",
+                "school"
+            ]
+        },
+        "TST1-MUC3-0074": {
+            "trig": [],
+            "ent": [
+                "marielaespinosaarango"
+            ]
+        },
+        "TST1-MUC3-0075": {
+            "trig": [],
+            "ent": [
+                "paidassassins",
+                "alfonsodelima",
+                "mmsubmachinegunrounds",
+                "mariaelenadiazperez",
+                "dagobertorodriguez"
+            ]
+        },
+        "TST1-MUC3-0076": {
+            "trig": [],
+            "ent": [
+                "vehicle",
+                "assassins",
+                "angelapiedaddeguerrero",
+                "stelatorradodeotalora",
+                "criminals"
+            ]
+        },
+        "TST1-MUC3-0077": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0078": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0079": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0080": {
+            "trig": [],
+            "ent": [
+                "threeheavilyarmedmen",
+                "federicoestradavelez",
+                "extraditables"
+            ]
+        },
+        "TST1-MUC3-0081": {
+            "trig": [],
+            "ent": [
+                "dinaechavarria",
+                "extraditables",
+                "patricia"
+            ]
+        },
+        "TST1-MUC3-0082": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "ernesto",
+                "rosafernandez",
+                "explosivedevice"
+            ]
+        },
+        "TST1-MUC3-0083": {
+            "trig": [],
+            "ent": [
+                "arena",
+                "civilians",
+                "captainalvarosaravia",
+                "rightistdeputydaubuisson",
+                "oscararnulforomero"
+            ]
+        },
+        "TST1-MUC3-0084": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0085": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0086": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0087": {
+            "trig": [],
+            "ent": [
+                "guillermoungo",
+                "men"
+            ]
+        },
+        "TST1-MUC3-0088": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0089": {
+            "trig": [],
+            "ent": [
+                "unknownnumberoffmlnterrorists",
+                "gasstationownedbyvalentinvillatoro",
+                "pylon",
+                "enemiesofthepeople",
+                "vehicles",
+                "antelnationaladministrationfortelecommunicationsoffices",
+                "municipalmayorsoffice",
+                "criminalterrorists",
+                "farabundomartinationalliberationfront",
+                "buswithlicenseplate"
+            ]
+        },
+        "TST1-MUC3-0090": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "bomb",
+                "powertower",
+                "urbanguerrillacommandos"
+            ]
+        },
+        "TST1-MUC3-0091": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0092": {
+            "trig": [],
+            "ent": [
+                "urbanguerrillas",
+                "transformers",
+                "pylons",
+                "fmln"
+            ]
+        },
+        "TST1-MUC3-0093": {
+            "trig": [],
+            "ent": [
+                "colonelponce"
+            ]
+        },
+        "TST1-MUC3-0094": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0095": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0096": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0097": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0098": {
+            "trig": [],
+            "ent": []
+        },
+        "TST1-MUC3-0099": {
+            "trig": [],
+            "ent": [
+                "carbomb",
+                "terrorists",
+                "embassy",
+                "buses",
+                "embassiesoftheprc",
+                "shiningpath",
+                "ussrembassyvehiclethatwasparkedinfrontoftheembassy",
+                "twobombs",
+                "mrta"
+            ]
+        },
+        "TST1-MUC3-0100": {
+            "trig": [],
+            "ent": [
+                "officesofthelocaldevelopmentcorporation",
+                "terrorists",
+                "radiostation",
+                "drugstore",
+                "train",
+                "shiningpath",
+                "bankbranches"
+            ]
+        },
+        "TST2-MUC4-0001": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0002": {
+            "trig": [],
+            "ent": [
+                "fpmr",
+                "nearbystructures",
+                "embassy"
+            ]
+        },
+        "TST2-MUC4-0003": {
+            "trig": [],
+            "ent": [
+                "handgrenades",
+                "erp",
+                "bus",
+                "workersjusticecommand",
+                "ruthesperanzaaguilarmarroquin"
+            ]
+        },
+        "TST2-MUC4-0004": {
+            "trig": [],
+            "ent": [
+                "zaratewillkaarmedforcesofliberation",
+                "embassy",
+                "dynamite",
+                "statebank",
+                "unidentifiedperson",
+                "peoplesperuvianbank",
+                "mariscalballivianbuilding",
+                "othershops",
+                "bookstore"
+            ]
+        },
+        "TST2-MUC4-0005": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0006": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0007": {
+            "trig": [],
+            "ent": [
+                "businesses",
+                "truckfullofpolicemen",
+                "pabloescobargaviria",
+                "houses",
+                "drugtraffickers",
+                "carbomb",
+                "dynamite",
+                "bernardojaramilloossa",
+                "buses",
+                "adolfomesameneses"
+            ]
+        },
+        "TST2-MUC4-0008": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0009": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0010": {
+            "trig": [],
+            "ent": [
+                "newspaper"
+            ]
+        },
+        "TST2-MUC4-0011": {
+            "trig": [],
+            "ent": [
+                "soldiers",
+                "army",
+                "lieutenants",
+                "colonelguillermoalfredobenavidesmoreno"
+            ]
+        },
+        "TST2-MUC4-0012": {
+            "trig": [],
+            "ent": [
+                "jecarneghme"
+            ]
+        },
+        "TST2-MUC4-0013": {
+            "trig": [],
+            "ent": [
+                "edwinrodrigotenedaparreno",
+                "juliotorres",
+                "luisantoniomenesesbenavides",
+                "colombianmilitary",
+                "scottheyndal",
+                "attackerswhoworefielduniformsofthecolombianmilitary",
+                "automaticweapons",
+                "smallecuadoranflagshipworkingwiththeimancominingcompany"
+            ]
+        },
+        "TST2-MUC4-0014": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0015": {
+            "trig": [],
+            "ent": [
+                "terrorist",
+                "bankbranchoffices",
+                "medellincartel",
+                "dynamite"
+            ]
+        },
+        "TST2-MUC4-0016": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0017": {
+            "trig": [],
+            "ent": [
+                "federalpolicebuilding",
+                "truckriggedwithdynamite",
+                "dynamite"
+            ]
+        },
+        "TST2-MUC4-0018": {
+            "trig": [],
+            "ent": [
+                "assassins",
+                "romero",
+                "armedforces"
+            ]
+        },
+        "TST2-MUC4-0019": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "machinegun",
+                "robertoarmandoriveraescobar"
+            ]
+        },
+        "TST2-MUC4-0020": {
+            "trig": [],
+            "ent": [
+                "aviancasboeingthatexplodedinmidairinasparselypopulatedregionnearbogota",
+                "colombiandrugkingpins",
+                "extraditables",
+                "man"
+            ]
+        },
+        "TST2-MUC4-0021": {
+            "trig": [],
+            "ent": [
+                "rebels",
+                "electricitypoles",
+                "dynamite"
+            ]
+        },
+        "TST2-MUC4-0022": {
+            "trig": [],
+            "ent": [
+                "carlospizarro",
+                "drugterrorists",
+                "rebels"
+            ]
+        },
+        "TST2-MUC4-0023": {
+            "trig": [],
+            "ent": [
+                "soldiers",
+                "arturoriveraydamas"
+            ]
+        },
+        "TST2-MUC4-0024": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "bomb",
+                "residencesofdemocraticleaderssuchasrubenzamoraandaronetediaz"
+            ]
+        },
+        "TST2-MUC4-0025": {
+            "trig": [],
+            "ent": [
+                "uniformedmen",
+                "ignacioellacuria"
+            ]
+        },
+        "TST2-MUC4-0026": {
+            "trig": [],
+            "ent": [
+                "fidelcastano",
+                "sectorswhoseektodestabilizethecountry",
+                "policemembers",
+                "army",
+                "henryperezheadsoftheextremerightistparamilitarymilitias",
+                "bernardojaramillo",
+                "medellincartel",
+                "carlospizarro",
+                "police",
+                "extraditables"
+            ]
+        },
+        "TST2-MUC4-0027": {
+            "trig": [],
+            "ent": [
+                "fmln"
+            ]
+        },
+        "TST2-MUC4-0028": {
+            "trig": [],
+            "ent": [
+                "armedfoceshighcommand",
+                "bomb",
+                "nationaluniversity",
+                "government"
+            ]
+        },
+        "TST2-MUC4-0029": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0030": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0031": {
+            "trig": [],
+            "ent": [
+                "airforce",
+                "rockets",
+                "army",
+                "honduranarmytroops",
+                "helicopter",
+                "arcebattalion",
+                "machineguns",
+                "animals",
+                "armies",
+                "homes"
+            ]
+        },
+        "TST2-MUC4-0032": {
+            "trig": [],
+            "ent": [
+                "cesargaviriatrujillo",
+                "hiredassassins",
+                "callers",
+                "pabloescobargaviria",
+                "thirdpersonlinkedtothepaidassassinwhokilledtheupleader",
+                "medellincartel",
+                "bernardojaramilloossa",
+                "paidassassin",
+                "gonzalorodriguezgachacommandogroup",
+                "extraditables"
+            ]
+        },
+        "TST2-MUC4-0033": {
+            "trig": [],
+            "ent": [
+                "franciscojoseguerrero",
+                "criminals"
+            ]
+        },
+        "TST2-MUC4-0034": {
+            "trig": [],
+            "ent": [
+                "eduardoantoniolopezpalencia"
+            ]
+        },
+        "TST2-MUC4-0035": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0036": {
+            "trig": [],
+            "ent": [
+                "pedrogonzalezerazo",
+                "militarydetachmentno",
+                "robertomena",
+                "victormanuelvasquez",
+                "army",
+                "nationalguard",
+                "raulramirez",
+                "hugomartinez",
+                "virgilioortiz",
+                "virgilioortizcruz",
+                "nationalpolicemembers",
+                "macloviagonzalez",
+                "colonelcanas",
+                "mariaasuncionromero",
+                "colonalorlandomontano",
+                "nationalpolice",
+                "thinfantrybrigade",
+                "bartolorodriguez",
+                "marioflores",
+                "armytroops",
+                "jaimeestevez",
+                "lieutenantpachecho",
+                "lucia",
+                "rafaelromero",
+                "atonalbattalion",
+                "troops"
+            ]
+        },
+        "TST2-MUC4-0037": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0038": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0039": {
+            "trig": [],
+            "ent": [
+                "lesliekent",
+                "nelsonmandelacell",
+                "jamesarthurdonnelly",
+                "davidlecky",
+                "eln"
+            ]
+        },
+        "TST2-MUC4-0040": {
+            "trig": [],
+            "ent": [
+                "patriciaechavarria",
+                "extraditables"
+            ]
+        },
+        "TST2-MUC4-0041": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0042": {
+            "trig": [],
+            "ent": [
+                "gonzalorodriguezgacha",
+                "specialgroups",
+                "police"
+            ]
+        },
+        "TST2-MUC4-0043": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0044": {
+            "trig": [],
+            "ent": [
+                "vehicle",
+                "explosives",
+                "nationalliberationarmy",
+                "membersofthecolombianguerrillas",
+                "colombiandrugtraffickinggangs"
+            ]
+        },
+        "TST2-MUC4-0045": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0046": {
+            "trig": [],
+            "ent": [
+                "terrorist",
+                "hkairplane"
+            ]
+        },
+        "TST2-MUC4-0047": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0048": {
+            "trig": [],
+            "ent": [
+                "explosives",
+                "guerrillas",
+                "bomb",
+                "armoredvehicle",
+                "robertogarciaalvarado",
+                "urbancommandos",
+                "farabundomartinationalliberationfront",
+                "merinoshome"
+            ]
+        },
+        "TST2-MUC4-0049": {
+            "trig": [],
+            "ent": [
+                "militarybus",
+                "carbomb",
+                "barracks"
+            ]
+        },
+        "TST2-MUC4-0050": {
+            "trig": [],
+            "ent": [
+                "jorgeadolfovargasgonzalez"
+            ]
+        },
+        "TST2-MUC4-0051": {
+            "trig": [],
+            "ent": [
+                "luiscarlosgalansarmiento"
+            ]
+        },
+        "TST2-MUC4-0052": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0053": {
+            "trig": [],
+            "ent": [
+                "unidentifiedassailants",
+                "norbertorodriguez"
+            ]
+        },
+        "TST2-MUC4-0054": {
+            "trig": [],
+            "ent": [
+                "armedforces",
+                "membersofthearmedforces"
+            ]
+        },
+        "TST2-MUC4-0055": {
+            "trig": [],
+            "ent": [
+                "mrtaactivists",
+                "hectordelgadoparker",
+                "mrta"
+            ]
+        },
+        "TST2-MUC4-0056": {
+            "trig": [],
+            "ent": [
+                "armedforcesmembers",
+                "armedforces"
+            ]
+        },
+        "TST2-MUC4-0057": {
+            "trig": [],
+            "ent": [
+                "colonelorlandozepedadeputydefenseminister",
+                "colonelreneemilioponcechairmanofthejointschiefsofstaff",
+                "colonelheribertohernandezdirectorofthetreasurypolice",
+                "captainalfonsochavezgarcia",
+                "treasurypolice"
+            ]
+        },
+        "TST2-MUC4-0058": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0059": {
+            "trig": [],
+            "ent": [
+                "individuals",
+                "hotel",
+                "bomb",
+                "bankinanotherpartofcartagena",
+                "residences",
+                "drugtraffickers",
+                "electricenergyenterprise",
+                "dynamite"
+            ]
+        },
+        "TST2-MUC4-0060": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0061": {
+            "trig": [],
+            "ent": [
+                "individualsinabluerenault",
+                "hipolitohincapie",
+                "newspaperelsiglosfacilities"
+            ]
+        },
+        "TST2-MUC4-0062": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0063": {
+            "trig": [],
+            "ent": [
+                "urbanguerrillas",
+                "unionheadquarters",
+                "lempariverhydroelectricexecutivecommissioncelsubstation"
+            ]
+        },
+        "TST2-MUC4-0064": {
+            "trig": [],
+            "ent": [
+                "drugtraffickers",
+                "migueljose",
+                "monicadegreiff"
+            ]
+        },
+        "TST2-MUC4-0065": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0066": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0067": {
+            "trig": [],
+            "ent": [
+                "transportation",
+                "gasstation",
+                "fmln",
+                "powerlines",
+                "rebels"
+            ]
+        },
+        "TST2-MUC4-0068": {
+            "trig": [],
+            "ent": [
+                "army",
+                "troops"
+            ]
+        },
+        "TST2-MUC4-0069": {
+            "trig": [],
+            "ent": [
+                "men",
+                "restaurant",
+                "mediumsizedbomb",
+                "bank"
+            ]
+        },
+        "TST2-MUC4-0070": {
+            "trig": [],
+            "ent": [
+                "jesusfernandez",
+                "membersandsympathizersofthemsgroscararnulforomerofederationofcommitteesofmothersandrelativesfecmafamofpoliticalprisonersandmurderedandmissingpeople",
+                "msgroscararnulforomerofederationofcommitteesofmothersandrelativesfecmafamofpoliticalprisonersandmurderedandmissingpeople"
+            ]
+        },
+        "TST2-MUC4-0071": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0072": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0073": {
+            "trig": [],
+            "ent": [
+                "military"
+            ]
+        },
+        "TST2-MUC4-0074": {
+            "trig": [],
+            "ent": [
+                "generalstaff",
+                "laborunionoffices",
+                "colorlandocepeda",
+                "colreneemilioponcechiefofstaff",
+                "alfredocristiani",
+                "colguillermobenavides",
+                "politicalparties",
+                "advisers",
+                "armedforces",
+                "colonels",
+                "religiouscenters",
+                "highcommand",
+                "officesofhumanitarianorganizations",
+                "usofficers",
+                "membersoflatandona"
+            ]
+        },
+        "TST2-MUC4-0075": {
+            "trig": [],
+            "ent": [
+                "officesofthesalvadoranworkersnationalunionfederation",
+                "carbomb"
+            ]
+        },
+        "TST2-MUC4-0076": {
+            "trig": [],
+            "ent": [
+                "unidentifiedpersons",
+                "ccargoplane",
+                "bomb"
+            ]
+        },
+        "TST2-MUC4-0077": {
+            "trig": [],
+            "ent": [
+                "carlosenriqueferreyros",
+                "mrta"
+            ]
+        },
+        "TST2-MUC4-0078": {
+            "trig": [],
+            "ent": [
+                "farabundomartinationalliberationfront",
+                "powerlines",
+                "fmlnfarabundomartinationalliberationfrontforces",
+                "transformers"
+            ]
+        },
+        "TST2-MUC4-0079": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0080": {
+            "trig": [],
+            "ent": [
+                "presidencialresidence",
+                "ambulance",
+                "vehiclesofthesalvadoranredcross"
+            ]
+        },
+        "TST2-MUC4-0081": {
+            "trig": [],
+            "ent": [
+                "unidentifiedpersons",
+                "bombs",
+                "bankbranches"
+            ]
+        },
+        "TST2-MUC4-0082": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0083": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0084": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0085": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0086": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0087": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0088": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0089": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0090": {
+            "trig": [],
+            "ent": [
+                "facilitiesnexttotheusembassy",
+                "bomb",
+                "buildingnexttotheusembassy"
+            ]
+        },
+        "TST2-MUC4-0091": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0092": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0093": {
+            "trig": [],
+            "ent": [
+                "airforce"
+            ]
+        },
+        "TST2-MUC4-0094": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0095": {
+            "trig": [],
+            "ent": [
+                "terrorist",
+                "airforceinstallations",
+                "explosivedevices",
+                "buildings"
+            ]
+        },
+        "TST2-MUC4-0096": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0097": {
+            "trig": [],
+            "ent": []
+        },
+        "TST2-MUC4-0098": {
+            "trig": [],
+            "ent": [
+                "army",
+                "christiandemocraticgovernment"
+            ]
+        },
+        "TST2-MUC4-0099": {
+            "trig": [],
+            "ent": [
+                "oilpipeline",
+                "guerrillaspresumedtobemembersoftheprocastroarmyofnationalliberation",
+                "oilterminal",
+                "eln",
+                "armyofnationalliberation"
+            ]
+        },
+        "TST2-MUC4-0100": {
+            "trig": [],
+            "ent": [
+                "armyofnationalliberation",
+                "guerrillas",
+                "carlosmarcelo"
+            ]
+        },
+        "TST3-MUC4-0001": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0002": {
+            "trig": [],
+            "ent": [
+                "armedforcesmembers",
+                "armedforces"
+            ]
+        },
+        "TST3-MUC4-0003": {
+            "trig": [],
+            "ent": [
+                "gerardoolivossilva",
+                "criminals",
+                "enriquelopezalbujartrint",
+                "shiningpath"
+            ]
+        },
+        "TST3-MUC4-0004": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0005": {
+            "trig": [],
+            "ent": [
+                "hectoroquelicolindres",
+                "gildaflores",
+                "heavilyarmedmen"
+            ]
+        },
+        "TST3-MUC4-0006": {
+            "trig": [],
+            "ent": [
+                "hectoroqueli",
+                "peoplewhothroughagovernmentradionetworkhadaccusedhimofbeinganaccompliceoftherebels",
+                "gildaflores",
+                "heavilyarmedmen"
+            ]
+        },
+        "TST3-MUC4-0007": {
+            "trig": [],
+            "ent": [
+                "oneoftheresidenceguards",
+                "josejesuspenaallegedchiefofsecurityforthenicaraguanembassyintegucigalpa",
+                "manuelantoniorugama",
+                "nicaraguanembassy"
+            ]
+        },
+        "TST3-MUC4-0008": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0009": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0010": {
+            "trig": [],
+            "ent": [
+                "thecommitteeofmothersofpoliticalprisonersandmissinginelsalvador",
+                "explosives",
+                "criminalgroups",
+                "fmln",
+                "salvadoranworkersnationalunionfederation",
+                "armedforcesstaffinstallations"
+            ]
+        },
+        "TST3-MUC4-0011": {
+            "trig": [],
+            "ent": [
+                "armyofnationalliberation",
+                "manuelgustavochaconsovereigntyoperation"
+            ]
+        },
+        "TST3-MUC4-0012": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0013": {
+            "trig": [],
+            "ent": [
+                "cristiani",
+                "arena",
+                "fecmasan",
+                "assassins",
+                "colonelelenafuente",
+                "residencesofleadersofthesocialchristianpeoplesmovement",
+                "deathsquad",
+                "nationalistdemocraticunion",
+                "fenastras",
+                "university",
+                "colonelponce",
+                "armedforces",
+                "government",
+                "mason"
+            ]
+        },
+        "TST3-MUC4-0014": {
+            "trig": [],
+            "ent": [
+                "bomb",
+                "luismorales",
+                "shiningpathmembers",
+                "shiningpath",
+                "terrorist",
+                "unidentifiedindividuals"
+            ]
+        },
+        "TST3-MUC4-0015": {
+            "trig": [],
+            "ent": [
+                "vehicleinwhichthereportersweretraveling",
+                "robertonavas",
+                "mauriciopineda"
+            ]
+        },
+        "TST3-MUC4-0016": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0017": {
+            "trig": [],
+            "ent": [
+                "modestoramirezcentralfront",
+                "fmln",
+                "explosivedevices",
+                "vicepresidentelectfranciscomerinoshome",
+                "armedforces",
+                "unidentifiedindividuals"
+            ]
+        },
+        "TST3-MUC4-0018": {
+            "trig": [],
+            "ent": [
+                "transportation",
+                "powerpoles",
+                "rocket",
+                "terrorists",
+                "nationalpolicestation",
+                "transformers",
+                "fmln",
+                "antelnationaladministrationfortelecommunicationsoffice",
+                "mortar",
+                "m",
+                "stinfantrybrigadegarrison"
+            ]
+        },
+        "TST3-MUC4-0019": {
+            "trig": [],
+            "ent": [
+                "pipeline"
+            ]
+        },
+        "TST3-MUC4-0020": {
+            "trig": [],
+            "ent": [
+                "peruvians"
+            ]
+        },
+        "TST3-MUC4-0021": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0022": {
+            "trig": [],
+            "ent": [
+                "hoodedindividuals",
+                "doloreshinostroza",
+                "shiningpath",
+                "commandogroupsofthemaoistshiningpath"
+            ]
+        },
+        "TST3-MUC4-0023": {
+            "trig": [],
+            "ent": [
+                "narcoticsmafia",
+                "antonioroldanbetancur"
+            ]
+        },
+        "TST3-MUC4-0024": {
+            "trig": [],
+            "ent": [
+                "pipeline",
+                "terrorists",
+                "vinapuertosalgaroilpipeline",
+                "dynamite"
+            ]
+        },
+        "TST3-MUC4-0025": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0026": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0027": {
+            "trig": [],
+            "ent": [
+                "unidentifiedindividuals",
+                "danilobarillas",
+                "machinegun"
+            ]
+        },
+        "TST3-MUC4-0028": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0029": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0030": {
+            "trig": [],
+            "ent": [
+                "people",
+                "mariaelenadiaz",
+                "carlosvalenciagarcia",
+                "paidassasins"
+            ]
+        },
+        "TST3-MUC4-0031": {
+            "trig": [],
+            "ent": [
+                "carlosvalencia",
+                "drugmafia"
+            ]
+        },
+        "TST3-MUC4-0032": {
+            "trig": [],
+            "ent": [
+                "jubizhazvumb",
+                "medellincartel",
+                "luiscarlosgalan",
+                "drugtraffickingmafias",
+                "paramilitarygroups"
+            ]
+        },
+        "TST3-MUC4-0033": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "militias",
+                "powerlines"
+            ]
+        },
+        "TST3-MUC4-0034": {
+            "trig": [],
+            "ent": [
+                "luiscarlosgalan",
+                "personofaraborigin"
+            ]
+        },
+        "TST3-MUC4-0035": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0036": {
+            "trig": [],
+            "ent": [
+                "airportinstallations"
+            ]
+        },
+        "TST3-MUC4-0037": {
+            "trig": [],
+            "ent": [
+                "bomb",
+                "bankbuilding",
+                "agrarianboard",
+                "stores",
+                "bus",
+                "drugtraffickers",
+                "dynamite"
+            ]
+        },
+        "TST3-MUC4-0038": {
+            "trig": [],
+            "ent": [
+                "luiscarlosgalan",
+                "martaluciagonzalez",
+                "alvarogonzalezsantana"
+            ]
+        },
+        "TST3-MUC4-0039": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0040": {
+            "trig": [],
+            "ent": [
+                "bankoffice",
+                "men",
+                "explosivedevices",
+                "shops",
+                "bancopopular",
+                "politicaloffices",
+                "bancodeoccidente",
+                "nearbybanks",
+                "bombs",
+                "banks",
+                "drugtraffickingcartels"
+            ]
+        },
+        "TST3-MUC4-0041": {
+            "trig": [],
+            "ent": [
+                "carbomb",
+                "peoplewhowerekilled",
+                "gasstation",
+                "dynamite"
+            ]
+        },
+        "TST3-MUC4-0042": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0043": {
+            "trig": [],
+            "ent": [
+                "arnulforomero"
+            ]
+        },
+        "TST3-MUC4-0044": {
+            "trig": [],
+            "ent": [
+                "officesthatformerpresidentraulalfonsinhasinthiscity",
+                "bomb",
+                "buildings",
+                "beatriziero"
+            ]
+        },
+        "TST3-MUC4-0045": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0046": {
+            "trig": [],
+            "ent": [
+                "marthaluzlopez",
+                "gunmen",
+                "miguelsolerrodriguez",
+                "marthalopezorozcodelopez",
+                "theextraditables",
+                "mainofficesinbogotaofelespectador",
+                "carbomb",
+                "unidentifiedindividuals",
+                "drugtraffickingmafia"
+            ]
+        },
+        "TST3-MUC4-0047": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0048": {
+            "trig": [],
+            "ent": [
+                "patriciadenny",
+                "dianamackortiz"
+            ]
+        },
+        "TST3-MUC4-0049": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0050": {
+            "trig": [],
+            "ent": [
+                "unit",
+                "airforce",
+                "mortar",
+                "fmln",
+                "army",
+                "machinegun",
+                "pylons"
+            ]
+        },
+        "TST3-MUC4-0051": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0052": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0053": {
+            "trig": [],
+            "ent": [
+                "fenastras",
+                "colponce",
+                "presidentcristiani"
+            ]
+        },
+        "TST3-MUC4-0054": {
+            "trig": [],
+            "ent": [
+                "centralelectionscouncil",
+                "presidentialresidence",
+                "terrorists",
+                "thinfantrybrigade",
+                "farabundomartinationalliberationfront",
+                "privateresidence",
+                "residenceofthelegislativeassemblypresident"
+            ]
+        },
+        "TST3-MUC4-0055": {
+            "trig": [],
+            "ent": [
+                "landingstrip",
+                "helicopters",
+                "deathsquads",
+                "army",
+                "guerrillafighters",
+                "military",
+                "febeelizabeth",
+                "dynamite",
+                "farabundomartinationalliberationfront",
+                "rebels"
+            ]
+        },
+        "TST3-MUC4-0056": {
+            "trig": [],
+            "ent": [
+                "armedforces"
+            ]
+        },
+        "TST3-MUC4-0057": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "rebels"
+            ]
+        },
+        "TST3-MUC4-0058": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0059": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0060": {
+            "trig": [],
+            "ent": [
+                "topmilitaryandpoliticalfigures",
+                "elvaramos",
+                "segundomontes",
+                "ignaciomartinbaro",
+                "largenumberofheavilyarmedsoldiers",
+                "amandolopez",
+                "juliaramos",
+                "armedforces",
+                "government",
+                "ignacioellacuria",
+                "juanramonmoreno",
+                "joaquinlopezylopez"
+            ]
+        },
+        "TST3-MUC4-0061": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "presidentalfredocristianisofficialandpersonalresidences",
+                "alfredocristiani",
+                "tradeunionsheadquarters",
+                "detachments",
+                "artillery"
+            ]
+        },
+        "TST3-MUC4-0062": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0063": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0064": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0065": {
+            "trig": [],
+            "ent": [
+                "unionheadquarters"
+            ]
+        },
+        "TST3-MUC4-0066": {
+            "trig": [],
+            "ent": [
+                "deathsquads"
+            ]
+        },
+        "TST3-MUC4-0067": {
+            "trig": [],
+            "ent": [
+                "latandona",
+                "homes",
+                "highcommand"
+            ]
+        },
+        "TST3-MUC4-0068": {
+            "trig": [],
+            "ent": [
+                "guerrillas",
+                "hotel",
+                "fmln",
+                "commanderesteban",
+                "rebelcommanders",
+                "commanderamilcar",
+                "joaobaenasoares"
+            ]
+        },
+        "TST3-MUC4-0069": {
+            "trig": [],
+            "ent": [
+                "army",
+                "uspilots",
+                "usgovernment"
+            ]
+        },
+        "TST3-MUC4-0070": {
+            "trig": [],
+            "ent": [
+                "farabundomartinationalliberationfront",
+                "armedforcesjointchiefsofstaff",
+                "nationalguardgarrison",
+                "presidentialhouse"
+            ]
+        },
+        "TST3-MUC4-0071": {
+            "trig": [],
+            "ent": [
+                "farabundomartinationalliberationfront",
+                "battalions",
+                "electricityposts"
+            ]
+        },
+        "TST3-MUC4-0072": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0073": {
+            "trig": [],
+            "ent": [
+                "bombhiddeninatruck",
+                "administrativedepartmentofsecurity",
+                "officesofthebogotatransportationdepartment"
+            ]
+        },
+        "TST3-MUC4-0074": {
+            "trig": [],
+            "ent": [
+                "fenastras",
+                "febeelizabethvelazquez",
+                "salvadoranworkersnationalunionfederation",
+                "dynamite"
+            ]
+        },
+        "TST3-MUC4-0075": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0076": {
+            "trig": [],
+            "ent": [
+                "government"
+            ]
+        },
+        "TST3-MUC4-0077": {
+            "trig": [],
+            "ent": [
+                "drugtraffickers",
+                "das",
+                "gonzalorodriguezgacha"
+            ]
+        },
+        "TST3-MUC4-0078": {
+            "trig": [],
+            "ent": [
+                "abiliodiniz",
+                "twocanadians",
+                "twoargentines",
+                "movementoftherevolutionaryleft",
+                "fivechileans",
+                "onebrazilian"
+            ]
+        },
+        "TST3-MUC4-0079": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0080": {
+            "trig": [],
+            "ent": [
+                "guerrillas",
+                "businesses",
+                "bomb",
+                "fmln",
+                "soldier",
+                "entireelectricalpowersystem",
+                "rebel",
+                "marialuzlopez",
+                "armedforces",
+                "dynamite",
+                "coffeeprocessingplant"
+            ]
+        },
+        "TST3-MUC4-0081": {
+            "trig": [],
+            "ent": [
+                "car",
+                "luissandigacabrera"
+            ]
+        },
+        "TST3-MUC4-0082": {
+            "trig": [],
+            "ent": [
+                "vladimirescobar"
+            ]
+        },
+        "TST3-MUC4-0083": {
+            "trig": [],
+            "ent": [
+                "hectoroqueli",
+                "government"
+            ]
+        },
+        "TST3-MUC4-0084": {
+            "trig": [],
+            "ent": [
+                "bomb",
+                "fmln",
+                "bus",
+                "store",
+                "rebels"
+            ]
+        },
+        "TST3-MUC4-0085": {
+            "trig": [],
+            "ent": [
+                "soldiers",
+                "army"
+            ]
+        },
+        "TST3-MUC4-0086": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0087": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0088": {
+            "trig": [],
+            "ent": [
+                "jorgeserranogonzalez",
+                "guerrillas",
+                "powersystem",
+                "popularliberationarmy",
+                "largecolumnofthepopularliberationarmy"
+            ]
+        },
+        "TST3-MUC4-0089": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0090": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0091": {
+            "trig": [],
+            "ent": [
+                "pistols",
+                "individuals",
+                "gustavoleighguzman",
+                "enriqueruiz"
+            ]
+        },
+        "TST3-MUC4-0092": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0093": {
+            "trig": [],
+            "ent": [
+                "bernardojaramillo"
+            ]
+        },
+        "TST3-MUC4-0094": {
+            "trig": [],
+            "ent": [
+                "vehicle",
+                "people",
+                "terrorists",
+                "mauriciocampos",
+                "josemanuelposada",
+                "bomb",
+                "ottomilla",
+                "concepcionherrera",
+                "manuelalvaromendoza",
+                "terroristsquads",
+                "carbomb",
+                "yohalmoantonioortiz",
+                "outpost",
+                "farabundomartinationalliberationfrontrevolutionarydemocraticfront",
+                "fmlnfdrmembers"
+            ]
+        },
+        "TST3-MUC4-0095": {
+            "trig": [],
+            "ent": []
+        },
+        "TST3-MUC4-0096": {
+            "trig": [],
+            "ent": [
+                "carlospizarroleongomez"
+            ]
+        },
+        "TST3-MUC4-0097": {
+            "trig": [],
+            "ent": [
+                "governmenttroops",
+                "fmln",
+                "army",
+                "houses",
+                "electricalsystems",
+                "guerrillamembers"
+            ]
+        },
+        "TST3-MUC4-0098": {
+            "trig": [],
+            "ent": [
+                "soldiers"
+            ]
+        },
+        "TST3-MUC4-0099": {
+            "trig": [],
+            "ent": [
+                "rifles",
+                "guerrillas",
+                "fmln",
+                "urbancommandosofthefarabundomartinationalliberationfront",
+                "pylons",
+                "electricpoles",
+                "transformer",
+                "mortars",
+                "celsubstation"
+            ]
+        },
+        "TST3-MUC4-0100": {
+            "trig": [],
+            "ent": [
+                "presidentalfredocristiani",
+                "government"
+            ]
+        },
+        "TST4-MUC4-0001": {
+            "trig": [],
+            "ent": [
+                "churchofjesuschristoflatterdaysaints",
+                "unidentifiedindividuals",
+                "bomb",
+                "ammoniumnitratefueloilblastingagents"
+            ]
+        },
+        "TST4-MUC4-0002": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0003": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0004": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0005": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0006": {
+            "trig": [],
+            "ent": [
+                "mine",
+                "lanoriabridge",
+                "alexandermolinagranados",
+                "fmln",
+                "electrictower",
+                "insurgents"
+            ]
+        },
+        "TST4-MUC4-0007": {
+            "trig": [],
+            "ent": [
+                "aeronicasregionaloffices",
+                "rightistsectors",
+                "grenades"
+            ]
+        },
+        "TST4-MUC4-0008": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0009": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0010": {
+            "trig": [],
+            "ent": [
+                "unidentifiedindividuals",
+                "nationalvanguardoffices",
+                "bomb",
+                "houses"
+            ]
+        },
+        "TST4-MUC4-0011": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0012": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0013": {
+            "trig": [],
+            "ent": [
+                "captainalvarosanabria",
+                "oscararnulforomero"
+            ]
+        },
+        "TST4-MUC4-0014": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0015": {
+            "trig": [],
+            "ent": [
+                "armyofnationalliberationgroup",
+                "fire",
+                "popularliberationarmy",
+                "houses",
+                "gang",
+                "bus",
+                "armyofnationalliberation"
+            ]
+        },
+        "TST4-MUC4-0016": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "fmlngeneralcommand",
+                "urbanguerrillas",
+                "bombs",
+                "cars"
+            ]
+        },
+        "TST4-MUC4-0017": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0018": {
+            "trig": [],
+            "ent": [
+                "noelkempff"
+            ]
+        },
+        "TST4-MUC4-0019": {
+            "trig": [],
+            "ent": [
+                "vehicle",
+                "bomb",
+                "terrorists",
+                "economyandfinanceministrybuilding",
+                "unidadagrariadelima"
+            ]
+        },
+        "TST4-MUC4-0020": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0021": {
+            "trig": [],
+            "ent": [
+                "darmydivisionheadquarters",
+                "bomb",
+                "extremist",
+                "terrorist",
+                "communistpartyheadquarters",
+                "homes"
+            ]
+        },
+        "TST4-MUC4-0022": {
+            "trig": [],
+            "ent": [
+                "approximatelyterrorists",
+                "machinery",
+                "molotovcocktails"
+            ]
+        },
+        "TST4-MUC4-0023": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0024": {
+            "trig": [],
+            "ent": [
+                "individuals",
+                "yesvotesupporters",
+                "humbertobalza",
+                "pdcspremises"
+            ]
+        },
+        "TST4-MUC4-0025": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "antelnationaladministrationfortelecommunicationsinstallations"
+            ]
+        },
+        "TST4-MUC4-0026": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0027": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0028": {
+            "trig": [],
+            "ent": [
+                "terrorists",
+                "czechoslovakbombs",
+                "tower",
+                "towerno",
+                "tnt"
+            ]
+        },
+        "TST4-MUC4-0029": {
+            "trig": [],
+            "ent": [
+                "embassy",
+                "terrorists",
+                "shiningpath",
+                "herminioparra"
+            ]
+        },
+        "TST4-MUC4-0030": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0031": {
+            "trig": [],
+            "ent": [
+                "terrorist",
+                "eln",
+                "sectionofthemultipurposepipeline",
+                "highway"
+            ]
+        },
+        "TST4-MUC4-0032": {
+            "trig": [],
+            "ent": [
+                "gunpowder",
+                "bomb",
+                "headquartersoftheshoeindustryworkersunion"
+            ]
+        },
+        "TST4-MUC4-0033": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0034": {
+            "trig": [],
+            "ent": [
+                "vehicle",
+                "individuals",
+                "bomb",
+                "houses",
+                "homeofgeneralenriquefranco",
+                "enriquefranco"
+            ]
+        },
+        "TST4-MUC4-0035": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0036": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0037": {
+            "trig": [],
+            "ent": [
+                "guerrillas",
+                "fmln",
+                "urbanguerrillas",
+                "powerpole",
+                "bombs",
+                "building",
+                "administrativeofficesofthenameindistinctseasideresort"
+            ]
+        },
+        "TST4-MUC4-0038": {
+            "trig": [],
+            "ent": [
+                "rosaliomejiarodriguez",
+                "eps",
+                "guillermosaulmejiaherrera",
+                "hectorrosalesmejiarodriguez",
+                "troops"
+            ]
+        },
+        "TST4-MUC4-0039": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0040": {
+            "trig": [],
+            "ent": [
+                "businesses",
+                "manueljosearceurbancommand",
+                "parkinglot",
+                "lancermotel",
+                "commercialbuilding"
+            ]
+        },
+        "TST4-MUC4-0041": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0042": {
+            "trig": [],
+            "ent": [
+                "epl",
+                "farc",
+                "guerrillasofthefarcandthepopularliberationarmyepl",
+                "bridge",
+                "bridges",
+                "guerrillasofthefarcandthepopularliberationarmy"
+            ]
+        },
+        "TST4-MUC4-0043": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "carbombs",
+                "chain",
+                "shoppingmall"
+            ]
+        },
+        "TST4-MUC4-0044": {
+            "trig": [],
+            "ent": [
+                "fpmr",
+                "victordiazcaro",
+                "augustopinochet",
+                "snipers"
+            ]
+        },
+        "TST4-MUC4-0045": {
+            "trig": [],
+            "ent": [
+                "popularliberationarmy",
+                "guerrillas",
+                "bridge",
+                "bus"
+            ]
+        },
+        "TST4-MUC4-0046": {
+            "trig": [],
+            "ent": [
+                "deathsquadmembers",
+                "oscararnulforomero",
+                "armedforces"
+            ]
+        },
+        "TST4-MUC4-0047": {
+            "trig": [],
+            "ent": [
+                "rebels"
+            ]
+        },
+        "TST4-MUC4-0048": {
+            "trig": [],
+            "ent": [
+                "armedforces",
+                "deathsquads"
+            ]
+        },
+        "TST4-MUC4-0049": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0050": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0051": {
+            "trig": [],
+            "ent": [
+                "criminals",
+                "carlossotosedice"
+            ]
+        },
+        "TST4-MUC4-0052": {
+            "trig": [],
+            "ent": [
+                "raulpellegrin",
+                "ceciliamagni"
+            ]
+        },
+        "TST4-MUC4-0053": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0054": {
+            "trig": [],
+            "ent": [
+                "nationalliberationarmy",
+                "citysadministrativeoffices",
+                "bomb",
+                "farms",
+                "insurgents"
+            ]
+        },
+        "TST4-MUC4-0055": {
+            "trig": [],
+            "ent": [
+                "andresavelinocacerespark",
+                "bomb",
+                "alangarcia"
+            ]
+        },
+        "TST4-MUC4-0056": {
+            "trig": [],
+            "ent": [
+                "army",
+                "militaryauthorities"
+            ]
+        },
+        "TST4-MUC4-0057": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "armedforces",
+                "deathsquad"
+            ]
+        },
+        "TST4-MUC4-0058": {
+            "trig": [],
+            "ent": [
+                "bomb",
+                "terrorists",
+                "shiningpath",
+                "dancehall",
+                "powder"
+            ]
+        },
+        "TST4-MUC4-0059": {
+            "trig": [],
+            "ent": [
+                "powertowers",
+                "terrorists"
+            ]
+        },
+        "TST4-MUC4-0060": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0061": {
+            "trig": [],
+            "ent": [
+                "rifles",
+                "administrativeofficesofthesugarmill",
+                "house",
+                "fmln",
+                "mortars",
+                "insurgents"
+            ]
+        },
+        "TST4-MUC4-0062": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0063": {
+            "trig": [],
+            "ent": [
+                "groupofrebels",
+                "antelnationaladministrationfortelecommunicationsoffice",
+                "fmln",
+                "courtoffices",
+                "communitycenter"
+            ]
+        },
+        "TST4-MUC4-0064": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0065": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0066": {
+            "trig": [],
+            "ent": [
+                "luzleon",
+                "parmenidescuenca"
+            ]
+        },
+        "TST4-MUC4-0067": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0068": {
+            "trig": [],
+            "ent": [
+                "eln",
+                "commando",
+                "miguelantonioavilabarreto",
+                "guillermorodriguezvelasquez"
+            ]
+        },
+        "TST4-MUC4-0069": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0070": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0071": {
+            "trig": [],
+            "ent": [
+                "subversives",
+                "justopastorceballos",
+                "venezuelanarmy",
+                "joseantonioaregua"
+            ]
+        },
+        "TST4-MUC4-0072": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0073": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0074": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0075": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0076": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0077": {
+            "trig": [],
+            "ent": [
+                "hotels",
+                "extremists",
+                "bus",
+                "shiningpath",
+                "inns",
+                "terroristgroups",
+                "mrta"
+            ]
+        },
+        "TST4-MUC4-0078": {
+            "trig": [],
+            "ent": [
+                "mine",
+                "powerpoles",
+                "nationaladministrationfortelecommunicationsoffices",
+                "transformers",
+                "fmln",
+                "vehicles",
+                "trains",
+                "junctionboxes",
+                "mayorialoffices",
+                "buses",
+                "towers",
+                "rebels"
+            ]
+        },
+        "TST4-MUC4-0079": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0080": {
+            "trig": [],
+            "ent": [
+                "gustavodejesusescobarfernandez",
+                "mariaflorezgutierrez",
+                "pistol",
+                "man"
+            ]
+        },
+        "TST4-MUC4-0081": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "guerrillas",
+                "train",
+                "mine"
+            ]
+        },
+        "TST4-MUC4-0082": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0083": {
+            "trig": [],
+            "ent": [
+                "mauricioverabarrios",
+                "bomb"
+            ]
+        },
+        "TST4-MUC4-0084": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0085": {
+            "trig": [],
+            "ent": [
+                "corineseguin",
+                "adolfospezua",
+                "thomaspellissier",
+                "augustovilcahuman",
+                "membersofthemaoistshiningpathguerrillamovement",
+                "shiningpath"
+            ]
+        },
+        "TST4-MUC4-0086": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "guerrillas",
+                "hectorarevalo"
+            ]
+        },
+        "TST4-MUC4-0087": {
+            "trig": [],
+            "ent": [
+                "unidentifiedcivilians",
+                "albertocelissanchez",
+                "camilistunity",
+                "nationalliberationarmy",
+                "ernestocheguevarafront",
+                "manuelsantoscruzarboleda"
+            ]
+        },
+        "TST4-MUC4-0088": {
+            "trig": [],
+            "ent": [
+                "terrorists",
+                "workersrevolutionarymovement",
+                "allegedterrorists",
+                "juancarlosvegallona",
+                "alfredochamorro"
+            ]
+        },
+        "TST4-MUC4-0089": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0090": {
+            "trig": [],
+            "ent": [
+                "urbanguerrillasoperatinginsantaana",
+                "rosaimeldagonzalezmedrano"
+            ]
+        },
+        "TST4-MUC4-0091": {
+            "trig": [],
+            "ent": [
+                "bomb",
+                "car",
+                "bridge"
+            ]
+        },
+        "TST4-MUC4-0092": {
+            "trig": [],
+            "ent": [
+                "fmln",
+                "garrison",
+                "rebels",
+                "antelnationaladministrationfortelecommunicationsoffice"
+            ]
+        },
+        "TST4-MUC4-0093": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0094": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0095": {
+            "trig": [],
+            "ent": [
+                "explosives",
+                "cellempariverhydroelectricexecutivecommissionsanluissubstation",
+                "anothergroup"
+            ]
+        },
+        "TST4-MUC4-0096": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0097": {
+            "trig": [],
+            "ent": [
+                "bombs",
+                "checkpoint"
+            ]
+        },
+        "TST4-MUC4-0098": {
+            "trig": [],
+            "ent": []
+        },
+        "TST4-MUC4-0099": {
+            "trig": [],
+            "ent": [
+                "fpmr",
+                "fernandotorressilva"
+            ]
+        },
+        "TST4-MUC4-0100": {
+            "trig": [],
+            "ent": []
+        }
+    }
+}
