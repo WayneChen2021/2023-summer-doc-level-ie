@@ -18,125 +18,12 @@ import torch
 from torch.utils.data import DataLoader
 from torch.nn import CrossEntropyLoss
 from transformers.modeling_outputs import Seq2SeqLMOutput, BaseModelOutput
-from transformers import AutoConfig, AutoTokenizer, HfArgumentParser, AutoModelForSeq2SeqLM, Trainer, TrainerCallback, T5ForConditionalGeneration
+from transformers import AutoConfig, AutoTokenizer, HfArgumentParser, AutoModelForSeq2SeqLM, Trainer, TrainerCallback
 
 from arguments import ModelArguments, DataTrainingArguments, TrainingArguments
 from datasets import load_dataset
 from evaluate import evaluate, get_avg_results, print_results
 from utils import get_episode_indices
-
-class T5Custom(T5ForConditionalGeneration):
-    def forward(
-        self,
-        input_ids=None,
-        attention_mask=None,
-        decoder_input_ids=None,
-        decoder_attention_mask=None,
-        encoder_outputs=None,
-        past_key_values=None,
-        head_mask=None,
-        inputs_embeds=None,
-        decoder_inputs_embeds=None,
-        labels=None,
-        use_cache=None,
-        output_attentions=None,
-        output_hidden_states=None,
-        return_dict=None,
-        non_args_masked = None,
-        types_mask = None,
-        non_args_masked_bool = None,
-        types_mask_bool = None,
-        left_brackets = None,
-        right_brackets = None,
-        decoder_head_mask=None,
-        cross_attn_head_mask=None,
-    ):
-        use_cache = use_cache if use_cache is not None else self.config.use_cache
-        return_dict = return_dict if return_dict is not None else self.config.use_return_dict
-
-        # Encode if needed (training, first prediction pass)
-        if encoder_outputs is None:
-            # Convert encoder inputs in embeddings if needed
-            encoder_outputs = self.encoder(
-                input_ids=input_ids,
-                attention_mask=attention_mask,
-                inputs_embeds=inputs_embeds,
-                head_mask=head_mask,
-                output_attentions=output_attentions,
-                output_hidden_states=output_hidden_states,
-                return_dict=return_dict,
-            )
-        elif return_dict and not isinstance(encoder_outputs, BaseModelOutput):
-            encoder_outputs = BaseModelOutput(
-                last_hidden_state=encoder_outputs[0],
-                hidden_states=encoder_outputs[1] if len(
-                    encoder_outputs) > 1 else None,
-                attentions=encoder_outputs[2] if len(
-                    encoder_outputs) > 2 else None,
-            )
-
-        hidden_states = encoder_outputs[0]
-
-        if labels is not None and decoder_input_ids is None and decoder_inputs_embeds is None:
-            # get decoder inputs from shifting lm labels to the right
-            decoder_input_ids = self._shift_right(labels)
-
-        # If decoding with past key value states, only the last tokens
-        # should be given as an input
-        if past_key_values is not None:
-            assert labels is None, "Decoder should not use cached key value states when training."
-            if decoder_input_ids is not None:
-                decoder_input_ids = decoder_input_ids[:, -1:]
-            if decoder_inputs_embeds is not None:
-                decoder_inputs_embeds = decoder_inputs_embeds[:, -1:]
-
-        # Decode
-        decoder_outputs = self.decoder(
-            input_ids=decoder_input_ids,
-            attention_mask=decoder_attention_mask,
-            inputs_embeds=decoder_inputs_embeds,
-            past_key_values=past_key_values,
-            encoder_hidden_states=hidden_states,
-            encoder_attention_mask=attention_mask,
-            head_mask=head_mask,
-            use_cache=use_cache,
-            output_attentions=output_attentions,
-            output_hidden_states=output_hidden_states,
-            return_dict=return_dict,
-        )
-
-        sequence_output = decoder_outputs[0]
-
-        if self.config.tie_word_embeddings:
-            # Rescale output before projecting on vocab
-            # See https://github.com/tensorflow/mesh/blob/fa19d69eafc9a482aff0b59ddd96b025c0cb207d/mesh_tensorflow/transformer/transformer.py#L586
-            sequence_output = sequence_output * (self.model_dim ** -0.5)
-
-        lm_logits = self.lm_head(sequence_output)
-
-        loss = None
-        if labels is not None:
-            loss_fct = CrossEntropyLoss(ignore_index=-100)
-            lm_logits_reshaped = lm_logits.view(-1, lm_logits.size(-1))
-            loss1 = loss_fct(lm_logits_reshaped, labels.view(-1))
-            loss2 = loss_fct(lm_logits_reshaped, non_args_masked.view(-1))
-            loss = loss1 + loss2
-            
-        if not return_dict:
-            output = (lm_logits,) + decoder_outputs[1:] + encoder_outputs
-            return ((loss,) + output) if loss is not None else output
-
-        return Seq2SeqLMOutput(
-            loss=loss,
-            logits=lm_logits,
-            past_key_values=decoder_outputs.past_key_values,
-            decoder_hidden_states=decoder_outputs.hidden_states,
-            decoder_attentions=decoder_outputs.attentions,
-            cross_attentions=decoder_outputs.cross_attentions,
-            encoder_last_hidden_state=encoder_outputs.last_hidden_state,
-            encoder_hidden_states=encoder_outputs.hidden_states,
-            encoder_attentions=encoder_outputs.attentions,
-        )
 
 def main():
     # assert torch.cuda.is_available(), 'CUDA not available'
@@ -145,7 +32,6 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('job')
     parser.add_argument('--do_test', action='store_true')
-    parser.add_argument('--from_ckpt', action='store_true')
     parser.add_argument('-c', '--config_file', type=str,
                         default='config.ini', help='configuration file')
     parser.add_argument('-e', '--eval', action='store_true',
@@ -178,7 +64,6 @@ def main():
         'learning_rate': 5e-4,
         'logging_steps': 100,     # do not log by default
         'save_steps': 0,        # do not save checkpoints by default
-        'gradient_accumulation_steps': 1
     }
 
     # the config file gives default values for the command line arguments
@@ -323,15 +208,9 @@ def main():
 
         # load pretrained model
         model = None
-        if args.from_ckpt:
-            model = T5Custom.from_pretrained(
-                "model_checkpoint",
-                config=config,
-                cache_dir=model_args.cache_dir,
-            )
-        elif training_args.zero_shot or training_args.do_train:
+        if training_args.zero_shot or training_args.do_train:
             logging.info(f"Using model {model_args.model_name_or_path}")
-            model = T5Custom.from_pretrained(
+            model = AutoModelForSeq2SeqLM.from_pretrained(
                 model_args.model_name_or_path,
                 config=config,
                 cache_dir=model_args.cache_dir,
@@ -341,31 +220,27 @@ def main():
         if training_args.do_train:
             # load train dataset
             datasets = []
-            # for dataset_name in dataset_names:
-            #     # logging.info(f'Process dataset {dataset_name} (train)')
-                # dataset = load_dataset(
-                #     dataset_name, data_args, split=data_args.train_split,
-                #     max_input_length=data_args.max_seq_length, max_output_length=data_args.max_output_seq_length,
-                #     tokenizer=tokenizer, seed=ep_idx, train_subset=data_args.train_subset,
-                # )
-            #     datasets.append(dataset)
+            for dataset_name in dataset_names:
+                # logging.info(f'Process dataset {dataset_name} (train)')
+                dataset = load_dataset(
+                    dataset_name, data_args, split=data_args.train_split,
+                    max_input_length=data_args.max_seq_length, max_output_length=data_args.max_output_seq_length,
+                    tokenizer=tokenizer, seed=ep_idx, train_subset=data_args.train_subset,
+                )
+                datasets.append(dataset)
 
-            # train_dataset = torch.utils.data.ConcatDataset(
-            #     datasets) if training_args.do_train else None
+            train_dataset = torch.utils.data.ConcatDataset(
+                datasets) if training_args.do_train else None
+
             num_gpus = args.gpu
-            train_dataset = load_dataset(
-                'mucevent_argument', data_args, split=data_args.train_split,
-                max_input_length=data_args.max_seq_length, max_output_length=data_args.max_output_seq_length,
-                tokenizer=tokenizer, seed=ep_idx, train_subset=data_args.train_subset,
-            )
             tracking_dataset_eval = load_dataset(
-                'mucevent_argument', data_args,
+                'mucevent_multiphase', data_args,
                 max_input_length=data_args.max_seq_length_eval,
                 max_output_length=data_args.max_output_seq_length_eval,
                 tokenizer=tokenizer, split='dev', seed=ep_idx, shuffle=False, is_eval=True,
             )
             tracking_dataset_test = load_dataset(
-                'mucevent_argument', data_args,
+                'mucevent_multiphase', data_args,
                 max_input_length=data_args.max_seq_length_eval,
                 max_output_length=data_args.max_output_seq_length_eval,
                 tokenizer=tokenizer, split='test', seed=ep_idx, shuffle=False, is_eval=True,
@@ -373,7 +248,7 @@ def main():
 
             class CustomCallback(TrainerCallback):
                 def on_step_end(self, args, state, control, **kwargs):
-                    if state.global_step % 500 == 0:
+                    if state.global_step % 100 == 0:
                         # Call your custom function here
                         model.eval()
                         device = torch.device(
@@ -383,12 +258,12 @@ def main():
                             pred_file.write("EVAL PART\n")
                         tracking_dataset_eval.evaluate_dataset(
                             data_args=data_args, model=model, device=device, batch_size=training_args.per_device_eval_batch_size,
-                            log_file="train_predictions.txt")
+                            log_file="train_predictions.txt", is_multiphase=True)
                         with open("train_predictions.txt", "a") as pred_file:
                             pred_file.write("TEST PART\n")
                         tracking_dataset_test.evaluate_dataset(
                             data_args=data_args, model=model, device=device, batch_size=training_args.per_device_eval_batch_size,
-                            log_file="train_predictions.txt")
+                            log_file="train_predictions.txt", is_multiphase=True)
                         model.train()
 
             # construct trainer
@@ -412,13 +287,13 @@ def main():
                 os.mkdir("model_checkpoint")
             trainer.save_model("model_checkpoint")
         
-        dev_dir = "data/mucevent/mucevent_dev.json"
+        dev_dir = "data/mucevent/mucevent_multiphase_dev.json"
         os.remove(dev_dir)
-        shutil.copy("other_data/mucevent_dev.json", dev_dir)
+        shutil.copy("other_data/mucevent_multiphase_dev.json", dev_dir)
 
         # run evaluation
         if not model:
-            model = T5Custom.from_pretrained(
+            model = AutoModelForSeq2SeqLM.from_pretrained(
                 "model_checkpoint",
                 config=config,
                 cache_dir=model_args.cache_dir,
@@ -429,28 +304,28 @@ def main():
             "cuda", args.gpu) if torch.cuda.is_available() else torch.device("cpu")
         model.to(device)
         dev_dataset = load_dataset(
-            'mucevent_argument', data_args,
+            'mucevent_multiphase', data_args,
             max_input_length=data_args.max_seq_length_eval,
             max_output_length=data_args.max_output_seq_length_eval,
             tokenizer=tokenizer, split='dev', seed=ep_idx, shuffle=False, is_eval=True,
         )
         _ = dev_dataset.evaluate_dataset(data_args=data_args, model=model, device=device, batch_size=training_args.per_device_eval_batch_size,
-                                            log_file="dev_predictions.txt")
+                                            log_file="dev_predictions.txt", is_multiphase=True)
         
         if args.do_test:
-            test_dir = "data/mucevent/mucevent_test.json"
+            test_dir = "data/mucevent/mucevent_multiphase_test.json"
             os.remove(test_dir)
-            shutil.copy("other_data/mucevent_test.json", test_dir)
+            shutil.copy("other_data/mucevent_multiphase_test.json", test_dir)
 
             test_dataset = load_dataset(
-                'mucevent_argument', data_args,
+                'mucevent_multiphase', data_args,
                 max_input_length=data_args.max_seq_length_eval,
                 max_output_length=data_args.max_output_seq_length_eval,
                 tokenizer=tokenizer, split='test', seed=ep_idx, shuffle=False, is_eval=True,
             )
             
             _ = test_dataset.evaluate_dataset(data_args=data_args, model=model, device=device, batch_size=training_args.per_device_eval_batch_size,
-                                                log_file="test_predictions.txt")
+                                                log_file="test_predictions.txt", is_multiphase=True)
 
 
 if __name__ == "__main__":

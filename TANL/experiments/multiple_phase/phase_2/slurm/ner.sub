@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH -J 2_trig                         # Job name
-#SBATCH -o ../g2_logs/2_trig.out                  # output file (%j expands to jobID)
-#SBATCH -e ../g2_logs/2_trig.err                  # error log file (%j expands to jobID)
+#SBATCH -J ner                         # Job name
+#SBATCH -o ../g2_logs/ner.out                  # output file (%j expands to jobID)
+#SBATCH -e ../g2_logs/ner.err                  # error log file (%j expands to jobID)
 #SBATCH --mail-type=ALL                      # Request status by email 
 #SBATCH --mail-user=zc272@cornell.edu        # Email address to send results to.
 #SBATCH -N 1                                 # Total number of nodes requested
@@ -13,15 +13,15 @@
 #SBATCH --gres=gpu:titanxp:4                  # Type/number of GPUs needed
 
 CONDA_ENV=TANL2
-ENV_NAME="2_trig"
+ENV_NAME="ner"
 NUM_EPOCHS=119
 
 SCHEMA="default.json"
 TYPE="default.json"
-TRAIN="2_trig.json"
-DEV="2_trig.json"
-TEST="2_trig.json"
-FULL_TEST="2_trig.json"
+TRAIN="ner.json"
+DEV="ner.json"
+TEST="ner.json"
+FULL_TEST="ner.json"
 
 BASE_DATASET="base_dataset.py"
 INPUT_EXAMPLE="input_example.py"

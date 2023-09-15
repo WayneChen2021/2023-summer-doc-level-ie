@@ -52,14 +52,34 @@
             "loss_collection_interval": 100,
             "small_evaluation_interval": 250
         },
-        "generate_second_phase_train": {
+        "generate_second_phase": {
             "run": false,
             "raw_outs": {
-                "0": "../experiments/multiple_phase/phase_1/g2_environments/ner/test_predictions.txt"
+                "0": "../experiments/multiple_phase/phase_1/g2_environments/ner/test_predictions.txt",
+                "1": "../experiments/multiple_phase/phase_1/g2_environments/ner/dev_predictions.txt"
             },
-            "tanl_ref": "../../data/multi_phase/second_phase_train/tanl_train.json",
+            "tanl_ref": {
+                "0": "../../data/multi_phase/second_phase_train/tanl_train.json",
+                "1": "../../data/full_eval/tanl_eval.json"
+            },
             "output_file": {
-                "0": "../experiments/multiple_phase/phase_2/data/train/ner.json"
+                "0": "../experiments/multiple_phase/phase_2/data/train/ner.json",
+                "1": "../experiments/multiple_phase/phase_2/data/test/ner.json"
+            }
+        },
+        "generate_second_phase_tracking": {
+            "run": true,
+            "full_datasets": {
+                "0": "../experiments/multiple_phase/phase_2/data/train/ner.json",
+                "1": "../experiments/multiple_phase/phase_2/data/test/ner.json"
+            },
+            "num_examples": {
+                "0": 10,
+                "1": 10
+            },
+            "raw_outs": {
+                "0": "../experiments/multiple_phase/phase_2/data/tracking/dev/ner.json",
+                "1": "../experiments/multiple_phase/phase_2/data/tracking/test/ner.json"
             }
         },
         "types_mapping": "types_mapping_verbose.json",
@@ -118,14 +138,34 @@
             "loss_collection_interval": 100,
             "small_evaluation_interval": 500
         },
-        "generate_second_phase_train": {
-            "run": true,
+        "generate_second_phase": {
+            "run": false,
             "raw_outs": {
-                "0": "../experiments/multiple_phase/phase_1/g2_environments/2_trig/test_predictions.txt"
+                "0": "../experiments/multiple_phase/phase_1/g2_environments/2_trig/test_predictions.txt",
+                "1": "../experiments/multiple_phase/phase_1/g2_environments/2_trig/dev_predictions.txt"
             },
-            "tanl_ref": "../../data/multi_phase/second_phase_train/tanl_train.json",
+            "tanl_ref": {
+                "0": "../../data/multi_phase/second_phase_train/tanl_train.json",
+                "1": "../../data/full_eval/tanl_eval.json"
+            },
             "output_file": {
-                "0": "../experiments/multiple_phase/phase_2/data/train/2_trig.json"
+                "0": "../experiments/multiple_phase/phase_2/data/train/2_trig.json",
+                "1": "../experiments/multiple_phase/phase_2/data/test/2_trig.json"
+            }
+        },
+        "generate_second_phase_tracking": {
+            "run": true,
+            "full_datasets": {
+                "0": "../experiments/multiple_phase/phase_2/data/train/2_trig.json",
+                "1": "../experiments/multiple_phase/phase_2/data/test/2_trig.json"
+            },
+            "num_examples": {
+                "0": 10,
+                "1": 10
+            },
+            "raw_outs": {
+                "0": "../experiments/multiple_phase/phase_2/data/tracking/dev/2_trig.json",
+                "1": "../experiments/multiple_phase/phase_2/data/tracking/test/2_trig.json"
             }
         },
         "types_mapping": "types_mapping_verbose.json",

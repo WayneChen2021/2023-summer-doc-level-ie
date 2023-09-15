@@ -6,6 +6,7 @@ from abc import ABC, abstractmethod
 from typing import List
 import copy
 
+from output_formats import EventOutputFormat
 from input_example import InputExample
 from utils import augment_sentence, get_span
 
@@ -86,7 +87,7 @@ class EventInputFormat(BaseInputFormat):
     # name = 'ace2005_event_with_trigger'
     name = 'muc_event_with_trigger'
 
-    def _format_input(self, example: InputExample) -> List[str]:
+    def _format_input(self, example: InputExample) -> str:
         triggers = example.triggers
         assert len(triggers) <= 1
         if len(triggers) <= 1:
@@ -95,6 +96,45 @@ class EventInputFormat(BaseInputFormat):
 
             return augment_sentence(example.tokens, augmentations, self.BEGIN_ENTITY_TOKEN, self.SEPARATOR_TOKEN,
                                     self.RELATION_SEPARATOR_TOKEN, self.END_ENTITY_TOKEN)
+
+@register_input_format
+class MUCMultiPhase(BaseInputFormat):
+    name = 'muc_multiphase'
+
+    def _format_input(self, example: InputExample) -> str:
+        return EventOutputFormat.format_output(example)
+
+@register_input_format
+class MUCMultiPhaseArgument(BaseInputFormat):
+    name = 'muc_multiphase_argument'
+
+    def _format_input(self, example: InputExample) -> str:
+        triggers = example.output_triggers
+        assert len(triggers) <= 1
+        if len(triggers) <= 1:
+            augmentations = [([(entity.type.natural,)], entity.start,
+                            entity.end) for entity in triggers]
+        
+        relations_by_entity = {entity: [] for entity in example.entities}
+        for relation in example.relations:
+            relations_by_entity[relation.head].append(
+                (relation.type, relation.tail))
+
+        augmentations = []
+        for entity in example.entities:
+            tags = [(entity.type.natural,)]
+            for relation_type, tail in relations_by_entity[entity]:
+                tags.append((relation_type.natural, ' '.join(
+                    example.tokens[tail.start:tail.end])))
+
+            augmentations.append((
+                tags,
+                entity.start,
+                entity.end,
+            ))
+        
+        return augment_sentence(example.tokens, augmentations, self.BEGIN_ENTITY_TOKEN, self.SEPARATOR_TOKEN,
+                                self.RELATION_SEPARATOR_TOKEN, self.END_ENTITY_TOKEN)
 
 @register_input_format
 class ACE2005EventInputFormat(BaseInputFormat):

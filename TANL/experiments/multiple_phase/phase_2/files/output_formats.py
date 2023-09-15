@@ -8,10 +8,10 @@ from abc import ABC, abstractmethod
 from collections import defaultdict
 from typing import Tuple, List, Dict
 import numpy as np
+from TANL.experiments.multiple_phase.phase_1.files.input_example import InputExample
 
 from input_example import InputFeatures, EntityType, RelationType, Entity, Relation, Intent, InputExample, CorefDocument
 from utils import augment_sentence, get_span
-
 
 OUTPUT_FORMATS = {}
 
@@ -269,7 +269,7 @@ class JointEROutputFormat(BaseOutputFormat):
                                 self.RELATION_SEPARATOR_TOKEN, self.END_ENTITY_TOKEN)
 
     def run_inference(self, example: InputExample, output_sentence: str,
-                      entity_types: Dict[str, EntityType] = None, relation_types: Dict[str, RelationType] = None) \
+                      entity_types: Dict[str, EntityType] = None, relation_types: Dict[str, RelationType] = None, log_file = None) \
             -> Tuple[set, set, bool, bool, bool, bool]:
         """
         Process an output sentence to extract predicted entities and relations (among the given entity/relation types).
@@ -293,6 +293,11 @@ class JointEROutputFormat(BaseOutputFormat):
         # parse output sentence
         raw_predicted_entities, wrong_reconstruction = self.parse_output_sentence(
             example, output_sentence)
+        if log_file:
+            with open(log_file, "a") as f:
+                f.write("id {}\predicted_entities {}\n".format(example.id, [
+                    (ent[1][0][0], ent[-2], ent[-1]) for ent in raw_predicted_entities if len(ent[1]) != 0 and len(ent[1][0]) != 0
+                ]))
 
         # INSERTION
         # file = open("/content/output_txt.txt", "a") #insert output file directory here
@@ -362,6 +367,21 @@ class JointEROutputFormat(BaseOutputFormat):
 
         return predicted_entities, predicted_relations, wrong_reconstruction, label_error, entity_error, format_error
 
+@register_output_format
+class MultiPhaseFormat(JointEROutputFormat):
+    name = 'multiphase_trigger'
+
+    def format_output(self, example: InputExample) -> str:
+        augmentations = []
+        for entity in example.output_triggers:
+            augmentations.append((
+                [(entity.type.natural,)],
+                entity.start,
+                entity.end,
+            ))
+
+        return augment_sentence(example.tokens, augmentations, self.BEGIN_ENTITY_TOKEN, self.SEPARATOR_TOKEN,
+                                self.RELATION_SEPARATOR_TOKEN, self.END_ENTITY_TOKEN)
 
 @register_output_format
 class JointICSLFormat(JointEROutputFormat):
@@ -452,21 +472,21 @@ class EventOutputFormat(JointEROutputFormat):
     # name = 'ace2005_event'
     name = "muc_event"
 
-    def format_output(self, example: InputExample, use_output=False) -> List[str]:
+    def format_output(self, example: InputExample, entities=None, triggers=None, relations=None) -> str:
         """
         Get output in augmented natural language, similarly to JointEROutputFormat (but we also consider triggers).
         """
         # organize relations by head entity
-        ex_triggers, ex_entities, ex_relations = example.triggers, example.entities, example.relations
-        if use_output:
-            ex_triggers, ex_entities, ex_relations = example.output_triggers, example.output_entities, example.output_relations
-            
-        relations_by_entity = {entity: [] for entity in ex_entities + ex_triggers}
-        for relation in ex_relations:
+
+        if not entities:
+            entities, triggers, relations = example.entities, example.triggers, example.relations
+
+        relations_by_entity = {entity: [] for entity in entities + triggers}
+        for relation in relations:
             relations_by_entity[relation.head].append((relation.type, relation.tail))
 
         augmentations = []
-        for entity in (ex_entities + ex_triggers):
+        for entity in (entities + triggers):
             if not relations_by_entity[entity]:
                 continue
 
@@ -514,7 +534,7 @@ class EventOutputFormat(JointEROutputFormat):
             trigs = [[trig.type, trig.start, trig.end] for trig in example.triggers]
             for ent in raw_predicted_entities:
                 if len(ent[1]) > 1:
-                    args.append([ent[1][1][0], (ent[-2], ent[-1]), tuple(trigs[0])])
+                    args.append((ent[1][1][0], (ent[-2], ent[-1]), tuple(trigs[0])))
 
             with open(log_file, "a") as f:
                 f.write("id {}\ntriggers {}\narguments {}\n".format(
@@ -552,6 +572,13 @@ class EventOutputFormat(JointEROutputFormat):
                             )
 
         return predicted_entities, predicted_relations, wrong_reconstruction
+
+@register_output_format
+class MultiPhaseOutpuFormat(EventOutputFormat):
+    name = 'multiphase_argument'
+
+    def format_output(self, example: InputExample) -> str:
+        return super().format_output(example, example.output_entities, example.output_triggers, example.output_relations)()
 
 @register_output_format
 class ACE2005EventOutputFormat(JointEROutputFormat):

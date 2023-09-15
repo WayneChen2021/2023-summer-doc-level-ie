@@ -316,11 +316,11 @@ def annotate_second_phase_train_ner(model_out, tanl_ref):
         "id": tanl_ref["id"]
     }
 
-def create_second_phase_train_ner(model_out, tanl_ref, output_file):
-    return BaseProcessing.create_second_phase_train(model_out, tanl_ref, output_file, handle_buffer_ner, annotate_second_phase_train_ner)
+def create_second_phase_ner(model_out, tanl_ref, output_file):
+    return BaseProcessing.create_second_phase(model_out, tanl_ref, output_file, handle_buffer_ner, annotate_second_phase_train_ner)
 
-def create_second_phase_train_event(model_out, tanl_ref, output_file):
-    return BaseProcessing.create_second_phase_train(model_out, tanl_ref, output_file, handle_buffer_event, annotate_second_phase_train_event)
+def create_second_phase_event(model_out, tanl_ref, output_file):
+    return BaseProcessing.create_second_phase(model_out, tanl_ref, output_file, handle_buffer_event, annotate_second_phase_train_event)
 
 def run_task(mode, log_name, config, types_mapping=None, id=None, global_config=None):
     if mode == "event":
@@ -343,11 +343,17 @@ def run_task(mode, log_name, config, types_mapping=None, id=None, global_config=
                 config["loss_collection_interval"],
                 config["output_file"]
             )
-        elif log_name == "generate_second_phase_train":
-            create_second_phase_train_event(
+        elif log_name == "generate_second_phase":
+            create_second_phase_event(
                 config["raw_outs"],
                 config["tanl_ref"],
                 config["output_file"]
+            )
+        elif log_name == "generate_second_phase_tracking":
+            BaseProcessing.create_tracking(
+                config["full_datasets"],
+                config["num_examples"],
+                config["raw_outs"]
             )
 
     else:
@@ -369,11 +375,17 @@ def run_task(mode, log_name, config, types_mapping=None, id=None, global_config=
                 config["loss_collection_interval"],
                 config["output_file"]
             )
-        elif log_name == "generate_second_phase_train":
-            create_second_phase_train_ner(
+        elif log_name == "generate_second_phase":
+            create_second_phase_ner(
                 config["raw_outs"],
                 config["tanl_ref"],
                 config["output_file"]
+            )
+        elif log_name == "generate_second_phase_tracking":
+            BaseProcessing.create_tracking(
+                config["full_datasets"],
+                config["num_examples"],
+                config["raw_outs"]
             )
 
 def parse_multiple_jobs(job, multi_job_fields):
@@ -422,18 +434,20 @@ if __name__ == "__main__":
             "test_time_logs": ["raw_outs", "output_file", "tanl_ref", "gtt_ref"],
             "train_time_logs": ["raw_outs", "output_file"],
             "training_errors": ["log_file", "output_file"],
-            "generate_second_phase_train": ["raw_outs", "output_file"]
+            "generate_second_phase": ["raw_outs", "output_file", "tanl_ref"],
+            "generate_second_phase_tracking": ["full_datasets", "num_examples", "raw_outs"]
         },
         "multi_phase_event": {
             "test_time_logs": ["raw_outs", "output_file", "tanl_ref", "gtt_ref"],
             "train_time_logs": ["raw_outs", "output_file"],
             "training_errors": ["log_file", "output_file"],
-            "generate_second_phase_train": ["raw_outs", "output_file"]
+            "generate_second_phase": ["raw_outs", "output_file", "tanl_ref"],
+            "generate_second_phase_tracking": ["full_datasets", "num_examples", "raw_outs"]
         }
     }
     for job_category in multi_tasks:
         jobs = config[job_category]
-        for job_name in ["test_time_logs", "train_time_logs", "training_errors", "generate_second_phase_train"]:
+        for job_name in ["test_time_logs", "train_time_logs", "training_errors", "generate_second_phase", "generate_second_phase_tracking"]:
             if jobs and job_name in jobs and jobs[job_name]["run"]:
                 for job_id, single_config in parse_multiple_jobs(jobs[job_name], multi_job_fields[job_category][job_name]).items():
                     run_task(jobs["mode"], job_name, single_config, jobs["types_mapping"], job_id, jobs)
