@@ -3,6 +3,9 @@
         "template entity": {
             "verbose": "template entity"
         },
+        "trigger": {
+            "verbose": "trigger"
+        },
         "trigger for forced work stoppage event": {
             "verbose": "trigger for forced work stoppage event"
         },

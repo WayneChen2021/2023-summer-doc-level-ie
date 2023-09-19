@@ -50,6 +50,7 @@ class BaseDataset(Dataset, ABC):
             shuffle: bool = True,
             data_args: DataTrainingArguments = None,
             is_eval: bool = False,
+            same_input_output_trigs = False
     ):
         if seed is not None:
             # set random seed for repeatability
@@ -86,7 +87,7 @@ class BaseDataset(Dataset, ABC):
 
             else:
                 self.load_schema()   # here the dataset can load information such as entity/relation types
-                self.examples = self.load_data(mode=mode, seed=seed)
+                self.examples = self.load_data(mode=mode, seed=seed, same_input_output_trigs=same_input_output_trigs)
 
                 # assign examples to this dataset
                 for example in self.examples:
@@ -158,7 +159,7 @@ class BaseDataset(Dataset, ABC):
         """
         pass
 
-    def load_data(self, mode: str, seed: int = None) -> List[InputExample]:
+    def load_data(self, mode: str, seed: int = None, same_input_output_trigs=False) -> List[InputExample]:
         """
         Load all data, where 'mode' is a list of comma-separated splits to use.
         """
@@ -171,7 +172,10 @@ class BaseDataset(Dataset, ABC):
             splits = mode
 
         for split in splits:
-            examples += self.load_data_single_split(split, seed=seed)
+            try:
+                examples += self.load_data_single_split(split, seed=seed, same_input_output_trigs=same_input_output_trigs)
+            except TypeError:
+                examples += self.load_data_single_split(split, seed=seed)
 
         return examples
 
@@ -185,10 +189,18 @@ class BaseDataset(Dataset, ABC):
             )
 
     def compute_features(self, max_input_length: int, max_output_length: int, multitask: bool = False):
-        input_sentences = [self.output_format.format_output(
-            example, use_output=False) for example in self.examples]
+        input_sentences = [self.input_format.format_input(
+            example, multitask=True) for example in self.examples]
         output_sentences = [self.output_format.format_output(
-            example, use_output=True) for example in self.examples]
+            example) for example in self.examples]
+        
+        print(self.input_format_str)
+        print(self.output_format_str)
+        for input, output in zip(input_sentences[:10], output_sentences[:10]):
+            print(input)
+            print(output)
+            print()
+        
         l = []
         input_tok = self.tokenizer.batch_encode_plus(
             input_sentences,
@@ -255,13 +267,7 @@ class BaseDataset(Dataset, ABC):
             features.append(InputFeatures(
                 input_ids=sentence_input_ids.tolist(),
                 attention_mask=att_mask.tolist(),
-                label_ids=label_input_ids_list,
-                non_args_masked=argument_mask,
-                types_mask=types_mask,
-                non_args_masked_bool=argument_mask_bool,
-                types_mask_bool=types_mask_bool,
-                left_brackets=[left_bracket_id if not b else -100 for b in argument_mask],
-                right_brackets=[right_bracket_id if not b else -100 for b in argument_mask]
+                label_ids=label_input_ids_list
             ))
 
         return features

@@ -10,7 +10,7 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 17,
                     "end": 20
                 }
@@ -197,12 +197,12 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 203,
                     "end": 206
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 147,
                     "end": 150
                 }
@@ -555,7 +555,7 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 25,
                     "end": 27
                 }
@@ -751,22 +751,22 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 211,
                     "end": 212
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 160,
                     "end": 163
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 213,
                     "end": 216
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 217,
                     "end": 220
                 }
@@ -1557,17 +1557,17 @@
             "triggers": [],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 156,
                     "end": 157
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 160,
                     "end": 163
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 152,
                     "end": 154
                 }
@@ -2161,22 +2161,22 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 36,
                     "end": 39
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 18,
                     "end": 23
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 56,
                     "end": 57
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 54,
                     "end": 55
                 }
@@ -2489,22 +2489,22 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 39,
                     "end": 40
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 35,
                     "end": 37
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 44,
                     "end": 48
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 76,
                     "end": 78
                 }
@@ -2835,37 +2835,37 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 23,
                     "end": 24
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 83,
                     "end": 84
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 35,
                     "end": 36
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 16,
                     "end": 22
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 30,
                     "end": 31
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 39,
                     "end": 41
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 138,
                     "end": 140
                 }
@@ -3101,12 +3101,12 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 100,
                     "end": 103
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 28,
                     "end": 32
                 }

@@ -15,27 +15,27 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 255,
                     "end": 257
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 19,
                     "end": 20
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 76,
                     "end": 78
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 202,
                     "end": 203
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 23,
                     "end": 28
                 }
@@ -319,37 +319,37 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 132,
                     "end": 133
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 128,
                     "end": 129
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 35,
                     "end": 36
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 130,
                     "end": 131
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 39,
                     "end": 42
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 29,
                     "end": 34
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 135,
                     "end": 137
                 }
@@ -551,12 +551,12 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 39,
                     "end": 43
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 138,
                     "end": 141
                 }
@@ -935,27 +935,27 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 26,
                     "end": 28
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 99,
                     "end": 102
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 137,
                     "end": 140
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 22,
                     "end": 25
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 97,
                     "end": 98
                 }
@@ -1173,7 +1173,7 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 49,
                     "end": 51
                 }
@@ -1481,17 +1481,17 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 27,
                     "end": 31
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 16,
                     "end": 17
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 56,
                     "end": 59
                 }
@@ -2071,7 +2071,7 @@
             "triggers": [],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 109,
                     "end": 117
                 }
@@ -2456,7 +2456,7 @@
             ],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 38,
                     "end": 39
                 }
@@ -2703,17 +2703,17 @@
             "triggers": [],
             "entities": [
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 132,
                     "end": 133
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 280,
                     "end": 282
                 },
                 {
-                    "type": "event argument",
+                    "type": "template entity",
                     "start": 16,
                     "end": 21
                 }

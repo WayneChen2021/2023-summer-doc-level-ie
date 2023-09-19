@@ -93,6 +93,19 @@ TANL/experiments/multiple_phase/phase_1/g2_environments/ner/*
 !TANL/experiments/multiple_phase/phase_1/g2_environments/ner/logs.json
 
 
+TANL/experiments/multiple_phase/phase_2/g2_environments/2_trig/*
+!TANL/experiments/multiple_phase/phase_2/g2_environments/2_trig/train_predictions.txt
+!TANL/experiments/multiple_phase/phase_2/g2_environments/2_trig/dev_predictions.txt
+!TANL/experiments/multiple_phase/phase_2/g2_environments/2_trig/test_predictions.txt
+!TANL/experiments/multiple_phase/phase_2/g2_environments/2_trig/logs.json
+
+TANL/experiments/multiple_phase/phase_2/g2_environments/ner/*
+!TANL/experiments/multiple_phase/phase_2/g2_environments/ner/train_predictions.txt
+!TANL/experiments/multiple_phase/phase_2/g2_environments/ner/dev_predictions.txt
+!TANL/experiments/multiple_phase/phase_2/g2_environments/ner/test_predictions.txt
+!TANL/experiments/multiple_phase/phase_2/g2_environments/ner/logs.json
+
+
 TANL/experiments/multiple_triggers/g2_environments/earliest_trig/*
 !TANL/experiments/multiple_triggers/g2_environments/earliest_trig/train_predictions.txt
 !TANL/experiments/multiple_triggers/g2_environments/earliest_trig/dev_predictions.txt

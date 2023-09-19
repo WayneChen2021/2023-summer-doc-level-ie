@@ -8,7 +8,6 @@ from abc import ABC, abstractmethod
 from collections import defaultdict
 from typing import Tuple, List, Dict
 import numpy as np
-from TANL.experiments.multiple_phase.phase_1.files.input_example import InputExample
 
 from input_example import InputFeatures, EntityType, RelationType, Entity, Relation, Intent, InputExample, CorefDocument
 from utils import augment_sentence, get_span
@@ -478,7 +477,7 @@ class EventOutputFormat(JointEROutputFormat):
         """
         # organize relations by head entity
 
-        if not entities:
+        if entities == None:
             entities, triggers, relations = example.entities, example.triggers, example.relations
 
         relations_by_entity = {entity: [] for entity in entities + triggers}
@@ -515,7 +514,7 @@ class EventOutputFormat(JointEROutputFormat):
         relation_types = set(relation_type.natural for relation_type in relation_types.values()) \
             if relation_types is not None else {}
 
-        triggers = example.triggers
+        triggers = example.output_triggers
         # assert len(triggers) <= 1
         if len(triggers) == 0:
             if log_file:
@@ -531,7 +530,7 @@ class EventOutputFormat(JointEROutputFormat):
             example, output_sentence)
         if log_file:
             args = []
-            trigs = [[trig.type, trig.start, trig.end] for trig in example.triggers]
+            trigs = [[trig.type.short, trig.start, trig.end] for trig in example.output_triggers]
             for ent in raw_predicted_entities:
                 if len(ent[1]) > 1:
                     args.append((ent[1][1][0], (ent[-2], ent[-1]), tuple(trigs[0])))
@@ -578,7 +577,7 @@ class MultiPhaseOutpuFormat(EventOutputFormat):
     name = 'multiphase_argument'
 
     def format_output(self, example: InputExample) -> str:
-        return super().format_output(example, example.output_entities, example.output_triggers, example.output_relations)()
+        return super().format_output(example, example.output_entities, example.output_triggers, example.output_relations)
 
 @register_output_format
 class ACE2005EventOutputFormat(JointEROutputFormat):

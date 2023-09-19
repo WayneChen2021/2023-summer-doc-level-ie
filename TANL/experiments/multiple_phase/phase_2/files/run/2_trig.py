@@ -225,7 +225,7 @@ def main():
                 dataset = load_dataset(
                     dataset_name, data_args, split=data_args.train_split,
                     max_input_length=data_args.max_seq_length, max_output_length=data_args.max_output_seq_length,
-                    tokenizer=tokenizer, seed=ep_idx, train_subset=data_args.train_subset,
+                    tokenizer=tokenizer, seed=ep_idx, train_subset=data_args.train_subset, same_input_output_trigs=True
                 )
                 datasets.append(dataset)
 
@@ -234,21 +234,21 @@ def main():
 
             num_gpus = args.gpu
             tracking_dataset_eval = load_dataset(
-                'mucevent_multiphase', data_args,
+                'muc_event_multiphase_argument', data_args,
                 max_input_length=data_args.max_seq_length_eval,
                 max_output_length=data_args.max_output_seq_length_eval,
-                tokenizer=tokenizer, split='dev', seed=ep_idx, shuffle=False, is_eval=True,
+                tokenizer=tokenizer, split='dev', seed=ep_idx, shuffle=False, is_eval=True, same_input_output_trigs=True
             )
             tracking_dataset_test = load_dataset(
-                'mucevent_multiphase', data_args,
+                'muc_event_multiphase_argument', data_args,
                 max_input_length=data_args.max_seq_length_eval,
                 max_output_length=data_args.max_output_seq_length_eval,
-                tokenizer=tokenizer, split='test', seed=ep_idx, shuffle=False, is_eval=True,
+                tokenizer=tokenizer, split='test', seed=ep_idx, shuffle=False, is_eval=True, same_input_output_trigs=True
             )
 
             class CustomCallback(TrainerCallback):
                 def on_step_end(self, args, state, control, **kwargs):
-                    if state.global_step % 100 == 0:
+                    if state.global_step % 500 == 0:
                         # Call your custom function here
                         model.eval()
                         device = torch.device(
@@ -258,12 +258,12 @@ def main():
                             pred_file.write("EVAL PART\n")
                         tracking_dataset_eval.evaluate_dataset(
                             data_args=data_args, model=model, device=device, batch_size=training_args.per_device_eval_batch_size,
-                            log_file="train_predictions.txt", is_multiphase=True)
+                            log_file="train_predictions.txt")
                         with open("train_predictions.txt", "a") as pred_file:
                             pred_file.write("TEST PART\n")
                         tracking_dataset_test.evaluate_dataset(
                             data_args=data_args, model=model, device=device, batch_size=training_args.per_device_eval_batch_size,
-                            log_file="train_predictions.txt", is_multiphase=True)
+                            log_file="train_predictions.txt")
                         model.train()
 
             # construct trainer
@@ -287,9 +287,9 @@ def main():
                 os.mkdir("model_checkpoint")
             trainer.save_model("model_checkpoint")
         
-        dev_dir = "data/mucevent/mucevent_multiphase_dev.json"
+        dev_dir = "data/muc_event_multiphase/muc_event_multiphase_dev.json"
         os.remove(dev_dir)
-        shutil.copy("other_data/mucevent_multiphase_dev.json", dev_dir)
+        shutil.copy("other_data/muc_event_multiphase_dev.json", dev_dir)
 
         # run evaluation
         if not model:
@@ -304,28 +304,28 @@ def main():
             "cuda", args.gpu) if torch.cuda.is_available() else torch.device("cpu")
         model.to(device)
         dev_dataset = load_dataset(
-            'mucevent_multiphase', data_args,
+            'muc_event_multiphase_argument', data_args,
             max_input_length=data_args.max_seq_length_eval,
             max_output_length=data_args.max_output_seq_length_eval,
-            tokenizer=tokenizer, split='dev', seed=ep_idx, shuffle=False, is_eval=True,
+            tokenizer=tokenizer, split='dev', seed=ep_idx, shuffle=False, is_eval=True, same_input_output_trigs=True
         )
         _ = dev_dataset.evaluate_dataset(data_args=data_args, model=model, device=device, batch_size=training_args.per_device_eval_batch_size,
-                                            log_file="dev_predictions.txt", is_multiphase=True)
+                                            log_file="dev_predictions.txt")
         
         if args.do_test:
-            test_dir = "data/mucevent/mucevent_multiphase_test.json"
+            test_dir = "data/muc_event_multiphase/muc_event_multiphase_test.json"
             os.remove(test_dir)
-            shutil.copy("other_data/mucevent_multiphase_test.json", test_dir)
+            shutil.copy("other_data/muc_event_multiphase_test.json", test_dir)
 
             test_dataset = load_dataset(
-                'mucevent_multiphase', data_args,
+                'muc_event_multiphase_argument', data_args,
                 max_input_length=data_args.max_seq_length_eval,
                 max_output_length=data_args.max_output_seq_length_eval,
-                tokenizer=tokenizer, split='test', seed=ep_idx, shuffle=False, is_eval=True,
+                tokenizer=tokenizer, split='test', seed=ep_idx, shuffle=False, is_eval=True, same_input_output_trigs=True
             )
             
             _ = test_dataset.evaluate_dataset(data_args=data_args, model=model, device=device, batch_size=training_args.per_device_eval_batch_size,
-                                                log_file="test_predictions.txt", is_multiphase=True)
+                                                log_file="test_predictions.txt")
 
 
 if __name__ == "__main__":

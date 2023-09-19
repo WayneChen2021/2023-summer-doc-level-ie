@@ -10,7 +10,7 @@
 #SBATCH --mem=50000                           # server memory requested (per node)
 #SBATCH -t 200:00:00                           # Time limit (hh:mm:ss)
 #SBATCH --partition=claire       # Request partition
-#SBATCH --gres=gpu:titanxp:4                  # Type/number of GPUs needed
+#SBATCH --gres=gpu:titanxp:2                  # Type/number of GPUs needed
 
 CONDA_ENV=TANL2
 ENV_NAME="2_trig"
@@ -26,18 +26,18 @@ FULL_TEST="2_trig.json"
 BASE_DATASET="base_dataset.py"
 INPUT_EXAMPLE="input_example.py"
 OUTPUT_FORMATS="output_formats.py"
-RUN="run.py"
+RUN="2_trig.py"
 
 mkdir "../g2_environments/$ENV_NAME"
 cp -r "../../../../original_scripts/." "../g2_environments/$ENV_NAME"
 
-cp "../data/schema/$SCHEMA" "../g2_environments/$ENV_NAME/data/mucevent_multiphase/mucevent_multiphase_schema.json"
-cp "../data/types/$TYPE" "../g2_environments/$ENV_NAME/data/mucevent_multiphase/mucevent_multiphase_types.json"
+cp "../data/schema/$SCHEMA" "../g2_environments/$ENV_NAME/data/muc_event_multiphase/muc_event_multiphase_schema.json"
+cp "../data/types/$TYPE" "../g2_environments/$ENV_NAME/data/muc_event_multiphase/muc_event_multiphase_types.json"
 
-cp "../data/train/$TRAIN" "../g2_environments/$ENV_NAME/data/mucevent_multiphase/mucevent_multiphase_train.json"
-cp "../data/tracking/dev/$DEV" "../g2_environments/$ENV_NAME/data/mucevent_multiphase/mucevent_multiphase_dev.json"
-cp "../data/tracking/dev/$TEST" "../g2_environments/$ENV_NAME/data/mucevent_multiphase/mucevent_multiphase_test.json"
-cp "../data/test/$FULL_TEST" "../g2_environments/$ENV_NAME/other_data/mucevent_multiphase_dev.json"
+cp "../data/train/$TRAIN" "../g2_environments/$ENV_NAME/data/muc_event_multiphase/muc_event_multiphase_train.json"
+cp "../data/tracking/dev/$DEV" "../g2_environments/$ENV_NAME/data/muc_event_multiphase/muc_event_multiphase_dev.json"
+cp "../data/tracking/test/$TEST" "../g2_environments/$ENV_NAME/data/muc_event_multiphase/muc_event_multiphase_test.json"
+cp "../data/test/$FULL_TEST" "../g2_environments/$ENV_NAME/other_data/muc_event_multiphase_dev.json"
 
 cp "../files/$BASE_DATASET" "../g2_environments/$ENV_NAME/base_dataset.py"
 cp "../files/$INPUT_EXAMPLE" "../g2_environments/$ENV_NAME/input_example.py"
@@ -52,4 +52,4 @@ pip3 install transformers
 pip3 install scipy
 pip3 install accelerate --upgrade
 
-python3 run.py mucevent_multiphase --from_ckpt --num_train_epochs $NUM_EPOCHS
+python3 run.py muc_event_multiphase --num_train_epochs $NUM_EPOCHS

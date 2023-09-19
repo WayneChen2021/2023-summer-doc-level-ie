@@ -43,7 +43,8 @@ def load_dataset(
         train_subset: float = 1,
         seed: int = None,
         shuffle: bool = True,
-        is_eval: bool = False
+        is_eval: bool = False,
+        same_input_output_trigs = False
 ):
     """
     Load a registered dataset.
@@ -59,6 +60,7 @@ def load_dataset(
         shuffle=shuffle,
         data_args=data_args,
         is_eval=is_eval,
+        same_input_output_trigs=same_input_output_trigs
     )
 
 
@@ -1892,11 +1894,11 @@ class MUCEventTriggerDataset(JointERDataset):
         return examples
 
 @register_dataset
-class MUCMultiPhaseTrigger(MUCEventTriggerDataset):
-    name = 'muc_multiphase_trigger'
-    data_name = 'mucevent_multiphase'
+class MUCNERMultiPhaseTrigger(MUCEventTriggerDataset):
+    name = 'muc_ner_multiphase_trigger'
+    data_name = 'muc_ner_multiphase'
 
-    default_input_format = 'muc_multiphase'
+    default_input_format = 'muc_multiphase_ner'
     default_output_format = 'multiphase_trigger'
 
     relation_schemas = None
@@ -1928,15 +1930,15 @@ class MUCMultiPhaseTrigger(MUCEventTriggerDataset):
                     # the trigger is the tail, and the entity is the head
                     Relation(
                         type=self.relation_types[y['type']
-                                                ], head=input_entities[y['head']], tail=input_entities[y['tail']]
+                                                ], head=input_entities[y['head']], tail=input_triggers[y['tail']]
                     )
-                    for y in x['first_phase']['relations']
+                    for y in (x['first_phase']['relations'] if 'relations' in x['first_phase'] else [])
                 ]
                 
                 output_triggers = [
                     Entity(
                         id=j, type=self.entity_types[y['type']], start=y['start'], end=y['end'])
-                    for j, y in enumerate(x['first_phase']['triggers'])
+                    for j, y in enumerate(x['second_phase']['triggers'])
                 ]
 
                 example = InputExample(
@@ -1951,6 +1953,13 @@ class MUCMultiPhaseTrigger(MUCEventTriggerDataset):
             
         return examples
 
+@register_dataset
+class MUCEventMultiPhaseTrigger(MUCNERMultiPhaseTrigger):
+    name = 'muc_event_multiphase_trigger'
+    data_name = 'muc_event_multiphase'
+
+    default_input_format = 'muc_multiphase_event'
+    default_output_format = 'multiphase_trigger'
 
 @register_dataset
 class MUCEventArgumentDataset(MUCEventTriggerDataset):
@@ -1964,6 +1973,9 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
     default_output_format = 'muc_event'
 
     def handle_single_trig(self, x, tokens, docid):
+        if not 'relations' in x:
+            x['relations'] = []
+
         entities = [
             Entity(
                 id=j, type=self.entity_types[y['type']], start=y['start'], end=y['end'])
@@ -1996,6 +2008,9 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
     def handle_multi_trig(self, x, tokens, docid):
         lst = []
         for trig_id, trig in enumerate(x['triggers']):
+            if not 'relations' in x:
+                x['relations'] = []
+
             triggers = [
                 Entity(id=trig_id, type=self.entity_types[trig['type']], start=trig['start'], end=trig['end'])
             ]
@@ -2003,7 +2018,7 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
             entities = [
                 Entity(
                     id=j, type=self.entity_types[y['type']], start=y['start'], end=y['end'])
-                for j, y in enumerate(x['entities']) if any(rel['head'] == j and rel['tail'] == trig_id for rel in relations)
+                for j, y in enumerate(x['entities']) if any(rel['head'] == j and rel['tail'] == trig_id for rel in x['relations'])
             ]
 
             relations = [
@@ -2012,7 +2027,7 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
                                             ], head=[ent for ent in entities if ent.id == y['head']][0], tail=triggers[0]
                 )
                 for y in x['relations'] if y['tail'] == trig_id
-            ]
+            ]        
         
             lst.append(InputExample(
                 id="{} {}".format(docid, trig_id),
@@ -2024,27 +2039,36 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
         
         return lst
 
-    def yield_single_document(self, tokens, x, x_second = None):
+    def yield_single_document(self, docid, tokens, x, x_second = None, same_input_output_trigs=False):
         input_parts = []
         output_parts = []
 
         if not x_second:
             if len(x['triggers']) <= 1:
-                input_parts.append(self.handle_single_trig(x, tokens, x['id']))
+                input_parts.append(self.handle_single_trig(x, tokens, docid))
             else:
-                input_parts += self.handle_multi_trig(x, tokens, x['id'])
+                input_parts += self.handle_multi_trig(x, tokens, docid)
 
             return input_parts
         
-        input_parts = self.handle_single_trig(x, tokens, x['id'])
+        input_parts = self.handle_single_trig(x, tokens, docid)
 
-        if len(x_second['triggers']) <= 1:
-            output_parts.append(self.handle_single_trig(x_second, tokens, x['id']))
+        if not (same_input_output_trigs and self.is_eval):
+            if len(x_second['triggers']) <= 1:
+                output_parts.append(self.handle_single_trig(x_second, tokens, docid))
+            else:
+                output_parts = self.handle_multi_trig(x_second, tokens, docid)
         else:
-            output_parts = self.handle_multi_trig(x_second, tokens, x['id'])
+            output_parts = [InputExample(
+                id="",
+                tokens=input_parts.tokens,
+                entities=[],
+                triggers=[trigger],
+                relations=[]
+            ) for trigger in input_parts.triggers]
 
         return [InputExample(
-            id="{} {}".format(x['id'], i),
+            id="{} {}".format(docid, i),
             tokens=tokens,
             entities=input_parts.entities,
             triggers=input_parts.triggers,
@@ -2054,7 +2078,7 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
             output_relations=ex.relations
         ) for i, ex in enumerate(output_parts)]
 
-    def load_data_single_split(self, split: str, seed: int = None) -> List[InputExample]:
+    def load_data_single_split(self, split: str, seed: int = None, same_input_output_trigs=False) -> List[InputExample]:
         """
         Load data for a single split (train, dev, or test).
         """
@@ -2069,9 +2093,9 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
 
             for i, x in enumerate(data):
                 if not 'second_phase' in x:
-                    examples += self.yield_single_document(x['tokens'], x)
+                    examples += self.yield_single_document(x['id'], x['tokens'], x, same_input_output_trigs)
                 else:
-                    examples += self.yield_single_document(x['tokens'], x['first_phase'], x['second_phase'])
+                    examples += self.yield_single_document(x['id'], x['tokens'], x['first_phase'], x['second_phase'], same_input_output_trigs)
 
         return examples
 
@@ -2170,12 +2194,18 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
         return res
         """
 
-class MUCMultiPhaseArgument(MUCEventArgumentDataset):
-    name = 'muc_multiphase_argument'
-    data_name = 'mucevent_multiphase'
+@register_dataset
+class MUCNERMultiPhaseArgument(MUCEventArgumentDataset):
+    name = 'muc_ner_multiphase_argument'
+    data_name = 'muc_ner_multiphase'
 
     default_input_format = 'muc_multiphase_argument'
     default_output_format = 'multiphase_argument'
+
+@register_dataset
+class MUCEventMultiPhaseArgument(MUCNERMultiPhaseArgument):
+    name = 'muc_event_multiphase_argument'
+    data_name = 'muc_event_multiphase'
 
 @register_dataset
 class MUCEventDataset(MUCEventArgumentDataset):
@@ -2206,13 +2236,13 @@ class MUCEventDataset(MUCEventArgumentDataset):
                 entities = [
                     Entity(
                         id=j, type=self.entity_types[y['type']], start=y['start'], end=y['end'])
-                    for j, y in enumerate(x['entities'])
+                    for j, y in enumerate(x['entities'] if 'entities' in x else x['first_phase']['entities'])
                 ]
 
                 triggers = [
                     Entity(
                         id=j, type=self.entity_types[y['type']], start=y['start'], end=y['end'])
-                    for j, y in enumerate(x['triggers'])
+                    for j, y in enumerate(x['triggers'] if 'triggers' in x else x['first_phase']['triggers'])
                 ]
 
                 relations = [
@@ -2221,8 +2251,14 @@ class MUCEventDataset(MUCEventArgumentDataset):
                         type=self.relation_types[y['type']
                                                  ], head=entities[y['head']], tail=triggers[y['tail']]
                     )
-                    for y in x['relations']
+                    for y in (x['relations'] if 'relations' in x else (x['first_phase']['relations'] if 'relations' in x['first_phase'] else []))
                 ]
+
+                output_triggers = [
+                    Entity(
+                        id=j, type=self.entity_types[y['type']], start=y['start'], end=y['end'])
+                    for j, y in enumerate(x['second_phase']['triggers'])
+                ] if 'second_phase' in x else []
 
                 tokens = x['tokens']
 
@@ -2232,6 +2268,7 @@ class MUCEventDataset(MUCEventArgumentDataset):
                     entities=entities,
                     triggers=triggers,
                     relations=relations,
+                    output_triggers=output_triggers
                 )
 
                 examples.append(example)
@@ -2300,6 +2337,7 @@ class MUCEventDataset(MUCEventArgumentDataset):
             predicted_triggers_notype = set()
             gt_triggers_notype = set()
             # trigger tuple format: (type, start, end) -- resetting all types to the same as 'TYPE'
+            predicted_triggers = [trig for trig in predicted_triggers if any(trig[0] == trigger_obj.natural for trigger_obj in self.entity_types.values())]
             if log_file:
                 with open(log_file, "a") as f:
                     f.write("id {}\ntriggers {}\n".format(example.id, list(predicted_triggers)))
@@ -2321,19 +2359,20 @@ class MUCEventDataset(MUCEventArgumentDataset):
                 for trigger_type in self.entity_types:
                     if self.entity_types[trigger_type].natural == trigger[0]:
                         break
+                
                 if not is_multiphase:
                     example_argument_single_trigger.triggers = [
                         Entity(type=self.entity_types[trigger_type], start=trigger[1], end=trigger[2])]
                 else:
-                   example_argument_single_trigger.output_triggers = [
-                        Entity(type=self.entity_types[trigger_type], start=trigger[1], end=trigger[2])]
-                 
+                    example_argument_single_trigger.output_triggers = [
+                            Entity(type=self.entity_types[trigger_type], start=trigger[1], end=trigger[2])]
+                    
                 argument_input_format = INPUT_FORMATS[self.argument_input_format](
                 )
                 argument_output_format = OUTPUT_FORMATS[self.argument_output_format](
                 )
                 example_input = argument_input_format.format_input(example_argument_single_trigger, multitask=True,
-                                                                   task_descriptor=ACE2005EventArgumentDataset.name)
+                                                                task_descriptor=self.argument_input_format)
                 example_input_ids = self.tokenizer.batch_encode_plus(
                     [example_input],
                     max_length=data_args.max_seq_length,
@@ -2349,11 +2388,11 @@ class MUCEventDataset(MUCEventArgumentDataset):
                 idx += 1
                 argument_output = argument_outputs[0]
                 argument_output_sentence = self.tokenizer.decode(argument_output, skip_special_tokens=True,
-                                                                 clean_up_tokenization_spaces=False)
+                                                                clean_up_tokenization_spaces=False)
 
                 gt_relations, predicted_relations, correct_relations = \
                     self.evaluate_argument(argument_output_format, example_argument_single_trigger, example,
-                                           argument_output_sentence, log_file)
+                                        argument_output_sentence, log_file)
                 all_gt_relations = all_gt_relations.union(gt_relations)
                 all_predicted_relations = all_predicted_relations.union(
                     predicted_relations)
@@ -2425,9 +2464,19 @@ class MUCEventDataset(MUCEventArgumentDataset):
         return full_results
 
 @register_dataset
+class MUCNERMultiPhaseDataset(MUCEventDataset):
+    name = 'muc_ner_multiphase'
+    data_name = 'muc_ner_multiphase'
+    default_input_format = 'muc_multiphase_ner'
+    default_output_format = 'multiphase_trigger'
+    argument_input_format = 'muc_multiphase_argument'
+    argument_output_format = 'multiphase_argument'
+
+@register_dataset
 class MUCEventMultiPhaseDataset(MUCEventDataset):
-    name = 'mucevent_multiphase'
-    default_input_format = 'muc_multiphase'
+    name = 'muc_event_multiphase'
+    data_name = 'muc_event_multiphase'
+    default_input_format = 'muc_multiphase_event'
     default_output_format = 'multiphase_trigger'
     argument_input_format = 'muc_multiphase_argument'
     argument_output_format = 'multiphase_argument'

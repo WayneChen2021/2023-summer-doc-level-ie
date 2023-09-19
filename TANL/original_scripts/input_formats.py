@@ -6,7 +6,7 @@ from abc import ABC, abstractmethod
 from typing import List
 import copy
 
-from output_formats import EventOutputFormat
+from output_formats import OUTPUT_FORMATS
 from input_example import InputExample
 from utils import augment_sentence, get_span
 
@@ -98,11 +98,19 @@ class EventInputFormat(BaseInputFormat):
                                     self.RELATION_SEPARATOR_TOKEN, self.END_ENTITY_TOKEN)
 
 @register_input_format
-class MUCMultiPhase(BaseInputFormat):
-    name = 'muc_multiphase'
+class MUCNERMultiPhase(BaseInputFormat):
+    name = 'muc_multiphase_ner'
 
     def _format_input(self, example: InputExample) -> str:
-        return EventOutputFormat.format_output(example)
+        example.entities += example.triggers
+        return OUTPUT_FORMATS['joint_er']().format_output(example)
+
+@register_input_format
+class MUCEventMultiPhase(BaseInputFormat):
+    name = 'muc_multiphase_event'
+
+    def _format_input(self, example: InputExample) -> str:
+        return OUTPUT_FORMATS['muc_event']().format_output(example)
 
 @register_input_format
 class MUCMultiPhaseArgument(BaseInputFormat):
@@ -120,7 +128,6 @@ class MUCMultiPhaseArgument(BaseInputFormat):
             relations_by_entity[relation.head].append(
                 (relation.type, relation.tail))
 
-        augmentations = []
         for entity in example.entities:
             tags = [(entity.type.natural,)]
             for relation_type, tail in relations_by_entity[entity]:
