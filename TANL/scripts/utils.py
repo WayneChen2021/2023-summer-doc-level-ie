@@ -32,8 +32,12 @@ def to_error_analysis_format_event(triplets, types_mapping):
             except KeyError:
                 print("type '{}' not identified".format(trig_tup[0]))
         
-        assert error_analysis["docid"].strip() == triplet["tanl"]["id"].strip()
-        assert triplet["tanl"]["id"].strip() == triplet["model_out"]["id"].strip()
+        try:
+            assert error_analysis["docid"].strip() == triplet["tanl"]["id"].strip()
+            assert triplet["tanl"]["id"].strip() == triplet["model_out"]["id"].strip()
+        except Exception as e:
+            print(error_analysis["docid"].strip(), triplet["tanl"]["id"].strip(), triplet["model_out"]["id"].strip())
+            raise e
 
         for arg_tup in triplet["model_out"]["args"]:
             try:
@@ -408,7 +412,6 @@ if __name__ == "__main__":
     with open(args.config, "r") as f:
         config = json.loads(f.read())
     
-    multi_tasks = ["multi_phase_ner", "multi_phase_event", "verbose_tags", "multiple_triggers", "focused_cross_entropy_typed", "focused_cross_entropy_notype"]
     multi_job_fields = {
         "verbose_tags": {
             "test_time_logs": ["raw_outs", "output_file"],
@@ -443,9 +446,15 @@ if __name__ == "__main__":
             "training_errors": ["log_file", "output_file"],
             "generate_second_phase": ["raw_outs", "output_file", "tanl_ref"],
             "generate_second_phase_tracking": ["full_datasets", "num_examples", "raw_outs"]
+        },
+        "second_phase_ner": {
+            "test_time_logs": ["raw_outs", "output_file"]
+        },
+        "second_phase_event": {
+            "test_time_logs": ["raw_outs", "output_file"]
         }
     }
-    for job_category in multi_tasks:
+    for job_category in multi_job_fields.keys():
         jobs = config[job_category]
         for job_name in ["test_time_logs", "train_time_logs", "training_errors", "generate_second_phase", "generate_second_phase_tracking"]:
             if jobs and job_name in jobs and jobs[job_name]["run"]:
