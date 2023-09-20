@@ -2059,13 +2059,22 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
             else:
                 output_parts = self.handle_multi_trig(x_second, tokens, docid)
         else:
-            output_parts = [InputExample(
-                id="",
-                tokens=input_parts.tokens,
-                entities=[],
-                triggers=[trigger],
-                relations=[]
-            ) for trigger in input_parts.triggers]
+            if len(input_parts.triggers):
+                output_parts = [InputExample(
+                    id="",
+                    tokens=input_parts.tokens,
+                    entities=[],
+                    triggers=[trigger],
+                    relations=[]
+                ) for trigger in input_parts.triggers]
+            else:
+                output_parts = [InputExample(
+                    id="",
+                    tokens=input_parts.tokens,
+                    entities=[],
+                    triggers=[],
+                    relations=[]
+                )]
 
         return [InputExample(
             id="{} {}".format(docid, i),

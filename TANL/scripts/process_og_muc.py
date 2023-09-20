@@ -181,7 +181,7 @@ def get_split(splits, ind, total_len):
         if ind + 1 <= total_len * accum:
             return i
 
-def main(annotation_dir, message_id_map, triggers_per_temp = 3):
+def main(annotation_dir, message_id_map, triggers_per_temp = 3, split_ind=None):
     error_analysis_templates = {}
     tanl_templates = {}
     # COMMENT: change if want to use different names
@@ -277,7 +277,7 @@ def main(annotation_dir, message_id_map, triggers_per_temp = 3):
                     })
             container['relations'].append(relation_set)
     
-    final_train_tanl, final_train_gtt = [], []
+    final_train_tanl_1, final_train_gtt_1, final_train_tanl_2, final_train_gtt_2 = [], [], [], []
     final_eval_tanl, final_eval_gtt = [], []
     for k in tanl_templates:
         split = 1
@@ -287,14 +287,37 @@ def main(annotation_dir, message_id_map, triggers_per_temp = 3):
         if split != 0 and len(entry['triggers']) > 0:
             entry['triggers'] = [[trig[0]] for trig in entry['triggers']]
         tanls, gtts = enumerate_all_gold(entry, error_analysis_templates[k], name_lookup)
+        if len(tanls) == 0:
+            tanls = [{
+                "entities": [],
+                "triggers": [],
+                "relations": [],
+                "tokens": [entry['text'][tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in entry['token_spans']],
+                "id": error_analysis_templates[k]["docid"]
+            }]
+            gtts = [error_analysis_templates[k]]
+
         if split == 0:
-            final_train_tanl += tanls
-            final_train_gtt += gtts
+            if split_ind:
+                if int(k[9:13]) < split_ind:
+                    final_train_tanl_1 += tanls
+                    final_train_gtt_1 += gtts
+                else:
+                    final_train_tanl_2 += tanls
+                    final_train_gtt_2 += gtts
+            else:
+                if split == 0:
+                    final_train_tanl_1 += tanls
+                    final_train_gtt_1 += gtts
+                elif split == 1:
+                    final_eval_tanl += tanls
+                    final_eval_gtt += gtts
+        
         elif split == 1:
             final_eval_tanl += tanls
             final_eval_gtt += gtts
     
-    return final_train_tanl, final_train_gtt, final_eval_tanl, final_eval_gtt
+    return final_train_tanl_1, final_train_gtt_1, final_train_tanl_2, final_train_gtt_2, final_eval_tanl, final_eval_gtt
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -302,17 +325,20 @@ if __name__ == "__main__":
     parser.add_argument("--temp_trigs", type=int, required=True)
     parser.add_argument("--annotation_file", type=str, required=True)
     parser.add_argument("--tanl_train_out", type=str, required=False)
+    parser.add_argument("--tanl_train_out_2", type=str, required=False)
     parser.add_argument("--tanl_eval_out", type=str, required=False)
     parser.add_argument("--gtt_train_out", type=str, required=False)
+    parser.add_argument("--gtt_train_out_2", type=str, required=False)
     parser.add_argument("--gtt_eval_out", type=str, required=False)
+    parser.add_argument("--split_ind", type=int, required=False)
     args = parser.parse_args()
 
     message_id_map = create_map(args.muc_dir)
-    train_tanl, train_gtt, eval_tanl, eval_gtt = main(args.annotation_file, message_id_map, args.temp_trigs)
+    train_tanl_1, train_gtt_1, train_tanl_2, train_gtt_2, eval_tanl, eval_gtt = main(args.annotation_file, message_id_map, args.temp_trigs, args.split_ind)
 
     if args.tanl_train_out:
         with open(args.tanl_tain_out, "w") as f:
-            f.write(json.dumps(train_tanl))
+            f.write(json.dumps(train_tanl_1))
 
     if args.tanl_eval_out:
         with open(args.tanl_eval_out, "w") as f:
@@ -320,8 +346,16 @@ if __name__ == "__main__":
     
     if args.gtt_train_out:
         with open(args.gtt_train_out, "w") as f:
-            f.write(json.dumps(train_gtt))
+            f.write(json.dumps(train_gtt_1))
 
     if args.gtt_eval_out:
         with open(args.gtt_eval_out, "w") as f:
             f.write(json.dumps(eval_gtt))
+
+    if args.tanl_train_out_2:
+        with open(args.tanl_train_out_2, "w") as f:
+            f.write(json.dumps(train_tanl_2))
+    
+    if args.gtt_train_out_2:
+        with open(args.gtt_train_out_2, "w") as f:
+            f.write(json.dumps(train_gtt_2))
