@@ -50,6 +50,7 @@ class BaseDataset(Dataset, ABC):
             shuffle: bool = True,
             data_args: DataTrainingArguments = None,
             is_eval: bool = False,
+            same_input_output_trigs = False
     ):
         if seed is not None:
             # set random seed for repeatability

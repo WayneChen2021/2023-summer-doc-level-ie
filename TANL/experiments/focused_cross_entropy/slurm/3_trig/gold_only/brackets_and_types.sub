@@ -14,15 +14,13 @@
 
 CONDA_ENV=TANL2
 ENV_NAME="3_trig/gold_only/brackets_and_types"
-NUM_EPOCHS=11
+NUM_EPOCHS=6
 
 SCHEMA="typed.json"
 TYPE="typed.json"
 TRAIN="typed_3_trig.json"
 
 BASE_DATASET="base_dataset.py"
-INPUT_EXAMPLE="input_example.py"
-OUTPUT_FORMATS="output_formats.py"
 RUN="run/gold_only/brackets_and_types.py"
 
 mkdir "../../../g2_environments/$ENV_NAME"
@@ -33,8 +31,6 @@ cp "../../../data/types/$TYPE" "../../../g2_environments/$ENV_NAME/data/mucevent
 cp "../../../data/train/$TRAIN" "../../../g2_environments/$ENV_NAME/data/mucevent/mucevent_train.json"
 
 cp "../../../files/$BASE_DATASET" "../../../g2_environments/$ENV_NAME/base_dataset.py"
-cp "../../../files/$INPUT_EXAMPLE" "../../../g2_environments/$ENV_NAME/input_example.py"
-cp "../../../files/$OUTPUT_FORMATS" "../../../g2_environments/$ENV_NAME/output_formats.py"
 cp "../../../files/$RUN" "../../../g2_environments/$ENV_NAME/run.py"
 
 source /share/apps/anaconda3/2022.10/bin/activate

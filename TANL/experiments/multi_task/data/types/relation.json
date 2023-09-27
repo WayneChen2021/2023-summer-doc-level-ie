@@ -1,0 +1,369 @@
+{
+    "entities": {
+        "template entity": {
+            "verbose": "template entity"
+        }
+    },
+    "relations": {
+        "same event perpetrating individual argument for kidnapping event and perpetrating organization argument for kidnapping event": {
+            "verbose": "same event perpetrating individual argument for kidnapping event and perpetrating organization argument for kidnapping event"
+        },
+        "same event perpetrating individual argument for kidnapping event and target argument for kidnapping event": {
+            "verbose": "same event perpetrating individual argument for kidnapping event and target argument for kidnapping event"
+        },
+        "same event perpetrating individual argument for kidnapping event and victim argument for kidnapping event": {
+            "verbose": "same event perpetrating individual argument for kidnapping event and victim argument for kidnapping event"
+        },
+        "same event perpetrating individual argument for kidnapping event and weapon argument for kidnapping event": {
+            "verbose": "same event perpetrating individual argument for kidnapping event and weapon argument for kidnapping event"
+        },
+        "same event perpetrating organization argument for kidnapping event and perpetrating individual argument for kidnapping event": {
+            "verbose": "same event perpetrating organization argument for kidnapping event and perpetrating individual argument for kidnapping event"
+        },
+        "same event perpetrating organization argument for kidnapping event and target argument for kidnapping event": {
+            "verbose": "same event perpetrating organization argument for kidnapping event and target argument for kidnapping event"
+        },
+        "same event perpetrating organization argument for kidnapping event and victim argument for kidnapping event": {
+            "verbose": "same event perpetrating organization argument for kidnapping event and victim argument for kidnapping event"
+        },
+        "same event perpetrating organization argument for kidnapping event and weapon argument for kidnapping event": {
+            "verbose": "same event perpetrating organization argument for kidnapping event and weapon argument for kidnapping event"
+        },
+        "same event target argument for kidnapping event and perpetrating individual argument for kidnapping event": {
+            "verbose": "same event target argument for kidnapping event and perpetrating individual argument for kidnapping event"
+        },
+        "same event target argument for kidnapping event and perpetrating organization argument for kidnapping event": {
+            "verbose": "same event target argument for kidnapping event and perpetrating organization argument for kidnapping event"
+        },
+        "same event target argument for kidnapping event and victim argument for kidnapping event": {
+            "verbose": "same event target argument for kidnapping event and victim argument for kidnapping event"
+        },
+        "same event target argument for kidnapping event and weapon argument for kidnapping event": {
+            "verbose": "same event target argument for kidnapping event and weapon argument for kidnapping event"
+        },
+        "same event victim argument for kidnapping event and perpetrating individual argument for kidnapping event": {
+            "verbose": "same event victim argument for kidnapping event and perpetrating individual argument for kidnapping event"
+        },
+        "same event victim argument for kidnapping event and perpetrating organization argument for kidnapping event": {
+            "verbose": "same event victim argument for kidnapping event and perpetrating organization argument for kidnapping event"
+        },
+        "same event victim argument for kidnapping event and target argument for kidnapping event": {
+            "verbose": "same event victim argument for kidnapping event and target argument for kidnapping event"
+        },
+        "same event victim argument for kidnapping event and weapon argument for kidnapping event": {
+            "verbose": "same event victim argument for kidnapping event and weapon argument for kidnapping event"
+        },
+        "same event weapon argument for kidnapping event and perpetrating individual argument for kidnapping event": {
+            "verbose": "same event weapon argument for kidnapping event and perpetrating individual argument for kidnapping event"
+        },
+        "same event weapon argument for kidnapping event and perpetrating organization argument for kidnapping event": {
+            "verbose": "same event weapon argument for kidnapping event and perpetrating organization argument for kidnapping event"
+        },
+        "same event weapon argument for kidnapping event and target argument for kidnapping event": {
+            "verbose": "same event weapon argument for kidnapping event and target argument for kidnapping event"
+        },
+        "same event weapon argument for kidnapping event and victim argument for kidnapping event": {
+            "verbose": "same event weapon argument for kidnapping event and victim argument for kidnapping event"
+        },
+        "same event perpetrating individual argument for attack event and perpetrating organization argument for attack event": {
+            "verbose": "same event perpetrating individual argument for attack event and perpetrating organization argument for attack event"
+        },
+        "same event perpetrating individual argument for attack event and target argument for attack event": {
+            "verbose": "same event perpetrating individual argument for attack event and target argument for attack event"
+        },
+        "same event perpetrating individual argument for attack event and victim argument for attack event": {
+            "verbose": "same event perpetrating individual argument for attack event and victim argument for attack event"
+        },
+        "same event perpetrating individual argument for attack event and weapon argument for attack event": {
+            "verbose": "same event perpetrating individual argument for attack event and weapon argument for attack event"
+        },
+        "same event perpetrating organization argument for attack event and perpetrating individual argument for attack event": {
+            "verbose": "same event perpetrating organization argument for attack event and perpetrating individual argument for attack event"
+        },
+        "same event perpetrating organization argument for attack event and target argument for attack event": {
+            "verbose": "same event perpetrating organization argument for attack event and target argument for attack event"
+        },
+        "same event perpetrating organization argument for attack event and victim argument for attack event": {
+            "verbose": "same event perpetrating organization argument for attack event and victim argument for attack event"
+        },
+        "same event perpetrating organization argument for attack event and weapon argument for attack event": {
+            "verbose": "same event perpetrating organization argument for attack event and weapon argument for attack event"
+        },
+        "same event target argument for attack event and perpetrating individual argument for attack event": {
+            "verbose": "same event target argument for attack event and perpetrating individual argument for attack event"
+        },
+        "same event target argument for attack event and perpetrating organization argument for attack event": {
+            "verbose": "same event target argument for attack event and perpetrating organization argument for attack event"
+        },
+        "same event target argument for attack event and victim argument for attack event": {
+            "verbose": "same event target argument for attack event and victim argument for attack event"
+        },
+        "same event target argument for attack event and weapon argument for attack event": {
+            "verbose": "same event target argument for attack event and weapon argument for attack event"
+        },
+        "same event victim argument for attack event and perpetrating individual argument for attack event": {
+            "verbose": "same event victim argument for attack event and perpetrating individual argument for attack event"
+        },
+        "same event victim argument for attack event and perpetrating organization argument for attack event": {
+            "verbose": "same event victim argument for attack event and perpetrating organization argument for attack event"
+        },
+        "same event victim argument for attack event and target argument for attack event": {
+            "verbose": "same event victim argument for attack event and target argument for attack event"
+        },
+        "same event victim argument for attack event and weapon argument for attack event": {
+            "verbose": "same event victim argument for attack event and weapon argument for attack event"
+        },
+        "same event weapon argument for attack event and perpetrating individual argument for attack event": {
+            "verbose": "same event weapon argument for attack event and perpetrating individual argument for attack event"
+        },
+        "same event weapon argument for attack event and perpetrating organization argument for attack event": {
+            "verbose": "same event weapon argument for attack event and perpetrating organization argument for attack event"
+        },
+        "same event weapon argument for attack event and target argument for attack event": {
+            "verbose": "same event weapon argument for attack event and target argument for attack event"
+        },
+        "same event weapon argument for attack event and victim argument for attack event": {
+            "verbose": "same event weapon argument for attack event and victim argument for attack event"
+        },
+        "same event perpetrating individual argument for bombing event and perpetrating organization argument for bombing event": {
+            "verbose": "same event perpetrating individual argument for bombing event and perpetrating organization argument for bombing event"
+        },
+        "same event perpetrating individual argument for bombing event and target argument for bombing event": {
+            "verbose": "same event perpetrating individual argument for bombing event and target argument for bombing event"
+        },
+        "same event perpetrating individual argument for bombing event and victim argument for bombing event": {
+            "verbose": "same event perpetrating individual argument for bombing event and victim argument for bombing event"
+        },
+        "same event perpetrating individual argument for bombing event and weapon argument for bombing event": {
+            "verbose": "same event perpetrating individual argument for bombing event and weapon argument for bombing event"
+        },
+        "same event perpetrating organization argument for bombing event and perpetrating individual argument for bombing event": {
+            "verbose": "same event perpetrating organization argument for bombing event and perpetrating individual argument for bombing event"
+        },
+        "same event perpetrating organization argument for bombing event and target argument for bombing event": {
+            "verbose": "same event perpetrating organization argument for bombing event and target argument for bombing event"
+        },
+        "same event perpetrating organization argument for bombing event and victim argument for bombing event": {
+            "verbose": "same event perpetrating organization argument for bombing event and victim argument for bombing event"
+        },
+        "same event perpetrating organization argument for bombing event and weapon argument for bombing event": {
+            "verbose": "same event perpetrating organization argument for bombing event and weapon argument for bombing event"
+        },
+        "same event target argument for bombing event and perpetrating individual argument for bombing event": {
+            "verbose": "same event target argument for bombing event and perpetrating individual argument for bombing event"
+        },
+        "same event target argument for bombing event and perpetrating organization argument for bombing event": {
+            "verbose": "same event target argument for bombing event and perpetrating organization argument for bombing event"
+        },
+        "same event target argument for bombing event and victim argument for bombing event": {
+            "verbose": "same event target argument for bombing event and victim argument for bombing event"
+        },
+        "same event target argument for bombing event and weapon argument for bombing event": {
+            "verbose": "same event target argument for bombing event and weapon argument for bombing event"
+        },
+        "same event victim argument for bombing event and perpetrating individual argument for bombing event": {
+            "verbose": "same event victim argument for bombing event and perpetrating individual argument for bombing event"
+        },
+        "same event victim argument for bombing event and perpetrating organization argument for bombing event": {
+            "verbose": "same event victim argument for bombing event and perpetrating organization argument for bombing event"
+        },
+        "same event victim argument for bombing event and target argument for bombing event": {
+            "verbose": "same event victim argument for bombing event and target argument for bombing event"
+        },
+        "same event victim argument for bombing event and weapon argument for bombing event": {
+            "verbose": "same event victim argument for bombing event and weapon argument for bombing event"
+        },
+        "same event weapon argument for bombing event and perpetrating individual argument for bombing event": {
+            "verbose": "same event weapon argument for bombing event and perpetrating individual argument for bombing event"
+        },
+        "same event weapon argument for bombing event and perpetrating organization argument for bombing event": {
+            "verbose": "same event weapon argument for bombing event and perpetrating organization argument for bombing event"
+        },
+        "same event weapon argument for bombing event and target argument for bombing event": {
+            "verbose": "same event weapon argument for bombing event and target argument for bombing event"
+        },
+        "same event weapon argument for bombing event and victim argument for bombing event": {
+            "verbose": "same event weapon argument for bombing event and victim argument for bombing event"
+        },
+        "same event perpetrating individual argument for robbery event and perpetrating organization argument for robbery event": {
+            "verbose": "same event perpetrating individual argument for robbery event and perpetrating organization argument for robbery event"
+        },
+        "same event perpetrating individual argument for robbery event and target argument for robbery event": {
+            "verbose": "same event perpetrating individual argument for robbery event and target argument for robbery event"
+        },
+        "same event perpetrating individual argument for robbery event and victim argument for robbery event": {
+            "verbose": "same event perpetrating individual argument for robbery event and victim argument for robbery event"
+        },
+        "same event perpetrating individual argument for robbery event and weapon argument for robbery event": {
+            "verbose": "same event perpetrating individual argument for robbery event and weapon argument for robbery event"
+        },
+        "same event perpetrating organization argument for robbery event and perpetrating individual argument for robbery event": {
+            "verbose": "same event perpetrating organization argument for robbery event and perpetrating individual argument for robbery event"
+        },
+        "same event perpetrating organization argument for robbery event and target argument for robbery event": {
+            "verbose": "same event perpetrating organization argument for robbery event and target argument for robbery event"
+        },
+        "same event perpetrating organization argument for robbery event and victim argument for robbery event": {
+            "verbose": "same event perpetrating organization argument for robbery event and victim argument for robbery event"
+        },
+        "same event perpetrating organization argument for robbery event and weapon argument for robbery event": {
+            "verbose": "same event perpetrating organization argument for robbery event and weapon argument for robbery event"
+        },
+        "same event target argument for robbery event and perpetrating individual argument for robbery event": {
+            "verbose": "same event target argument for robbery event and perpetrating individual argument for robbery event"
+        },
+        "same event target argument for robbery event and perpetrating organization argument for robbery event": {
+            "verbose": "same event target argument for robbery event and perpetrating organization argument for robbery event"
+        },
+        "same event target argument for robbery event and victim argument for robbery event": {
+            "verbose": "same event target argument for robbery event and victim argument for robbery event"
+        },
+        "same event target argument for robbery event and weapon argument for robbery event": {
+            "verbose": "same event target argument for robbery event and weapon argument for robbery event"
+        },
+        "same event victim argument for robbery event and perpetrating individual argument for robbery event": {
+            "verbose": "same event victim argument for robbery event and perpetrating individual argument for robbery event"
+        },
+        "same event victim argument for robbery event and perpetrating organization argument for robbery event": {
+            "verbose": "same event victim argument for robbery event and perpetrating organization argument for robbery event"
+        },
+        "same event victim argument for robbery event and target argument for robbery event": {
+            "verbose": "same event victim argument for robbery event and target argument for robbery event"
+        },
+        "same event victim argument for robbery event and weapon argument for robbery event": {
+            "verbose": "same event victim argument for robbery event and weapon argument for robbery event"
+        },
+        "same event weapon argument for robbery event and perpetrating individual argument for robbery event": {
+            "verbose": "same event weapon argument for robbery event and perpetrating individual argument for robbery event"
+        },
+        "same event weapon argument for robbery event and perpetrating organization argument for robbery event": {
+            "verbose": "same event weapon argument for robbery event and perpetrating organization argument for robbery event"
+        },
+        "same event weapon argument for robbery event and target argument for robbery event": {
+            "verbose": "same event weapon argument for robbery event and target argument for robbery event"
+        },
+        "same event weapon argument for robbery event and victim argument for robbery event": {
+            "verbose": "same event weapon argument for robbery event and victim argument for robbery event"
+        },
+        "same event perpetrating individual argument for arson event and perpetrating organization argument for arson event": {
+            "verbose": "same event perpetrating individual argument for arson event and perpetrating organization argument for arson event"
+        },
+        "same event perpetrating individual argument for arson event and target argument for arson event": {
+            "verbose": "same event perpetrating individual argument for arson event and target argument for arson event"
+        },
+        "same event perpetrating individual argument for arson event and victim argument for arson event": {
+            "verbose": "same event perpetrating individual argument for arson event and victim argument for arson event"
+        },
+        "same event perpetrating individual argument for arson event and weapon argument for arson event": {
+            "verbose": "same event perpetrating individual argument for arson event and weapon argument for arson event"
+        },
+        "same event perpetrating organization argument for arson event and perpetrating individual argument for arson event": {
+            "verbose": "same event perpetrating organization argument for arson event and perpetrating individual argument for arson event"
+        },
+        "same event perpetrating organization argument for arson event and target argument for arson event": {
+            "verbose": "same event perpetrating organization argument for arson event and target argument for arson event"
+        },
+        "same event perpetrating organization argument for arson event and victim argument for arson event": {
+            "verbose": "same event perpetrating organization argument for arson event and victim argument for arson event"
+        },
+        "same event perpetrating organization argument for arson event and weapon argument for arson event": {
+            "verbose": "same event perpetrating organization argument for arson event and weapon argument for arson event"
+        },
+        "same event target argument for arson event and perpetrating individual argument for arson event": {
+            "verbose": "same event target argument for arson event and perpetrating individual argument for arson event"
+        },
+        "same event target argument for arson event and perpetrating organization argument for arson event": {
+            "verbose": "same event target argument for arson event and perpetrating organization argument for arson event"
+        },
+        "same event target argument for arson event and victim argument for arson event": {
+            "verbose": "same event target argument for arson event and victim argument for arson event"
+        },
+        "same event target argument for arson event and weapon argument for arson event": {
+            "verbose": "same event target argument for arson event and weapon argument for arson event"
+        },
+        "same event victim argument for arson event and perpetrating individual argument for arson event": {
+            "verbose": "same event victim argument for arson event and perpetrating individual argument for arson event"
+        },
+        "same event victim argument for arson event and perpetrating organization argument for arson event": {
+            "verbose": "same event victim argument for arson event and perpetrating organization argument for arson event"
+        },
+        "same event victim argument for arson event and target argument for arson event": {
+            "verbose": "same event victim argument for arson event and target argument for arson event"
+        },
+        "same event victim argument for arson event and weapon argument for arson event": {
+            "verbose": "same event victim argument for arson event and weapon argument for arson event"
+        },
+        "same event weapon argument for arson event and perpetrating individual argument for arson event": {
+            "verbose": "same event weapon argument for arson event and perpetrating individual argument for arson event"
+        },
+        "same event weapon argument for arson event and perpetrating organization argument for arson event": {
+            "verbose": "same event weapon argument for arson event and perpetrating organization argument for arson event"
+        },
+        "same event weapon argument for arson event and target argument for arson event": {
+            "verbose": "same event weapon argument for arson event and target argument for arson event"
+        },
+        "same event weapon argument for arson event and victim argument for arson event": {
+            "verbose": "same event weapon argument for arson event and victim argument for arson event"
+        },
+        "same event perpetrating individual argument for forced work stoppage event and perpetrating organization argument for forced work stoppage event": {
+            "verbose": "same event perpetrating individual argument for forced work stoppage event and perpetrating organization argument for forced work stoppage event"
+        },
+        "same event perpetrating individual argument for forced work stoppage event and target argument for forced work stoppage event": {
+            "verbose": "same event perpetrating individual argument for forced work stoppage event and target argument for forced work stoppage event"
+        },
+        "same event perpetrating individual argument for forced work stoppage event and victim argument for forced work stoppage event": {
+            "verbose": "same event perpetrating individual argument for forced work stoppage event and victim argument for forced work stoppage event"
+        },
+        "same event perpetrating individual argument for forced work stoppage event and weapon argument for forced work stoppage event": {
+            "verbose": "same event perpetrating individual argument for forced work stoppage event and weapon argument for forced work stoppage event"
+        },
+        "same event perpetrating organization argument for forced work stoppage event and perpetrating individual argument for forced work stoppage event": {
+            "verbose": "same event perpetrating organization argument for forced work stoppage event and perpetrating individual argument for forced work stoppage event"
+        },
+        "same event perpetrating organization argument for forced work stoppage event and target argument for forced work stoppage event": {
+            "verbose": "same event perpetrating organization argument for forced work stoppage event and target argument for forced work stoppage event"
+        },
+        "same event perpetrating organization argument for forced work stoppage event and victim argument for forced work stoppage event": {
+            "verbose": "same event perpetrating organization argument for forced work stoppage event and victim argument for forced work stoppage event"
+        },
+        "same event perpetrating organization argument for forced work stoppage event and weapon argument for forced work stoppage event": {
+            "verbose": "same event perpetrating organization argument for forced work stoppage event and weapon argument for forced work stoppage event"
+        },
+        "same event target argument for forced work stoppage event and perpetrating individual argument for forced work stoppage event": {
+            "verbose": "same event target argument for forced work stoppage event and perpetrating individual argument for forced work stoppage event"
+        },
+        "same event target argument for forced work stoppage event and perpetrating organization argument for forced work stoppage event": {
+            "verbose": "same event target argument for forced work stoppage event and perpetrating organization argument for forced work stoppage event"
+        },
+        "same event target argument for forced work stoppage event and victim argument for forced work stoppage event": {
+            "verbose": "same event target argument for forced work stoppage event and victim argument for forced work stoppage event"
+        },
+        "same event target argument for forced work stoppage event and weapon argument for forced work stoppage event": {
+            "verbose": "same event target argument for forced work stoppage event and weapon argument for forced work stoppage event"
+        },
+        "same event victim argument for forced work stoppage event and perpetrating individual argument for forced work stoppage event": {
+            "verbose": "same event victim argument for forced work stoppage event and perpetrating individual argument for forced work stoppage event"
+        },
+        "same event victim argument for forced work stoppage event and perpetrating organization argument for forced work stoppage event": {
+            "verbose": "same event victim argument for forced work stoppage event and perpetrating organization argument for forced work stoppage event"
+        },
+        "same event victim argument for forced work stoppage event and target argument for forced work stoppage event": {
+            "verbose": "same event victim argument for forced work stoppage event and target argument for forced work stoppage event"
+        },
+        "same event victim argument for forced work stoppage event and weapon argument for forced work stoppage event": {
+            "verbose": "same event victim argument for forced work stoppage event and weapon argument for forced work stoppage event"
+        },
+        "same event weapon argument for forced work stoppage event and perpetrating individual argument for forced work stoppage event": {
+            "verbose": "same event weapon argument for forced work stoppage event and perpetrating individual argument for forced work stoppage event"
+        },
+        "same event weapon argument for forced work stoppage event and perpetrating organization argument for forced work stoppage event": {
+            "verbose": "same event weapon argument for forced work stoppage event and perpetrating organization argument for forced work stoppage event"
+        },
+        "same event weapon argument for forced work stoppage event and target argument for forced work stoppage event": {
+            "verbose": "same event weapon argument for forced work stoppage event and target argument for forced work stoppage event"
+        },
+        "same event weapon argument for forced work stoppage event and victim argument for forced work stoppage event": {
+            "verbose": "same event weapon argument for forced work stoppage event and victim argument for forced work stoppage event"
+        }
+    }
+}

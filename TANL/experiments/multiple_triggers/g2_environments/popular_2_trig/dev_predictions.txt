@@ -1,39 +1,35 @@
 id TST1-MUC3-0001
-triggers [('attack', 102, 103), ('attack', 236, 237)]
-arguments [('Target: attack', (202, 203), ('attack', 102, 103))]
+triggers [('attack', 96, 97)]
 arguments []
 id TST1-MUC3-0002
-triggers []
+triggers [('bombing', 138, 139)]
+arguments []
 id TST1-MUC3-0003
-triggers [('kidnapping', 155, 157)]
-arguments [('Victim: kidnapping', (143, 145), ('kidnapping', 155, 157)), ('Target: kidnapping', (138, 141), ('kidnapping', 155, 157)), ('Victim: kidnapping', (147, 149), ('kidnapping', 155, 157))]
+triggers [('kidnapping', 270, 271)]
+arguments []
 id TST1-MUC3-0004
-triggers [('bombing', 109, 112), ('bombing', 178, 179)]
-arguments [('Target: bombing', (22, 25), ('bombing', 109, 112)), ('Weapon: bombing', (97, 102), ('bombing', 109, 112)), ('Weapon: bombing', (27, 28), ('bombing', 109, 112))]
-arguments [('Target: bombing', (22, 25), ('bombing', 178, 179)), ('PerpInd: bombing', (86, 87), ('bombing', 178, 179)), ('Weapon: bombing', (97, 102), ('bombing', 178, 179)), ('Weapon: bombing', (27, 28), ('bombing', 178, 179))]
+triggers [('bombing', 178, 179)]
+arguments []
 id TST1-MUC3-0005
 triggers [('attack', 201, 202)]
 arguments []
 id TST1-MUC3-0006
-triggers [('attack', 22, 23)]
-arguments [('PerpOrg: attack', (15, 17), ('attack', 22, 23))]
+triggers [('attack', 51, 52)]
+arguments []
 id TST1-MUC3-0007
-triggers [('attack', 196, 198)]
-arguments [('Victim: attack', (202, 205), ('attack', 196, 198))]
+triggers []
 id TST1-MUC3-0008
 triggers [('attack', 203, 204)]
 arguments []
 id TST1-MUC3-0009
 triggers []
 id TST1-MUC3-0010
-triggers [('attack', 256, 257)]
-arguments [('PerpOrg: attack', (132, 133), ('attack', 256, 257))]
+triggers []
 id TST1-MUC3-0011
-triggers [('attack', 59, 60)]
+triggers [('attack', 168, 169)]
 arguments []
 id TST1-MUC3-0012
-triggers [('attack', 106, 108)]
-arguments [('PerpInd: attack', (14, 15), ('attack', 106, 108))]
+triggers []
 id TST1-MUC3-0013
 triggers []
 id TST1-MUC3-0014
@@ -41,77 +37,63 @@ triggers []
 id TST1-MUC3-0015
 triggers []
 id TST1-MUC3-0016
-triggers [('attack', 157, 158)]
-arguments [('Target: attack', (116, 117), ('attack', 157, 158))]
+triggers []
 id TST1-MUC3-0017
 triggers []
 id TST1-MUC3-0018
-triggers [('attack', 150, 151)]
-arguments [('PerpInd: attack', (84, 86), ('attack', 150, 151)), ('Victim: attack', (54, 57), ('attack', 150, 151))]
+triggers [('kidnapping', 78, 79)]
+arguments []
 id TST1-MUC3-0019
-triggers [('attack', 219, 220)]
-arguments [('PerpOrg: attack', (69, 71), ('attack', 219, 220)), ('PerpInd: attack', (34, 35), ('attack', 219, 220))]
+triggers []
 id TST1-MUC3-0020
 triggers []
 id TST1-MUC3-0021
 triggers []
 id TST1-MUC3-0022
-triggers [('attack', 106, 107)]
-arguments [('PerpOrg: attack', (108, 110), ('attack', 106, 107))]
+triggers []
 id TST1-MUC3-0023
 triggers []
 id TST1-MUC3-0024
-triggers [('bombing', 188, 189)]
-arguments [('PerpOrg: bombing', (277, 280), ('bombing', 188, 189))]
+triggers [('bombing', 20, 21)]
+arguments []
 id TST1-MUC3-0025
 triggers []
 id TST1-MUC3-0026
 triggers []
 id TST1-MUC3-0027
-triggers [('bombing', 23, 25)]
-arguments [('Weapon: bombing', (66, 67), ('bombing', 23, 25))]
+triggers [('bombing', 66, 68)]
+arguments []
 id TST1-MUC3-0028
-triggers [('attack', 134, 135)]
-arguments [('Victim: attack', (52, 53), ('attack', 134, 135))]
+triggers []
 id TST1-MUC3-0029
-triggers [('attack', 161, 162)]
-arguments [('PerpInd: attack', (159, 161), ('attack', 161, 162))]
+triggers []
 id TST1-MUC3-0030
-triggers [('attack', 190, 191)]
-arguments [('PerpOrg: attack', (212, 215), ('attack', 190, 191)), ('Victim: attack', (192, 194), ('attack', 190, 191))]
+triggers [('attack', 219, 220)]
+arguments []
 id TST1-MUC3-0031
-triggers [('attack', 60, 61)]
-arguments [('Victim: attack', (27, 29), ('attack', 60, 61))]
+triggers []
 id TST1-MUC3-0032
-triggers [('robbery', 206, 207)]
-arguments []
+triggers []
 id TST1-MUC3-0033
-triggers [('attack', 31, 32)]
-arguments []
+triggers []
 id TST1-MUC3-0034
-triggers [('attack', 305, 306)]
-arguments [('PerpOrg: attack', (103, 108), ('attack', 305, 306))]
+triggers []
 id TST1-MUC3-0035
-triggers [('attack', 65, 66)]
-arguments [('PerpOrg: attack', (50, 55), ('attack', 65, 66)), ('PerpInd: attack', (60, 63), ('attack', 65, 66))]
+triggers []
 id TST1-MUC3-0036
-triggers [('bombing', 88, 89)]
-arguments [('Weapon: bombing', (57, 59), ('bombing', 88, 89)), ('Target: bombing', (25, 27), ('bombing', 88, 89))]
+triggers []
 id TST1-MUC3-0037
 triggers [('bombing', 119, 120)]
-arguments [('Weapon: bombing', (146, 147), ('bombing', 119, 120))]
+arguments []
 id TST1-MUC3-0038
 triggers []
 id TST1-MUC3-0039
-triggers [('attack', 347, 350)]
-arguments []
+triggers []
 id TST1-MUC3-0040
-triggers [('kidnapping', 96, 97), ('bombing', 251, 252)]
-arguments [('Victim: kidnapping', (259, 262), ('kidnapping', 96, 97))]
-arguments [('Victim: bombing', (259, 262), ('bombing', 251, 252))]
+triggers [('bombing', 251, 252)]
+arguments []
 id TST1-MUC3-0041
-triggers [('attack', 199, 202)]
-arguments [('PerpOrg: attack', (139, 140), ('attack', 199, 202))]
+triggers []
 id TST1-MUC3-0042
 triggers []
 id TST1-MUC3-0043
@@ -119,182 +101,161 @@ triggers []
 id TST1-MUC3-0044
 triggers []
 id TST1-MUC3-0045
-triggers [('attack', 164, 165)]
-arguments [('PerpOrg: attack', (38, 40), ('attack', 164, 165))]
-id TST1-MUC3-0046
-triggers [('attack', 325, 326)]
+triggers [('attack', 42, 43)]
 arguments []
+id TST1-MUC3-0046
+triggers []
 id TST1-MUC3-0047
 triggers []
 id TST1-MUC3-0048
-triggers [('forced work stoppage', 65, 66)]
+triggers [('attack', 44, 45)]
 arguments []
 id TST1-MUC3-0049
-triggers [('arson', 75, 76), ('attack', 34, 36)]
-arguments [('Victim: arson', (49, 52), ('arson', 75, 76)), ('Target: arson', (77, 78), ('arson', 75, 76))]
-arguments [('Victim: attack', (49, 52), ('attack', 34, 36))]
+triggers [('attack', 53, 54)]
+arguments []
 id TST1-MUC3-0050
-triggers [('attack', 233, 234)]
-arguments [('PerpInd: attack', (202, 206), ('attack', 233, 234)), ('Victim: attack', (212, 215), ('attack', 233, 234))]
+triggers [('attack', 197, 198)]
+arguments []
 id TST1-MUC3-0051
-triggers [('attack', 83, 86)]
-arguments [('Victim: attack', (52, 55), ('attack', 83, 86)), ('Victim: attack', (59, 62), ('attack', 83, 86)), ('PerpInd: attack', (32, 36), ('attack', 83, 86))]
+triggers []
 id TST1-MUC3-0052
 triggers []
 id TST1-MUC3-0053
 triggers []
 id TST1-MUC3-0054
-triggers [('attack', 70, 71)]
-arguments [('PerpOrg: attack', (348, 350), ('attack', 70, 71)), ('PerpOrg: attack', (304, 306), ('attack', 70, 71))]
+triggers []
 id TST1-MUC3-0055
 triggers []
 id TST1-MUC3-0056
-triggers [('attack', 131, 132), ('attack', 280, 281)]
+triggers [('attack', 280, 281)]
 arguments []
-arguments [('PerpInd: attack', (283, 284), ('attack', 280, 281))]
 id TST1-MUC3-0057
 triggers []
 id TST1-MUC3-0058
-triggers [('attack', 86, 87)]
-arguments [('PerpInd: attack', (36, 37), ('attack', 86, 87)), ('Weapon: attack', (89, 91), ('attack', 86, 87))]
+triggers []
 id TST1-MUC3-0059
-triggers [('attack', 38, 39)]
-arguments [('PerpOrg: attack', (225, 227), ('attack', 38, 39)), ('Victim: attack', (41, 45), ('attack', 38, 39))]
+triggers [('attack', 121, 122)]
+arguments []
 id TST1-MUC3-0060
 triggers []
 id TST1-MUC3-0061
 triggers [('attack', 255, 256)]
-arguments [('Victim: attack', (257, 260), ('attack', 255, 256))]
-id TST1-MUC3-0062
-triggers [('kidnapping', 100, 101)]
-arguments [('PerpOrg: kidnapping', (13, 17), ('kidnapping', 100, 101))]
-id TST1-MUC3-0063
-triggers [('attack', 86, 87)]
 arguments []
+id TST1-MUC3-0062
+triggers []
+id TST1-MUC3-0063
+triggers []
 id TST1-MUC3-0064
 triggers []
 id TST1-MUC3-0065
 triggers [('kidnapping', 68, 70)]
-arguments [('Victim: kidnapping', (51, 53), ('kidnapping', 68, 70)), ('Victim: kidnapping', (56, 58), ('kidnapping', 68, 70)), ('Victim: kidnapping', (64, 66), ('kidnapping', 68, 70))]
+arguments []
 id TST1-MUC3-0066
 triggers []
 id TST1-MUC3-0067
 triggers []
 id TST1-MUC3-0068
-triggers [('attack', 164, 165)]
-arguments []
+triggers []
 id TST1-MUC3-0069
 triggers []
 id TST1-MUC3-0070
 triggers []
 id TST1-MUC3-0071
-triggers [('attack', 24, 27), ('attack', 281, 282)]
-arguments [('PerpOrg: attack', (43, 44), ('attack', 24, 27)), ('PerpInd: attack', (31, 34), ('attack', 24, 27))]
-arguments [('PerpOrg: attack', (43, 44), ('attack', 281, 282)), ('PerpInd: attack', (33, 34), ('attack', 281, 282))]
+triggers [('attack', 24, 27)]
+arguments []
 id TST1-MUC3-0072
 triggers [('attack', 111, 113)]
-arguments [('Target: attack', (18, 21), ('attack', 111, 113))]
+arguments []
 id TST1-MUC3-0073
-triggers [('bombing', 228, 231), ('bombing', 110, 111)]
-arguments [('Weapon: bombing', (24, 25), ('bombing', 228, 231)), ('PerpInd: bombing', (21, 22), ('bombing', 228, 231))]
-arguments [('Target: bombing', (55, 63), ('bombing', 110, 111)), ('Weapon: bombing', (24, 25), ('bombing', 110, 111))]
+triggers [('bombing', 162, 163)]
+arguments []
 id TST1-MUC3-0074
 triggers [('attack', 100, 101), ('attack', 119, 120)]
-arguments [('Victim: attack', (104, 107), ('attack', 100, 101))]
-arguments [('Victim: attack', (122, 125), ('attack', 119, 120))]
+arguments []
+arguments []
 id TST1-MUC3-0075
-triggers [('attack', 159, 161)]
+triggers [('attack', 217, 218)]
 arguments []
 id TST1-MUC3-0076
-triggers [('attack', 111, 112)]
-arguments [('Victim: attack', (28, 32), ('attack', 111, 112))]
+triggers [('attack', 111, 112), ('attack', 50, 53)]
+arguments []
+arguments []
 id TST1-MUC3-0077
 triggers [('attack', 169, 170)]
 arguments []
 id TST1-MUC3-0078
-triggers [('attack', 42, 43)]
-arguments [('PerpInd: attack', (41, 42), ('attack', 42, 43)), ('PerpOrg: attack', (121, 122), ('attack', 42, 43))]
+triggers []
 id TST1-MUC3-0079
 triggers []
 id TST1-MUC3-0080
-triggers [('kidnapping', 126, 127)]
-arguments [('Victim: kidnapping', (26, 29), ('kidnapping', 126, 127))]
+triggers []
 id TST1-MUC3-0081
 triggers []
 id TST1-MUC3-0082
-triggers [('arson', 21, 25)]
-arguments [('PerpInd: arson', (67, 69), ('arson', 21, 25))]
-id TST1-MUC3-0083
-triggers [('attack', 38, 39)]
-arguments [('PerpInd: attack', (32, 34), ('attack', 38, 39)), ('Victim: attack', (40, 44), ('attack', 38, 39))]
-id TST1-MUC3-0084
-triggers [('attack', 226, 227)]
+triggers [('bombing', 29, 30)]
 arguments []
+id TST1-MUC3-0083
+triggers [('kidnapping', 38, 39)]
+arguments []
+id TST1-MUC3-0084
+triggers []
 id TST1-MUC3-0085
 triggers []
 id TST1-MUC3-0086
-triggers [('attack', 209, 210)]
-arguments []
+triggers []
 id TST1-MUC3-0087
-triggers [('attack', 173, 174)]
-arguments [('PerpInd: attack', (184, 188), ('attack', 173, 174))]
+triggers []
 id TST1-MUC3-0088
-triggers [('attack', 246, 247)]
-arguments [('PerpOrg: attack', (49, 50), ('attack', 246, 247))]
+triggers []
 id TST1-MUC3-0089
-triggers [('arson', 148, 149), ('attack', 275, 276)]
-arguments [('Target: arson', (28, 29), ('arson', 148, 149)), ('PerpInd: arson', (23, 24), ('arson', 148, 149))]
-arguments [('Target: attack', (295, 297), ('attack', 275, 276))]
+triggers [('arson', 148, 149), ('arson', 293, 294)]
+arguments []
+arguments []
 id TST1-MUC3-0090
-triggers [('bombing', 104, 106)]
-arguments [('Target: bombing', (60, 62), ('bombing', 104, 106)), ('PerpOrg: bombing', (89, 90), ('bombing', 104, 106))]
+triggers [('bombing', 38, 39)]
+arguments []
 id TST1-MUC3-0091
 triggers []
 id TST1-MUC3-0092
-triggers [('attack', 183, 184)]
-arguments [('PerpInd: attack', (181, 183), ('attack', 183, 184)), ('Target: attack', (184, 185), ('attack', 183, 184))]
+triggers []
 id TST1-MUC3-0093
 triggers [('attack', 150, 151)]
 arguments []
 id TST1-MUC3-0094
 triggers []
 id TST1-MUC3-0095
-triggers [('attack', 134, 135)]
-arguments []
+triggers []
 id TST1-MUC3-0096
-triggers [('kidnapping', 130, 132)]
-arguments []
+triggers []
 id TST1-MUC3-0097
 triggers [('attack', 116, 117)]
-arguments [('Victim: attack', (27, 30), ('attack', 116, 117))]
-id TST1-MUC3-0098
-triggers []
-id TST1-MUC3-0099
-triggers [('arson', 248, 249), ('bombing', 58, 61)]
-arguments [('PerpOrg: arson', (138, 142), ('arson', 248, 249)), ('PerpOrg: arson', (130, 132), ('arson', 248, 249)), ('Weapon: arson', (58, 59), ('arson', 248, 249))]
-arguments [('Weapon: bombing', (58, 59), ('bombing', 58, 61))]
-id TST1-MUC3-0100
-triggers [('attack', 223, 225)]
 arguments []
+id TST1-MUC3-0098
+triggers [('attack', 83, 85)]
+arguments []
+id TST1-MUC3-0099
+triggers [('bombing', 200, 201), ('arson', 248, 249)]
+arguments []
+arguments []
+id TST1-MUC3-0100
+triggers []
 id TST2-MUC4-0001
 triggers []
 id TST2-MUC4-0002
 triggers [('bombing', 92, 93)]
 arguments []
 id TST2-MUC4-0003
-triggers [('attack', 100, 101)]
-arguments [('PerpInd: attack', (29, 33), ('attack', 100, 101)), ('Victim: attack', (41, 43), ('attack', 100, 101))]
+triggers []
 id TST2-MUC4-0004
-triggers [('bombing', 42, 43)]
-arguments [('Target: bombing', (21, 23), ('bombing', 42, 43)), ('PerpOrg: bombing', (133, 139), ('bombing', 42, 43)), ('Weapon: bombing', (15, 17), ('bombing', 42, 43))]
-id TST2-MUC4-0005
-triggers [('attack', 156, 157)]
+triggers [('bombing', 218, 219)]
 arguments []
+id TST2-MUC4-0005
+triggers []
 id TST2-MUC4-0006
 triggers []
 id TST2-MUC4-0007
-triggers [('bombing', 86, 87)]
-arguments [('PerpInd: bombing', (75, 76), ('bombing', 86, 87))]
+triggers [('attack', 237, 238)]
+arguments []
 id TST2-MUC4-0008
 triggers []
 id TST2-MUC4-0009
@@ -302,349 +263,311 @@ triggers []
 id TST2-MUC4-0010
 triggers []
 id TST2-MUC4-0011
-triggers [('attack', 173, 174)]
-arguments []
+triggers []
 id TST2-MUC4-0012
 triggers [('attack', 27, 28)]
-arguments [('Victim: attack', (29, 31), ('attack', 27, 28))]
+arguments []
 id TST2-MUC4-0013
 triggers []
 id TST2-MUC4-0014
-triggers [('attack', 201, 202)]
-arguments [('PerpInd: attack', (37, 40), ('attack', 201, 202))]
+triggers []
 id TST2-MUC4-0015
-triggers [('bombing', 114, 116)]
+triggers [('bombing', 159, 161)]
 arguments []
 id TST2-MUC4-0016
 triggers []
 id TST2-MUC4-0017
 triggers []
 id TST2-MUC4-0018
-triggers [('attack', 285, 286)]
-arguments [('Victim: attack', (288, 291), ('attack', 285, 286))]
+triggers []
 id TST2-MUC4-0019
-triggers [('attack', 118, 119)]
-arguments [('PerpOrg: attack', (41, 42), ('attack', 118, 119))]
+triggers [('attack', 144, 145)]
+arguments []
 id TST2-MUC4-0020
-triggers [('bombing', 43, 44)]
+triggers [('bombing', 88, 89)]
 arguments []
 id TST2-MUC4-0021
 triggers [('bombing', 99, 101)]
-arguments [('Target: bombing', (102, 104), ('bombing', 99, 101))]
+arguments []
 id TST2-MUC4-0022
 triggers []
 id TST2-MUC4-0023
-triggers []
+triggers [('attack', 156, 157)]
+arguments []
 id TST2-MUC4-0024
-triggers [('bombing', 269, 270)]
-arguments [('PerpOrg: bombing', (314, 316), ('bombing', 269, 270)), ('Target: bombing', (279, 283), ('bombing', 269, 270))]
+triggers [('bombing', 292, 293)]
+arguments []
 id TST2-MUC4-0025
 triggers [('attack', 224, 225)]
-arguments [('PerpOrg: attack', (103, 104), ('attack', 224, 225))]
-id TST2-MUC4-0026
-triggers [('attack', 97, 98)]
-arguments [('Victim: attack', (58, 62), ('attack', 97, 98)), ('Victim: attack', (44, 46), ('attack', 97, 98))]
-id TST2-MUC4-0027
-triggers [('attack', 264, 265)]
 arguments []
+id TST2-MUC4-0026
+triggers [('attack', 142, 144), ('attack', 290, 291)]
+arguments []
+arguments []
+id TST2-MUC4-0027
+triggers []
 id TST2-MUC4-0028
-triggers [('bombing', 181, 182), ('bombing', 127, 128)]
-arguments [('PerpOrg: bombing', (14, 19), ('bombing', 181, 182))]
-arguments [('Weapon: bombing', (27, 28), ('bombing', 127, 128))]
+triggers [('bombing', 127, 128)]
+arguments []
 id TST2-MUC4-0029
 triggers []
 id TST2-MUC4-0030
-triggers [('attack', 35, 36)]
-arguments [('PerpOrg: attack', (39, 41), ('attack', 35, 36)), ('Target: attack', (27, 31), ('attack', 35, 36)), ('PerpInd: attack', (42, 44), ('attack', 35, 36)), ('Victim: attack', (52, 55), ('attack', 35, 36))]
+triggers []
 id TST2-MUC4-0031
-triggers [('attack', 169, 171)]
-arguments [('Weapon: attack', (172, 173), ('attack', 169, 171)), ('PerpOrg: attack', (88, 90), ('attack', 169, 171)), ('Weapon: attack', (170, 171), ('attack', 169, 171))]
-id TST2-MUC4-0032
-triggers [('attack', 111, 112)]
-arguments [('Victim: attack', (34, 37), ('attack', 111, 112))]
-id TST2-MUC4-0033
-triggers [('attack', 262, 263)]
-arguments [('PerpInd: attack', (100, 101), ('attack', 262, 263)), ('Victim: attack', (36, 39), ('attack', 262, 263))]
-id TST2-MUC4-0034
-triggers [('attack', 17, 20), ('kidnapping', 177, 178)]
+triggers [('robbery', 296, 297)]
 arguments []
+id TST2-MUC4-0032
+triggers [('attack', 177, 178), ('attack', 59, 60)]
+arguments []
+arguments []
+id TST2-MUC4-0033
+triggers []
+id TST2-MUC4-0034
+triggers [('kidnapping', 177, 178)]
 arguments []
 id TST2-MUC4-0035
-triggers [('bombing', 138, 139)]
-arguments []
-id TST2-MUC4-0036
 triggers []
+id TST2-MUC4-0036
+triggers [('attack', 298, 299)]
+arguments []
 id TST2-MUC4-0037
 triggers []
 id TST2-MUC4-0038
-triggers [('attack', 29, 30)]
-arguments [('PerpInd: attack', (27, 28), ('attack', 29, 30))]
+triggers []
 id TST2-MUC4-0039
 triggers [('kidnapping', 71, 72)]
-arguments [('Victim: kidnapping', (66, 69), ('kidnapping', 71, 72)), ('PerpInd: kidnapping', (37, 38), ('kidnapping', 71, 72)), ('Victim: kidnapping', (56, 58), ('kidnapping', 71, 72)), ('PerpOrg: kidnapping', (40, 41), ('kidnapping', 71, 72))]
-id TST2-MUC4-0040
-triggers [('kidnapping', 268, 270)]
 arguments []
+id TST2-MUC4-0040
+triggers []
 id TST2-MUC4-0041
 triggers []
 id TST2-MUC4-0042
-triggers [('attack', 31, 32)]
-arguments [('Victim: attack', (33, 36), ('attack', 31, 32))]
+triggers [('attack', 88, 89)]
+arguments []
 id TST2-MUC4-0043
-triggers [('attack', 197, 198)]
-arguments [('Weapon: attack', (246, 248), ('attack', 197, 198)), ('Target: attack', (243, 245), ('attack', 197, 198))]
+triggers []
 id TST2-MUC4-0044
-triggers [('bombing', 142, 143)]
+triggers [('bombing', 188, 189)]
 arguments []
 id TST2-MUC4-0045
-triggers [('attack', 140, 141)]
-arguments [('PerpOrg: attack', (35, 36), ('attack', 140, 141))]
+triggers []
 id TST2-MUC4-0046
-triggers [('bombing', 137, 138)]
+triggers [('bombing', 56, 57)]
 arguments []
 id TST2-MUC4-0047
-triggers [('attack', 238, 239)]
-arguments [('Victim: attack', (249, 252), ('attack', 238, 239))]
+triggers []
 id TST2-MUC4-0048
-triggers [('bombing', 40, 41), ('bombing', 275, 276)]
-arguments [('PerpInd: bombing', (85, 87), ('bombing', 40, 41)), ('Victim: bombing', (24, 27), ('bombing', 40, 41)), ('Victim: bombing', (44, 46), ('bombing', 40, 41)), ('PerpOrg: bombing', (30, 35), ('bombing', 40, 41))]
-arguments [('PerpOrg: bombing', (36, 37), ('bombing', 275, 276)), ('Target: bombing', (276, 279), ('bombing', 275, 276))]
-id TST2-MUC4-0049
-triggers [('attack', 124, 125)]
+triggers [('bombing', 228, 231), ('attack', 55, 56)]
 arguments []
+arguments []
+id TST2-MUC4-0049
+triggers []
 id TST2-MUC4-0050
 triggers [('attack', 98, 99)]
-arguments [('Victim: attack', (27, 31), ('attack', 98, 99))]
+arguments []
 id TST2-MUC4-0051
-triggers [('arson', 149, 150)]
-arguments [('Victim: arson', (54, 58), ('arson', 149, 150))]
+triggers [('attack', 59, 60)]
+arguments []
 id TST2-MUC4-0052
 triggers []
 id TST2-MUC4-0053
 triggers [('kidnapping', 45, 46)]
-arguments [('PerpInd: kidnapping', (43, 45), ('kidnapping', 45, 46)), ('Victim: kidnapping', (46, 48), ('kidnapping', 45, 46))]
+arguments []
 id TST2-MUC4-0054
-triggers [('attack', 343, 344)]
-arguments [('PerpOrg: attack', (33, 36), ('attack', 343, 344))]
+triggers []
 id TST2-MUC4-0055
-triggers [('kidnapping', 81, 82)]
+triggers [('kidnapping', 49, 50)]
 arguments []
 id TST2-MUC4-0056
-triggers [('attack', 191, 192)]
-arguments []
+triggers []
 id TST2-MUC4-0057
 triggers [('attack', 194, 195)]
-arguments [('PerpOrg: attack', (179, 183), ('attack', 194, 195)), ('Victim: attack', (202, 204), ('attack', 194, 195))]
+arguments []
 id TST2-MUC4-0058
 triggers []
 id TST2-MUC4-0059
-triggers [('bombing', 69, 71), ('bombing', 225, 226)]
-arguments [('Weapon: bombing', (49, 50), ('bombing', 69, 71)), ('Target: bombing', (75, 76), ('bombing', 69, 71))]
-arguments [('Weapon: bombing', (49, 50), ('bombing', 225, 226)), ('Target: bombing', (75, 76), ('bombing', 225, 226))]
+triggers [('bombing', 49, 51), ('bombing', 132, 133)]
+arguments []
+arguments []
 id TST2-MUC4-0060
 triggers []
 id TST2-MUC4-0061
-triggers [('attack', 131, 132)]
-arguments [('Victim: attack', (80, 83), ('attack', 131, 132)), ('Victim: attack', (68, 71), ('attack', 131, 132)), ('Target: attack', (60, 61), ('attack', 131, 132))]
+triggers [('attack', 45, 48)]
+arguments []
 id TST2-MUC4-0062
 triggers [('attack', 71, 72)]
-arguments [('Victim: attack', (68, 70), ('attack', 71, 72))]
+arguments []
 id TST2-MUC4-0063
-triggers [('attack', 82, 83)]
-arguments [('PerpInd: attack', (24, 26), ('attack', 82, 83)), ('Target: attack', (28, 29), ('attack', 82, 83)), ('Target: attack', (31, 33), ('attack', 82, 83))]
+triggers [('attack', 21, 22)]
+arguments []
 id TST2-MUC4-0064
-triggers [('attack', 128, 129)]
-arguments [('Victim: attack', (15, 19), ('attack', 128, 129))]
+triggers []
 id TST2-MUC4-0065
 triggers []
 id TST2-MUC4-0066
 triggers [('attack', 122, 123)]
 arguments []
 id TST2-MUC4-0067
-triggers [('attack', 161, 164), ('attack', 156, 157)]
-arguments [('PerpInd: attack', (127, 128), ('attack', 161, 164))]
-arguments [('Target: attack', (157, 159), ('attack', 156, 157)), ('PerpInd: attack', (222, 223), ('attack', 156, 157))]
+triggers []
 id TST2-MUC4-0068
-triggers [('attack', 69, 70)]
-arguments []
+triggers []
 id TST2-MUC4-0069
 triggers [('bombing', 126, 127)]
-arguments [('Weapon: bombing', (201, 202), ('bombing', 126, 127))]
+arguments []
 id TST2-MUC4-0070
 triggers []
 id TST2-MUC4-0071
-triggers [('attack', 37, 38)]
-arguments []
+triggers []
 id TST2-MUC4-0072
 triggers []
 id TST2-MUC4-0073
 triggers [('attack', 244, 245)]
-arguments [('PerpInd: attack', (282, 284), ('attack', 244, 245)), ('Victim: attack', (240, 243), ('attack', 244, 245))]
+arguments []
 id TST2-MUC4-0074
-triggers [('attack', 75, 76)]
-arguments [('PerpOrg: attack', (126, 131), ('attack', 75, 76))]
+triggers [('attack', 269, 270)]
+arguments []
 id TST2-MUC4-0075
-triggers [('bombing', 52, 53)]
-arguments [('Target: bombing', (30, 38), ('bombing', 52, 53)), ('Weapon: bombing', (24, 26), ('bombing', 52, 53))]
+triggers []
 id TST2-MUC4-0076
-triggers [('arson', 80, 81)]
-arguments [('Target: arson', (17, 24), ('arson', 80, 81))]
+triggers [('bombing', 33, 35), ('arson', 80, 81)]
+arguments []
+arguments []
 id TST2-MUC4-0077
-triggers [('kidnapping', 71, 72)]
-arguments [('Victim: kidnapping', (56, 59), ('kidnapping', 71, 72)), ('PerpOrg: kidnapping', (25, 29), ('kidnapping', 71, 72))]
+triggers []
 id TST2-MUC4-0078
-triggers [('attack', 139, 140)]
-arguments [('PerpOrg: attack', (118, 119), ('attack', 139, 140))]
+triggers [('arson', 133, 134)]
+arguments []
 id TST2-MUC4-0079
 triggers []
 id TST2-MUC4-0080
-triggers [('attack', 227, 228)]
-arguments [('PerpOrg: attack', (168, 173), ('attack', 227, 228))]
+triggers []
 id TST2-MUC4-0081
 triggers []
 id TST2-MUC4-0082
 triggers []
 id TST2-MUC4-0083
-triggers [('bombing', 26, 27)]
-arguments [('PerpInd: bombing', (25, 26), ('bombing', 26, 27))]
+triggers []
 id TST2-MUC4-0084
-triggers [('kidnapping', 157, 158)]
-arguments []
+triggers []
 id TST2-MUC4-0085
-triggers [('attack', 41, 43)]
-arguments [('PerpOrg: attack', (64, 66), ('attack', 41, 43))]
+triggers []
 id TST2-MUC4-0086
-triggers [('attack', 268, 269)]
-arguments []
+triggers []
 id TST2-MUC4-0087
 triggers []
 id TST2-MUC4-0088
-triggers [('attack', 123, 125)]
-arguments [('Weapon: attack', (121, 122), ('attack', 123, 125)), ('PerpOrg: attack', (36, 37), ('attack', 123, 125))]
+triggers []
 id TST2-MUC4-0089
-triggers [('attack', 181, 182)]
-arguments [('Victim: attack', (167, 170), ('attack', 181, 182)), ('PerpOrg: attack', (178, 180), ('attack', 181, 182))]
+triggers []
 id TST2-MUC4-0090
 triggers []
 id TST2-MUC4-0091
-triggers [('bombing', 199, 200)]
-arguments [('PerpOrg: bombing', (84, 86), ('bombing', 199, 200))]
+triggers []
 id TST2-MUC4-0092
 triggers []
 id TST2-MUC4-0093
 triggers []
 id TST2-MUC4-0094
-triggers [('attack', 291, 292)]
-arguments []
+triggers []
 id TST2-MUC4-0095
-triggers [('bombing', 77, 78)]
-arguments [('PerpInd: bombing', (224, 228), ('bombing', 77, 78))]
+triggers [('bombing', 168, 170)]
+arguments []
 id TST2-MUC4-0096
 triggers []
 id TST2-MUC4-0097
 triggers []
 id TST2-MUC4-0098
-triggers [('kidnapping', 31, 32), ('attack', 353, 354)]
+triggers [('attack', 353, 354), ('kidnapping', 171, 172)]
 arguments []
-arguments [('Weapon: attack', (189, 190), ('attack', 353, 354))]
+arguments []
 id TST2-MUC4-0099
-triggers [('bombing', 81, 82)]
-arguments [('PerpOrg: bombing', (24, 28), ('bombing', 81, 82)), ('PerpInd: bombing', (16, 17), ('bombing', 81, 82))]
+triggers [('bombing', 34, 35)]
+arguments []
 id TST2-MUC4-0100
-triggers [('kidnapping', 51, 52)]
-arguments [('Victim: kidnapping', (32, 34), ('kidnapping', 51, 52)), ('PerpInd: kidnapping', (38, 44), ('kidnapping', 51, 52))]
+triggers [('kidnapping', 66, 67)]
+arguments []
 id TST3-MUC4-0001
 triggers []
 id TST3-MUC4-0002
-triggers [('attack', 228, 229)]
-arguments [('PerpInd: attack', (234, 237), ('attack', 228, 229))]
+triggers []
 id TST3-MUC4-0003
-triggers [('attack', 193, 194)]
-arguments [('Victim: attack', (156, 159), ('attack', 193, 194)), ('PerpOrg: attack', (77, 79), ('attack', 193, 194))]
+triggers [('attack', 94, 97)]
+arguments []
 id TST3-MUC4-0004
 triggers []
 id TST3-MUC4-0005
 triggers [('kidnapping', 104, 105)]
-arguments [('Victim: kidnapping', (126, 128), ('kidnapping', 104, 105)), ('Victim: kidnapping', (20, 23), ('kidnapping', 104, 105)), ('PerpInd: kidnapping', (110, 113), ('kidnapping', 104, 105))]
-id TST3-MUC4-0006
-triggers [('attack', 218, 219), ('kidnapping', 151, 152)]
 arguments []
-arguments [('Victim: kidnapping', (16, 18), ('kidnapping', 151, 152)), ('Victim: kidnapping', (33, 35), ('kidnapping', 151, 152))]
+id TST3-MUC4-0006
+triggers [('attack', 218, 221), ('kidnapping', 151, 152)]
+arguments []
+arguments []
 id TST3-MUC4-0007
 triggers [('attack', 95, 96)]
 arguments []
 id TST3-MUC4-0008
-triggers [('attack', 27, 28)]
-arguments [('Target: attack', (30, 32), ('attack', 27, 28))]
+triggers []
 id TST3-MUC4-0009
 triggers []
 id TST3-MUC4-0010
-triggers [('bombing', 201, 203)]
-arguments []
+triggers []
 id TST3-MUC4-0011
-triggers [('kidnapping', 80, 81)]
-arguments [('PerpOrg: kidnapping', (47, 51), ('kidnapping', 80, 81)), ('Target: kidnapping', (88, 93), ('kidnapping', 80, 81))]
+triggers [('kidnapping', 54, 55)]
+arguments []
 id TST3-MUC4-0012
 triggers []
 id TST3-MUC4-0013
-triggers [('attack', 238, 239)]
+triggers [('attack', 169, 170)]
 arguments []
 id TST3-MUC4-0014
-triggers [('bombing', 19, 21), ('attack', 41, 42)]
-arguments [('Weapon: bombing', (19, 20), ('bombing', 19, 21)), ('PerpInd: bombing', (29, 32), ('bombing', 19, 21))]
-arguments [('PerpOrg: attack', (29, 31), ('attack', 41, 42))]
+triggers [('bombing', 36, 37)]
+arguments []
 id TST3-MUC4-0015
 triggers [('attack', 98, 99)]
-arguments [('Victim: attack', (15, 17), ('attack', 98, 99))]
-id TST3-MUC4-0016
-triggers [('attack', 131, 132)]
 arguments []
+id TST3-MUC4-0016
+triggers []
 id TST3-MUC4-0017
-triggers [('attack', 81, 82)]
-arguments [('Weapon: attack', (48, 51), ('attack', 81, 82)), ('PerpInd: attack', (45, 47), ('attack', 81, 82)), ('PerpOrg: attack', (15, 20), ('attack', 81, 82))]
+triggers []
 id TST3-MUC4-0018
-triggers [('attack', 16, 17), ('attack', 269, 270)]
-arguments [('Victim: attack', (18, 22), ('attack', 16, 17)), ('Target: attack', (124, 126), ('attack', 16, 17)), ('PerpInd: attack', (15, 16), ('attack', 16, 17))]
-arguments [('Weapon: attack', (113, 116), ('attack', 269, 270)), ('Weapon: attack', (111, 112), ('attack', 269, 270))]
+triggers []
 id TST3-MUC4-0019
 triggers [('bombing', 34, 36)]
-arguments [('Target: bombing', (24, 25), ('bombing', 34, 36))]
-id TST3-MUC4-0020
-triggers [('attack', 26, 27)]
 arguments []
+id TST3-MUC4-0020
+triggers []
 id TST3-MUC4-0021
 triggers [('attack', 65, 66)]
-arguments [('PerpInd: attack', (193, 195), ('attack', 65, 66)), ('Victim: attack', (60, 64), ('attack', 65, 66))]
+arguments []
 id TST3-MUC4-0022
 triggers [('attack', 30, 31)]
-arguments [('PerpInd: attack', (28, 29), ('attack', 30, 31)), ('Victim: attack', (31, 33), ('attack', 30, 31))]
+arguments []
 id TST3-MUC4-0023
 triggers [('attack', 109, 110)]
-arguments [('PerpOrg: attack', (95, 96), ('attack', 109, 110)), ('Victim: attack', (111, 114), ('attack', 109, 110))]
+arguments []
 id TST3-MUC4-0024
-triggers [('bombing', 65, 66)]
-arguments [('Weapon: bombing', (77, 78), ('bombing', 65, 66)), ('PerpInd: bombing', (19, 21), ('bombing', 65, 66)), ('Target: bombing', (23, 25), ('bombing', 65, 66))]
+triggers [('bombing', 77, 79)]
+arguments []
 id TST3-MUC4-0025
 triggers []
 id TST3-MUC4-0026
 triggers [('attack', 268, 269)]
 arguments []
 id TST3-MUC4-0027
-triggers [('attack', 74, 75)]
-arguments [('Victim: attack', (13, 15), ('attack', 74, 75)), ('PerpInd: attack', (37, 39), ('attack', 74, 75))]
+triggers [('attack', 99, 100)]
+arguments []
 id TST3-MUC4-0028
 triggers []
 id TST3-MUC4-0029
 triggers []
 id TST3-MUC4-0030
-triggers [('attack', 85, 86)]
-arguments [('Victim: attack', (62, 64), ('attack', 85, 86))]
+triggers [('attack', 75, 76), ('attack', 246, 247)]
+arguments []
+arguments []
 id TST3-MUC4-0031
-triggers [('attack', 206, 207)]
-arguments [('Victim: attack', (59, 61), ('attack', 206, 207))]
+triggers []
 id TST3-MUC4-0032
-triggers [('attack', 100, 101)]
-arguments [('Victim: attack', (106, 109), ('attack', 100, 101)), ('PerpInd: attack', (126, 129), ('attack', 100, 101))]
+triggers []
 id TST3-MUC4-0033
 triggers []
 id TST3-MUC4-0034
@@ -655,35 +578,31 @@ id TST3-MUC4-0036
 triggers [('attack', 179, 180)]
 arguments []
 id TST3-MUC4-0037
-triggers [('bombing', 180, 182), ('bombing', 38, 40)]
-arguments [('Target: bombing', (44, 47), ('bombing', 180, 182)), ('Target: bombing', (24, 26), ('bombing', 180, 182)), ('Weapon: bombing', (38, 39), ('bombing', 180, 182))]
-arguments [('Weapon: bombing', (38, 39), ('bombing', 38, 40)), ('Target: bombing', (44, 47), ('bombing', 38, 40)), ('Target: bombing', (24, 26), ('bombing', 38, 40))]
-id TST3-MUC4-0038
-triggers [('attack', 343, 344)]
+triggers [('bombing', 15, 16), ('bombing', 180, 182)]
 arguments []
+arguments []
+id TST3-MUC4-0038
+triggers []
 id TST3-MUC4-0039
-triggers [('attack', 181, 182)]
-arguments [('PerpOrg: attack', (90, 91), ('attack', 181, 182))]
+triggers []
 id TST3-MUC4-0040
-triggers [('bombing', 119, 121), ('bombing', 33, 35)]
-arguments [('Target: bombing', (55, 59), ('bombing', 119, 121)), ('Weapon: bombing', (33, 34), ('bombing', 119, 121))]
-arguments [('Target: bombing', (55, 59), ('bombing', 33, 35)), ('Weapon: bombing', (33, 34), ('bombing', 33, 35))]
+triggers [('bombing', 33, 35)]
+arguments []
 id TST3-MUC4-0041
 triggers [('bombing', 145, 146)]
-arguments [('PerpInd: bombing', (82, 84), ('bombing', 145, 146)), ('Target: bombing', (115, 117), ('bombing', 145, 146))]
+arguments []
 id TST3-MUC4-0042
 triggers []
 id TST3-MUC4-0043
 triggers []
 id TST3-MUC4-0044
 triggers [('bombing', 38, 39)]
-arguments [('Target: bombing', (67, 71), ('bombing', 38, 39)), ('Weapon: bombing', (18, 19), ('bombing', 38, 39)), ('PerpInd: bombing', (80, 88), ('bombing', 38, 39)), ('Target: bombing', (27, 33), ('bombing', 38, 39))]
+arguments []
 id TST3-MUC4-0045
 triggers []
 id TST3-MUC4-0046
-triggers [('attack', 278, 279), ('attack', 29, 30)]
-arguments [('PerpOrg: attack', (13, 15), ('attack', 278, 279))]
-arguments [('PerpInd: attack', (80, 81), ('attack', 29, 30)), ('Victim: attack', (51, 54), ('attack', 29, 30))]
+triggers [('attack', 29, 30)]
+arguments []
 id TST3-MUC4-0047
 triggers []
 id TST3-MUC4-0048
@@ -692,44 +611,37 @@ arguments []
 id TST3-MUC4-0049
 triggers []
 id TST3-MUC4-0050
-triggers [('bombing', 157, 158)]
-arguments [('Weapon: bombing', (54, 55), ('bombing', 157, 158)), ('PerpInd: bombing', (51, 52), ('bombing', 157, 158)), ('PerpOrg: bombing', (159, 162), ('bombing', 157, 158))]
+triggers [('bombing', 266, 267)]
+arguments []
 id TST3-MUC4-0051
-triggers [('attack', 96, 97)]
-arguments [('Victim: attack', (68, 71), ('attack', 96, 97))]
+triggers [('attack', 85, 86)]
+arguments []
 id TST3-MUC4-0052
 triggers []
 id TST3-MUC4-0053
 triggers []
 id TST3-MUC4-0054
-triggers [('attack', 197, 198)]
+triggers [('attack', 163, 164)]
 arguments []
 id TST3-MUC4-0055
-triggers [('attack', 321, 322)]
-arguments [('PerpOrg: attack', (295, 300), ('attack', 321, 322))]
+triggers []
 id TST3-MUC4-0056
-triggers [('attack', 136, 137)]
-arguments []
+triggers []
 id TST3-MUC4-0057
-triggers [('bombing', 150, 151)]
-arguments []
+triggers []
 id TST3-MUC4-0058
-triggers [('attack', 115, 116)]
-arguments [('PerpOrg: attack', (67, 72), ('attack', 115, 116))]
+triggers []
 id TST3-MUC4-0059
-triggers [('forced work stoppage', 291, 292)]
-arguments [('PerpOrg: forced work stoppage', (232, 234), ('forced work stoppage', 291, 292))]
+triggers []
 id TST3-MUC4-0060
-triggers [('attack', 121, 123)]
-arguments [('PerpOrg: attack', (71, 74), ('attack', 121, 123))]
+triggers []
 id TST3-MUC4-0061
 triggers []
 id TST3-MUC4-0062
-triggers [('attack', 157, 159)]
-arguments [('Weapon: attack', (309, 310), ('attack', 157, 159)), ('Target: attack', (286, 289), ('attack', 157, 159)), ('Weapon: attack', (316, 317), ('attack', 157, 159)), ('Weapon: attack', (276, 279), ('attack', 157, 159))]
-id TST3-MUC4-0063
-triggers [('attack', 151, 152)]
+triggers [('bombing', 290, 291)]
 arguments []
+id TST3-MUC4-0063
+triggers []
 id TST3-MUC4-0064
 triggers []
 id TST3-MUC4-0065
@@ -737,290 +649,259 @@ triggers [('attack', 118, 119)]
 arguments []
 id TST3-MUC4-0066
 triggers [('attack', 143, 144)]
-arguments [('Victim: attack', (110, 113), ('attack', 143, 144)), ('Victim: attack', (122, 124), ('attack', 143, 144)), ('PerpOrg: attack', (134, 138), ('attack', 143, 144))]
+arguments []
 id TST3-MUC4-0067
 triggers []
 id TST3-MUC4-0068
-triggers [('attack', 315, 316)]
-arguments [('PerpOrg: attack', (318, 320), ('attack', 315, 316))]
+triggers []
 id TST3-MUC4-0069
-triggers [('attack', 104, 105)]
-arguments []
+triggers []
 id TST3-MUC4-0070
 triggers []
 id TST3-MUC4-0071
-triggers [('attack', 133, 134)]
-arguments [('Weapon: attack', (170, 171), ('attack', 133, 134)), ('Weapon: attack', (166, 169), ('attack', 133, 134))]
+triggers [('attack', 185, 186)]
+arguments []
 id TST3-MUC4-0072
-triggers [('attack', 149, 150)]
-arguments [('Weapon: attack', (265, 267), ('attack', 149, 150))]
-id TST3-MUC4-0073
 triggers []
+id TST3-MUC4-0073
+triggers [('bombing', 52, 54)]
+arguments []
 id TST3-MUC4-0074
-triggers [('attack', 173, 174)]
-arguments [('Weapon: attack', (276, 278), ('attack', 173, 174)), ('PerpOrg: attack', (179, 186), ('attack', 173, 174))]
+triggers [('bombing', 173, 174)]
+arguments []
 id TST3-MUC4-0075
 triggers []
 id TST3-MUC4-0076
 triggers []
 id TST3-MUC4-0077
-triggers [('attack', 152, 153)]
-arguments [('Victim: attack', (78, 81), ('attack', 152, 153))]
+triggers []
 id TST3-MUC4-0078
-triggers [('kidnapping', 39, 40)]
-arguments [('PerpInd: kidnapping', (22, 23), ('kidnapping', 39, 40)), ('Victim: kidnapping', (30, 32), ('kidnapping', 39, 40))]
+triggers [('kidnapping', 150, 151)]
+arguments []
 id TST3-MUC4-0079
-triggers [('attack', 296, 297)]
-arguments [('Victim: attack', (300, 301), ('attack', 296, 297))]
+triggers []
 id TST3-MUC4-0080
-triggers [('attack', 105, 106)]
+triggers [('attack', 169, 170)]
 arguments []
 id TST3-MUC4-0081
 triggers []
 id TST3-MUC4-0082
-triggers [('attack', 132, 133)]
-arguments [('Victim: attack', (118, 121), ('attack', 132, 133))]
+triggers []
 id TST3-MUC4-0083
-triggers [('attack', 138, 139)]
-arguments [('Victim: attack', (143, 145), ('attack', 138, 139))]
+triggers []
 id TST3-MUC4-0084
-triggers [('arson', 63, 67)]
-arguments [('PerpOrg: arson', (78, 83), ('arson', 63, 67))]
+triggers [('bombing', 179, 182), ('arson', 63, 64)]
+arguments []
+arguments []
 id TST3-MUC4-0085
 triggers [('attack', 244, 245)]
 arguments []
 id TST3-MUC4-0086
-triggers [('kidnapping', 334, 335)]
-arguments []
+triggers []
 id TST3-MUC4-0087
 triggers []
 id TST3-MUC4-0088
 triggers [('kidnapping', 48, 49)]
-arguments [('PerpOrg: kidnapping', (154, 155), ('kidnapping', 48, 49))]
+arguments []
 id TST3-MUC4-0089
 triggers []
 id TST3-MUC4-0090
 triggers []
 id TST3-MUC4-0091
-triggers [('attack', 277, 278)]
+triggers [('attack', 191, 194)]
 arguments []
 id TST3-MUC4-0092
-triggers [('attack', 281, 282)]
+triggers [('attack', 197, 198)]
 arguments []
 id TST3-MUC4-0093
-triggers [('attack', 166, 167)]
-arguments [('Victim: attack', (322, 325), ('attack', 166, 167))]
+triggers []
 id TST3-MUC4-0094
-triggers [('kidnapping', 253, 254), ('attack', 32, 33)]
-arguments [('Victim: kidnapping', (257, 260), ('kidnapping', 253, 254)), ('Victim: kidnapping', (221, 224), ('kidnapping', 253, 254)), ('PerpInd: kidnapping', (147, 148), ('kidnapping', 253, 254))]
-arguments [('Victim: attack', (110, 112), ('attack', 32, 33)), ('PerpInd: attack', (26, 28), ('attack', 32, 33)), ('Victim: attack', (113, 115), ('attack', 32, 33))]
+triggers [('bombing', 214, 215)]
+arguments []
 id TST3-MUC4-0095
 triggers []
 id TST3-MUC4-0096
 triggers [('attack', 46, 47)]
-arguments [('Victim: attack', (43, 45), ('attack', 46, 47)), ('Victim: attack', (34, 37), ('attack', 46, 47))]
+arguments []
 id TST3-MUC4-0097
 triggers []
 id TST3-MUC4-0098
 triggers []
 id TST3-MUC4-0099
-triggers [('attack', 27, 28)]
-arguments [('Target: attack', (29, 32), ('attack', 27, 28)), ('Weapon: attack', (137, 138), ('attack', 27, 28)), ('Weapon: attack', (139, 140), ('attack', 27, 28)), ('PerpInd: attack', (26, 27), ('attack', 27, 28))]
+triggers []
 id TST3-MUC4-0100
 triggers []
 id TST4-MUC4-0001
 triggers [('bombing', 45, 46)]
-arguments [('PerpInd: bombing', (27, 29), ('bombing', 45, 46)), ('Target: bombing', (58, 68), ('bombing', 45, 46)), ('Weapon: bombing', (31, 32), ('bombing', 45, 46))]
+arguments []
 id TST4-MUC4-0002
-triggers [('attack', 24, 25)]
-arguments [('PerpInd: attack', (20, 21), ('attack', 24, 25))]
+triggers [('attack', 135, 136)]
+arguments []
 id TST4-MUC4-0003
-triggers [('attack', 166, 167)]
-arguments [('PerpInd: attack', (164, 165), ('attack', 166, 167)), ('PerpInd: attack', (147, 148), ('attack', 166, 167)), ('Target: attack', (168, 171), ('attack', 166, 167))]
+triggers [('attack', 159, 160)]
+arguments []
 id TST4-MUC4-0004
-triggers [('kidnapping', 95, 96)]
-arguments [('Victim: kidnapping', (21, 23), ('kidnapping', 95, 96))]
+triggers [('kidnapping', 131, 132)]
+arguments []
 id TST4-MUC4-0005
-triggers [('attack', 39, 40)]
-arguments [('Target: attack', (24, 25), ('attack', 39, 40))]
+triggers []
 id TST4-MUC4-0006
 triggers [('bombing', 89, 90)]
-arguments [('PerpInd: bombing', (56, 57), ('bombing', 89, 90)), ('Victim: bombing', (40, 43), ('bombing', 89, 90))]
+arguments []
 id TST4-MUC4-0007
-triggers [('attack', 29, 30)]
-arguments [('Target: attack', (121, 123), ('attack', 29, 30))]
+triggers [('attack', 116, 117)]
+arguments []
 id TST4-MUC4-0008
-triggers [('bombing', 27, 28)]
-arguments [('Target: bombing', (29, 31), ('bombing', 27, 28))]
+triggers []
 id TST4-MUC4-0009
 triggers []
 id TST4-MUC4-0010
-triggers [('bombing', 35, 36)]
-arguments [('Weapon: bombing', (33, 34), ('bombing', 35, 36)), ('Target: bombing', (48, 49), ('bombing', 35, 36)), ('PerpInd: bombing', (29, 31), ('bombing', 35, 36))]
+triggers [('bombing', 23, 24)]
+arguments []
 id TST4-MUC4-0011
 triggers []
 id TST4-MUC4-0012
 triggers []
 id TST4-MUC4-0013
 triggers [('attack', 110, 111)]
-arguments [('Victim: attack', (98, 102), ('attack', 110, 111)), ('Victim: attack', (35, 38), ('attack', 110, 111))]
-id TST4-MUC4-0014
-triggers [('attack', 249, 250)]
 arguments []
+id TST4-MUC4-0014
+triggers []
 id TST4-MUC4-0015
-triggers [('attack', 305, 306), ('arson', 102, 103)]
-arguments [('PerpOrg: attack', (315, 320), ('attack', 305, 306))]
+triggers [('arson', 218, 219)]
 arguments []
 id TST4-MUC4-0016
-triggers [('bombing', 141, 142)]
-arguments [('Weapon: bombing', (27, 29), ('bombing', 141, 142))]
+triggers []
 id TST4-MUC4-0017
 triggers []
 id TST4-MUC4-0018
 triggers []
 id TST4-MUC4-0019
 triggers [('bombing', 115, 116)]
-arguments [('Weapon: bombing', (47, 48), ('bombing', 115, 116)), ('Target: bombing', (35, 37), ('bombing', 115, 116))]
+arguments []
 id TST4-MUC4-0020
-triggers [('attack', 167, 168), ('attack', 61, 62)]
-arguments [('Target: attack', (165, 166), ('attack', 167, 168))]
-arguments [('Target: attack', (165, 166), ('attack', 61, 62)), ('PerpInd: attack', (171, 172), ('attack', 61, 62))]
+triggers [('attack', 61, 62)]
+arguments []
 id TST4-MUC4-0021
-triggers [('bombing', 99, 100)]
-arguments [('Weapon: bombing', (56, 57), ('bombing', 99, 100)), ('PerpInd: bombing', (52, 54), ('bombing', 99, 100)), ('Target: bombing', (42, 46), ('bombing', 99, 100)), ('Target: bombing', (59, 63), ('bombing', 99, 100))]
+triggers [('bombing', 99, 100), ('attack', 183, 184)]
+arguments []
+arguments []
 id TST4-MUC4-0022
-triggers [('bombing', 66, 67)]
-arguments [('PerpInd: bombing', (36, 37), ('bombing', 66, 67)), ('Target: bombing', (38, 43), ('bombing', 66, 67)), ('Weapon: bombing', (56, 58), ('bombing', 66, 67)), ('Weapon: bombing', (54, 55), ('bombing', 66, 67))]
+triggers [('bombing', 37, 38)]
+arguments []
 id TST4-MUC4-0023
 triggers []
 id TST4-MUC4-0024
-triggers [('attack', 168, 169)]
-arguments []
+triggers []
 id TST4-MUC4-0025
-triggers [('attack', 66, 68)]
-arguments [('PerpInd: attack', (15, 17), ('attack', 66, 68)), ('Victim: attack', (61, 64), ('attack', 66, 68))]
+triggers []
 id TST4-MUC4-0026
-triggers [('attack', 88, 89)]
-arguments [('PerpInd: attack', (12, 14), ('attack', 88, 89)), ('PerpInd: attack', (25, 26), ('attack', 88, 89))]
+triggers [('attack', 74, 75)]
+arguments []
 id TST4-MUC4-0027
-triggers [('attack', 187, 188)]
-arguments [('PerpInd: attack', (239, 240), ('attack', 187, 188)), ('Victim: attack', (231, 234), ('attack', 187, 188))]
+triggers []
 id TST4-MUC4-0028
-triggers [('bombing', 160, 161)]
-arguments [('PerpInd: bombing', (163, 164), ('bombing', 160, 161)), ('Weapon: bombing', (185, 188), ('bombing', 160, 161))]
+triggers [('bombing', 144, 146)]
+arguments []
 id TST4-MUC4-0029
 triggers [('attack', 24, 25)]
-arguments [('PerpInd: attack', (12, 13), ('attack', 24, 25)), ('PerpOrg: attack', (16, 19), ('attack', 24, 25))]
+arguments []
 id TST4-MUC4-0030
 triggers []
 id TST4-MUC4-0031
-triggers [('bombing', 31, 32)]
-arguments [('Weapon: bombing', (131, 132), ('bombing', 31, 32))]
+triggers [('bombing', 141, 142)]
+arguments []
 id TST4-MUC4-0032
 triggers [('bombing', 81, 82)]
-arguments [('Weapon: bombing', (14, 16), ('bombing', 81, 82)), ('Target: bombing', (22, 29), ('bombing', 81, 82))]
-id TST4-MUC4-0033
-triggers [('arson', 121, 122)]
 arguments []
+id TST4-MUC4-0033
+triggers []
 id TST4-MUC4-0034
-triggers [('bombing', 77, 80), ('bombing', 201, 202)]
-arguments [('Weapon: bombing', (21, 22), ('bombing', 77, 80)), ('Target: bombing', (29, 30), ('bombing', 77, 80))]
-arguments [('Weapon: bombing', (21, 22), ('bombing', 201, 202)), ('Target: bombing', (29, 30), ('bombing', 201, 202))]
+triggers [('bombing', 181, 183)]
+arguments []
 id TST4-MUC4-0035
 triggers []
 id TST4-MUC4-0036
 triggers []
 id TST4-MUC4-0037
-triggers [('bombing', 42, 43), ('bombing', 148, 150)]
-arguments [('PerpOrg: bombing', (20, 21), ('bombing', 42, 43)), ('Weapon: bombing', (15, 17), ('bombing', 42, 43))]
-arguments [('Weapon: bombing', (16, 17), ('bombing', 148, 150)), ('Target: bombing', (151, 153), ('bombing', 148, 150))]
+triggers [('bombing', 26, 27), ('bombing', 121, 123)]
+arguments []
+arguments []
 id TST4-MUC4-0038
-triggers [('attack', 157, 158), ('kidnapping', 94, 95)]
-arguments [('Weapon: attack', (161, 162), ('attack', 157, 158)), ('Weapon: attack', (159, 160), ('attack', 157, 158)), ('Victim: attack', (193, 197), ('attack', 157, 158))]
-arguments [('Victim: kidnapping', (97, 100), ('kidnapping', 94, 95)), ('PerpInd: kidnapping', (92, 94), ('kidnapping', 94, 95)), ('Victim: kidnapping', (103, 107), ('kidnapping', 94, 95))]
+triggers [('kidnapping', 94, 95)]
+arguments []
 id TST4-MUC4-0039
 triggers [('kidnapping', 94, 95)]
-arguments [('PerpInd: kidnapping', (102, 103), ('kidnapping', 94, 95))]
+arguments []
 id TST4-MUC4-0040
-triggers []
+triggers [('bombing', 57, 58)]
+arguments []
 id TST4-MUC4-0041
-triggers [('kidnapping', 24, 26), ('kidnapping', 165, 168)]
-arguments [('PerpInd: kidnapping', (28, 31), ('kidnapping', 24, 26))]
-arguments [('PerpInd: kidnapping', (30, 31), ('kidnapping', 165, 168))]
+triggers [('kidnapping', 24, 26)]
+arguments []
 id TST4-MUC4-0042
-triggers [('bombing', 212, 213)]
-arguments [('PerpOrg: bombing', (177, 178), ('bombing', 212, 213)), ('PerpInd: bombing', (174, 175), ('bombing', 212, 213)), ('PerpOrg: bombing', (180, 183), ('bombing', 212, 213))]
+triggers [('bombing', 278, 279)]
+arguments []
 id TST4-MUC4-0043
 triggers []
 id TST4-MUC4-0044
-triggers [('attack', 333, 334)]
-arguments []
+triggers []
 id TST4-MUC4-0045
-triggers [('bombing', 37, 39)]
-arguments [('Target: bombing', (43, 45), ('bombing', 37, 39)), ('Target: bombing', (40, 41), ('bombing', 37, 39)), ('PerpInd: bombing', (36, 37), ('bombing', 37, 39))]
+triggers [('bombing', 57, 58)]
+arguments []
 id TST4-MUC4-0046
 triggers []
 id TST4-MUC4-0047
-triggers [('attack', 234, 235)]
-arguments []
+triggers []
 id TST4-MUC4-0048
-triggers [('attack', 115, 116)]
-arguments []
+triggers []
 id TST4-MUC4-0049
 triggers []
 id TST4-MUC4-0050
 triggers []
 id TST4-MUC4-0051
-triggers []
+triggers [('attack', 39, 40)]
+arguments []
 id TST4-MUC4-0052
-triggers [('attack', 164, 165)]
-arguments [('PerpOrg: attack', (158, 162), ('attack', 164, 165))]
+triggers []
 id TST4-MUC4-0053
 triggers []
 id TST4-MUC4-0054
-triggers [('bombing', 63, 64)]
-arguments [('PerpInd: bombing', (16, 17), ('bombing', 63, 64)), ('Target: bombing', (65, 66), ('bombing', 63, 64))]
+triggers [('bombing', 52, 55)]
+arguments []
 id TST4-MUC4-0055
 triggers []
 id TST4-MUC4-0056
-triggers [('attack', 291, 292)]
-arguments []
+triggers []
 id TST4-MUC4-0057
-triggers [('attack', 67, 68)]
-arguments []
+triggers []
 id TST4-MUC4-0058
-triggers [('bombing', 114, 116), ('bombing', 25, 27)]
-arguments [('Weapon: bombing', (115, 116), ('bombing', 114, 116)), ('PerpInd: bombing', (112, 114), ('bombing', 114, 116))]
-arguments [('PerpInd: bombing', (64, 65), ('bombing', 25, 27)), ('Weapon: bombing', (35, 36), ('bombing', 25, 27))]
+triggers [('bombing', 114, 116)]
+arguments []
 id TST4-MUC4-0059
-triggers [('attack', 53, 54)]
-arguments [('Target: attack', (56, 58), ('attack', 53, 54))]
+triggers [('bombing', 130, 132)]
+arguments []
 id TST4-MUC4-0060
 triggers []
 id TST4-MUC4-0061
-triggers [('attack', 31, 32)]
-arguments [('Weapon: attack', (63, 64), ('attack', 31, 32)), ('Target: attack', (41, 45), ('attack', 31, 32)), ('Weapon: attack', (61, 62), ('attack', 31, 32))]
+triggers []
 id TST4-MUC4-0062
-triggers [('attack', 14, 15)]
-arguments [('PerpInd: attack', (20, 23), ('attack', 14, 15)), ('Victim: attack', (65, 66), ('attack', 14, 15))]
+triggers [('attack', 131, 133)]
+arguments []
 id TST4-MUC4-0063
 triggers [('bombing', 63, 64)]
-arguments [('PerpOrg: bombing', (66, 67), ('bombing', 63, 64))]
+arguments []
 id TST4-MUC4-0064
-triggers [('attack', 342, 343)]
-arguments [('Target: attack', (351, 352), ('attack', 342, 343)), ('Target: attack', (348, 350), ('attack', 342, 343))]
+triggers []
 id TST4-MUC4-0065
-triggers [('attack', 174, 177)]
-arguments [('Victim: attack', (101, 104), ('attack', 174, 177)), ('Weapon: attack', (151, 153), ('attack', 174, 177)), ('Victim: attack', (112, 115), ('attack', 174, 177)), ('Weapon: attack', (146, 147), ('attack', 174, 177)), ('Victim: attack', (96, 98), ('attack', 174, 177)), ('Weapon: attack', (148, 149), ('attack', 174, 177)), ('Victim: attack', (171, 173), ('attack', 174, 177)), ('PerpOrg: attack', (34, 38), ('attack', 174, 177)), ('Victim: attack', (163, 167), ('attack', 174, 177))]
+triggers []
 id TST4-MUC4-0066
 triggers [('attack', 48, 49)]
-arguments [('Victim: attack', (42, 44), ('attack', 48, 49)), ('Victim: attack', (15, 17), ('attack', 48, 49))]
+arguments []
 id TST4-MUC4-0067
-triggers [('bombing', 83, 84)]
-arguments [('Target: bombing', (24, 28), ('bombing', 83, 84)), ('Weapon: bombing', (19, 20), ('bombing', 83, 84))]
+triggers []
 id TST4-MUC4-0068
-triggers [('kidnapping', 86, 87)]
-arguments [('PerpOrg: kidnapping', (22, 23), ('kidnapping', 86, 87))]
+triggers []
 id TST4-MUC4-0069
 triggers []
 id TST4-MUC4-0070
@@ -1029,78 +910,68 @@ id TST4-MUC4-0071
 triggers [('attack', 185, 186)]
 arguments []
 id TST4-MUC4-0072
-triggers [('attack', 56, 57)]
-arguments [('Victim: attack', (83, 85), ('attack', 56, 57))]
+triggers [('bombing', 128, 129)]
+arguments []
 id TST4-MUC4-0073
 triggers []
 id TST4-MUC4-0074
 triggers []
 id TST4-MUC4-0075
-triggers [('attack', 285, 286)]
-arguments []
+triggers []
 id TST4-MUC4-0076
 triggers []
 id TST4-MUC4-0077
-triggers [('bombing', 53, 54)]
-arguments [('PerpOrg: bombing', (13, 15), ('bombing', 53, 54))]
+triggers []
 id TST4-MUC4-0078
-triggers [('kidnapping', 152, 153), ('bombing', 231, 233)]
-arguments [('PerpInd: kidnapping', (151, 152), ('kidnapping', 152, 153))]
+triggers [('kidnapping', 152, 153)]
 arguments []
 id TST4-MUC4-0079
 triggers []
 id TST4-MUC4-0080
-triggers [('attack', 240, 241)]
-arguments [('Victim: attack', (60, 65), ('attack', 240, 241))]
-id TST4-MUC4-0081
 triggers []
-id TST4-MUC4-0082
-triggers [('attack', 120, 121)]
+id TST4-MUC4-0081
+triggers [('attack', 66, 67)]
 arguments []
+id TST4-MUC4-0082
+triggers []
 id TST4-MUC4-0083
-triggers [('bombing', 147, 148)]
-arguments [('Weapon: bombing', (43, 44), ('bombing', 147, 148)), ('Victim: bombing', (78, 81), ('bombing', 147, 148))]
+triggers [('bombing', 129, 133)]
+arguments []
 id TST4-MUC4-0084
 triggers []
 id TST4-MUC4-0085
-triggers [('attack', 14, 15)]
-arguments [('Victim: attack', (175, 177), ('attack', 14, 15)), ('PerpOrg: attack', (50, 52), ('attack', 14, 15)), ('Victim: attack', (178, 180), ('attack', 14, 15))]
+triggers [('attack', 122, 126)]
+arguments []
 id TST4-MUC4-0086
-triggers [('attack', 88, 89)]
+triggers [('attack', 88, 91)]
 arguments []
 id TST4-MUC4-0087
-triggers [('kidnapping', 81, 82)]
-arguments [('PerpInd: kidnapping', (47, 48), ('kidnapping', 81, 82)), ('Victim: kidnapping', (25, 28), ('kidnapping', 81, 82))]
+triggers [('kidnapping', 47, 48)]
+arguments []
 id TST4-MUC4-0088
 triggers [('attack', 47, 48)]
-arguments [('PerpInd: attack', (12, 15), ('attack', 47, 48)), ('Victim: attack', (23, 25), ('attack', 47, 48))]
+arguments []
 id TST4-MUC4-0089
 triggers []
 id TST4-MUC4-0090
 triggers [('attack', 32, 33)]
-arguments [('Victim: attack', (34, 38), ('attack', 32, 33)), ('PerpOrg: attack', (19, 20), ('attack', 32, 33))]
-id TST4-MUC4-0091
-triggers [('bombing', 172, 174)]
-arguments [('Weapon: bombing', (172, 173), ('bombing', 172, 174))]
-id TST4-MUC4-0092
-triggers [('arson', 48, 50)]
-arguments [('Target: arson', (52, 60), ('arson', 48, 50))]
-id TST4-MUC4-0093
-triggers [('kidnapping', 209, 212)]
 arguments []
+id TST4-MUC4-0091
+triggers []
+id TST4-MUC4-0092
+triggers []
+id TST4-MUC4-0093
+triggers []
 id TST4-MUC4-0094
 triggers []
 id TST4-MUC4-0095
-triggers [('bombing', 136, 137)]
-arguments [('Target: bombing', (139, 143), ('bombing', 136, 137))]
+triggers []
 id TST4-MUC4-0096
 triggers []
 id TST4-MUC4-0097
-triggers [('bombing', 19, 21)]
-arguments [('Weapon: bombing', (19, 20), ('bombing', 19, 21))]
+triggers []
 id TST4-MUC4-0098
-triggers [('attack', 106, 107)]
-arguments [('Victim: attack', (171, 175), ('attack', 106, 107)), ('Victim: attack', (181, 185), ('attack', 106, 107)), ('Victim: attack', (187, 191), ('attack', 106, 107)), ('PerpInd: attack', (101, 102), ('attack', 106, 107)), ('Victim: attack', (176, 180), ('attack', 106, 107))]
+triggers []
 id TST4-MUC4-0099
 triggers []
 id TST4-MUC4-0100
