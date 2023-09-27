@@ -3,10 +3,13 @@ from nltk.tokenize import TreebankWordTokenizer as tbwt
 import argparse
 import json
 
-def main(message_id_map):
+def main(message_id_map, test_only=False):
     all_gtt = []
     all_tanl = []
-    sorted_keys = sorted(k for k in message_id_map.keys() if 'TST' in k)
+    if test_only:
+        sorted_keys = sorted(k for k in message_id_map.keys() if 'TST' in k)
+    else:
+        sorted_keys = sorted(k for k in message_id_map.keys())
     for k in sorted_keys:
         template_infos = message_id_map[k]
         text_as_str = template_infos['text'].replace("\n", " ")
@@ -48,13 +51,14 @@ def main(message_id_map):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--test_only", action="store_true")
     parser.add_argument("--muc_dir", type=str, required=True)
     parser.add_argument("--tanl_out", type=str, required=False)
     parser.add_argument("--gtt_out", type=str, required=False)
     args = parser.parse_args()
 
     message_id_map = create_map(args.muc_dir)
-    all_tanl, all_gtt = main(message_id_map)
+    all_tanl, all_gtt = main(message_id_map, args.test_only)
 
     if args.tanl_out:
         with open(args.tanl_out, "w") as f:
