@@ -12,9 +12,13 @@ def span_mods(span):
     span = span.replace("[ ", "[")
     return span
 
-def process_role(template, text, role_name):
+def process_role(template, text, role_name, return_coref=False):
     output_lst = []
-    entities = template[role_name].split("; ")
+    try:
+        entities = template[role_name].split("; ")
+    except Exception as e:
+        print(template[role_name])
+        raise e
     for entity in entities:
         output_lst.append([span.strip()[1:-1] for span in re.split('[/?]', entity)])
 
@@ -22,6 +26,7 @@ def process_role(template, text, role_name):
     span_lst = [[span_mods(item) for item in sublist] for sublist in output_lst ]
     tup_lst = []
     gtt_lst = []
+    gtt_lst_slice = []
     for coref_spans in span_lst:
         coref_lst = []
         for span in coref_spans:
@@ -39,8 +44,12 @@ def process_role(template, text, role_name):
         tup_lst += pos_sorted[:1]
         # tup_lst += len_sorted[:1]
         gtt_lst.append([text[tup[0] : tup[1]] for tup in coref_lst])
+        gtt_lst_slice.append(coref_lst)
     
-    return list(set(tup_lst)), gtt_lst
+    if not return_coref:
+        return list(set(tup_lst)), gtt_lst
+
+    return list(set(tup_lst)), gtt_lst, gtt_lst_slice
 
 def build_entity(name, spans, head, tail):
     entity_head = -1
@@ -89,7 +98,16 @@ def create_map(original_muc_dir):
     return message_id_map
 
 def handle_edge_cases(matching_template, og_message_id):
+    if "PHYS TGT: ID                   \"" in matching_template:
+        matching_template["PHYS TGT: ID"] = matching_template["PHYS TGT: ID                   \""]
+
     for k, v in matching_template.items():
+        if isinstance(v, list):
+            print(og_message_id)
+            matching_template[k] = v[0]
+        if isinstance(v, tuple):
+            print(og_message_id)
+            matching_template[k] = v[0]
         if 'ESPERANA' in v:
             matching_template[k] = v.replace('ESPERANA', 'ESPERANZA')
         if '"ALFREDO CRISTIANI"; "ROBERTO D\'AUBUISSON"' in v:
@@ -114,8 +132,6 @@ def handle_edge_cases(matching_template, og_message_id):
             matching_template[k] = '"TERRORIST"'
         if '"ECOPETROL FUEL STORAGE TANKS"' in v:
             matching_template[k] = v.replace('"ECOPETROL FUEL STORAGE TANKS"', '"ECOPETROL [COLOMBIAN PETROLEUM ENTERPRISE] FUEL STORAGE TANKS"')
-        if 'ATLACATL' in v:
-            matching_template[k] = v.replace('ATLACATL', '"ATLACATL"')
         if 'A 7.65 MM AND A 9-MM' in v:
             matching_template[k] = v.replace('A 7.65 MM AND A 9-MM', 'A 7.65-MM AND THE OTHER A 9-MM')
         if og_message_id == 'DEV-MUC3-0442 (LSI)' and 'BERNARDETTE PARDO' in v:
@@ -149,12 +165,12 @@ def handle_edge_cases(matching_template, og_message_id):
         if "\"FENSATRAS BUILDING\"" == v:
             matching_template[k] = 'FENSATRAS [SALVADORAN WORKERS NATIONAL UNION FEDERATION] BUILDING'
         if "\"CEL MINISTATION\" / \"LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION MINISTATION\"" == v:
-            matching_template[k] = "\"CEL [LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION] MINISTATION\" / \"LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION MINISTATION\""
+            matching_template[k] = "\"CEL [LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION] MINISTATION\""
         if "\"CEL [LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION MINISTATION] MINISTATION\" / \"LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION MINISTATION\"" == v:
-            matching_template[k] = "\"CEL [LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION] MINISTATION\" / \"LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION MINISTATION\""
+            matching_template[k] = "\"CEL [LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION] MINISTATION\""
         if "\"ALFRED CRISTIANI'S RIGHTIST GOVERNMENT\"; \"FARABUNDO MARTI NATIONAL LIBERATION FRONT ( FMLN)\" / \"FMLN\"" == v:
-            matching_template[k] = "\"ALFREDO CRISTIANI'S RIGHTIST GOVERNMENT\"; \"FARABUNDO MARTI NATIONAL LIBERATION FRONT ( FMLN)\" / \"FMLN\"",
-        if ["\"ALFREDO CRISTIANI'S RIGHTIST GOVERNMENT\"; \"FARABUNDO MARTI NATIONAL LIBERATION FRONT ( FMLN)\" / \"FMLN\""] == v:
+            matching_template[k] = "\"ALFREDO CRISTIANI'S RIGHTIST GOVERNMENT\"; \"FARABUNDO MARTI NATIONAL LIBERATION FRONT (FMLN)\" / \"FMLN\""
+        if ["\"ALFREDO CRISTIANI'S RIGHTIST GOVERNMENT\"; \"FARABUNDO MARTI NATIONAL LIBERATION FRONT (FMLN)\" / \"FMLN\""] == v:
             matching_template[k] = "\"ALFREDO CRISTIANI'S RIGHTIST GOVERNMENT\"; \"FARABUNDO MARTI NATIONAL LIBERATION FRONT (FMLN)\" / \"FMLN\""
         if ('"ALFREDO CRISTIANI\'S RIGHTIST GOVERNMENT"; "FARABUNDO MARTI NATIONAL LIBERATION FRONT ( FMLN)" / "FMLN"',) == v:
             matching_template[k] = '"ALFREDO CRISTIANI\'S RIGHTIST GOVERNMENT"; "FARABUNDO MARTI NATIONAL LIBERATION FRONT (FMLN)" / "FMLN"'
@@ -176,7 +192,47 @@ def handle_edge_cases(matching_template, og_message_id):
             matching_template[k] = "\"BUILDING\" / \"BUILDING AND FACILITIES NEXT TO THE U.S. EMBASSY\"; \"FACILITIES\" / \"FACILITIES NEXT TO THE U.S. EMBASSY\""
         if "? \"URBAN COMMANDOS\" / \"TERRORIST SQUADS\"" == v:
             matching_template[k] = "? \"URBAN COMMANDOS\" / \"TERRORISTS SQUADS\""
-            
+        if "\"\"\"ATLACATL\"\" BATTALION\"" == v:
+            matching_template[k] = "\"\"ATLACATL\" BATTALION\""
+        if "\"FENASTRAS\" / \"FENASTRAS [SALVADORAN WORKERS NATIONAL LABOR FEDERATION]\"" == v:
+            matching_template[k] = "\"FENASTRAS\" / \"FENASTRAS [SALVADORAN WORKERS NATIONAL UNION FEDERATION]\""
+        if "\"OFFICE\" / \"OFFICE OF THE RULING AMERICAN POPULAR REVOLUTIONARY ALLIANCE PARTY\"" == v:
+            matching_template[k] = "\"OFFICE\" / \"OFFICE OF THE RULING AMERICAN POPULAR REVOLUTIONARY ALLIANCE (APRA) PARTY\""
+        if "\"CEL [LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION] MINISTATION\" / \"LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION MINISTATION\"" == v:
+            matching_template[k] = "\"CEL [LEMPA RIVER HYDROELECTRIC EXECUTIVE COMMISSION] MINISTATION\""
+        if "?\"LONG RANGE WEAPON\"/\"LONG RANGE WEAPONS\"; ?\"AK-47 AND M-16 ASSAULT RIFLES\"" == v:
+            matching_template[k] = "?\"LONG-RANGE WEAPON\"/\"LONG-RANGE WEAPONS\"; ?\"AK-47 AND M-16 ASSAULT RIFLES\""
+        if "\"ARMED FORCES\" / \"\"ATLACATL\" BATTALION\"" == v:
+            matching_template[k] = "\"ARMED FORCES\" / \"ATLACATL BATTALION\""
+        if "\"\"ATLACATL\" BATTALION\" / \"MILITARY OFFICERS\" / \"EIGHT MILITARY OFFICERS\"" == v:
+            matching_template[k] = "\"ATLACATL BATTALION\" / \"MILITARY OFFICERS\" / \"EIGHT MILITARY OFFICERS\""
+        if "\"ARMED FORCES\" / \"\"\"ATLACATL\"\" BATTALION\"" == v:
+            matching_template[k] = "\"ARMED FORCES\" / \"ATLACATL BATTALION\""
+        if "\"A UC-ELN NELSON MANDELA COMMAND GROUP IN MEDELLIN\" / \"COMMAND GROUP IN MEDELLIN\" / \"A UC-ELN NELSON MANDELA COMMAND GROUP\" / \"COMMAND GROUP\" / \"UC-ELN NELSON MANDELA COMMAND GROUP IN MEDELLIN\" / \"UC-ELN NELSON MANDELA COMMAND GROUP\" / \"NELSON MANDELA COMMAND GROUP\"" == v:
+            matching_template[k] = "\"A UC-ELN \"NELSON MANDELA\" COMMAND GROUP IN MEDELLIN\" / \"COMMAND GROUP IN MEDELLIN\" / \"A UC-ELN \"NELSON MANDELA\" COMMAND GROUP\" / \"COMMAND GROUP\" / \"UC-ELN \"NELSON MANDELA\" COMMAND GROUP IN MEDELLIN\" / \"UC-ELN \"NELSON MANDELA\" COMMAND GROUP\" / \"\"NELSON MANDELA\" COMMAND GROUP\""
+        if "\"URBAN CELLS\" / \"FMLN URBAN CELLS\" / \"[FARABUNDO MARTI NATIONAL LIBERATION FRONT] URBAN CELLS\"" == v:
+            matching_template[k] = "\"URBAN CELLS\" / \"[FARABUNDO MARTI NATIONAL LIBERATION FRONT] URBAN CELLS\""
+        if "\"ELN\" / \"THE MARXIST ARMY OF NATIONAL LIBERATION\" / \"THE MARXIST ARMY OF NATIONAL LIBERATION GUERRILLA GROUP\"" == v:
+            matching_template[k] = "\"ELN\" / \"THE MARXIST ARMY OF NATIONAL LIBERATION\" / \"THE MARXIST ARMY OF NATIONAL LIBERATION (ELN) GUERRILLA GROUP\""
+        if "\"HILTON HOTEL\" / \"THE HILTON HOTEL\"; \"STORES\"; \"MARINAS\"" == v:
+            matching_template[k] = "\"\"HILTON\" HOTEL\" / \"THE \"HILTON\" HOTEL\"; \"STORES\"; \"MARINAS\""
+        if "\"A SHINING PATH COLUMN\" / \"SHINING PATH COLUMN\" / \"COLUMN\"" == v:
+            matching_template[k] = "\"A \"SHINING PATH\" COLUMN\" / \"\"SHINING PATH\" COLUMN\" / \"COLUMN\""
+        if "? \"MEMBERS\" / \"MEMBERS OF THE MARXIST GUERRILLA GROUP ARMY OF NATIONAL LIBERATION\" / \"MEMBERS OF ELN\"" == v:
+            matching_template[k] = "? \"MEMBERS\" / \"MEMBERS OF THE MARXIST GUERRILLA GROUP ARMY OF NATIONAL LIBERATION\""
+        if "? \"BOMBS\"" == v:
+            matching_template[k] = "? \"BOMB\""
+        if "\"ELECTROLIMA OFFICE\" / \"LIMA ELECTRIC POWER ENTERPRISE OFFICE\"" == v:
+            matching_template[k] = "\"ELECTROLIMA [LIMA ELECTRIC POWER ENTERPRISE] OFFICE\" / \"[LIMA ELECTRIC POWER ENTERPRISE] OFFICE\""
+        if "\"ENTELPERU OFFICE\" / \"NATIONAL TELECOMMUNICATIONS ENTERPRISE OF PERU OFFICE\"" == v:
+            matching_template[k] = "\"ENTELPERU [NATIONAL TELECOMMUNICATIONS ENTERPRISE OF PERU] OFFICE\" / \"[NATIONAL TELECOMMUNICATIONS ENTERPRISE OF PERU] OFFICE\""
+        if "\"OFFICES OF THE DEMOCRATIC FRONT\" / \"OFFICES OF FREDEMO\"; \"OFFICE OF THE RULING AMERICAN POPULAR REVOLUTIONARY ALLIANCE\"; \"TELEPHONE EXCHANGE\"; \"BANKS\"; \"STORE\"; \"MOVIE THEATER\"" == v:
+            matching_template[k] = "\"OFFICES OF THE DEMOCRATIC FRONT\" / \"OFFICES OF THE DEMOCRATIC FRONT (FREDEMO)\"; \"OFFICE OF THE RULING AMERICAN POPULAR REVOLUTIONARY ALLIANCE\"; \"TELEPHONE EXCHANGE\"; \"BANKS\"; \"STORE\"; \"MOVIE THEATER\""
+        if "\"AT LEAST SIX BOMBS\" / \"BOMBS\"" == v:
+            matching_template[k] = "\"AT LEAST SIX [AS HEARD] BOMBS\" / \"BOMBS\""
+        if "\"ATLACATL BATTALION\"" == v:
+            matching_template[k] = "\"\"ATLACATL\" BATTALION\""
+        
     return matching_template
 
 def remove_dup_triggers(trigger_spans, incident_type):
@@ -228,6 +284,7 @@ def enumerate_all_gold(entry, error_analysis_entry, name_lookup, triggers_per_te
             # new_entry['triggers'].append(build_entity(trigger_tup[-2], entry['token_spans'], trigger_tup[0], trigger_tup[1]))
             # new_entry['triggers'].append(build_entity("trigger for {} event".format(trigger_tup[-2]), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
             new_entry['triggers'].append(build_entity("trigger for {} event".format("{ " + trigger_tup[-2] + " }"), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
+            # new_entry['triggers'].append({"type": str(template_ind), "start": template_ind, "end": template_ind + 1})
             new_entry['relations'] += [{**existing, **{"tail": template_ind}} for existing in entry['relations'][template_ind]]
         if len(examples) != num_examples:
             if len(new_entry['triggers']) == len(set([str(e) for e in new_entry['triggers']])):
@@ -267,7 +324,7 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
             container = tanl_templates[message_id]
             error_analysis_container = error_analysis_templates[message_id]
         else:
-            text_as_str = template_infos['text'].replace("\n", " ")
+            text_as_str = template_infos['text'].replace("\n", " ").replace("  ", " ")
             container = {
                 "text": text_as_str,
                 "entities": [],

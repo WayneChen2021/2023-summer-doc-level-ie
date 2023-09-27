@@ -3215,50 +3215,63 @@ class MUCMultiTaskRelationClassificationDataset(TACRED):
         #                 .natural for role_type in role_types)
 
     def load_data_single_split(self, split: str, seed: int = None) -> List[InputExample]:
-        file_path = os.path.join(self.data_dir(), '{}_{}.json'.format(self.data_name, split))
+        name_mapping = {
+            "PerpInd": "perpetrating individual",
+            "PerpOrg": "perpetrating organization",
+            "Target": "target",
+            "Victim": "victim",
+            "Weapon": "weapon"
+        }
+
+        file_path = os.path.join(self.data_dir(), '{}_{}.json'.format("muc_multitask_coref", split))
         with open(file_path, 'r') as f:
             data = json.loads(f.read())
         
         examples = []
         for x in data:
-            entities = [
-                Entity(
-                    id=j, type=self.entity_types[y['type']], start=y['start'], end=y['end'])
-                for j, y in enumerate(x['entities'])
-            ]
-
-            templates = {}
-            
-            for relation in x['relations']:
-                trigger_ind = relation['tail']
-                if not trigger_ind in templates:
-                    templates[trigger_ind] = []
-                
-                templates[trigger_ind].append(
-                    (
-                        relation['type'],
-                        relation['head']
-                    )
-                )
-            
+            entities = []
             relations = []
-            for arguments in templates.values():
-                for i, argument in enumerate(arguments):
-                    for other_argument in arguments[i + 1]:
-                        earlier, later = argument, other_argument
-                        if entities[earlier[1]].start > entities[later[1]].start:
-                            earlier, later = other_argument, argument
+            
+            for template in x['templates']:
+                simplified_template = {
+                    "PerpInd": [],
+                    "PerpOrg": [],
+                    "Target": [],
+                    "Victim": [],
+                    "Weapon": []
+                }
+                for role, entitiy_list in template.items():
+                    simplified_template[role] = [coref_set[0] for coref_set in entitiy_list]
+                    entities += [coref_set[0] for coref_set in entitiy_list if not coref_set[0] in entities]
 
-                        relations.append(
-                            Relation(
-                                type=self.relation_types["same event {} and {}".format(earlier[0], later[1])],
-                                head=entities[earlier[1]],
-                                tail=entities[later[1]]
-                            )
-                        )
+                for role, entities in simplified_template.items():
+                    for role2, entities2 in simplified_template.items():
+                        if role2 != role:
+                            for entity1 in entities:
+                                for entity2 in entities2:
+                                    if entity1 != entity2:
+                                        earlier, later = entity1, entity2
+                                        earlier_role, later_role = role, role2
+                                        if earlier[0] > later[0]:
+                                            earlier, later = entity2, entity1
+                                            earlier_role, later_role = role2, role
+                                        relations.append((
+                                            "same event {} and {}".format(name_mapping[earlier_role], name_mapping[later_role]),
+                                            entities.index(entity1),
+                                            entities.indes(entity2)
+                                            ))
+
+            entities = [
+                Entity(start=tup[0], end=tup[1], type=EntityType(short="event argument", natural="event argument"))
+                for tup in entities
+            ]
+            relations = [
+                Relation(type=self.relation_types[tup[0]], head=tup[1], tail=tup[2])
+                for tup in relations
+            ]
             
             examples.append(InputExample(
-                id=x['id'],
+                id=x['docid'],
                 tokens=x['tokens'],
                 entities=entities,
                 relations=relations
