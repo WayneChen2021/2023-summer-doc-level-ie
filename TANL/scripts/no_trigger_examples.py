@@ -53,8 +53,8 @@ def main(message_id_map, test_only=False):
                         token_sliced[i].append(entity_info)
                 
                 perp_ind_coref, perp_org_coref, target_coref, victim_coref, weapon_coref = token_sliced
-                print(perp_ind, perp_org)
-                print(1/0)
+                # print(perp_ind, perp_org)
+                # print(1/0)
 
                 gtt_template = {
                     "incident_type": template['INCIDENT: TYPE'].lower().strip(),

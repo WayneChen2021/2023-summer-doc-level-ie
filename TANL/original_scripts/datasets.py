@@ -3192,7 +3192,7 @@ class MUCMultiTaskRelationClassificationDataset(TACRED):
 
     def load_schema(self):
         types_file_name = os.path.join(
-            self.data_dir(), f'{self.name}_types.json')
+            self.data_dir(), f'{self.data_name}_types.json')
         with open(types_file_name, 'r') as f:
             types = json.load(f)
 

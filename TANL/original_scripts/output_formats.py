@@ -736,7 +736,7 @@ class MUCMultiTaskCorefOutputFormat(BaseOutputFormat):
         """
         augmentations = []
 
-        for group in example.groups:
+        for group in [g for g in example.groups if len(g) > 1]:
             previous_entity = None
             for entity in group:
                 augmentation = (

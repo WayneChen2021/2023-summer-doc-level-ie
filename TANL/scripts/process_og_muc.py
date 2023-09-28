@@ -10,6 +10,7 @@ def span_mods(span):
     span = re.sub(r'\\', '', span)
     span = span.replace("  ", " ")
     span = span.replace("[ ", "[")
+    # span = " ".join(span.split())
     return span
 
 def process_role(template, text, role_name, return_coref=False):
@@ -22,6 +23,8 @@ def process_role(template, text, role_name, return_coref=False):
     for entity in entities:
         output_lst.append([span.strip()[1:-1] for span in re.split('[/?]', entity)])
 
+    # if "DEV-MUC3-0001" in template['MESSAGE: ID']:
+    #     print(output_lst, template[role_name])
     output_lst = [list(filter(lambda s: s.strip() not in ["-", "", "*"], sublist)) for sublist in output_lst]
     span_lst = [[span_mods(item) for item in sublist] for sublist in output_lst ]
     tup_lst = []
@@ -55,20 +58,24 @@ def build_entity(name, spans, head, tail):
     entity_head = -1
     entity_tail = -1
     for i, tup in enumerate(spans):
-        if head >= tup[0] and head < tup[1]:
+        if head >= tup[0] and head <= tup[1]:
             entity_head = i
             break
-    
-    assert entity_head != -1
-    for i, tup in enumerate(spans[(entity_head-1):]):
-        if tail > tup[0] and tail <= tup[1]:
+    try:
+        assert entity_head != -1
+    except Exception as e:
+        print(head, tail)
+        raise e
+
+    for i, tup in enumerate(spans[entity_head:]):
+        if tail >= tup[0] and tail <= tup[1]:
             entity_tail = entity_head + i
             break
     
     return {
         "type": name,
         "start": entity_head,
-        "end": entity_tail
+        "end": max(entity_tail, entity_head + 1)
     }
 
 def span_overlaps(span1, span2):
@@ -103,10 +110,8 @@ def handle_edge_cases(matching_template, og_message_id):
 
     for k, v in matching_template.items():
         if isinstance(v, list):
-            print(og_message_id)
             matching_template[k] = v[0]
         if isinstance(v, tuple):
-            print(og_message_id)
             matching_template[k] = v[0]
         if 'ESPERANA' in v:
             matching_template[k] = v.replace('ESPERANA', 'ESPERANZA')
@@ -272,20 +277,24 @@ def enumerate_all_gold(entry, error_analysis_entry, name_lookup, triggers_per_te
         num_examples = reduce(lambda x , y : x * y, [min(len(sublist), triggers_per_temp) for sublist in entry['triggers']])
     # print(num_examples, len(trigger_sets))
     for trigger_set in trigger_sets:
-        new_entry = {
-            # "entities": [build_entity(name_lookup[tup[-1]], entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
-            "entities": [build_entity("template entity", entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
-            "triggers": [],
-            "relations": [],
-            "tokens": [entry['text'][tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in entry['token_spans']]
-        }
-        for template_ind, ind in enumerate(trigger_set):
-            trigger_tup = entry['triggers'][template_ind][ind]
-            # new_entry['triggers'].append(build_entity(trigger_tup[-2], entry['token_spans'], trigger_tup[0], trigger_tup[1]))
-            # new_entry['triggers'].append(build_entity("trigger for {} event".format(trigger_tup[-2]), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
-            new_entry['triggers'].append(build_entity("trigger for {} event".format("{ " + trigger_tup[-2] + " }"), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
-            # new_entry['triggers'].append({"type": str(template_ind), "start": template_ind, "end": template_ind + 1})
-            new_entry['relations'] += [{**existing, **{"tail": template_ind}} for existing in entry['relations'][template_ind]]
+        try:
+            new_entry = {
+                # "entities": [build_entity(name_lookup[tup[-1]], entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
+                "entities": [build_entity("template entity", entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
+                "triggers": [],
+                "relations": [],
+                "tokens": [entry['text'][tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in entry['token_spans']]
+            }
+            for template_ind, ind in enumerate(trigger_set):
+                trigger_tup = entry['triggers'][template_ind][ind]
+                # new_entry['triggers'].append(build_entity(trigger_tup[-2], entry['token_spans'], trigger_tup[0], trigger_tup[1]))
+                new_entry['triggers'].append(build_entity("trigger for {} event".format(trigger_tup[-2]), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
+                # new_entry['triggers'].append(build_entity("trigger for {} event".format("{ " + trigger_tup[-2] + " }"), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
+                # new_entry['triggers'].append({"type": str(template_ind), "start": template_ind, "end": template_ind + 1})
+                new_entry['relations'] += [{**existing, **{"tail": template_ind}} for existing in entry['relations'][template_ind]]
+        except Exception as e:
+            print(entry)
+            raise e
         if len(examples) != num_examples:
             if len(new_entry['triggers']) == len(set([str(e) for e in new_entry['triggers']])):
                 examples.append(new_entry)
@@ -305,11 +314,11 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
     error_analysis_templates = {}
     tanl_templates = {}
     name_lookup = {
-        "PERP: INDIVIDUAL ID": "{ perpetrating individual }",
-        "PERP: ORGANIZATION ID": "{ perpetrating organization }",
-        "PHYS TGT: ID": "{ target }",
-        "HUM TGT: NAME": "{ victim }",
-        "INCIDENT: INSTRUMENT ID": "{ weapon }",
+        "PERP: INDIVIDUAL ID": "perpetrating individual",
+        "PERP: ORGANIZATION ID": "perpetrating organization",
+        "PHYS TGT: ID": "target",
+        "HUM TGT: NAME": "victim",
+        "INCIDENT: INSTRUMENT ID": "weapon",
     }
 
     with open(annotation_dir, "r") as f:
@@ -324,7 +333,8 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
             container = tanl_templates[message_id]
             error_analysis_container = error_analysis_templates[message_id]
         else:
-            text_as_str = template_infos['text'].replace("\n", " ").replace("  ", " ")
+            text_as_str = template_infos['text'].replace("\n", " ")
+            # text_as_str = " ".join(text_as_str.split())
             container = {
                 "text": text_as_str,
                 "entities": [],
@@ -397,9 +407,9 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
             relation_set = []
             for entity_tup in all_entities:
                 relation_set.append({
-                        "type": "{} argument for ".format(name_lookup[entity_tup[-1]]) + "{ "  + incident_type + " } event",
+                        # "type": "{} argument for ".format(name_lookup[entity_tup[-1]]) + "{ "  + incident_type + " } event",
                         # "type": "{}: {}".format(name_lookup[entity_tup[-1]], incident_type),
-                        # "type": "{} argument for {} event".format(name_lookup[entity_tup[-1]], incident_type),
+                        "type": "{} argument for {} event".format(name_lookup[entity_tup[-1]], incident_type),
                         "head": container['entities'].index(entity_tup)
                     })
             container['relations'].append(relation_set)
@@ -413,7 +423,35 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
         entry = tanl_templates[k]
         if split != 0 and len(entry['triggers']) > 0:
             entry['triggers'] = [[trig[0]] for trig in entry['triggers']]
-        tanls, gtts = enumerate_all_gold(entry, error_analysis_templates[k], name_lookup, triggers_per_temp)
+        try:
+            tanls, gtts = enumerate_all_gold(entry, error_analysis_templates[k], name_lookup, triggers_per_temp)
+        except Exception as e:
+            print(error_analysis_templates[k]['doctext'])
+            raise e
+        
+        for tanl in tanls:
+            new_entities = []
+            entity_ind_mapping = {}
+            for i, entity in enumerate(tanl["entities"]):
+                if not entity in new_entities:
+                    new_entities.append(entity)
+                    entity_ind_mapping[i] = i
+                else:
+                    entity_ind_mapping[i] = new_entities.index(entity)
+            
+            new_relations = []
+            for relation in tanl["relations"]:
+                new_relations.append(
+                    {
+                        "type": relation["type"],
+                        "head": entity_ind_mapping[relation["head"]],
+                        "tail": relation["tail"]
+                    }
+                )
+            
+            tanl["entities"] = new_entities
+            tanl["relations"] = new_relations
+
         if len(tanls) == 0:
             tanls = [{
                 "entities": [],
@@ -425,7 +463,7 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
         
         for tanl in tanls:
             tanl["id"] = gtts[0]["docid"]
-
+        
         if split == 0:
             if split_ind:
                 if int(k[9:13]) < split_ind:
