@@ -8,6 +8,8 @@ def main(message_id_map, test_only=False):
     all_gtt = []
     all_tanl = []
     corefs = []
+    all_ner = []
+
     if test_only:
         sorted_keys = sorted(k for k in message_id_map.keys() if 'TST' in k)
     else:
@@ -20,28 +22,35 @@ def main(message_id_map, test_only=False):
             "entities": [],
             "triggers": [],
             "relations": [],
-            "tokens": [text_as_str[tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in token_spans]
+            "tokens": [text_as_str[tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in token_spans],
+            "id": k
         }
         all_tanl.append(tanl_template)
+        
+        ner_template = deepcopy(tanl_template)
+        ner_template["entities"] = set()
+        
         error_analysis_container = {
             "docid": k,
             "doctext": text_as_str.lower().replace("[","(").replace("]",")"),
             "templates": []
         }
+
         coref_container = {
             "docid": k,
             "tokens": tanl_template["tokens"],
             "templates": []
         }
+
         for template in template_infos["templates"]:
             if not "*" in template['INCIDENT: TYPE']:
-                og_template = deepcopy(template)
+                # og_template = deepcopy(template)
                 template = handle_edge_cases(template, k)
-                perp_ind, perp_ind_gtt, perp_ind_coref = process_role(template, text_as_str, 'PERP: INDIVIDUAL ID', True)
-                perp_org, perp_org_gtt, perp_org_coref = process_role(template, text_as_str, 'PERP: ORGANIZATION ID', True)
-                target, target_gtt, target_coref = process_role(template, text_as_str, 'PHYS TGT: ID', True)
-                victim, victim_gtt, victim_coref = process_role(template, text_as_str, 'HUM TGT: NAME', True)
-                weapon, weapon_gtt, weapon_coref = process_role(template, text_as_str, 'INCIDENT: INSTRUMENT ID', True)
+                _, perp_ind_gtt, perp_ind_coref = process_role(template, text_as_str, 'PERP: INDIVIDUAL ID', True)
+                _, perp_org_gtt, perp_org_coref = process_role(template, text_as_str, 'PERP: ORGANIZATION ID', True)
+                _, target_gtt, target_coref = process_role(template, text_as_str, 'PHYS TGT: ID', True)
+                _, victim_gtt, victim_coref = process_role(template, text_as_str, 'HUM TGT: NAME', True)
+                _, weapon_gtt, weapon_coref = process_role(template, text_as_str, 'INCIDENT: INSTRUMENT ID', True)
 
                 token_sliced = [[], [], [], [], []]
                 for i, outputs in enumerate([perp_ind_coref, perp_org_coref, target_coref, victim_coref, weapon_coref]):
@@ -53,8 +62,6 @@ def main(message_id_map, test_only=False):
                         token_sliced[i].append(entity_info)
                 
                 perp_ind_coref, perp_org_coref, target_coref, victim_coref, weapon_coref = token_sliced
-                # print(perp_ind, perp_org)
-                # print(1/0)
 
                 gtt_template = {
                     "incident_type": template['INCIDENT: TYPE'].lower().strip(),
@@ -74,11 +81,28 @@ def main(message_id_map, test_only=False):
                     "Weapon": [[tup[:2] for tup in entity] for entity in weapon_coref if len(entity)]
                 }
                 coref_container["templates"].append(coref_template)
+
+                for role_entities in [perp_ind_coref, perp_org_coref, target_coref, victim_coref, weapon_coref]:
+                    for entity in role_entities:
+                        if len(entity):
+                            ner_template["entities"].add(tuple(entity[0]))
+
+        new_entities = []
+        for tup in ner_template["entities"]:
+            new_entities.append(
+                {
+                    "type": "template entity",
+                    "start": tup[0],
+                    "end": tup[1]
+                }
+            )
+        ner_template["entities"] = new_entities
+        all_ner.append(ner_template)
         
         all_gtt.append(error_analysis_container)
         corefs.append(coref_container)
     
-    return all_tanl, all_gtt, corefs
+    return all_tanl, all_gtt, corefs, all_ner
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -87,10 +111,11 @@ if __name__ == "__main__":
     parser.add_argument("--tanl_out", type=str, required=False)
     parser.add_argument("--gtt_out", type=str, required=False)
     parser.add_argument("--coref_out", type=str, required=False)
+    parser.add_argument("--ner_out", type=str, required=False)
     args = parser.parse_args()
 
     message_id_map = create_map(args.muc_dir)
-    all_tanl, all_gtt, corefs = main(message_id_map, args.test_only)
+    all_tanl, all_gtt, corefs, all_ners = main(message_id_map, args.test_only)
 
     if args.tanl_out:
         with open(args.tanl_out, "w") as f:
@@ -103,3 +128,7 @@ if __name__ == "__main__":
     if args.coref_out:
         with open(args.coref_out, "w") as f:
             f.write(json.dumps(corefs))
+    
+    if args.ner_out:
+        with open(args.ner_out, "w") as f:
+            f.write(json.dumps(all_ners))
