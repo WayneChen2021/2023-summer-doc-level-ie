@@ -724,6 +724,70 @@ class CorefOutputFormat(BaseOutputFormat):
 
         return res
 
+@register_output_format
+class MUCMultiTaskCorefOutputFormat(BaseOutputFormat):
+    name = "muc_multitask_coref"
+
+    def format_output(self, example: InputExample) -> str:
+        """
+        Get output in augmented natural language, for example:
+        Tolkien's epic novel [ The Lord of the Rings ] was published in 1954-1955, years after the
+        [ book | The Lord of the Rings ] was completed.
+        """
+        augmentations = []
+
+        for group in example.groups:
+            previous_entity = None
+            for entity in group:
+                augmentation = (
+                    [(' '.join(example.tokens[previous_entity.start:previous_entity.end]),)]
+                    if previous_entity is not None else [],
+                    entity.start,
+                    entity.end,
+                )
+                augmentations.append(augmentation)
+                if not previous_entity:
+                    previous_entity = entity
+
+        return augment_sentence(example.tokens, augmentations, self.BEGIN_ENTITY_TOKEN, self.SEPARATOR_TOKEN,
+                                self.RELATION_SEPARATOR_TOKEN, self.END_ENTITY_TOKEN)
+
+    def run_inference(self, example: InputExample, output_sentence: str, log_file: str = None) \
+            -> List[Tuple[Tuple[int, int], Tuple[int, int]]]:
+        """
+        Process an output sentence to extract coreference relations.
+        Return a list of ((start, end), parent) where (start, end) denote an entity span, and parent is either None
+        or another (previous) entity span.
+        """
+        raw_annotations, wrong_reconstruction = self.parse_output_sentence(
+            example, output_sentence)
+
+        # INSERTION
+        # file = open("/content/output_txt.txt", "a") #insert output file directory here
+        # file.write(str(raw_predicted_entities).replace(',)],', ')],').replace(',),', '),') + '], ')
+        # file.close()
+
+        res = []
+        previous_entities = {}
+        for entity, tags, start, end in raw_annotations:
+            entity_span = (start, end)
+
+            if len(tags) > 0 and tags[0][0] in previous_entities:
+                previous_entity = tags[0][0]
+                res.append((entity_span, previous_entities[previous_entity]))
+
+            else:
+                # no previous entity found
+                res.append((entity_span, None))
+
+            # record this entity
+            previous_entities[entity] = entity_span
+
+        if log_file:
+            with open(log_file, "a") as f:
+                f.write("id {}\noutput {}\n".format(example.id, res))
+
+        return res
 
 @register_output_format
 class RelationClassificationOutputFormat(BaseOutputFormat):
@@ -742,7 +806,7 @@ class RelationClassificationOutputFormat(BaseOutputFormat):
         return s.strip()
 
     def run_inference(self, example: InputExample, output_sentence: str,
-                      entity_types: Dict[str, EntityType] = None, relation_types: Dict[str, RelationType] = None) \
+                      entity_types: Dict[str, EntityType] = None, relation_types: Dict[str, RelationType] = None, log_file=None) \
             -> Tuple[set, set]:
         """
         Process an output sentence to extract the predicted relation.
@@ -760,6 +824,10 @@ class RelationClassificationOutputFormat(BaseOutputFormat):
             example.relations[0].tail.to_tuple(
             ) if example.relations[0].tail else None,
         )}
+
+        if log_file:
+            with open(log_file, "a") as f:
+                f.write("id {}\nentities {}\nrelations {}".format(example.id, predicted_entities, predicted_relations))
 
         return predicted_entities, predicted_relations
 

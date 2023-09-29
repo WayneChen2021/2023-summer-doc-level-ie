@@ -16,6 +16,7 @@ from typing import Dict, List, Tuple, Set
 import torch
 from datetime import datetime
 from transformers import PreTrainedTokenizer
+from nltk.tokenize import TreebankWordTokenizer as tbwt
 
 from arguments import DataTrainingArguments
 from input_example import InputFeatures, EntityType, RelationType, Entity, Relation, Intent, InputExample, CorefDocument
@@ -784,14 +785,49 @@ class NERDataset(JointERDataset):
 
         return examples
 
-    def evaluate_dataset(self, data_args: DataTrainingArguments, model, device, batch_size: int, macro: bool = False) \
+    def evaluate_dataset(self, data_args: DataTrainingArguments, model, device, batch_size: int, macro: bool = False, log_file=None) \
             -> Dict[str, float]:
         """
         Evaluate model on this dataset, and return entity metrics only.
         """
         results = super().evaluate_dataset(
-            data_args, model, device, batch_size, macro=macro)
+            data_args, model, device, batch_size, macro=macro, log_file=log_file)
         return {k: v for k, v in results.items() if k.startswith('entity') and k != 'entity_error'}
+
+@register_dataset
+class MUCMultiTaskNERDataset(NERDataset):
+    name = "muc_multitask_ner"
+    data_name = "muc_multitask"
+
+    natural_entity_types = {
+        "template entity": "template entity"
+    }
+
+    def load_data_single_split(self, split: str, seed: int = None) -> List[InputExample]:
+        file_path = os.path.join(self.data_dir(), '{}_{}.json'.format(self.data_name, split))
+        with open(file_path, 'r') as f:
+            infos = json.loads(f.read())
+        
+        examples = []
+        for document in infos:
+            entities = []
+            for i, ent in enumerate(document["entities"]):
+                entity_type = "template entity"
+                entities.append(Entity(
+                    start = ent["start"],
+                    end = ent["end"],
+                    type = EntityType(short=entity_type, natural=entity_type),
+                    id = i
+                ))
+
+            examples.append(InputExample(
+                id = document["id"],
+                tokens = document["tokens"],
+                entities = entities,
+                relations = []
+            ))
+        
+        return examples
 
 @register_dataset
 class MUCNERDataset(JointERDataset):
@@ -799,7 +835,7 @@ class MUCNERDataset(JointERDataset):
 
     natural_entity_types = {
         "trigger": "trigger",
-        "event argument": "event argument"
+        "template entity": "template entity"
     }
     
     def load_data_single_split(self, split: str, seed: int = None) -> List[InputExample]:
@@ -811,7 +847,7 @@ class MUCNERDataset(JointERDataset):
         for document in infos:
             entities = []
             for i, ent in enumerate(document["entities"] + document["triggers"]):
-                entity_type = "trigger" if "trigger" in ent["type"] else "event argument"
+                entity_type = "trigger" if "trigger" in ent["type"] else "event argument" #TODO: change to "template entity"
                 entities.append(Entity(
                     start = ent["start"],
                     end = ent["end"],
@@ -2656,7 +2692,91 @@ class CoNLL12CorefDataset(BaseDataset):
             for metric_name, metric_values in metrics['micro'].items()
             for x, v in metric_values.items()
         }
+    
+@register_dataset
+class MUCMultiTaskCorefDataset(BaseDataset):
+    name = "muc_multitask_coref"
+    data_name = "muc_multitask"
+    default_output_format = "muc_multitask_coref"
 
+    def load_data_single_split(self, split: str, seed: int = None) -> List[InputExample]:
+        """
+        Feed in GTT formated examples with tokens and span strings replaced by slice indices (in tuples)
+        """
+        def tup_overlap(span1, span2):
+            earlier = span1
+            later = span2
+            if span2[0] < span1[0]:
+                earlier = span2
+                later = span1
+            
+            if later[0] < earlier[1]:
+                return True
+            
+            return False
+
+        def sets_have_overlap(set1, set2):
+            for tup1 in set1:
+                if any(tup_overlap(tup1, tup2) for tup2 in set2):
+                    return True
+            
+            return False
+
+        def remove_overlap(sets):
+            while True:
+                has_overlap = False
+                new_sets = []
+                for coref_set in sets:
+                    overlapping = [s for s in sets if sets_have_overlap(s, coref_set)]
+                    new_sets.append(coref_set.union(*overlapping))
+                    if len(overlapping) > 1:
+                        has_overlap = True
+            
+                sets = new_sets
+                if not has_overlap:
+                    break
+            
+            return sets
+        
+        file_path = os.path.join(self.data_dir(), '{}_{}.json'.format(self.name, split))
+        with open(file_path, 'r') as f:
+            data = json.loads(f.read())
+        
+        examples = []
+        for x in data:
+            coref_sets = []
+            for template in x["templates"]:
+                for role, entities in template.items():
+                    for coref_set in entities:
+                        coref_sets.append(set(coref_set))
+
+            coref_sets = remove_overlap(coref_sets)
+            coref_sets_ents = []
+            for coref_set in coref_sets:
+                coref_sets_ents.append([
+                    Entity(
+                        start=tup[0],
+                        end=tup[1]
+                    ) for tup in coref_set
+                ])
+
+            examples.append(
+                InputExample(
+                    id=x['docid'],
+                    tokens=x['tokens'],
+                    groups=coref_sets_ents
+                )
+            )
+        
+        return examples
+
+    def evaluate_dataset(self, data_args, model, device, batch_size=8, log_file=None):
+        for example, output_sentence in self.generate_output_sentences(data_args, model, device, batch_size):
+            _ = self.output_format.run_inference(
+                example=example,
+                output_sentence=output_sentence,
+                log_file=log_file
+            )        
 
 class RelationClassificationDataset(JointERDataset):
     """
@@ -3061,6 +3181,90 @@ class TACRED(RelationClassificationDataset):
         results = super().evaluate_dataset(
             data_args, model, device, batch_size, macro=macro)
         return {k: v for k, v in results.items() if k.startswith('relation')}
+
+@register_dataset
+class MUCMultiTaskRelationClassificationDataset(TACRED):
+    name = "muc_multitask_relation"
+    data_name = "muc_multitask"
+
+    def load_schema(self):
+        types_file_name = os.path.join(
+            self.data_dir(), f'{self.name}_types.json')
+        with open(types_file_name, 'r') as f:
+            types = json.load(f)
+
+            self.entity_types = {name: EntityType(
+                short=name,
+                natural=x['verbose'],
+            ) for name, x in types['entities'].items()}
+
+            self.relation_types = {name: RelationType(
+                short=name,
+                natural=x['verbose'],
+            ) for name, x in types['relations'].items()}
+
+        # schema_file_name = os.path.join(
+        #     self.data_dir(), f'{self.name}_schema.json')
+        # with open(schema_file_name, 'r') as f:
+        #     schema = json.load(f)
+        #     self.relation_schemas = dict()
+        #     for trigger_type, role_types in schema.items():
+        #         trigger_type = self.entity_types[trigger_type].natural
+        #         self.relation_schemas[trigger_type] = \
+        #             set(self.relation_types[role_type]
+        #                 .natural for role_type in role_types)
+
+    def load_data_single_split(self, split: str, seed: int = None) -> List[InputExample]:
+        file_path = os.path.join(self.data_dir(), '{}_{}.json'.format(self.data_name, split))
+        with open(file_path, 'r') as f:
+            data = json.loads(f.read())
+        
+        examples = []
+        for x in data:
+            entities = [
+                Entity(
+                    id=j, type=self.entity_types[y['type']], start=y['start'], end=y['end'])
+                for j, y in enumerate(x['entities'])
+            ]
+
+            templates = {}
+            
+            for relation in x['relations']:
+                trigger_ind = relation['tail']
+                if not trigger_ind in templates:
+                    templates[trigger_ind] = []
+                
+                templates[trigger_ind].append(
+                    (
+                        relation['type'],
+                        relation['head']
+                    )
+                )
+            
+            relations = []
+            for arguments in templates.values():
+                for i, argument in enumerate(arguments):
+                    for other_argument in arguments[i + 1]:
+                        earlier, later = argument, other_argument
+                        if entities[earlier[1]].start > entities[later[1]].start:
+                            earlier, later = other_argument, argument
+
+                        relations.append(
+                            Relation(
+                                type=self.relation_types["same event {} and {}".format(earlier[0], later[1])],
+                                head=entities[earlier[1]],
+                                tail=entities[later[1]]
+                            )
+                        )
+            
+            examples.append(InputExample(
+                id=x['id'],
+                tokens=x['tokens'],
+                entities=entities,
+                relations=relations
+            ))
+        
+        return examples
 
 
 @register_dataset
