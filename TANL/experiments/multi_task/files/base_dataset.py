@@ -187,13 +187,17 @@ class BaseDataset(Dataset, ABC):
 
     def compute_features(self, max_input_length: int, max_output_length: int, multitask: bool = False):
         input_sentences = [self.input_format.format_input(
-            example, multitask=multitask) for example in self.examples]
+            example, multitask=True) for example in self.examples]
         output_sentences = [self.output_format.format_output(
             example) for example in self.examples]
-        print()
-        print(input_sentences[:10])
-        print()
-        print(output_sentences[:10])
+        
+        print(self.input_format_str)
+        print(self.output_format_str)
+        for input, output in zip(input_sentences[:10], output_sentences[:10]):
+            print(input)
+            print(output)
+            print()
+
         l = []
         input_tok = self.tokenizer.batch_encode_plus(
             input_sentences,

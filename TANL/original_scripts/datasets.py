@@ -804,7 +804,7 @@ class MUCMultiTaskNERDataset(NERDataset):
     }
 
     def load_data_single_split(self, split: str, seed: int = None) -> List[InputExample]:
-        file_path = os.path.join(self.data_dir(), '{}_{}.json'.format(self.data_name, split))
+        file_path = os.path.join(self.data_dir(), '{}_{}.json'.format(self.name, split))
         with open(file_path, 'r') as f:
             infos = json.loads(f.read())
         
@@ -2728,7 +2728,10 @@ class MUCMultiTaskCorefDataset(BaseDataset):
                 new_sets = []
                 for coref_set in sets:
                     overlapping = [s for s in sets if sets_have_overlap(s, coref_set)]
-                    new_sets.append(coref_set.union(*overlapping))
+                    joined_set = coref_set.union(*overlapping)
+                    if not joined_set in new_sets:
+                        new_sets.append(joined_set)
+                    
                     if len(overlapping) > 1:
                         has_overlap = True
             
@@ -2748,7 +2751,7 @@ class MUCMultiTaskCorefDataset(BaseDataset):
             for template in x["templates"]:
                 for role, entities in template.items():
                     for coref_set in entities:
-                        coref_sets.append(set(coref_set))
+                        coref_sets.append(set(tuple(tup) for tup in coref_set))
 
             coref_sets = remove_overlap(coref_sets)
             coref_sets_ents = []

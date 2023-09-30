@@ -146,3 +146,6 @@ TANL/experiments/verbose_tags/g2_environments/3_trig/*
 !TANL/experiments/verbose_tags/g2_environments/3_trig/train_predictions.txt
 !TANL/experiments/verbose_tags/g2_environments/3_trig/dev_predictions.txt
 !TANL/experiments/verbose_tags/g2_environments/3_trig/logs.json
+
+
+TANL/experiments/multi_task
