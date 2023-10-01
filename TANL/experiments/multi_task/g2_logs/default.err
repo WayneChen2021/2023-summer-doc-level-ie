@@ -1,0 +1,54 @@
+/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/utils.py:15: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if episodes_string is not None and episodes_string is not '':
+/home/zc272/.conda/envs/TANL2/lib/python3.11/site-packages/transformers/models/t5/tokenization_t5_fast.py:155: FutureWarning: This tokenizer was incorrectly instantiated with a model max length of 512 which will be corrected in Transformers v5.
+For now, this behavior is kept to avoid breaking backwards compatibility when padding/encoding with `truncation is True`.
+- Be aware that you SHOULD NOT rely on t5-base automatically truncating your input to 512 when padding/encoding.
+- If you want to encode/pad to sequences longer than 512 you can either instantiate this tokenizer with `model_max_length` or pass `max_length` when encoding/padding.
+- To avoid this warning, please instantiate this tokenizer with `model_max_length` set to your preferred value.
+  warnings.warn(
+Episode 0 (1 episodes total)
+Output directory: experiments/muc_multitask-t5-base-ep38-len512-b1-train/episode0
+Using model t5-base
+Token indices sequence length is longer than the specified maximum sequence length for this model (591 > 512). Running this sequence through the model will result in indexing errors
+Max sequence length is 512 but the longest input sequence is 2056 long
+Max sequence length is 512 but the longest output sequence is 2047 long
+Tree structure is not satisfied! Dropping annotation ([('four individuals',)], 140, 144)
+Tree structure is not satisfied! Dropping annotation ([('30 men in uniforms',)], 286, 289)
+Tree structure is not satisfied! Dropping annotation ([('a camp',)], 65, 74)
+Tree structure is not satisfied! Dropping annotation ([('a camp',)], 65, 69)
+Tree structure is not satisfied! Dropping annotation ([('the members of the new nelson mandela urban command',)], 105, 117)
+Tree structure is not satisfied! Dropping annotation ([('uc-eln',)], 79, 92)
+Tree structure is not satisfied! Dropping annotation ([('uc-eln',)], 85, 92)
+Tree structure is not satisfied! Dropping annotation ([('command group in medellin',)], 115, 124)
+Tree structure is not satisfied! Dropping annotation ([], 120, 124)
+Tree structure is not satisfied! Dropping annotation ([('the " canessa " and " el obrajuelo " cotton plants',)], 36, 42)
+Tree structure is not satisfied! Dropping annotation ([('an electric power substation in northwestern san salvador',)], 160, 167)
+Tree structure is not satisfied! Dropping annotation ([], 34, 43)
+Tree structure is not satisfied! Dropping annotation ([('suspension bridge',)], 199, 207)
+Tree structure is not satisfied! Dropping annotation ([('dynamite and grenade rocket',)], 99, 102)
+Tree structure is not satisfied! Dropping annotation ([('dynamite and grenade rocket',)], 99, 101)
+Tree structure is not satisfied! Dropping annotation ([('9-mm submachine gun',)], 171, 174)
+Tree structure is not satisfied! Dropping annotation ([('army',)], 20, 22)
+Tree structure is not satisfied! Dropping annotation ([('several people',)], 223, 244)
+Tree structure is not satisfied! Dropping annotation ([], 201, 203)
+Tree structure is not satisfied! Dropping annotation ([('alleged commando groups of the maoist shining path',)], 105, 112)
+Tree structure is not satisfied! Dropping annotation ([('people',)], 59, 63)
+Tree structure is not satisfied! Dropping annotation ([('oil pipeline.',)], 23, 30)
+Max sequence length is 512 but the longest input sequence is 2057 long
+Max sequence length is 512 but the longest output sequence is 2321 long
+Traceback (most recent call last):
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/run.py", line 332, in <module>
+    main()
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/run.py", line 225, in main
+    dataset = load_dataset(
+              ^^^^^^^^^^^^^
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 53, in load_dataset
+    return DATASETS[dataset_name](
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/base_dataset.py", line 89, in __init__
+    self.load_schema()   # here the dataset can load information such as entity/relation types
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 3196, in load_schema
+    with open(types_file_name, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/muc_multitask/muc_multitask_relation_types.json'

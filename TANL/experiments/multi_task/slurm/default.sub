@@ -1,0 +1,51 @@
+#!/bin/bash
+#SBATCH -J default                         # Job name
+#SBATCH -o ../g2_logs/default.out                  # output file (%j expands to jobID)
+#SBATCH -e ../g2_logs/default.err                  # error log file (%j expands to jobID)
+#SBATCH --mail-type=ALL                      # Request status by email 
+#SBATCH --mail-user=zc272@cornell.edu        # Email address to send results to.
+#SBATCH -N 1                                 # Total number of nodes requested
+#SBATCH -n 1                                 # Total number of cores requested
+#SBATCH --get-user-env                       # retrieve the users login environment
+#SBATCH --mem=125000                           # server memory requested (per node)
+#SBATCH -t 100:00:00                           # Time limit (hh:mm:ss)
+#SBATCH --partition=claire       # Request partition
+#SBATCH --gres=gpu:titanxp:4                  # Type/number of GPUs needed
+
+CONDA_ENV=TANL2
+ENV_NAME="default"
+NUM_EPOCHS=38
+
+EVENT_SCHEMA="event.json"
+COREF_TRAIN="default.json"
+EVENT_TRAIN="default.json"
+NER_TRAIN="default.json"
+EVENT_TYPE="event.json"
+RELATION_TYPE="relation.json"
+
+BASE_DATASET="base_dataset.py"
+RUN="run.py"
+
+mkdir "../g2_environments/$ENV_NAME"
+cp -r "../../../original_scripts/." "../g2_environments/$ENV_NAME"
+
+cp "../data/schema/$EVENT_SCHEMA" "../g2_environments/$ENV_NAME/data/mucevent/mucevent_schema.json"
+cp "../data/types/$EVENT_TYPE" "../g2_environments/$ENV_NAME/data/mucevent/mucevent_types.json"
+cp "../data/types/$RELATION_TYPE" "../g2_environments/$ENV_NAME/data/muc_multitask/muc_multitask_types.json"
+
+cp "../data/train/event/$EVENT_TRAIN" "../g2_environments/$ENV_NAME/data/mucevent/mucevent_train.json"
+cp "../data/train/ner/$NER_TRAIN" "../g2_environments/$ENV_NAME/data/muc_multitask/muc_multitask_ner_train.json"
+cp "../data/train/coref/$COREF_TRAIN" "../g2_environments/$ENV_NAME/data/muc_multitask/muc_multitask_coref_train.json"
+
+cp "../files/$BASE_DATASET" "../g2_environments/$ENV_NAME/base_dataset.py"
+cp "../files/$RUN" "../g2_environments/$ENV_NAME/run.py"
+
+source /share/apps/anaconda3/2022.10/bin/activate
+conda activate $CONDA_ENV
+cd "../g2_environments/$ENV_NAME"
+pip3 install nltk
+pip3 install transformers
+pip3 install scipy
+pip3 install accelerate --upgrade
+
+python3 run.py muc_multitask --num_train_epochs $NUM_EPOCHS
