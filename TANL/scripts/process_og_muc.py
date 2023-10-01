@@ -75,7 +75,7 @@ def build_entity(name, spans, head, tail):
     return {
         "type": name,
         "start": entity_head,
-        "end": max(entity_tail, entity_head + 1)
+        "end": entity_tail + 1
     }
 
 def span_overlaps(span1, span2):
