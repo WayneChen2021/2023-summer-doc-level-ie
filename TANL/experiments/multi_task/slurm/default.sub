@@ -2,8 +2,6 @@
 #SBATCH -J default                         # Job name
 #SBATCH -o ../g2_logs/default.out                  # output file (%j expands to jobID)
 #SBATCH -e ../g2_logs/default.err                  # error log file (%j expands to jobID)
-#SBATCH --mail-type=ALL                      # Request status by email 
-#SBATCH --mail-user=zc272@cornell.edu        # Email address to send results to.
 #SBATCH -N 1                                 # Total number of nodes requested
 #SBATCH -n 1                                 # Total number of cores requested
 #SBATCH --get-user-env                       # retrieve the users login environment
