@@ -3261,7 +3261,7 @@ class MUCMultiTaskRelationClassificationDataset(TACRED):
                                         relations.append((
                                             "same event {} and {}".format(name_mapping[earlier_role], name_mapping[later_role]),
                                             entities.index(entity1),
-                                            entities.indes(entity2)
+                                            entities.index(entity2)
                                             ))
 
             entities = [

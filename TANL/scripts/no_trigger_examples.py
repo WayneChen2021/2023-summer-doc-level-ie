@@ -14,7 +14,7 @@ def main(message_id_map, test_only=False):
         sorted_keys = sorted(k for k in message_id_map.keys())
     for k in sorted_keys:
         template_infos = message_id_map[k]
-        text_as_str = template_infos['text'].replace("\n", " ").replace("  ", " ")
+        text_as_str = template_infos['text'].replace("\n", " ")
         token_spans = list(tbwt().span_tokenize(text_as_str))
         tanl_template = {
             "entities": [],

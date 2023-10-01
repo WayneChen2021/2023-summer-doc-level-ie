@@ -12,30 +12,20 @@ Using model t5-base
 Token indices sequence length is longer than the specified maximum sequence length for this model (591 > 512). Running this sequence through the model will result in indexing errors
 Max sequence length is 512 but the longest input sequence is 2056 long
 Max sequence length is 512 but the longest output sequence is 2047 long
-Tree structure is not satisfied! Dropping annotation ([('four individuals',)], 140, 144)
-Tree structure is not satisfied! Dropping annotation ([('30 men in uniforms',)], 286, 289)
-Tree structure is not satisfied! Dropping annotation ([('a camp',)], 65, 74)
-Tree structure is not satisfied! Dropping annotation ([('a camp',)], 65, 69)
-Tree structure is not satisfied! Dropping annotation ([('the members of the new nelson mandela urban command',)], 105, 117)
-Tree structure is not satisfied! Dropping annotation ([('uc-eln',)], 79, 92)
-Tree structure is not satisfied! Dropping annotation ([('uc-eln',)], 85, 92)
-Tree structure is not satisfied! Dropping annotation ([('command group in medellin',)], 115, 124)
-Tree structure is not satisfied! Dropping annotation ([], 120, 124)
-Tree structure is not satisfied! Dropping annotation ([('the " canessa " and " el obrajuelo " cotton plants',)], 36, 42)
-Tree structure is not satisfied! Dropping annotation ([('an electric power substation in northwestern san salvador',)], 160, 167)
-Tree structure is not satisfied! Dropping annotation ([], 34, 43)
-Tree structure is not satisfied! Dropping annotation ([('suspension bridge',)], 199, 207)
-Tree structure is not satisfied! Dropping annotation ([('dynamite and grenade rocket',)], 99, 102)
+Tree structure is not satisfied! Dropping annotation ([('camp',)], 65, 73)
+Tree structure is not satisfied! Dropping annotation ([('the new nelson mandela urban',)], 105, 116)
+Tree structure is not satisfied! Dropping annotation ([], 79, 91)
+Tree structure is not satisfied! Dropping annotation ([('pro-castrist army of national lilberation , camilist union guerrrilla group ( uc-eln',)], 85, 91)
+Tree structure is not satisfied! Dropping annotation ([], 115, 123)
+Tree structure is not satisfied! Dropping annotation ([('uc-eln " nelson mandela " command group in',)], 120, 123)
+Tree structure is not satisfied! Dropping annotation ([('the " canessa " and " el obrajuelo " cotton',)], 36, 41)
+Tree structure is not satisfied! Dropping annotation ([('electric power',)], 160, 166)
 Tree structure is not satisfied! Dropping annotation ([('dynamite and grenade rocket',)], 99, 101)
-Tree structure is not satisfied! Dropping annotation ([('9-mm submachine gun',)], 171, 174)
-Tree structure is not satisfied! Dropping annotation ([('army',)], 20, 22)
-Tree structure is not satisfied! Dropping annotation ([('several people',)], 223, 244)
-Tree structure is not satisfied! Dropping annotation ([], 201, 203)
-Tree structure is not satisfied! Dropping annotation ([('alleged commando groups of the maoist shining path',)], 105, 112)
-Tree structure is not satisfied! Dropping annotation ([('people',)], 59, 63)
-Tree structure is not satisfied! Dropping annotation ([('oil pipeline.',)], 23, 30)
+Tree structure is not satisfied! Dropping annotation ([('9-mm submachine gun',)], 171, 173)
+Tree structure is not satisfied! Dropping annotation ([('alleged commando groups of the maoist shining',)], 105, 111)
+Tree structure is not satisfied! Dropping annotation ([('section of the multipurpose pipeline between barrancabermeja and',)], 23, 29)
 Max sequence length is 512 but the longest input sequence is 2057 long
-Max sequence length is 512 but the longest output sequence is 2321 long
+Max sequence length is 512 but the longest output sequence is 2047 long
 Traceback (most recent call last):
   File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/run.py", line 332, in <module>
     main()
@@ -45,10 +35,13 @@ Traceback (most recent call last):
   File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 53, in load_dataset
     return DATASETS[dataset_name](
            ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/base_dataset.py", line 89, in __init__
-    self.load_schema()   # here the dataset can load information such as entity/relation types
-    ^^^^^^^^^^^^^^^^^^
-  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 3196, in load_schema
-    with open(types_file_name, 'r') as f:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: 'data/muc_multitask/muc_multitask_relation_types.json'
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/base_dataset.py", line 90, in __init__
+    self.examples = self.load_data(mode=mode, seed=seed)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/base_dataset.py", line 175, in load_data
+    examples += self.load_data_single_split(split, seed=seed)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 3264, in load_data_single_split
+    entities.indes(entity2)
+    ^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'indes'. Did you mean: 'index'?
