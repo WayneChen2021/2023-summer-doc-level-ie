@@ -2057,13 +2057,17 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
                 for j, y in enumerate(x['entities']) if any(rel['head'] == j and rel['tail'] == trig_id for rel in x['relations'])
             ]
 
-            relations = [
-                Relation(
-                    type=self.relation_types[y['type']
-                                            ], head=[ent for ent in entities if ent.id == y['head']][0], tail=triggers[0]
-                )
-                for y in x['relations'] if y['tail'] == trig_id
-            ]        
+            try:
+                relations = [
+                    Relation(
+                        type=self.relation_types[y['type']
+                                                ], head=[ent for ent in entities if ent.id == y['head']][0], tail=triggers[0]
+                    )
+                    for y in x['relations'] if y['tail'] == trig_id
+                ] 
+            except Exception as e:
+                print(x)
+                raise e      
         
             lst.append(InputExample(
                 id="{} {}".format(docid, trig_id),
@@ -2722,7 +2726,7 @@ class MUCMultiTaskCorefDataset(BaseDataset):
             
             return False
 
-        def remove_overlap(sets):
+        def remove_overlap_sets(sets):
             while True:
                 has_overlap = False
                 new_sets = []
@@ -2741,6 +2745,22 @@ class MUCMultiTaskCorefDataset(BaseDataset):
             
             return sets
         
+        def remove_overlap_spans(spans):
+            while True:
+                has_overlap = False
+                new_spans = set()
+                for span in spans:
+                    overlapping = [s for s in spans if tup_overlap(s, span)]
+                    new_spans.add((min(overlapping, key=lambda x:x[0])[0], max(overlapping, key=lambda x:x[1])[1]))
+                    if len(overlapping) > 1:
+                        has_overlap = True
+                
+                spans = new_spans
+                if not has_overlap:
+                    break
+            
+            return spans
+        
         file_path = os.path.join(self.data_dir(), '{}_{}.json'.format(self.name, split))
         with open(file_path, 'r') as f:
             data = json.loads(f.read())
@@ -2753,7 +2773,9 @@ class MUCMultiTaskCorefDataset(BaseDataset):
                     for coref_set in entities:
                         coref_sets.append(set(tuple(tup) for tup in coref_set))
 
-            coref_sets = remove_overlap(coref_sets)
+            coref_sets = remove_overlap_sets(coref_sets)
+            coref_sets = [remove_overlap_spans(spans) for spans in coref_sets]
+
             coref_sets_ents = []
             for coref_set in coref_sets:
                 coref_sets_ents.append([
@@ -3233,7 +3255,7 @@ class MUCMultiTaskRelationClassificationDataset(TACRED):
         examples = []
         for x in data:
             entities = []
-            relations = []
+            relations = set()
             
             for template in x['templates']:
                 simplified_template = {
@@ -3245,24 +3267,28 @@ class MUCMultiTaskRelationClassificationDataset(TACRED):
                 }
                 for role, entitiy_list in template.items():
                     simplified_template[role] = [coref_set[0] for coref_set in entitiy_list]
-                    entities += [coref_set[0] for coref_set in entitiy_list if not coref_set[0] in entities]
+                
+                for entity_span_lists in simplified_template.values():
+                    entities += [span for span in entity_span_lists if not span in entities]
 
-                for role, entities in simplified_template.items():
+                for role1, entities1 in simplified_template.items():
                     for role2, entities2 in simplified_template.items():
-                        if role2 != role:
-                            for entity1 in entities:
+                        if role2 != role1:
+                            for entity1 in entities1:
                                 for entity2 in entities2:
                                     if entity1 != entity2:
-                                        earlier, later = entity1, entity2
-                                        earlier_role, later_role = role, role2
-                                        if earlier[0] > later[0]:
-                                            earlier, later = entity2, entity1
-                                            earlier_role, later_role = role2, role
-                                        relations.append((
-                                            "same event {} and {}".format(name_mapping[earlier_role], name_mapping[later_role]),
-                                            entities.index(entity1),
-                                            entities.index(entity2)
-                                            ))
+                                        if entity1[0] > entity2[0]:
+                                            relations.add((
+                                                "same event {} and {}".format(name_mapping[role2], name_mapping[role1]),
+                                                entities.index(entity2),
+                                                entities.index(entity1)
+                                                ))
+                                        else:
+                                            relations.add((
+                                                "same event {} and {}".format(name_mapping[role1], name_mapping[role2]),
+                                                entities.index(entity1),
+                                                entities.index(entity2)
+                                                ))
 
             entities = [
                 Entity(start=tup[0], end=tup[1], type=EntityType(short="event argument", natural="event argument"))
@@ -3272,13 +3298,14 @@ class MUCMultiTaskRelationClassificationDataset(TACRED):
                 Relation(type=self.relation_types[tup[0]], head=tup[1], tail=tup[2])
                 for tup in relations
             ]
-            
-            examples.append(InputExample(
-                id=x['docid'],
-                tokens=x['tokens'],
-                entities=entities,
-                relations=relations
-            ))
+
+            if len(relations):
+                examples.append(InputExample(
+                    id=x['docid'],
+                    tokens=x['tokens'],
+                    entities=entities,
+                    relations=relations
+                ))
         
         return examples
 

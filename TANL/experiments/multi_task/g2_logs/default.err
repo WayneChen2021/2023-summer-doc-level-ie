@@ -9,23 +9,14 @@ For now, this behavior is kept to avoid breaking backwards compatibility when pa
 Episode 0 (1 episodes total)
 Output directory: experiments/muc_multitask-t5-base-ep38-len512-b1-train/episode0
 Using model t5-base
+Tree structure is not satisfied! Dropping annotation ([('template entity',)], 105, 117)
 Token indices sequence length is longer than the specified maximum sequence length for this model (591 > 512). Running this sequence through the model will result in indexing errors
 Max sequence length is 512 but the longest input sequence is 2056 long
 Max sequence length is 512 but the longest output sequence is 2047 long
-Tree structure is not satisfied! Dropping annotation ([('camp',)], 65, 73)
-Tree structure is not satisfied! Dropping annotation ([('the new nelson mandela urban',)], 105, 116)
-Tree structure is not satisfied! Dropping annotation ([], 79, 91)
-Tree structure is not satisfied! Dropping annotation ([('pro-castrist army of national lilberation , camilist union guerrrilla group ( uc-eln',)], 85, 91)
-Tree structure is not satisfied! Dropping annotation ([], 115, 123)
-Tree structure is not satisfied! Dropping annotation ([('uc-eln " nelson mandela " command group in',)], 120, 123)
-Tree structure is not satisfied! Dropping annotation ([('the " canessa " and " el obrajuelo " cotton',)], 36, 41)
-Tree structure is not satisfied! Dropping annotation ([('electric power',)], 160, 166)
-Tree structure is not satisfied! Dropping annotation ([('dynamite and grenade rocket',)], 99, 101)
-Tree structure is not satisfied! Dropping annotation ([('9-mm submachine gun',)], 171, 173)
-Tree structure is not satisfied! Dropping annotation ([('alleged commando groups of the maoist shining',)], 105, 111)
-Tree structure is not satisfied! Dropping annotation ([('section of the multipurpose pipeline between barrancabermeja and',)], 23, 29)
 Max sequence length is 512 but the longest input sequence is 2057 long
 Max sequence length is 512 but the longest output sequence is 2047 long
+Max sequence length is 512 but the longest input sequence is 1681 long
+Loaded 1515 sentences for split train of mucevent_argument
 Traceback (most recent call last):
   File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/run.py", line 332, in <module>
     main()
@@ -41,7 +32,19 @@ Traceback (most recent call last):
   File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/base_dataset.py", line 175, in load_data
     examples += self.load_data_single_split(split, seed=seed)
                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 3264, in load_data_single_split
-    entities.indes(entity2)
-    ^^^^^^^^^^^^^^
-AttributeError: 'list' object has no attribute 'indes'. Did you mean: 'index'?
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 2145, in load_data_single_split
+    examples += self.yield_single_document(x['id'], x['tokens'], x, same_input_output_trigs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 2090, in yield_single_document
+    input_parts += self.handle_multi_trig(x, tokens, docid)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 2070, in handle_multi_trig
+    raise e      
+    ^^^^^^^
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 2061, in handle_multi_trig
+    relations = [
+                ^
+  File "/home/zc272/2023-summer-doc-level-ie/TANL/experiments/multi_task/g2_environments/default/datasets.py", line 2064, in <listcomp>
+    ], head=[ent for ent in entities if ent.id == y['head']][0], tail=triggers[0]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

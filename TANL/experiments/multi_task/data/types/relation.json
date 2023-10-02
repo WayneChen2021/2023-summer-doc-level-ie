@@ -5,65 +5,65 @@
         }
     },
     "relations": {
-        "same event perpetrating individual argument and perpetrating organization argument": {
-            "verbose": "same event perpetrating individual argument and perpetrating organization argument"
+        "same event perpetrating individual and perpetrating organization": {
+            "verbose": "same event perpetrating individual and perpetrating organization"
         },
-        "same event perpetrating individual argument and target argument": {
-            "verbose": "same event perpetrating individual argument and target argument"
+        "same event perpetrating individual and target": {
+            "verbose": "same event perpetrating individual and target"
         },
-        "same event perpetrating individual argument and victim argument": {
-            "verbose": "same event perpetrating individual argument and victim argument"
+        "same event perpetrating individual and victim": {
+            "verbose": "same event perpetrating individual and victim"
         },
-        "same event perpetrating individual argument and weapon argument": {
-            "verbose": "same event perpetrating individual argument and weapon argument"
+        "same event perpetrating individual and weapon": {
+            "verbose": "same event perpetrating individual and weapon"
         },
-        "same event perpetrating organization argument and perpetrating individual argument": {
-            "verbose": "same event perpetrating organization argument and perpetrating individual argument"
+        "same event perpetrating organization and perpetrating individual": {
+            "verbose": "same event perpetrating organization and perpetrating individual"
         },
-        "same event perpetrating organization argument and target argument": {
-            "verbose": "same event perpetrating organization argument and target argument"
+        "same event perpetrating organization and target": {
+            "verbose": "same event perpetrating organization and target"
         },
-        "same event perpetrating organization argument and victim argument": {
-            "verbose": "same event perpetrating organization argument and victim argument"
+        "same event perpetrating organization and victim": {
+            "verbose": "same event perpetrating organization and victim"
         },
-        "same event perpetrating organization argument and weapon argument": {
-            "verbose": "same event perpetrating organization argument and weapon argument"
+        "same event perpetrating organization and weapon": {
+            "verbose": "same event perpetrating organization and weapon"
         },
-        "same event target argument and perpetrating individual argument": {
-            "verbose": "same event target argument and perpetrating individual argument"
+        "same event target and perpetrating individual": {
+            "verbose": "same event target and perpetrating individual"
         },
-        "same event target argument and perpetrating organization argument": {
-            "verbose": "same event target argument and perpetrating organization argument"
+        "same event target and perpetrating organization": {
+            "verbose": "same event target and perpetrating organization"
         },
-        "same event target argument and victim argument": {
-            "verbose": "same event target argument and victim argument"
+        "same event target and victim": {
+            "verbose": "same event target and victim"
         },
-        "same event target argument and weapon argument": {
-            "verbose": "same event target argument and weapon argument"
+        "same event target and weapon": {
+            "verbose": "same event target and weapon"
         },
-        "same event victim argument and perpetrating individual argument": {
-            "verbose": "same event victim argument and perpetrating individual argument"
+        "same event victim and perpetrating individual": {
+            "verbose": "same event victim and perpetrating individual"
         },
-        "same event victim argument and perpetrating organization argument": {
-            "verbose": "same event victim argument and perpetrating organization argument"
+        "same event victim and perpetrating organization": {
+            "verbose": "same event victim and perpetrating organization"
         },
-        "same event victim argument and target argument": {
-            "verbose": "same event victim argument and target argument"
+        "same event victim and target": {
+            "verbose": "same event victim and target"
         },
-        "same event victim argument and weapon argument": {
-            "verbose": "same event victim argument and weapon argument"
+        "same event victim and weapon": {
+            "verbose": "same event victim and weapon"
         },
-        "same event weapon argument and perpetrating individual argument": {
-            "verbose": "same event weapon argument and perpetrating individual argument"
+        "same event weapon and perpetrating individual": {
+            "verbose": "same event weapon and perpetrating individual"
         },
-        "same event weapon argument and perpetrating organization argument": {
-            "verbose": "same event weapon argument and perpetrating organization argument"
+        "same event weapon and perpetrating organization": {
+            "verbose": "same event weapon and perpetrating organization"
         },
-        "same event weapon argument and target argument": {
-            "verbose": "same event weapon argument and target argument"
+        "same event weapon and target": {
+            "verbose": "same event weapon and target"
         },
-        "same event weapon argument and victim argument": {
-            "verbose": "same event weapon argument and victim argument"
+        "same event weapon and victim": {
+            "verbose": "same event weapon and victim"
         }
     }
 }

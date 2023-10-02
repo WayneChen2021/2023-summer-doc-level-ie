@@ -430,27 +430,30 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
             raise e
         
         for tanl in tanls:
-            new_entities = []
-            entity_ind_mapping = {}
-            for i, entity in enumerate(tanl["entities"]):
-                if not entity in new_entities:
-                    new_entities.append(entity)
-                    entity_ind_mapping[i] = i
-                else:
-                    entity_ind_mapping[i] = new_entities.index(entity)
-            
-            new_relations = []
-            for relation in tanl["relations"]:
-                new_relations.append(
+            new_relations = [
+                {
+                    "type": relation["type"],
+                    "head": tanl["entities"][relation["head"]],
+                    "tail": relation["tail"]
+                }
+                for relation in tanl["relations"]
+            ]
+            entities = []
+            relations = []
+            for relation in new_relations:
+                if not relation["head"] in entities:
+                    entities.append(relation["head"])
+                
+                relations.append(
                     {
                         "type": relation["type"],
-                        "head": entity_ind_mapping[relation["head"]],
+                        "head": entities.index(relation["head"]),
                         "tail": relation["tail"]
                     }
                 )
             
-            tanl["entities"] = new_entities
-            tanl["relations"] = new_relations
+            tanl["entities"] = entities
+            tanl["relations"] = relations
 
         if len(tanls) == 0:
             tanls = [{
