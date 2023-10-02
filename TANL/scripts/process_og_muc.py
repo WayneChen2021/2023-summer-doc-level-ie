@@ -438,6 +438,7 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
                 }
                 for relation in tanl["relations"]
             ]
+            
             entities = []
             relations = []
             for relation in new_relations:
@@ -454,7 +455,7 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
             
             tanl["entities"] = entities
             tanl["relations"] = relations
-
+        
         if len(tanls) == 0:
             tanls = [{
                 "entities": [],
