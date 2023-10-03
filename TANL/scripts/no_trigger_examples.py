@@ -44,13 +44,19 @@ def main(message_id_map, test_only=False):
 
         for template in template_infos["templates"]:
             if not "*" in template['INCIDENT: TYPE']:
-                # og_template = deepcopy(template)
+                og_template = deepcopy(template)
                 template = handle_edge_cases(template, k)
-                _, perp_ind_gtt, perp_ind_coref = process_role(template, text_as_str, 'PERP: INDIVIDUAL ID', True)
-                _, perp_org_gtt, perp_org_coref = process_role(template, text_as_str, 'PERP: ORGANIZATION ID', True)
-                _, target_gtt, target_coref = process_role(template, text_as_str, 'PHYS TGT: ID', True)
-                _, victim_gtt, victim_coref = process_role(template, text_as_str, 'HUM TGT: NAME', True)
-                _, weapon_gtt, weapon_coref = process_role(template, text_as_str, 'INCIDENT: INSTRUMENT ID', True)
+                try:
+                    _, perp_ind_gtt, perp_ind_coref = process_role(template, text_as_str, 'PERP: INDIVIDUAL ID', True)
+                    _, perp_org_gtt, perp_org_coref = process_role(template, text_as_str, 'PERP: ORGANIZATION ID', True)
+                    _, target_gtt, target_coref = process_role(template, text_as_str, 'PHYS TGT: ID', True)
+                    _, victim_gtt, victim_coref = process_role(template, text_as_str, 'HUM TGT: NAME', True)
+                    _, weapon_gtt, weapon_coref = process_role(template, text_as_str, 'INCIDENT: INSTRUMENT ID', True)
+                except Exception as e:
+                    print(json.dumps(og_template, indent=4))
+                    print(json.dumps(template, indent=4))
+                    print(text_as_str)
+                    raise e
 
                 token_sliced = [[], [], [], [], []]
                 for i, outputs in enumerate([perp_ind_coref, perp_org_coref, target_coref, victim_coref, weapon_coref]):

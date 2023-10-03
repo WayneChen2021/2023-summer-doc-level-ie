@@ -45,7 +45,8 @@ def load_dataset(
         seed: int = None,
         shuffle: bool = True,
         is_eval: bool = False,
-        same_input_output_trigs = False
+        same_input_output_trigs = False,
+        mask_args = False
 ):
     """
     Load a registered dataset.
@@ -61,7 +62,8 @@ def load_dataset(
         shuffle=shuffle,
         data_args=data_args,
         is_eval=is_eval,
-        same_input_output_trigs=same_input_output_trigs
+        same_input_output_trigs=same_input_output_trigs,
+        mask_args=False
     )
 
 

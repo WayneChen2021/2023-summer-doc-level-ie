@@ -50,12 +50,14 @@ class BaseDataset(Dataset, ABC):
             shuffle: bool = True,
             data_args: DataTrainingArguments = None,
             is_eval: bool = False,
-            same_input_output_trigs = False
+            same_input_output_trigs = False,
+            mask_args = False
     ):
         if seed is not None:
             # set random seed for repeatability
             random.seed(seed)
 
+        self.mask_args = mask_args
         self.data_args = data_args
         self.tokenizer = tokenizer
 
@@ -238,13 +240,9 @@ class BaseDataset(Dataset, ABC):
                                                                  output_tok.input_ids):
             label_input_ids_list = label_input_ids.tolist()
             left, right = 0, 0
-            is_in_bracket = False
             left_bracket_id, right_bracket_id = 784, 908
-            left_curly_id, right_curly_id = 32100, 32101
             argument_mask = [-100] * len(label_input_ids_list)
             argument_mask_bool = [False] * len(label_input_ids_list)
-            types_mask = [-100] * len(label_input_ids_list)
-            types_mask_bool = [False] * len(label_input_ids_list)
             
             for i, tok_id in enumerate(label_input_ids_list):
                 left += int(tok_id == left_bracket_id)
@@ -253,25 +251,19 @@ class BaseDataset(Dataset, ABC):
                     argument_mask[i] = tok_id
                 right += int(tok_id == right_bracket_id)
 
-                if tok_id == left_curly_id:
-                    is_in_bracket = True
-                if is_in_bracket:
-                    types_mask[i] = tok_id
-                    types_mask_bool[i] = True
-                if tok_id == right_curly_id:
-                    is_in_bracket = False
-
-            features.append(InputFeatures(
-                input_ids=sentence_input_ids.tolist(),
-                attention_mask=att_mask.tolist(),
-                label_ids=label_input_ids_list,
-                non_args_masked=argument_mask,
-                types_mask=types_mask,
-                non_args_masked_bool=argument_mask_bool,
-                types_mask_bool=types_mask_bool,
-                left_brackets=[left_bracket_id if not b else -100 for b in argument_mask],
-                right_brackets=[right_bracket_id if not b else -100 for b in argument_mask]
-            ))
+            if self.mask_args:
+                features.append(InputFeatures(
+                    input_ids=sentence_input_ids.tolist(),
+                    attention_mask=att_mask.tolist(),
+                    label_ids=label_input_ids_list,
+                    non_args_masked=argument_mask
+                ))
+            else:
+                features.append(InputFeatures(
+                    input_ids=sentence_input_ids.tolist(),
+                    attention_mask=att_mask.tolist(),
+                    label_ids=label_input_ids_list
+                ))
 
         return features
 

@@ -8,7 +8,6 @@ from functools import reduce
 
 def span_mods(span):
     span = re.sub(r'\\', '', span)
-    span = span.replace("  ", " ")
     span = span.replace("[ ", "[")
     # span = " ".join(span.split())
     return span
@@ -46,8 +45,8 @@ def process_role(template, text, role_name, return_coref=False):
         
         tup_lst += pos_sorted[:1]
         # tup_lst += len_sorted[:1]
-        gtt_lst.append([text[tup[0] : tup[1]] for tup in coref_lst])
-        gtt_lst_slice.append(coref_lst)
+        gtt_lst.append([text[tup[0] : tup[1]] for tup in pos_sorted])
+        gtt_lst_slice.append(pos_sorted)
     
     if not return_coref:
         return list(set(tup_lst)), gtt_lst
@@ -237,6 +236,10 @@ def handle_edge_cases(matching_template, og_message_id):
             matching_template[k] = "\"AT LEAST SIX [AS HEARD] BOMBS\" / \"BOMBS\""
         if "\"ATLACATL BATTALION\"" == v:
             matching_template[k] = "\"\"ATLACATL\" BATTALION\""
+        if "\"CAMILIST UNION OF THE ARMY OF NATIONAL  LIBERATION\" / \"UC-ELN\"" == v:
+            matching_template[k] = "\"CAMILIST UNION OF THE ARMY OF NATIONAL LIBERATION\" / \"UC-ELN\""
+        if "\"BATHROOM OF THE CHILEAN-U.S. CULTURAL INSTITUTE\" / \"CHILEAN-U.S. CULTURAL INSTITUTE\" / \"CULTURAL INSTITUTE\"" == v:
+            matching_template[k] = "\"BATHROOM OF THE CHILEAN-U.S.  CULTURAL INSTITUTE\" / \"CHILEAN-U.S.  CULTURAL INSTITUTE\" / \"CULTURAL INSTITUTE\""
         
     return matching_template
 
