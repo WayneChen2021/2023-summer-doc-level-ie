@@ -309,7 +309,7 @@ def enumerate_all_gold(entry, error_analysis_entry, name_lookup, triggers_per_te
                     # "entities": [build_entity(name_lookup[tup[-1]], entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
                     "entities": [build_entity("template entity", entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
                     "triggers": [],
-                    "relations": [{**existing, **{"tail": template_ind}} for existing in entry['relations'][template_ind]],
+                    "relations": [{**existing, **{"tail": 0}} for existing in entry['relations'][template_ind]],
                     "tokens": [entry['text'][tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in entry['token_spans']]
                 }
                 new_entry['triggers'].append(build_entity("trigger for {} event".format(trigger_tup[-2]), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
@@ -482,11 +482,12 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None, sp
                 "triggers": [],
                 "relations": [],
                 "tokens": [entry['text'][tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in entry['token_spans']],
+                "id": k
             }]
         
         if split == 0:
-            final_trig_examples.append(trig_examples)
-            final_arg_examples.append(arg_examples)
+            final_trig_examples += trig_examples
+            final_arg_examples += arg_examples
     
     return final_trig_examples, final_arg_examples
         
