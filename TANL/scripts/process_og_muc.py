@@ -272,7 +272,7 @@ def sort_multi_trig(trigger_spans, k):
 
     return list(triggers)
 
-def enumerate_all_gold(entry, error_analysis_entry, name_lookup, triggers_per_temp):
+def enumerate_all_gold(entry, error_analysis_entry, name_lookup, triggers_per_temp, split_train):
     trigger_sets = list(product(*[range(len(sublist)) for sublist in entry['triggers']]))
     examples = []
     num_examples = 0
@@ -280,31 +280,42 @@ def enumerate_all_gold(entry, error_analysis_entry, name_lookup, triggers_per_te
         num_examples = reduce(lambda x , y : x * y, [min(len(sublist), triggers_per_temp) for sublist in entry['triggers']])
     # print(num_examples, len(trigger_sets))
     for trigger_set in trigger_sets:
-        try:
-            new_entry = {
-                # "entities": [build_entity(name_lookup[tup[-1]], entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
-                "entities": [build_entity("template entity", entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
-                "triggers": [],
-                "relations": [],
-                "tokens": [entry['text'][tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in entry['token_spans']]
-            }
-            for template_ind, ind in enumerate(trigger_set):
-                trigger_tup = entry['triggers'][template_ind][ind]
-                # new_entry['triggers'].append(build_entity(trigger_tup[-2], entry['token_spans'], trigger_tup[0], trigger_tup[1]))
-                new_entry['triggers'].append(build_entity("trigger for {} event".format(trigger_tup[-2]), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
-                # new_entry['triggers'].append(build_entity("trigger for {} event".format("{ " + trigger_tup[-2] + " }"), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
-                # new_entry['triggers'].append({"type": str(template_ind), "start": template_ind, "end": template_ind + 1})
-                new_entry['relations'] += [{**existing, **{"tail": template_ind}} for existing in entry['relations'][template_ind]]
-        except Exception as e:
-            print(entry)
-            raise e
+        new_entry = {
+            # "entities": [build_entity(name_lookup[tup[-1]], entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
+            "entities": [build_entity("template entity", entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
+            "triggers": [],
+            "relations": [],
+            "tokens": [entry['text'][tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in entry['token_spans']]
+        }
+        for template_ind, ind in enumerate(trigger_set):
+            trigger_tup = entry['triggers'][template_ind][ind]
+            # new_entry['triggers'].append(build_entity(trigger_tup[-2], entry['token_spans'], trigger_tup[0], trigger_tup[1]))
+            new_entry['triggers'].append(build_entity("trigger for {} event".format(trigger_tup[-2]), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
+            # new_entry['triggers'].append(build_entity("trigger for {} event".format("{ " + trigger_tup[-2] + " }"), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
+            # new_entry['triggers'].append({"type": str(template_ind), "start": template_ind, "end": template_ind + 1})
+            new_entry['relations'] += [{**existing, **{"tail": template_ind}} for existing in entry['relations'][template_ind]]
         if len(examples) != num_examples:
             if len(new_entry['triggers']) == len(set([str(e) for e in new_entry['triggers']])):
                 examples.append(new_entry)
         else:
             break
-    
-    return examples, [error_analysis_entry] * len(examples)
+    if not split_train:
+        return examples, [error_analysis_entry] * len(examples)
+    else:
+        arg_examples = []
+        for template_ind, trigger_set in enumerate(entry['triggers']):
+            for trigger_tup in trigger_set:
+                new_entry = {
+                    # "entities": [build_entity(name_lookup[tup[-1]], entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
+                    "entities": [build_entity("template entity", entry['token_spans'], tup[0], tup[1]) for tup in entry['entities']],
+                    "triggers": [],
+                    "relations": [{**existing, **{"tail": template_ind}} for existing in entry['relations'][template_ind]],
+                    "tokens": [entry['text'][tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in entry['token_spans']]
+                }
+                new_entry['triggers'].append(build_entity("trigger for {} event".format(trigger_tup[-2]), entry['token_spans'], trigger_tup[0], trigger_tup[1]))
+                arg_examples.append(new_entry)
+        
+        return examples, arg_examples
 
 def get_split(splits, ind, total_len):
     accum = 0
@@ -313,7 +324,7 @@ def get_split(splits, ind, total_len):
         if ind + 1 <= total_len * accum:
             return i
 
-def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
+def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None, split_train=False):
     error_analysis_templates = {}
     tanl_templates = {}
     name_lookup = {
@@ -417,8 +428,9 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
                     })
             container['relations'].append(relation_set)
     
-    final_train_tanl_1, final_train_gtt_1, final_train_tanl_2, final_train_gtt_2 = [], [], [], []
-    final_eval_tanl, final_eval_gtt = [], []
+    # final_train_tanl_1, final_train_gtt_1, final_train_tanl_2, final_train_gtt_2 = [], [], [], []
+    # final_eval_tanl, final_eval_gtt = [], []
+    final_trig_examples, final_arg_examples = [], []
     for k in tanl_templates:
         split = 1
         if not 'TST' in k:
@@ -426,21 +438,26 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
         entry = tanl_templates[k]
         if split != 0 and len(entry['triggers']) > 0:
             entry['triggers'] = [[trig[0]] for trig in entry['triggers']]
-        try:
-            tanls, gtts = enumerate_all_gold(entry, error_analysis_templates[k], name_lookup, triggers_per_temp)
-        except Exception as e:
-            print(error_analysis_templates[k]['doctext'])
-            raise e
+
+        trig_examples, arg_examples = enumerate_all_gold(entry, error_analysis_templates[k], name_lookup, triggers_per_temp, split_train)
+        for trig_example in trig_examples:
+            trig_example["entities"] = []
+        for example in trig_examples + arg_examples:
+            example["id"] = k
         
-        for tanl in tanls:
-            new_relations = [
-                {
-                    "type": relation["type"],
-                    "head": tanl["entities"][relation["head"]],
-                    "tail": relation["tail"]
-                }
-                for relation in tanl["relations"]
-            ]
+        for tanl in arg_examples:
+            try:
+                new_relations = [
+                    {
+                        "type": relation["type"],
+                        "head": tanl["entities"][relation["head"]],
+                        "tail": relation["tail"]
+                    }
+                    for relation in tanl["relations"]
+                ]
+            except Exception as e:
+                print(json.dumps(tanl, indent=4))
+                raise e
             
             entities = []
             relations = []
@@ -459,45 +476,92 @@ def main(annotation_dir, message_id_map, triggers_per_temp=3, split_ind=None):
             tanl["entities"] = entities
             tanl["relations"] = relations
         
-        if len(tanls) == 0:
-            tanls = [{
+        if len(trig_examples) == 0:
+            trig_examples = [{
                 "entities": [],
                 "triggers": [],
                 "relations": [],
                 "tokens": [entry['text'][tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in entry['token_spans']],
             }]
-            gtts = [error_analysis_templates[k]]
-        
-        for tanl in tanls:
-            tanl["id"] = gtts[0]["docid"]
         
         if split == 0:
-            if split_ind:
-                if int(k[9:13]) < split_ind:
-                    final_train_tanl_1 += tanls
-                    final_train_gtt_1 += gtts
-                else:
-                    final_train_tanl_2 += tanls
-                    final_train_gtt_2 += gtts
-            else:
-                if split == 0:
-                    final_train_tanl_1 += tanls
-                    final_train_gtt_1 += gtts
-                elif split == 1:
-                    final_eval_tanl += tanls
-                    final_eval_gtt += gtts
-        
-        elif split == 1:
-            final_eval_tanl += tanls
-            final_eval_gtt += gtts
+            final_trig_examples.append(trig_examples)
+            final_arg_examples.append(arg_examples)
     
-    return final_train_tanl_1, final_train_gtt_1, final_train_tanl_2, final_train_gtt_2, final_eval_tanl, final_eval_gtt
+    return final_trig_examples, final_arg_examples
+        
+    #     tanls, gtts = enumerate_all_gold(entry, error_analysis_templates[k], name_lookup, triggers_per_temp, split_train)
+    #     if len(tanls) > 1:
+    #         print(entry)
+    #         print(1/0)
+        
+    #     for tanl in tanls:
+    #         new_relations = [
+    #             {
+    #                 "type": relation["type"],
+    #                 "head": tanl["entities"][relation["head"]],
+    #                 "tail": relation["tail"]
+    #             }
+    #             for relation in tanl["relations"]
+    #         ]
+            
+    #         entities = []
+    #         relations = []
+    #         for relation in new_relations:
+    #             if not relation["head"] in entities:
+    #                 entities.append(relation["head"])
+                
+    #             relations.append(
+    #                 {
+    #                     "type": relation["type"],
+    #                     "head": entities.index(relation["head"]),
+    #                     "tail": relation["tail"]
+    #                 }
+    #             )
+            
+    #         tanl["entities"] = entities
+    #         tanl["relations"] = relations
+        
+    #     if len(tanls) == 0:
+    #         tanls = [{
+    #             "entities": [],
+    #             "triggers": [],
+    #             "relations": [],
+    #             "tokens": [entry['text'][tup[0]:tup[1]].lower().replace("[","(").replace("]",")") for tup in entry['token_spans']],
+    #         }]
+    #         gtts = [error_analysis_templates[k]]
+        
+    #     for tanl in tanls:
+    #         tanl["id"] = gtts[0]["docid"]
+        
+    #     if split == 0:
+    #         if split_ind:
+    #             if int(k[9:13]) < split_ind:
+    #                 final_train_tanl_1 += tanls
+    #                 final_train_gtt_1 += gtts
+    #             else:
+    #                 final_train_tanl_2 += tanls
+    #                 final_train_gtt_2 += gtts
+    #         else:
+    #             if split == 0:
+    #                 final_train_tanl_1 += tanls
+    #                 final_train_gtt_1 += gtts
+    #             elif split == 1:
+    #                 final_eval_tanl += tanls
+    #                 final_eval_gtt += gtts
+        
+    #     elif split == 1:
+    #         final_eval_tanl += tanls
+    #         final_eval_gtt += gtts
+    
+    # return final_train_tanl_1, final_train_gtt_1, final_train_tanl_2, final_train_gtt_2, final_eval_tanl, final_eval_gtt
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--muc_dir", type=str, required=True)
     parser.add_argument("--trigs_per_temp", type=int, required=True)
     parser.add_argument("--annotation_file", type=str, required=True)
+    parser.add_argument("--split_train", action='store_true')
     parser.add_argument("--tanl_train_out", type=str, required=False)
     parser.add_argument("--tanl_train_out_2", type=str, required=False)
     parser.add_argument("--tanl_eval_out", type=str, required=False)
@@ -508,28 +572,37 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     message_id_map = create_map(args.muc_dir)
-    train_tanl_1, train_gtt_1, train_tanl_2, train_gtt_2, eval_tanl, eval_gtt = main(args.annotation_file, message_id_map, args.trigs_per_temp, args.split_ind)
+    # train_tanl_1, train_gtt_1, train_tanl_2, train_gtt_2, eval_tanl, eval_gtt = main(args.annotation_file, message_id_map, args.trigs_per_temp, args.split_ind, args.split_train)
 
+    # if args.tanl_train_out:
+    #     with open(args.tanl_train_out, "w") as f:
+    #         f.write(json.dumps(train_tanl_1))
+
+    # if args.tanl_eval_out:
+    #     with open(args.tanl_eval_out, "w") as f:
+    #         f.write(json.dumps(eval_tanl))
+    
+    # if args.gtt_train_out:
+    #     with open(args.gtt_train_out, "w") as f:
+    #         f.write(json.dumps(train_gtt_1))
+
+    # if args.gtt_eval_out:
+    #     with open(args.gtt_eval_out, "w") as f:
+    #         f.write(json.dumps(eval_gtt))
+
+    # if args.tanl_train_out_2:
+    #     with open(args.tanl_train_out_2, "w") as f:
+    #         f.write(json.dumps(train_tanl_2))
+    
+    # if args.gtt_train_out_2:
+    #     with open(args.gtt_train_out_2, "w") as f:
+    #         f.write(json.dumps(train_gtt_2))
+
+    trig_examples, arg_examples = main(args.annotation_file, message_id_map, args.trigs_per_temp, args.split_ind, args.split_train)
     if args.tanl_train_out:
         with open(args.tanl_train_out, "w") as f:
-            f.write(json.dumps(train_tanl_1))
-
-    if args.tanl_eval_out:
-        with open(args.tanl_eval_out, "w") as f:
-            f.write(json.dumps(eval_tanl))
-    
-    if args.gtt_train_out:
-        with open(args.gtt_train_out, "w") as f:
-            f.write(json.dumps(train_gtt_1))
-
-    if args.gtt_eval_out:
-        with open(args.gtt_eval_out, "w") as f:
-            f.write(json.dumps(eval_gtt))
+            f.write(json.dumps(trig_examples))    
 
     if args.tanl_train_out_2:
         with open(args.tanl_train_out_2, "w") as f:
-            f.write(json.dumps(train_tanl_2))
-    
-    if args.gtt_train_out_2:
-        with open(args.gtt_train_out_2, "w") as f:
-            f.write(json.dumps(train_gtt_2))
+            f.write(json.dumps(arg_examples))

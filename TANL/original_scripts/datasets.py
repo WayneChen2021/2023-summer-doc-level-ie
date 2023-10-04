@@ -1904,7 +1904,7 @@ class MUCEventTriggerDataset(JointERDataset):
         """
         examples = []
         file_path = os.path.join(
-            self.data_dir(), f'{self.data_name}_{split}.json')
+            self.data_dir(), f'{self.name}_{split}.json')
 
         with open(file_path, 'r') as f:
             data = json.load(f)
@@ -2138,6 +2138,7 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
         """
         examples = []
         name = self.name if self.data_name is None else self.data_name
+        name = 'mucevent_argument'
         file_path = os.path.join(self.data_dir(), f'{name}_{split}.json')
 
         with open(file_path, 'r') as f:
