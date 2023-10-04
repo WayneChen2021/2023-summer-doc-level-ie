@@ -16,7 +16,8 @@ NUM_EPOCHS=38
 
 EVENT_SCHEMA="event.json"
 COREF_TRAIN="default.json"
-EVENT_TRAIN="default.json"
+EVENT_TRIG_TRAIN="default.json"
+EVENT_ARG_TRAIN="default.json"
 NER_TRAIN="default.json"
 EVENT_TYPE="event.json"
 RELATION_TYPE="relation.json"
@@ -31,7 +32,8 @@ cp "../data/schema/$EVENT_SCHEMA" "../g2_environments/$ENV_NAME/data/mucevent/mu
 cp "../data/types/$EVENT_TYPE" "../g2_environments/$ENV_NAME/data/mucevent/mucevent_types.json"
 cp "../data/types/$RELATION_TYPE" "../g2_environments/$ENV_NAME/data/muc_multitask/muc_multitask_types.json"
 
-cp "../data/train/event/$EVENT_TRAIN" "../g2_environments/$ENV_NAME/data/mucevent/mucevent_train.json"
+cp "../data/train/event_trig/$EVENT_TRIG_TRAIN" "../g2_environments/$ENV_NAME/data/mucevent/mucevent_trigger_train.json"
+cp "../data/train/event_arg/$EVENT_ARG_TRAIN" "../g2_environments/$ENV_NAME/data/mucevent/mucevent_argument_train.json"
 cp "../data/train/ner/$NER_TRAIN" "../g2_environments/$ENV_NAME/data/muc_multitask/muc_multitask_ner_train.json"
 cp "../data/train/coref/$COREF_TRAIN" "../g2_environments/$ENV_NAME/data/muc_multitask/muc_multitask_coref_train.json"
 
