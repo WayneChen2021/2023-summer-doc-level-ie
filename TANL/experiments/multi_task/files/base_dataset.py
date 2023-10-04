@@ -51,13 +51,13 @@ class BaseDataset(Dataset, ABC):
             data_args: DataTrainingArguments = None,
             is_eval: bool = False,
             same_input_output_trigs = False,
-            mask_args = False
+            mask_args_weight = False
     ):
         if seed is not None:
             # set random seed for repeatability
             random.seed(seed)
 
-        self.mask_args = mask_args
+        self.mask_args_weight = mask_args_weight
         self.data_args = data_args
         self.tokenizer = tokenizer
 
@@ -242,28 +242,20 @@ class BaseDataset(Dataset, ABC):
             left, right = 0, 0
             left_bracket_id, right_bracket_id = 784, 908
             argument_mask = [-100] * len(label_input_ids_list)
-            argument_mask_bool = [False] * len(label_input_ids_list)
             
             for i, tok_id in enumerate(label_input_ids_list):
                 left += int(tok_id == left_bracket_id)
                 if left > right:
-                    argument_mask_bool[i] = True
                     argument_mask[i] = tok_id
                 right += int(tok_id == right_bracket_id)
 
-            if self.mask_args:
-                features.append(InputFeatures(
-                    input_ids=sentence_input_ids.tolist(),
-                    attention_mask=att_mask.tolist(),
-                    label_ids=label_input_ids_list,
-                    non_args_masked=argument_mask
-                ))
-            else:
-                features.append(InputFeatures(
-                    input_ids=sentence_input_ids.tolist(),
-                    attention_mask=att_mask.tolist(),
-                    label_ids=label_input_ids_list
-                ))
+            features.append(InputFeatures(
+                input_ids=sentence_input_ids.tolist(),
+                attention_mask=att_mask.tolist(),
+                label_ids=label_input_ids_list,
+                use_non_args_masked=self.mask_args_weight,
+                non_args_masked=argument_mask
+            ))
 
         return features
 

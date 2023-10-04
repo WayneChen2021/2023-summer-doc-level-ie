@@ -133,6 +133,7 @@ class InputFeatures:
     input_ids: List[int]
     attention_mask: List[int]
     label_ids: Optional[List[int]] = None
+    use_non_args_masked: Optional[float] = None
     non_args_masked: Optional[List[int]] = None
     types_mask: Optional[List[int]] = None
     non_args_masked_bool: Optional[List[bool]] = None

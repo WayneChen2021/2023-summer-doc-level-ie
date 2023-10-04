@@ -46,7 +46,7 @@ def load_dataset(
         shuffle: bool = True,
         is_eval: bool = False,
         same_input_output_trigs = False,
-        mask_args = False
+        mask_args_weight = None
 ):
     """
     Load a registered dataset.
@@ -63,7 +63,7 @@ def load_dataset(
         data_args=data_args,
         is_eval=is_eval,
         same_input_output_trigs=same_input_output_trigs,
-        mask_args=False
+        mask_args_weight=mask_args_weight
     )
 
 
@@ -2086,7 +2086,10 @@ class MUCEventArgumentDataset(MUCEventTriggerDataset):
         output_parts = []
 
         if not x_second:
-            if len(x['triggers']) <= 1:
+            if len(x['triggers']) == 0:
+                return input_parts
+            
+            if len(x['triggers']) == 1:
                 input_parts.append(self.handle_single_trig(x, tokens, docid))
             else:
                 input_parts += self.handle_multi_trig(x, tokens, docid)
@@ -2365,7 +2368,7 @@ class MUCEventDataset(MUCEventArgumentDataset):
 
         return predicted_relations, gt_relations, correct_relations
 
-    def evaluate_dataset(self, data_args: DataTrainingArguments, model, device, batch_size: int, macro: bool = False, log_file: str = None, is_multiphase = True) \
+    def evaluate_dataset(self, data_args: DataTrainingArguments, model, device, batch_size: int, macro: bool = False, log_file: str = None, is_multiphase = False) \
             -> Dict[str, float]:
         """
         Evaluate model on this dataset.

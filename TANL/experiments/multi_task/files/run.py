@@ -42,6 +42,7 @@ class T5Custom(T5ForConditionalGeneration):
         output_attentions=None,
         output_hidden_states=None,
         return_dict=None,
+        use_non_args_masked=None,
         non_args_masked = None,
         types_mask = None,
         non_args_masked_bool = None,
@@ -119,8 +120,9 @@ class T5Custom(T5ForConditionalGeneration):
             loss_fct = CrossEntropyLoss(ignore_index=-100)
             lm_logits_reshaped = lm_logits.view(-1, lm_logits.size(-1))
             loss1 = loss_fct(lm_logits_reshaped, labels.view(-1))
-            if non_args_masked:
-                loss2 = loss_fct(lm_logits_reshaped, non_args_masked.view(-1))
+            loss2 = 0
+            if use_non_args_masked != None:
+                loss2 = use_non_args_masked * loss_fct(lm_logits_reshaped, non_args_masked.view(-1))
             loss = loss1 + loss2
             
         if not return_dict:
@@ -336,10 +338,15 @@ def main():
             datasets = []
             for dataset_name in dataset_names:
                 # logging.info(f'Process dataset {dataset_name} (train)')
+                weight = 0
+                if dataset_name == "mucevent_trigger":
+                    weight = 1
+                elif dataset_name == "mucevent_argument":
+                    weight = 1
                 dataset = load_dataset(
                     dataset_name, data_args, split=data_args.train_split,
                     max_input_length=data_args.max_seq_length, max_output_length=data_args.max_output_seq_length,
-                    tokenizer=tokenizer, seed=ep_idx, train_subset=data_args.train_subset, mask_args='mucevent' in dataset_name
+                    tokenizer=tokenizer, seed=ep_idx, train_subset=data_args.train_subset, mask_args_weight=weight
                 )
                 datasets.append(dataset)
 
