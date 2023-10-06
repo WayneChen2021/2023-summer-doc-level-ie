@@ -892,3 +892,8 @@ san salvador , 19 mar 89 ( radio cadena sonora ) -- ( communique ) ( farabundo m
 {'loss': 0.0196, 'learning_rate': 8.201171980001074e-05, 'epoch': 31.77}
 {'loss': 0.013, 'learning_rate': 8.133971291866028e-05, 'epoch': 31.82}
 {'loss': 0.0202, 'learning_rate': 8.066770603730983e-05, 'epoch': 31.87}
+{'loss': 0.0152, 'learning_rate': 7.999569915595936e-05, 'epoch': 31.92}
+{'loss': 0.0239, 'learning_rate': 7.93236922746089e-05, 'epoch': 31.97}
+{'loss': 0.0145, 'learning_rate': 7.865168539325843e-05, 'epoch': 32.02}
+{'loss': 0.0161, 'learning_rate': 7.797967851190796e-05, 'epoch': 32.07}
+{'loss': 0.0128, 'learning_rate': 7.730767163055751e-05, 'epoch': 32.12}

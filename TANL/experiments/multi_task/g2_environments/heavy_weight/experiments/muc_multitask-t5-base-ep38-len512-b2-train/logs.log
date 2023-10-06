@@ -1,0 +1,23 @@
+2023-10-04 15:34:04 - INFO - root -   Episode 0 (1 episodes total)
+2023-10-04 15:34:04 - INFO - root -   Output directory: experiments/muc_multitask-t5-base-ep38-len512-b2-train/episode0
+2023-10-04 15:34:04 - INFO - root -   Using model t5-base
+2023-10-04 15:34:20 - WARNING - root -   Max sequence length is 512 but the longest input sequence is 2056 long
+2023-10-04 15:34:24 - WARNING - root -   Max sequence length is 512 but the longest output sequence is 2047 long
+2023-10-04 15:34:32 - WARNING - root -   Max sequence length is 512 but the longest input sequence is 2057 long
+2023-10-04 15:34:36 - WARNING - root -   Max sequence length is 512 but the longest output sequence is 2047 long
+2023-10-04 15:34:41 - WARNING - root -   Max sequence length is 512 but the longest input sequence is 1681 long
+2023-10-04 15:34:43 - INFO - root -   Loaded 2174 sentences for split train of mucevent_argument
+2023-10-04 15:34:48 - WARNING - root -   Max sequence length is 512 but the longest input sequence is 1956 long
+2023-10-04 15:34:53 - WARNING - root -   Max sequence length is 512 but the longest output sequence is 1975 long
+2023-10-04 15:34:57 - INFO - root -   Loaded 1515 sentences for split train of mucevent_trigger
+2023-10-04 15:34:57 - WARNING - root -   Tree structure is not satisfied! Dropping annotation ([('trigger for attack event',)], 48, 58)
+2023-10-04 15:34:57 - WARNING - root -   Tree structure is not satisfied! Dropping annotation ([('trigger for attack event',)], 35, 37)
+2023-10-04 15:35:01 - WARNING - root -   Max sequence length is 512 but the longest input sequence is 2055 long
+2023-10-04 15:35:05 - WARNING - root -   Max sequence length is 512 but the longest output sequence is 2047 long
+2023-10-04 15:35:07 - INFO - root -   Loaded 10 sentences for split dev of mucevent
+2023-10-04 15:35:07 - WARNING - root -   Max sequence length is 512 but the longest input sequence is 1361 long
+2023-10-04 15:35:07 - WARNING - root -   Max sequence length is 512 but the longest output sequence is 1353 long
+2023-10-04 15:35:07 - INFO - root -   Loaded 10 sentences for split test of mucevent
+2023-10-04 15:35:07 - WARNING - root -   Max sequence length is 512 but the longest input sequence is 689 long
+2023-10-04 15:35:07 - WARNING - root -   Max sequence length is 512 but the longest output sequence is 681 long
+2023-10-04 15:35:15 - INFO - root -   Start training
