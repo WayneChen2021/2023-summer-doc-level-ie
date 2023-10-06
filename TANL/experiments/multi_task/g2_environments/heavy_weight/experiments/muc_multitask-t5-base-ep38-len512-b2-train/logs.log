@@ -21,3 +21,6 @@
 2023-10-04 15:35:07 - WARNING - root -   Max sequence length is 512 but the longest input sequence is 689 long
 2023-10-04 15:35:07 - WARNING - root -   Max sequence length is 512 but the longest output sequence is 681 long
 2023-10-04 15:35:15 - INFO - root -   Start training
+2023-10-06 02:29:42 - INFO - root -   Loaded 400 sentences for split dev of mucevent
+2023-10-06 02:29:43 - WARNING - root -   Max sequence length is 512 but the longest input sequence is 1439 long
+2023-10-06 02:29:44 - WARNING - root -   Max sequence length is 512 but the longest output sequence is 1431 long

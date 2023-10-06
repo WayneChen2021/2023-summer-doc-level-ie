@@ -151,3 +151,8 @@ TANL/experiments/multi_task/g2_environments/default/*
 !TANL/experiments/multi_task/g2_environments/default/train_predictions.txt
 !TANL/experiments/multi_task/g2_environments/default/dev_predictions.txt
 !TANL/experiments/multi_task/g2_environments/default/logs.json
+
+TANL/experiments/multi_task/g2_environments/heavy_weight/*
+!TANL/experiments/multi_task/g2_environments/heavy_weight/train_predictions.txt
+!TANL/experiments/multi_task/g2_environments/heavy_weight/dev_predictions.txt
+!TANL/experiments/multi_task/g2_environments/heavy_weight/logs.json
