@@ -342,7 +342,7 @@ def main():
                 if dataset_name == "mucevent_trigger":
                     weight = 1
                 elif dataset_name == "mucevent_argument":
-                    weight = 1
+                    weight = 10
                 dataset = load_dataset(
                     dataset_name, data_args, split=data_args.train_split,
                     max_input_length=data_args.max_seq_length, max_output_length=data_args.max_output_seq_length,
