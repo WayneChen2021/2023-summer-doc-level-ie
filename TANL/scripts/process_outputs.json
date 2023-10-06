@@ -17,7 +17,7 @@
     },
     "second_phase_event": {
         "test_time_logs": {
-            "run": true,
+            "run": false,
             "raw_outs": {
                 "0": "../experiments/multiple_phase/phase_2/g2_environments/2_trig/dev_predictions.txt"
             },
@@ -205,21 +205,21 @@
     },
     "verbose_tags": {
         "test_time_logs": {
-            "run": false,
+            "run": true,
             "raw_outs": {
-                "0": "../experiments/verbose_tags/g2_environments/3_trig/dev_predictions.txt"
+                "0": "../experiments/multi_task/g2_environments/heavy_weight/dev_predictions.txt"
             },
             "tanl_ref": "../../data/full_eval/tanl_eval.json",
             "gtt_ref": "../../data/full_eval/gtt_eval.json",
             "output_file": {
-                "0": "../experiments/verbose_tags/error_analysis_output/3_trig.out"
+                "0": "../experiments/multi_task/error_analysis_output/heavy_weight.out"
             },
             "error_analysis_script": "Error_Analysis.py"
         },
         "train_time_logs": {
-            "run": false,
+            "run": true,
             "raw_outs": {
-                "0": "../experiments/verbose_tags/g2_environments/3_trig/train_predictions.txt"
+                "0": "../experiments/multi_task/g2_environments/heavy_weight/train_predictions.txt"
             },
             "tanl_ref": [
                 "../../data/short_files/tanl_train.json",
@@ -231,19 +231,19 @@
             ],
             "output_file": {
                 "0": [
-                    "../experiments/verbose_tags/training_errors/3_trig/train_template_errors.txt",
-                    "../experiments/verbose_tags/training_errors/3_trig/test_template_errors.txt"
+                    "../experiments/multi_task/training_errors/heavy_weight/train_template_errors.txt",
+                    "../experiments/multi_task/training_errors/heavy_weight/test_template_errors.txt"
                 ]
             },
             "error_analysis_script": "Error_Analysis_quick.py"
         },
         "training_errors": {
-            "run": false,
+            "run": true,
             "log_file": {
-                "0": "../experiments/verbose_tags/g2_environments/3_trig/logs.json"
+                "0": "../experiments/multi_task/g2_environments/heavy_weight/logs.json"
             },
             "output_file": {
-                "0": "../experiments/verbose_tags/training_errors/3_trig/graph.png"
+                "0": "../experiments/multi_task/training_errors/heavy_weight/graph.png"
             },
             "loss_collection_interval": 100,
             "small_evaluation_interval": 500
